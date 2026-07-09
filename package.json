@@ -5,13 +5,16 @@
   "license": "MIT",
   "private": true,
   "type": "module",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "extract": "node scripts/extract-from-noderoom.mjs --src ..",
     "extract:check": "node scripts/extract-from-noderoom.mjs --dry-run",
     "typecheck": "tsc -p tsconfig.packages.json"
   },
   "devDependencies": {
+    "@types/node": "^26.1.1",
     "typescript": "^5.7.2"
   }
 }

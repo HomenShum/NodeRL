@@ -54,6 +54,12 @@ The
 reusable artifacts are the **proof-receipt contract** (`spec/proof-receipt-contract.md`) and the
 **anti-cheat doctrine** (`spec/anti-cheat-doctrine.md`).
 
+Storyboard first: public NodeRL demos should follow
+[`docs/FEATURE_PROOF_STORYBOARD.md`](docs/FEATURE_PROOF_STORYBOARD.md). The
+storyboard requires one complete episode from goal to trace to reward to memory
+to repair to export, with NodeGraph relationships and NodeTasks task ids kept
+explicit.
+
 ## Packages
 
 | Package | What it is | Maturity |
