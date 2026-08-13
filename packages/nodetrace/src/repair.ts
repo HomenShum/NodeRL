@@ -6,8 +6,8 @@
  * fix — it packages the exact ground-truth failure + evidence and asks the coding agent to trace the
  * root cause, propose the smallest shared fix, resolve unsourced claims, and add the regression.
  */
-import type { NodeMergedTrajectory, MergedReward, UiAssertion } from "./merged";
-import { computeMergedReward } from "./mergedReward";
+import type { NodeMergedTrajectory, MergedReward, UiAssertion } from "./merged.ts";
+import { computeMergedReward } from "./mergedReward.ts";
 
 export interface RegressionCase {
   id: string;

@@ -27,8 +27,8 @@ import type {
   NodeMergedTrajectory,
   MergedReward,
   MergedStep,
-} from "./merged";
-import { MERGED_REWARD_COMPONENTS } from "./merged";
+} from "./merged.ts";
+import { MERGED_REWARD_COMPONENTS } from "./merged.ts";
 
 /* ------------------------------------------------------------------------------------------------ *
  * Budget — the DOCUMENTED reference for cost/latency efficiency.                                     *

@@ -13,8 +13,8 @@ import assert from "node:assert";
 import {
   verifyCashFlowIndirect,
   type CashFlowIndirectInput,
-} from "../src/accounting/cashFlowIndirect";
-import type { VerifierResult } from "../src/accounting/oracleTypes";
+} from "../src/accounting/cashFlowIndirect.ts";
+import type { VerifierResult } from "../src/accounting/oracleTypes.ts";
 
 /** Find a named check in a result, or throw with a helpful message. */
 function check(result: VerifierResult, name: string) {

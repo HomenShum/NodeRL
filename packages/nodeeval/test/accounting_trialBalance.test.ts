@@ -11,8 +11,8 @@
 // The oracle types come from the module built by the prior step; the verifier
 // re-exports nothing, so we pull types from oracleTypes and the fn from
 // trialBalance. (Import path is relative to this test file in test/.)
-import { verifyTrialBalance, type TrialBalanceInput } from "../src/accounting/trialBalance";
-import type { VerifierResult } from "../src/accounting/oracleTypes";
+import { verifyTrialBalance, type TrialBalanceInput } from "../src/accounting/trialBalance.ts";
+import type { VerifierResult } from "../src/accounting/oracleTypes.ts";
 
 let failures = 0;
 function assert(cond: boolean, msg: string): void {

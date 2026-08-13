@@ -5,8 +5,8 @@
  * Use this for "screenshot the source page" fast/cheap; use Browserbase when you need the exact box.
  * Reads FIRECRAWL_API_KEY from the environment.
  */
-import type { BrowserSubstrate, ObserveTarget, PageHandle } from "../types";
-import { CAPTURE_LIMITS } from "../guards";
+import type { BrowserSubstrate, ObserveTarget, PageHandle } from "../types.ts";
+import { CAPTURE_LIMITS } from "../guards.ts";
 
 const FIRECRAWL_ENDPOINT = "https://api.firecrawl.dev/v1/scrape";
 

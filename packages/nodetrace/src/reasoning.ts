@@ -8,7 +8,7 @@
 import { generateObject, type LanguageModel } from "ai";
 import { createAnthropic } from "@ai-sdk/anthropic";
 import { createOpenAI } from "@ai-sdk/openai";
-import type { ReasoningModel } from "./types";
+import type { ReasoningModel } from "./types.ts";
 
 // Trim env keys: a stray trailing \r (Windows copy/pipe artifact in `convex env set`) would otherwise
 // produce a malformed "Authorization: Bearer …\r" header and break the provider call.

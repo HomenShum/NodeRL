@@ -8,8 +8,8 @@
  * scripts/qa-trace producer, not from inside a Convex function. Convex orchestrates + persists.
  */
 import { chromium, type Browser, type Page } from "playwright-core";
-import type { ActStep, BrowserSubstrate, LocatedTarget, ObserveTarget, PageHandle } from "../types";
-import { CAPTURE_LIMITS } from "../guards";
+import type { ActStep, BrowserSubstrate, LocatedTarget, ObserveTarget, PageHandle } from "../types.ts";
+import { CAPTURE_LIMITS } from "../guards.ts";
 
 async function createSession(apiKey: string, projectId: string, signal: AbortSignal): Promise<string> {
   const res = await fetch("https://api.browserbase.com/v1/sessions", {

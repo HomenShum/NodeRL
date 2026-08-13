@@ -1,10 +1,19 @@
 {
   "name": "@noderl/nodemem",
   "version": "0.1.0",
-  "description": "Deterministic replay/context memory + failure store. src/ generated from NodeRoom — see ../../EXTRACTION.md.",
+  "description": "Deterministic classify / compile / retrieve memory + failure store. No database.",
   "license": "MIT",
   "private": true,
   "type": "module",
   "main": "src/index.ts",
-  "keywords": ["agent", "memory", "rl", "replay", "retrieval"]
+  "keywords": [
+    "agent",
+    "memory",
+    "rl",
+    "replay",
+    "retrieval"
+  ],
+  "exports": {
+    ".": "./src/index.ts"
+  }
 }

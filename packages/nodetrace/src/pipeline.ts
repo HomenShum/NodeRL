@@ -10,8 +10,8 @@
  * fake success (HONEST_STATUS). Bounded on steps + a single wall-clock budget (BOUND + TIMEOUT).
  */
 import { z } from "zod";
-import type { BrowserSubstrate, CaptureResult, CaptureStep, PageHandle, ReasoningModel } from "./types";
-import { CAPTURE_LIMITS, assertCapturableUrl, clipRepresentation } from "./guards";
+import type { BrowserSubstrate, CaptureResult, CaptureStep, PageHandle, ReasoningModel } from "./types.ts";
+import { CAPTURE_LIMITS, assertCapturableUrl, clipRepresentation } from "./guards.ts";
 
 const TargetSchema = z.object({
   description: z.string(),

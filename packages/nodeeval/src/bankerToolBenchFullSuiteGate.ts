@@ -13,7 +13,7 @@ import {
   type BankerToolBenchSweepSummary,
   type BtbLedgerImport,
   type BtbLedgerTask,
-} from "./bankerToolBenchEvalLedger";
+} from "./bankerToolBenchEvalLedger.ts";
 
 export interface FullSuiteGateOptions {
   /** Number of official tasks the full suite must cover. Default 100. */

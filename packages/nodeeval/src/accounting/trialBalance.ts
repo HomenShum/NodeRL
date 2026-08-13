@@ -23,10 +23,10 @@
 //   EPS = 0.005, i.e. |a - b| <= 0.005 counts as equal. This absorbs binary
 //   floating-point representation error on cent-scale money (e.g. 100.00 vs
 //   100.004999...) without ever masking a real >= 1 cent discrepancy.
-import { summarize, type OracleCheck, type VerifierResult } from "./oracleTypes";
+import { summarize, type OracleCheck, type VerifierResult } from "./oracleTypes.ts";
 
 /** Half-a-cent absolute tolerance for money comparisons. Documented above. */
-export const EPS = 0.005;
+const EPS = 0.005;
 
 /** Account types recognized by the trial-balance oracle. */
 export type AccountType = "asset" | "liability" | "equity" | "revenue" | "expense";

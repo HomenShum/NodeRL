@@ -1,0 +1,72 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "2. Agent execution — how a run is produced",
+  "description": "Tour 1 replayed a run that had already happened. This is the code that produces one: an observe/act/extract loop that drives a real web page with a model deciding each step. Needs an LLM key and a remote browser to actually run.",
+  "steps": [
+    {
+      "file": "packages/nodetrace/src/types.ts",
+      "line": 74,
+      "description": "**Seam one: the model.** Anything that can look at a page and return a *structured* decision satisfies `ReasoningModel`.\n\nNote what is absent: the model never receives a browser handle. It cannot click anything. It reads a page description and returns a description of what it wants done — which is what makes it swappable and what keeps its output checkable."
+    },
+    {
+      "file": "packages/nodetrace/src/types.ts",
+      "line": 86,
+      "description": "**Seam two: the browser.** `BrowserSubstrate` is the thing that actually opens, observes and acts on a page.\n\nTwo seams, and the loop between them depends on neither concretely. Swapping Claude for GPT, or Browserbase for Firecrawl, touches nothing else in this file or in `pipeline.ts`."
+    },
+    {
+      "file": "packages/nodetrace/src/substrate/index.ts",
+      "line": 10,
+      "description": "**The entire tool registry.** Not a plugin system — one function that reads the environment and picks the most capable browser actually configured.\n\nBrowserbase first because it can click and can report exact element boxes; Firecrawl second because it is screenshot-and-extract only. With neither configured this returns `null`. It does not fabricate a fake browser, so the caller is forced to handle 'no substrate' rather than discovering it as a confusing error later."
+    },
+    {
+      "file": "packages/nodetrace/src/guards.ts",
+      "line": 71,
+      "description": "**Every outbound URL passes through here first.** It rejects `localhost`, `.local`, `.internal`, and private IP literals including IPv6 and IPv4-mapped forms.\n\nThe header comment above explains the honest limit of this control: the browser runs *remotely*, at Browserbase or Firecrawl, so the provider resolves the domain, not us. Blocking IP literals is defence in depth; the real control for production is the optional `allowHosts` allowlist. The comment says so rather than implying the check is stronger than it is."
+    },
+    {
+      "file": "packages/nodetrace/src/guards.ts",
+      "line": 12,
+      "description": "**The ceilings.** 12 steps, 60 seconds total, 24k characters of page text, 4MB per screenshot, 64 extracted fields.\n\nAn agent loop without a hard bound is an agent loop that will one day run until something else stops it. Every one of these is enforced in `pipeline.ts`, not merely declared here."
+    },
+    {
+      "file": "packages/nodetrace/src/pipeline.ts",
+      "line": 56,
+      "description": "**The loop.** Read the header comment above for the division of labour: the loop owns reliability, the model owns judgement, the substrate owns the browser.\n\nEach responsibility sits with the part that can actually discharge it. The model cannot be trusted to stop; the loop can. The loop cannot read a page; the model can."
+    },
+    {
+      "file": "packages/nodetrace/src/pipeline.ts",
+      "line": 82,
+      "description": "**The budget is checked before each step, not after.**\n\nWhen time runs out, it pushes a step labelled `time budget exhausted` with status `warn` and breaks. It does not throw and it does not silently truncate — the trace records that the loop stopped early and why, so the run is interpretable afterwards."
+    },
+    {
+      "file": "packages/nodetrace/src/pipeline.ts",
+      "line": 86,
+      "description": "**The model's turn.** It gets the page's accessibility tree — clipped to the input budget by `clipRepresentation` — plus a screenshot, and must return something matching `DecisionSchema`.\n\nThat schema is Zod, so a reply that is not a valid action is rejected right here at the seam, rather than causing a confusing failure several steps deeper."
+    },
+    {
+      "file": "packages/nodetrace/src/pipeline.ts",
+      "line": 97,
+      "description": "**The act, and the box.** After acting, the loop records the bounding box of the element that was touched — from the action result if the substrate returned one, otherwise by locating the target.\n\nThat box is why a step can later be shown as a highlight over its screenshot: the evidence points at the exact pixel region it came from."
+    },
+    {
+      "file": "packages/nodetrace/src/pipeline.ts",
+      "line": 116,
+      "description": "**Extraction records its provenance too.** For each field, the model must return the verbatim on-page text it came from, and the loop locates that text to get its box.\n\nA field whose value is `null` is recorded with status `warn` rather than dropped. 'Not found' is a result worth keeping — silently omitting it would make an incomplete extraction look complete."
+    },
+    {
+      "file": "packages/nodetrace/src/pipeline.ts",
+      "line": 120,
+      "description": "**Failure is a return value, not an exception.** `{ ok: false, url, steps, error }` — with every step captured before the failure still attached.\n\nThis is the same honesty rule as `mergeTrajectory`, applied to control flow. A crashed run is still a recorded run, and a partial trace of a failure is often more useful for training than a clean trace of a success."
+    },
+    {
+      "file": "packages/nodetrace/src/trajectory.ts",
+      "line": 233,
+      "description": "**From capture to dataset.** `toTrajectory` maps a `CaptureResult` into the `(state, action, observation, reward)` shape that SFT / DPO / RLVR pipelines consume.\n\nRead the header comment at the top of the file for the invariants it holds — in particular that a failed capture yields a *failure trajectory* with the error preserved, never a coerced-positive reward."
+    },
+    {
+      "file": "packages/nodetrace/src/trajectory.ts",
+      "line": 464,
+      "description": "**And out to JSONL** — one trajectory per line, with stable sorted key order so the same input produces byte-identical output.\n\nNote it returns a string. Nothing in this repository writes a file. Storage is deliberately the caller's problem; see tour 3 and `docs/START_HERE.md` Step 6 for why."
+    }
+  ]
+}

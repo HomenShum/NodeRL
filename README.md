@@ -2,13 +2,10 @@
 
 **Turn failed agent runs into the next better attempt — and into training data.**
 
-NodeRL records what your agent did (**NodeTrace**), scores the outcome with tests,
-screenshots, a video judge, and proof receipts (**NodeEval**), remembers what worked and
-failed (**NodeMem**), and feeds the loop that retries until the task is *proven*.
-
-It works around your agent host — Codex, Claude Code, Windsurf, Devin, or your own runtime.
-NodeRL is the **environment + reward + memory + dataset-exporter** layer that most agentic-RL
-efforts are missing — not another model.
+When you run an AI agent on a real task, it often half-succeeds: it gets the number right but shows
+no working, or cites five sources that do not actually support the claim. That run is normally
+thrown away. NodeRL keeps it: it records what the agent did, scores it against honest signals,
+remembers the failure, and writes the prompt that asks a coding agent to fix the cause.
 
 ```
 Goal → Act → Observe → Evaluate → Reward → Remember → Repair → Export
@@ -17,83 +14,99 @@ Goal → Act → Observe → Evaluate → Reward → Remember → Repair → Exp
                                                                   (SFT/DPO/RLVR)
 ```
 
-> **Status: pre-release scaffold.** This tree is staged inside the NodeRoom repo and will be
-> split out to a standalone public repo once two honesty debts are settled
-> (see `../docs/noderl/HONESTY_DEBTS_BEFORE_PUBLISH.md`). Nothing here asserts a benchmark
-> number it cannot back.
+NodeRL is the **environment + reward + memory + dataset-exporter** layer, not a model. It works
+around whatever agent host you already use — Codex, Claude Code, Windsurf, Devin, or your own.
 
----
+## Quickstart
 
-## What's real today (honest)
+Needs **Node 22.18 or newer** and nothing else. No API key, no database, no build step.
 
-- **NodeTrace** — a framework-free trajectory recorder: browser + PDF actions, per-step
-  screenshots, normalized bounding boxes, extracted-field evidence, honest error status.
-  ~80% extracted from a production capture pipeline; the `(s,a,o,r)` trajectory exporter (per-step
-  reward/cost → JSONL) now ships via the `./trajectory` subpath.
-- **NodeMem** — deterministic memory: rule-based `compileEpisode` + multi-factor ranked
-  retrieval (`rankFacts`/`planRetrieval`). Pure functions, no DB lock-in.
-- **NodeEval** — the `walkthrough-review` CLI + MCP server (capture → render → media judge →
-  UX judge → report) and a reusable **proof-receipt contract**.
+```bash
+git clone https://github.com/HomenShum/NodeRL.git
+cd NodeRL
+npm install     # ~19 packages, all dev-only for the default path
+npm test        # 12 test files
+npm run demo    # one real failed run, end to end
+```
 
-## What's coming
+`npm run demo` replays a captured agent run that got a bank reconciliation *numerically right and
+methodologically wrong*, and prints the two things NodeRL produces from it:
 
-- Durable Convex recording of trajectory streams (the `(s,a,o,r)` exporter ships today — see above; persisting the stream to the ledger is next).
-- Failure-pattern replay store (the type exists; persistence is net-new).
-- A re-run NodeMem recall benchmark with per-variant isolation.
+1. a **repair prompt** naming each failed assertion with its observed text — ground truth, not a guess,
+2. a **regression case** as JSON, so that failure cannot silently come back.
+
+Node runs the TypeScript directly (type stripping), so there is no compile step. `npm run typecheck`
+runs `tsc` as a checker only.
+
+**New here? Read [`docs/START_HERE.md`](docs/START_HERE.md)** — it walks the demo through the code in
+the order it actually executes.
+
+## The three packages
+
+| Package | What it is | Depends on |
+|---|---|---|
+| [`packages/nodetrace`](packages/nodetrace) | Record a run, join its slices, score it, repair it, export it | nothing for the loop half; an LLM + remote browser for live capture |
+| [`packages/nodeeval`](packages/nodeeval) | Deterministic accounting oracles + suite-level proof gates | nothing |
+| [`packages/nodemem`](packages/nodemem) | Classify / compile / retrieve memory + a failure store | nothing |
+
+Import each from its package root: `import { mergeTrajectory } from "@noderl/nodetrace";`
+
+## The one rule everything here follows
+
+**Never report a score you did not earn.** It shows up as three concrete behaviours, each enforced
+in code rather than asked for in a comment:
+
+- A reward component with no signal in the trace is `0` **and** labelled `unscored:<name>` — never a
+  hardcoded floor.
+- A failed UI assertion or a `needs_review` citation is carried through verbatim. Nothing promotes
+  it. The failure is the signal.
+- Screenshots are stored as paths. Passing raw bytes throws rather than silently inlining them.
+
+Read [`spec/anti-cheat-doctrine.md`](spec/anti-cheat-doctrine.md) and
+[`spec/prove-before-claim.md`](spec/prove-before-claim.md) for why each exists.
 
 ## The proof story (honest scope)
 
-**All 100 BankerToolBench tasks executed and officially scored (Gandalf), clean generic-only —
-no answer-key writers — at mean reward 0.2519.** That is full-suite *completion + scoring*, not a
-100% pass rate, and we say exactly that: the proof registry keeps "100% rubric pass rate" under `doesNotProve`. **All 100 tasks are ALSO proven through the live
-product UI** (FR-020C: fresh room → upload → public @nodeagent → export → reopen → package
-verifier → visual judge), with file-backed per-task receipts strictly validated. Both flips are
-gate-driven, not hand-asserted (`bankertoolbench-fullsuite-gate.ts`,
-`bankertoolbench-livesuite-gate.ts`), and the proof registry derives them from committed verdicts.
-The
-reusable artifacts are the **proof-receipt contract** (`spec/proof-receipt-contract.md`) and the
-**anti-cheat doctrine** (`spec/anti-cheat-doctrine.md`).
+All 100 BankerToolBench tasks were executed and officially scored (Gandalf), clean generic-only with
+no answer-key writers, at **mean reward 0.2519**. That is full-suite *completion and scoring*, not a
+100% pass rate, and the proof registry deliberately keeps "100% rubric pass rate" under
+`doesNotProve`. All 100 are also proven through the live product UI (fresh room → upload → public
+agent → export → reopen → package verifier → visual judge), with file-backed per-task receipts.
 
-Storyboard first: public NodeRL demos should follow
-[`docs/FEATURE_PROOF_STORYBOARD.md`](docs/FEATURE_PROOF_STORYBOARD.md). The
-storyboard requires one complete episode from goal to trace to reward to memory
-to repair to export, with NodeGraph relationships and NodeTasks task ids kept
-explicit.
+Both flips are gate-driven rather than hand-asserted — the gates are
+[`packages/nodeeval/src/bankerToolBenchFullSuiteGate.ts`](packages/nodeeval/src/bankerToolBenchFullSuiteGate.ts)
+and
+[`packages/nodeeval/src/bankerToolBenchLiveSuiteGate.ts`](packages/nodeeval/src/bankerToolBenchLiveSuiteGate.ts).
+The runs those gates scored happened in the NodeRoom application; this repository ships the gate
+logic and the contracts, not the receipt files.
 
-## Packages
+## Documentation
 
-| Package | What it is | Maturity |
-|---|---|---|
-| [`packages/nodetrace`](packages/nodetrace) | Trajectory / evidence recorder + `(s,a,o,r)` exporter | core extracted; exporter shipped (tsc-clean + 5-scenario test) |
-| [`packages/nodemem`](packages/nodemem) | Replay / context memory | core pure, +failure-store pending |
-| [`packages/nodeeval`](packages/nodeeval) | Reward builder + visual/video judges + proof schema | walkthrough CLI standalone; judge contract pending |
-
-> Each package's `src/` is **generated** from the canonical NodeRoom source (never hand-forked) via
-> `MANIFEST.json` + `scripts/extract-from-noderoom.mjs`. See [EXTRACTION.md](EXTRACTION.md). Verified
-> 2026-06-28: `node scripts/extract-from-noderoom.mjs --dry-run` → 18/18 files resolve.
+- [`docs/START_HERE.md`](docs/START_HERE.md) — the demo, traced through the code in runtime order
+- [`docs/codebase/`](docs/codebase) — stack, structure, architecture, conventions, integrations, testing, concerns
+- [`docs/SIMPLIFICATION_REPORT.md`](docs/SIMPLIFICATION_REPORT.md) — what was removed and the commands that prove it
+- [`.tours/`](.tours) — CodeTour walkthroughs (VS Code extension `vsls-contrib.codetour`)
 
 ## Spec
 
-- [`spec/trajectory-schema.md`](spec/trajectory-schema.md)
-- [`spec/reward-design.md`](spec/reward-design.md)
-- [`spec/proof-receipt-contract.md`](spec/proof-receipt-contract.md)
-- [`spec/anti-cheat-doctrine.md`](spec/anti-cheat-doctrine.md)
-- [`spec/manifest-lint.md`](spec/manifest-lint.md) — author-time lint for NODE-LOOPS.md (patterns foraged from looper, MIT)
-- [`spec/prove-before-claim.md`](spec/prove-before-claim.md) — the agent-side honesty gate: documented failure signals (proxy-vs-ground-truth) + the PROVE-BEFORE-CLAIM gate the loop enforces
-- [`.claude/skills/proof-looping/SKILL.md`](.claude/skills/proof-looping/SKILL.md) — the portable proof-looping skill (8-phase handoff; drop into any repo)
+- [`spec/trajectory-schema.md`](spec/trajectory-schema.md) · [`spec/reward-design.md`](spec/reward-design.md)
+- [`spec/proof-receipt-contract.md`](spec/proof-receipt-contract.md) · [`spec/anti-cheat-doctrine.md`](spec/anti-cheat-doctrine.md)
+- [`spec/prove-before-claim.md`](spec/prove-before-claim.md) — the agent-side honesty gate
+- [`spec/node-loops.md`](spec/node-loops.md) + [`NODE-LOOPS.md`](NODE-LOOPS.md) — this repo's self-improving loop manifest
+- [`spec/manifest-lint.md`](spec/manifest-lint.md) — author-time lint for `NODE-LOOPS.md`
 - [`docs/thesis.md`](docs/thesis.md) · [`docs/literature-review.md`](docs/literature-review.md) · [`docs/exists-vs-net-new.md`](docs/exists-vs-net-new.md) · [`docs/looper-foraging.md`](docs/looper-foraging.md)
-- Experiments: [`experiments/NodeRL-BTB-ToolPolicy-v0.md`](experiments/NodeRL-BTB-ToolPolicy-v0.md) — the narrow first run (inputs, action space, reward, baseline-vs-nudge harness) · [`experiments/Substrate-Ablation-v0.md`](experiments/Substrate-Ablation-v0.md) — the 3-arm within-repo test of whether NODE-LOOPS.md + memory/graph/OKF substrates actually help an agent self-improve
-- Loop manifest: [`NODE-LOOPS.md`](NODE-LOOPS.md) — this repo's self-improving loop (spec: [`spec/node-loops.md`](spec/node-loops.md)). Companion to CLAUDE.md; one per agent-loop repo, grounded in that repo's real context.
+- Experiments: [`experiments/NodeRL-BTB-ToolPolicy-v0.md`](experiments/NodeRL-BTB-ToolPolicy-v0.md) · [`experiments/Substrate-Ablation-v0.md`](experiments/Substrate-Ablation-v0.md)
 
 ## Related
 
-- **Solo Founder Agent Builder** (`github.com/HomenShum/solo-founder-nodes`) — the curriculum +
-  repair loop that *generates* the trajectories NodeRL records, scores, and trains on.
-- **looper** (`github.com/ksimback/looper`, MIT, Kevin Simback) — a complementary loop-**design**
-  coach. looper DESIGNS the loop; NODE-LOOPS.md DECLARES it; NodeRL RUNS/RECORDS/REWARDS it. Patterns
-  foraged into our stack (with attribution) are catalogued in [`docs/looper-foraging.md`](docs/looper-foraging.md).
+- **Solo Founder Agent Builder** (`github.com/HomenShum/solo-founder-nodes`) — the curriculum + repair
+  loop that *generates* the trajectories NodeRL records, scores, and trains on.
+- **looper** (`github.com/ksimback/looper`, MIT, Kevin Simback) — a complementary loop-*design* coach.
+  looper designs the loop; `NODE-LOOPS.md` declares it; NodeRL runs, records and rewards it. Patterns
+  foraged into this stack are catalogued with attribution in
+  [`docs/looper-foraging.md`](docs/looper-foraging.md).
 
 ## License
 
-MIT © 2026 Homen Shum. **Bring your own API keys** — this library bundles no secrets
-(see `SECURITY.md`).
+MIT © 2026 Homen Shum. **Bring your own API keys** — this library bundles no secrets. See
+[`SECURITY.md`](SECURITY.md).

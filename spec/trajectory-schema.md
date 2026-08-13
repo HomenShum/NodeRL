@@ -62,9 +62,8 @@ interface NodeTraceStep extends CaptureStep {
 ## Export
 
 The exporter lives in [`packages/nodetrace/src/trajectory.ts`](../packages/nodetrace/src/trajectory.ts)
-(net-new, hand-maintained — **not** in `MANIFEST.json` and **not** wired through the generated
-`index.ts`, so a re-extract can't clobber it; exposed via the package `"./trajectory"` subpath). Three
-pure functions:
+and is re-exported from the package root, so `import { toTrajectory } from "@noderl/nodetrace"`
+works. Three pure functions:
 
 - `toTrajectory(capture, meta)` — maps a `CaptureResult` → `NodeTrajectory`: sequential `stepIndex`,
   deterministic ids, per-step process reward + cost, and (HONEST_STATUS) a failure trajectory with

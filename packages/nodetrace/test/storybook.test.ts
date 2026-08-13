@@ -17,15 +17,15 @@
  * (No test framework — plain node:assert so it runs anywhere tsx/node can.)
  */
 import assert from "node:assert/strict";
-import { mergeTrajectory, type NodeMergedTrajectory, type OuterTraceInput } from "../src/merged";
-import { renderStorybook } from "../src/storybook";
+import { mergeTrajectory, type NodeMergedTrajectory, type OuterTraceInput } from "../src/merged.ts";
+import { renderStorybook } from "../src/storybook.ts";
 import {
   accountingInner,
   accountingOuter,
   accountingArtifacts,
   accountingEvidence,
   accountingMeta,
-} from "./merged.fixture";
+} from "./merged.fixture.ts";
 
 let passed = 0;
 let failed = 0;

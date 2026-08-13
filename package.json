@@ -1,17 +1,20 @@
 {
   "name": "noderl",
   "version": "0.1.0",
-  "description": "Agentic-RL substrate: trace -> reward -> memory -> repair. Curated extraction from NodeRoom.",
+  "description": "Agentic-RL substrate: trace -> reward -> memory -> repair.",
   "license": "MIT",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "extract": "node scripts/extract-from-noderoom.mjs --src ..",
-    "extract:check": "node scripts/extract-from-noderoom.mjs --dry-run",
-    "typecheck": "tsc -p tsconfig.packages.json"
+    "test": "node --test \"test/*.test.ts\" \"packages/*/test/*.test.ts\"",
+    "typecheck": "tsc -p tsconfig.packages.json",
+    "demo": "node experiments/fr-a1-runs/fr-a1-live-run-001-build.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.1.1",

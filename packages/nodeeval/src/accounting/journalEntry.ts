@@ -22,10 +22,10 @@
 //   check uses the same half-cent tolerance for its zero-floor so that a value
 //   like -0.0000001 (float noise) is not spuriously flagged, while -0.01 is.
 
-import { type OracleCheck, summarize, type VerifierResult } from "./oracleTypes";
+import { type OracleCheck, summarize, type VerifierResult } from "./oracleTypes.ts";
 
 /** Half a cent. Any float delta at or below this is treated as an exact tie. */
-export const CENTS_TOLERANCE = 0.005;
+const CENTS_TOLERANCE = 0.005;
 
 /** One line of a journal entry: a debit and/or credit against an account. */
 export interface JournalLine {

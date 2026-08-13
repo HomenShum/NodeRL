@@ -1,5 +1,5 @@
 {
-  "//": "Standalone typecheck for the generated NodeRL packages. Resolves npm deps from the parent node_modules (noderl/ lives inside noderoom during extraction). Run: npx tsc -p noderl/tsconfig.packages.json",
+  "//": "Typechecks every TypeScript file in the repo — package sources AND their tests. Nothing is emitted: Node runs the .ts files directly (type stripping), so tsc is a checker, not a build step. Run: npm run typecheck",
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
@@ -8,9 +8,12 @@
     "types": ["node"],
     "strict": true,
     "noEmit": true,
+    // Imports carry explicit .ts extensions so plain `node` resolves them with no
+    // bundler and no loader. tsc needs this flag to accept those specifiers.
+    "allowImportingTsExtensions": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["packages/*/src/**/*.ts"]
+  "include": ["packages/*/src/**/*.ts", "packages/*/test/**/*.ts", "test/**/*.ts"]
 }

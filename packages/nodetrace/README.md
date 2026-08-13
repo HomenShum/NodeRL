@@ -1,49 +1,70 @@
 # @noderl/nodetrace
 
-Framework-free **trajectory / evidence recorder** for agent runs: browser + PDF actions,
-per-step screenshots, normalized bounding boxes, extracted-field evidence, honest error status.
+Record what an agent run did, score it honestly, and turn a failure into the next attempt.
 
-## Status
+Import everything from the package root:
 
-Core ~80% extracted from a production capture pipeline. Injectable reasoner + substrate, no DB
-lock-in. RL export fields are the net-new work.
+```ts
+import { mergeTrajectory, computeMergedReward, generateRepairPrompt } from "@noderl/nodetrace";
+```
 
-## Extraction manifest (from the NodeRoom repo)
+## Two halves
 
-| Source file | Role |
+The package contains two things that are useful separately. Know which one you are in.
+
+### 1. The loop — pure, no dependencies, no network
+
+This is what the tests cover and what `npm run demo` runs.
+
+| Module | What it does |
 |---|---|
-| `src/nodeagent/capture/types.ts` | core type contracts (`CaptureStep`, `CaptureResult`, `NormBox`, `ActStep`) |
-| `src/nodeagent/capture/pipeline.ts` | `runCapture()` observe→act→extract loop |
-| `src/nodeagent/capture/reasoning.ts` | `aiSdkReasoner()` (Vercel AI SDK, provider-agnostic) |
-| `src/nodeagent/capture/guards.ts` | URL validation + repr clipping (SSRF posture) |
-| `src/nodeagent/capture/pdfBox.ts` | pure box math (normalize, rotate, CropBox→NormBox) |
-| `src/nodeagent/capture/substrate/{index,firecrawl,browserbase}.ts` | swappable capture substrates |
-| `src/nodeagent/capture/secFacts.ts` | optional fallback data lane |
+| `src/merged.ts` | `mergeTrajectory(...)` joins one run's four slices — browser proof, agent reasoning steps, artifacts produced, evidence grounded — into one `NodeMergedTrajectory`. Never invents a score. |
+| `src/mergedReward.ts` | `computeMergedReward(t)` derives the reward components readable off the trace, and labels the rest `unscored:<name>` rather than guessing. |
+| `src/repair.ts` | `generateRepairPrompt(t)` and `toRegressionCase(t)` turn a failed run into a coding-agent prompt and a promotable regression case. |
+| `src/storybook.ts` | `renderStorybook(t)` renders one trajectory as a single self-contained HTML page — no server, no build, no network. |
+| `src/trajectory.ts` | `toTrajectory(capture, meta)` and `toJSONL(...)` export `(state, action, observation, reward)` rows for SFT / DPO / RLVR pipelines. |
 
-**Leave behind:** `convex/captures*.ts`, `src/ui/traceLens/*`, the AgentTool wrapper.
+Every function is deterministic: no `Date.now`, no `Math.random`, no `new Date`. The same input
+produces a byte-identical output, which is what makes a trajectory replayable.
 
-## Net-new (the RL export target)
+### 2. Live capture — needs an LLM key and a remote browser
 
-- per-step `reward { process, reason }`
-- per-step `cost { tokensIn, tokensOut, latencyMs, usd }`
-- `episodeId` + `stepIndex`, `truncated` / `resumeFrom`
-- **JSONL export** of `NodeTrajectory[]` (see `../../spec/trajectory-schema.md`)
+`runCapture` drives a real page in an observe -> act -> extract loop and records every step with a
+screenshot and the bounding box of the element it acted on.
 
-## Strip before publish
-
-- Default SEC user-agent email in `secFacts.ts` → placeholder.
-- Document BYO keys; never bundle secrets (`../../SECURITY.md`).
-
-## Sketch
+| Module | What it does |
+|---|---|
+| `src/pipeline.ts` | `runCapture(opts)` — the loop. Bounded on steps and on one wall-clock budget. |
+| `src/reasoning.ts` | `aiSdkReasoner(modelId)` — the default model seam, provider-agnostic via the Vercel AI SDK. |
+| `src/substrate/` | `pickSubstrate(env)` — Browserbase when its keys are set, else Firecrawl, else `null`. |
+| `src/guards.ts` | URL validation (rejects private and internal addresses) and input clipping. |
+| `src/types.ts` | The shared contracts both seams are written against. |
 
 ```ts
 import { runCapture, aiSdkReasoner, pickSubstrate } from "@noderl/nodetrace";
 
-const trajectory = await runCapture({
+const substrate = pickSubstrate();          // null when no substrate keys are set
+if (!substrate) throw new Error("set BROWSERBASE_* or FIRECRAWL_API_KEY");
+
+const result = await runCapture({
   goal: "extract the revenue table",
-  url: "https://example.com/10-k.pdf",
-  reasoner: aiSdkReasoner({ model: yourModel }),  // injected
-  substrate: pickSubstrate(),                       // firecrawl | browserbase
+  url: "https://example.com/annual-report",
+  reasoner: aiSdkReasoner("claude-haiku-4-5"),  // model id, not an object
+  substrate,
 });
-// trajectory.steps[]: action + screenshot + box + status (+ reward/cost once added)
+// result.ok === false carries the error and the steps captured so far — never a fake success.
 ```
+
+Failure is a first-class result, not an exception: `runCapture` returns `{ ok: false, error, steps }`
+so a failed run is still a recorded run.
+
+## Dependencies
+
+The loop half has none. The live-capture half needs `ai`, `@ai-sdk/anthropic`, `@ai-sdk/openai` and
+`zod`, plus `playwright-core` (optional) for the Browserbase substrate. Bring your own API keys —
+this package bundles no secrets. See [`../../SECURITY.md`](../../SECURITY.md).
+
+## Provenance
+
+These sources began life inside the NodeRoom application and were vendored here when NodeRL was
+split out. This repository is now the canonical copy: edit it directly.

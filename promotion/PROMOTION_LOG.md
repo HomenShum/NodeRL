@@ -85,3 +85,39 @@ reproduction; a hunch is not a defect.
 ## Iterations
 
 _none yet — Wave 1 is baseline only. No defect above was fixed, by design._
+
+### Iteration 1 — 2026-08-13 (Wave 3, human-readiness)
+
+The Wave 1 baseline above was marked PROVISIONAL pending a merge-or-retire decision on
+NodeRL. That flag is **lifted**: the repo is in scope and was worked as a standalone
+public repository.
+
+- **Journey exercised:** J1 (quickstart), J2/J3/J4 (the three drivable journeys), J5
+  (extraction refresh — retired, see below).
+- **Observed:** the root cause under D1/D3/D4/D6 was one thing, not four. `packages/*/src`
+  was generated from the private NodeRoom repo by `scripts/extract-from-noderoom.mjs`, a
+  generator that cannot run in a standalone clone. Its existence also forced
+  `merged.ts` and `trajectory.ts` to stay *out* of `index.ts` ("would clobber any edit"),
+  which is why `npx knip` reported **32 unused files** and `Package entry file not found`
+  for two of three packages.
+- **Fixed:**
+  - deleted `scripts/extract-from-noderoom.mjs`, `MANIFEST.json`, `EXTRACTION.md`, and the
+    `extract` / `extract:check` scripts (D1, D6; J5 retires with them);
+  - wrote real entry points — `packages/{nodetrace,nodeeval,nodemem}/src/index.ts`;
+  - replaced the undeclared `tsx` requirement with Node's built-in type stripping and
+    `node --test`, adding explicit `.ts` extensions to relative imports (D3, D4);
+  - rewrote `README.md` with a quickstart, and the three package READMEs, which described
+    files and a CLI that are not in this tree (D2, D7);
+  - deleted `packages/nodetrace/src/{pdfBox,secFacts}.ts` — zero importers, zero tests,
+    NodeRoom-only.
+- **Re-proved:** `npm test` → 14 files, 14 pass. `npm run typecheck` → clean, now covering
+  tests as well as sources. `npm run demo` → exit 0 under plain `node`. `npx knip` → no
+  output at all (32 unused files → 0; 16 unused exports → 0).
+- **Tests:** `npm test` (14/14). Three added: `test/entrypoints.test.ts`,
+  `test/tours.test.ts`, `packages/nodetrace/test/guards.test.ts`. No existing test was
+  weakened, skipped or deleted.
+- **Conditions newly PASS:** D1, D2, D3, D4, D6, D7 closed. **D5 remains open** —
+  `examples/btb-one-task-proven/` still describes five artifacts that do not exist, and
+  populating it is a content decision, not a refactor.
+- **Full evidence:** [`../docs/SIMPLIFICATION_REPORT.md`](../docs/SIMPLIFICATION_REPORT.md).
+  Remaining gaps, ranked: [`../docs/codebase/CONCERNS.md`](../docs/codebase/CONCERNS.md).

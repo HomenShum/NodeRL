@@ -1,41 +1,63 @@
 # @noderl/nodeeval
 
-The **reward builder + judge layer**: turn a finished run into rewards from tests, scorers,
-visual/video judges, citation verification, export-reopen, and cost/latency.
+Decide whether a run actually earned the claim it is making. Two kinds of check live here, and both
+are pure functions — no file IO, no network, no clock, no randomness.
 
-## Status
+```ts
+import { verifyTrialBalance, evaluateFullSuiteGate } from "@noderl/nodeeval";
+```
 
-Anchored on a component that is **already standalone**: the `walkthrough-review` CLI + MCP server.
-The judges and scorers are runnable; the net-new work is a generic judge-fn contract and a
-`proof-schema` package.
+## 1. Accounting oracles — was this worked answer right?
 
-## What it bundles
+A grader needs to tell a correct reconciliation from a plausible-looking wrong one without a human
+and without an answer key. Each oracle takes a worked answer and returns pass/fail plus the *named*
+check that failed, so "wrong" is always attributable.
 
-| Piece | Source (exists today) | Maturity |
+| Module | Function | Named checks it can fail |
 |---|---|---|
-| `walkthrough-review` CLI + MCP | `packages/walkthrough-review-cli` (zero deps, `walkthrough_review_run`) | standalone |
-| Gemini media/video judge | `scripts/gemini-demo-media-judge.ts` | runnable |
-| GIF judge (frame-level) | `scripts/judge-demo-gif.ts` | runnable |
-| deterministic scorers | `src/eval/*Scorer.ts`, `*Runner.ts` (formula recompute, exact/semantic golden) | runnable |
-| citation verifier | `boundary_box_receipts` locator contract | runnable |
-| proof-receipt schema | `docs/eval/fresh-room/proof-registry.json` → `../../spec/proof-receipt-contract.md` | spec |
-| cost/latency ledger | per-step token + time recording | runnable |
+| `src/accounting/trialBalance.ts` | `verifyTrialBalance` | `input_well_formed`, `debits_equal_credits`, `unknown_account_type`, `net_income_links_to_equity`, `balance_sheet_balances` |
+| `src/accounting/bankReconciliation.ts` | `verifyBankReconciliation` | `ending_cash_tie`, `partition_covers_all_items` |
+| `src/accounting/arApAging.ts` | `verifyAging` | `bucket_partition`, `bucket_sums_total`, `reserve_monotonic` |
+| `src/accounting/journalEntry.ts` | `verifyJournalEntries` | `balances[entry N]`, `accounts_exist[entry N][line M]`, `no_negative[entry N][line M]` — indexed, so the failure points at the offending line |
+| `src/accounting/cashFlowIndirect.ts` | `verifyCashFlowIndirect` | `operating_starts_from_net_income`, `net_change_ties_to_cash_balances` |
 
-**Leave behind:** `btb_noderoom_agent/harbor_adapter.py` (BTB-specific + contaminated), task-family
-materializers, Room/RoomTools backend.
+All five return the shared `VerifierResult` from `src/accounting/oracleTypes.ts`:
+an overall `passed` plus the list of named `checks` behind it.
 
-## The judge is pluggable
+**The bar these are written to:** an oracle that always passes is a bug, so every test asserts
+*both* directions — it must accept a good answer AND reject a bad one *by the right named check*.
+See `test/accounting_*.test.ts`.
 
-`walkthrough-review` orchestrates `capture → render → media judge → UX judge → report` but
-delegates judgment to injected commands. NodeRL formalizes that as a **judge-fn contract** so you
-bring your own vision model.
-
+```ts
+const result = verifyTrialBalance(input);
+if (!result.passed) {
+  const failing = result.checks.filter((c) => !c.passed).map((c) => c.name);
+  // e.g. ["debits_equal_credits"] — which invariant broke, not just "it failed"
+}
 ```
-feature spec → browser capture → render → judge(video|frames) → reward + Markdown/JSON report
-```
 
-## Reward output
+## 2. Proof gates — did the whole suite earn the claim?
 
-Produces a `NodeRewardSummary` (see `../../spec/reward-design.md`) plus a machine-checkable proof
-receipt. Headline rewards are **generic-only**; per-task materializers, if any, are diagnostic and
-labeled — never the reported number.
+One task passing is not a suite passing. A gate aggregates many task results into a single
+blocked -> passed flip, and refuses to flip unless the receipts earn it.
+
+| Module | Function | Question it answers |
+|---|---|---|
+| `src/bankerToolBenchEvalLedger.ts` | `buildBtbLedgerImport` | normalizes a raw benchmark sweep into the ledger shape the gates read |
+| `src/bankerToolBenchFullSuiteGate.ts` | `evaluateFullSuiteGate` | did every task execute clean, and does every clean task carry an official score? |
+| `src/bankerToolBenchLiveSuiteGate.ts` | `evaluateLiveSuiteGate` | does every task have a passing receipt from the live product UI? |
+
+The full-suite gate reports **completion, mean reward and pass-rate separately** on purpose. "100
+tasks executed and scored" is a different claim from "100 tasks passed", and collapsing the two is
+the exact dishonesty these gates exist to prevent. See
+[`../../spec/anti-cheat-doctrine.md`](../../spec/anti-cheat-doctrine.md).
+
+## Known gap
+
+The three gate modules have no tests. The five accounting oracles have thorough two-direction tests;
+the gates do not. See [`../../docs/codebase/CONCERNS.md`](../../docs/codebase/CONCERNS.md).
+
+## Provenance
+
+These sources began life inside the NodeRoom application and were vendored here when NodeRL was
+split out. This repository is now the canonical copy: edit it directly.

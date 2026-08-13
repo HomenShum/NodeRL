@@ -21,10 +21,10 @@
 // (100.00 vs 100.004999…) is treated as equal. daysOverdue is INTEGER arithmetic
 // on day-numbers, so bucket boundaries are exact (no float tolerance there).
 
-import { summarize, type OracleCheck, type VerifierResult } from "./oracleTypes";
+import { summarize, type OracleCheck, type VerifierResult } from "./oracleTypes.ts";
 
 /** Half a cent: money within this delta is considered equal. Documented tie-break. */
-export const CENT_TOLERANCE = 0.005;
+const CENT_TOLERANCE = 0.005;
 
 /** One invoice line in the aging input. `amount` is outstanding balance (money). */
 export interface AgingInvoice {

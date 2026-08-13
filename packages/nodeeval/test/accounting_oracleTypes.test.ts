@@ -4,7 +4,7 @@
 // Hard bar (anti-cheat doctrine): the summarizer MUST accept a GOOD input
 // (passed=true) AND reject a BAD input (passed=false). A summarizer that always
 // passes is a bug — so we assert BOTH directions, plus determinism.
-import { summarize, type OracleCheck } from "./oracleTypes";
+import { summarize, type OracleCheck } from "../src/accounting/oracleTypes.ts";
 
 let failures = 0;
 function assert(cond: boolean, msg: string): void {

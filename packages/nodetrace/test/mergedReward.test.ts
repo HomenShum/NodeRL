@@ -21,15 +21,15 @@
  * (No test framework — plain node:assert so it runs anywhere tsx/node can.)
  */
 import assert from "node:assert/strict";
-import { mergeTrajectory, type NodeMergedTrajectory } from "../src/merged";
-import { computeMergedReward } from "../src/mergedReward";
+import { mergeTrajectory, type NodeMergedTrajectory } from "../src/merged.ts";
+import { computeMergedReward } from "../src/mergedReward.ts";
 import {
   accountingInner,
   accountingOuter,
   accountingArtifacts,
   accountingEvidence,
   accountingMeta,
-} from "./merged.fixture";
+} from "./merged.fixture.ts";
 
 let passed = 0;
 let failed = 0;

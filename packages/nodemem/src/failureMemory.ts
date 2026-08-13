@@ -4,7 +4,7 @@
 // unresolved failures and condition the agent off known-bad paths -- the "memory -> repair" half of
 // the NodeRL loop. Pure + deterministic (the CLI does file IO); no Convex dependency, so it works in
 // the portable NodeRL extraction as well as in NodeRoom.
-import type { NodeMemFailurePattern } from "./core/types";
+import type { NodeMemFailurePattern } from "./core/types.ts";
 
 export interface TaskFailure {
   taskId: string;

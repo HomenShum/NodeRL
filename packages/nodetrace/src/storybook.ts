@@ -32,14 +32,14 @@ import type {
   MergedEvidence,
   MergedReward,
   UiAssertion,
-} from "./merged";
+} from "./merged.ts";
 
 /* ------------------------------------------------------------------------------------------------ *
  * Primitives: escaping + a NO-LEAK guard reused from the merge doctrine.                            *
  * ------------------------------------------------------------------------------------------------ */
 
 /** HTML-escape a value for safe text/attribute interpolation. Deterministic, total (coerces to string). */
-export function esc(value: unknown): string {
+function esc(value: unknown): string {
   return String(value)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -74,7 +74,7 @@ function usd(n: number): string {
  * ------------------------------------------------------------------------------------------------ */
 
 /** Room header: the user goal + the live room URL the outer proof drove. */
-export function RoomHeaderAtom(goal: string, url: string): string {
+function RoomHeaderAtom(goal: string, url: string): string {
   return (
     `<header class="nt-room-header" data-atom="room-header">` +
     `<div class="nt-room-kicker">NodeRoom run</div>` +
@@ -85,7 +85,7 @@ export function RoomHeaderAtom(goal: string, url: string): string {
 }
 
 /** One agent chat/reasoning message (an inner-trace step). Cost/latency shown only when present. */
-export function ChatMessageAtom(step: MergedStep): string {
+function ChatMessageAtom(step: MergedStep): string {
   const meta: string[] = [`step ${esc(step.stepIndex)}`, esc(step.phase)];
   if (step.toolName) meta.push(`tool: ${esc(step.toolName)}`);
   if (typeof step.costUsd === "number" && Number.isFinite(step.costUsd)) meta.push(esc(usd(step.costUsd)));
@@ -107,7 +107,7 @@ export function ChatMessageAtom(step: MergedStep): string {
 }
 
 /** An artifact tab: the deliverable's id/kind + its honest reopen proof + export path (text only). */
-export function ArtifactTabAtom(artifact: MergedArtifact): string {
+function ArtifactTabAtom(artifact: MergedArtifact): string {
   const reopen =
     artifact.reopenPassed === undefined
       ? `<span class="nt-reopen nt-reopen-unknown">reopen: n/a</span>`
@@ -132,7 +132,7 @@ export function ArtifactTabAtom(artifact: MergedArtifact): string {
  * An evidence card: claim -> quote -> source, with an explicit NEEDS REVIEW flag when the fact is not
  * source-backed. The status is rendered verbatim; needs_review is never hidden or promoted (HONEST_STATUS).
  */
-export function EvidenceCardAtom(evidence: MergedEvidence): string {
+function EvidenceCardAtom(evidence: MergedEvidence): string {
   const needsReview = evidence.status === "needs_review";
   const flag = needsReview
     ? `<span class="nt-evidence-flag nt-needs-review" data-testid="needs-review">NEEDS REVIEW</span>`
@@ -155,7 +155,7 @@ export function EvidenceCardAtom(evidence: MergedEvidence): string {
 }
 
 /** Cost badge: sums the per-step costUsd off the inner trace. Derived from the trace only (HONEST_SCORES). */
-export function CostBadgeAtom(steps: MergedStep[]): string {
+function CostBadgeAtom(steps: MergedStep[]): string {
   let sum = 0;
   for (const s of steps) {
     if (typeof s.costUsd === "number" && Number.isFinite(s.costUsd)) sum += s.costUsd;
@@ -176,7 +176,7 @@ export function CostBadgeAtom(steps: MergedStep[]): string {
  *    (and at least one assertion exists); FAIL if any failed; UNVERIFIED if there are no assertions.
  * No fabricated score: when a reward exists we show its total; when it doesn't we show no number at all.
  */
-export function VerdictBadgeAtom(reward: MergedReward | undefined, uiAssertions: UiAssertion[]): string {
+function VerdictBadgeAtom(reward: MergedReward | undefined, uiAssertions: UiAssertion[]): string {
   const anyAssertionFailed = uiAssertions.some((a) => a.passed === false);
   const hasAssertions = uiAssertions.length > 0;
 
@@ -204,7 +204,7 @@ export function VerdictBadgeAtom(reward: MergedReward | undefined, uiAssertions:
  * Focus box: a single outer screenshot rendered as its PATH (never an inlined image). The label + the
  * visible component ids (the attention-overlay layer) are shown as text. NO-LEAK is enforced here too.
  */
-export function FocusBoxAtom(shot: OuterScreenshot): string {
+function FocusBoxAtom(shot: OuterScreenshot): string {
   assertScreenshotPathNotBytes(shot.path, `screenshot[${shot.label}].path`);
   const components = (shot.visibleComponentIds ?? [])
     .map((id) => `<code class="nt-focus-component">${esc(id)}</code>`)

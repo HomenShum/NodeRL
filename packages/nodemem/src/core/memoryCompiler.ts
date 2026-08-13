@@ -7,15 +7,15 @@
  * This is the "extraction pipeline" step: raw episode → candidate memories.
  */
 
-import { classifyNoteworthy, normalizeEntityKey } from "./classifier";
-import type { NoteworthyFinding } from "./classifier";
+import { classifyNoteworthy, normalizeEntityKey } from "./classifier.ts";
+import type { NoteworthyFinding } from "./classifier.ts";
 import type {
   NodeMemEpisode,
   NodeMemEntity,
   NodeMemFact,
   EntityKind,
   FactStatus,
-} from "./types";
+} from "./types.ts";
 
 export interface CompiledMemories {
   entities: NodeMemEntity[];

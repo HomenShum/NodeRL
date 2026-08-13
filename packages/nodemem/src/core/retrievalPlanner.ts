@@ -8,7 +8,7 @@ import type {
   RetrieverKind,
   NodeMemFact,
   Visibility,
-} from "./types";
+} from "./types.ts";
 
 export interface RetrievalRequest {
   goal: string;

@@ -14,7 +14,7 @@
  * (No test framework — plain node:assert so it runs anywhere tsx/node can.)
  */
 import assert from "node:assert/strict";
-import type { CaptureResult } from "../src/types";
+import type { CaptureResult } from "../src/types.ts";
 import {
   toTrajectory,
   toJSONL,
@@ -23,7 +23,7 @@ import {
   type NodeTrajectory,
   type ToTrajectoryMeta,
   type TraceAction,
-} from "../src/trajectory";
+} from "../src/trajectory.ts";
 
 let passed = 0;
 let failed = 0;

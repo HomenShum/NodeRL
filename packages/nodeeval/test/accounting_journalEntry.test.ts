@@ -10,7 +10,7 @@
 // that the SPECIFIC failing check is named, and that the verifier is deterministic
 // (same input => byte-identical result).
 import assert from "node:assert/strict";
-import { verifyJournalEntries, type JournalEntriesInput } from "../src/accounting/journalEntry";
+import { verifyJournalEntries, type JournalEntriesInput } from "../src/accounting/journalEntry.ts";
 
 // -----------------------------------------------------------------------------
 // GOOD fixture: a real double-entry set. Every entry balances, every account is

@@ -4,15 +4,15 @@
  * regression case captures the real failure, and both are deterministic. Run: tsx test/repair.test.ts
  */
 import assert from "node:assert/strict";
-import { mergeTrajectory } from "../src/merged";
-import { generateRepairPrompt, toRegressionCase } from "../src/repair";
+import { mergeTrajectory } from "../src/merged.ts";
+import { generateRepairPrompt, toRegressionCase } from "../src/repair.ts";
 import {
   accountingOuter,
   accountingInner,
   accountingArtifacts,
   accountingEvidence,
   accountingMeta,
-} from "./merged.fixture";
+} from "./merged.fixture.ts";
 
 let pass = 0, fail = 0;
 function scenario(name: string, fn: () => void) {

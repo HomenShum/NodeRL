@@ -21,7 +21,7 @@ import type {
   MergedArtifact,
   MergedEvidence,
   MergeMeta,
-} from "../src/merged";
+} from "../src/merged.ts";
 
 /** The OUTER UI proof: room URL, 3 screenshots (before/during/after), 3 UI assertions (one failing). */
 export const accountingOuter: OuterTraceInput = {

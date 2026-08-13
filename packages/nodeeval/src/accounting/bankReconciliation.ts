@@ -15,10 +15,10 @@
 //   vs 100.004999…) without masking a real 1-cent discrepancy (a full 0.01 delta
 //   fails the tie). The tolerance lives here because it is a property of the
 //   money domain, not of the summarizer.
-import { type OracleCheck, type VerifierResult, summarize } from "./oracleTypes";
+import { type OracleCheck, type VerifierResult, summarize } from "./oracleTypes.ts";
 
 /** Half a cent: the documented monetary tie tolerance (see file header). */
-export const CENT_TOLERANCE = 0.005;
+const CENT_TOLERANCE = 0.005;
 
 /** True iff `a` and `b` are equal within the documented half-cent tolerance. */
 function equalToTheCent(a: number, b: number): boolean {
@@ -33,13 +33,13 @@ function money(n: number): string {
 }
 
 /** One line of a proposed journal entry. Absent side defaults to 0. */
-export interface JournalLine {
+interface JournalLine {
   debit?: number;
   credit?: number;
 }
 
 /** A proposed journal entry: a set of debit/credit lines that must balance. */
-export interface JournalEntry {
+interface JournalEntry {
   lines: JournalLine[];
 }
 

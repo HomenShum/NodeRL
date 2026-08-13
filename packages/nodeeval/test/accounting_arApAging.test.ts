@@ -6,7 +6,7 @@
 // broken invariant. A verifier that always passes is a bug — assert BOTH
 // directions, plus determinism (same input => byte-identical result).
 import assert from "node:assert/strict";
-import { verifyAging, dayNumber, type AgingInput } from "../src/accounting/arApAging";
+import { verifyAging, dayNumber, type AgingInput } from "../src/accounting/arApAging.ts";
 
 // -----------------------------------------------------------------------------
 // Fixture: asOf 2026-07-01. Four invoices, one per bucket, hand-computed ages.
@@ -68,16 +68,12 @@ const sumsCheck = badSumsResult.checks.find((c) => c.name === "bucket_sums_total
 assert.ok(sumsCheck, "the failing check named bucket_sums_total exists");
 assert.equal(sumsCheck.passed, false, "bucket_sums_total is the failing check");
 // The OTHER invariants must still hold — proves the failure is specific, not blanket.
-assert.equal(
-  badSumsResult.checks.find((c) => c.name === "bucket_partition").passed,
-  true,
-  "BAD sums: partition still passes (failure is isolated to sums)",
-);
-assert.equal(
-  badSumsResult.checks.find((c) => c.name === "reserve_monotonic").passed,
-  true,
-  "BAD sums: monotonicity still passes (failure is isolated to sums)",
-);
+const partitionCheck = badSumsResult.checks.find((c) => c.name === "bucket_partition");
+assert.ok(partitionCheck, "the bucket_partition check exists");
+assert.equal(partitionCheck.passed, true, "BAD sums: partition still passes (failure is isolated to sums)");
+const monotonicCheck = badSumsResult.checks.find((c) => c.name === "reserve_monotonic");
+assert.ok(monotonicCheck, "the reserve_monotonic check exists");
+assert.equal(monotonicCheck.passed, true, "BAD sums: monotonicity still passes (failure is isolated to sums)");
 
 // === BAD #2: reserve_monotonic broken (older bucket reserves LESS) ===
 // 90+ reserveRate drops to 0.10 (< 61-90's 0.50): older money reserved cheaper.

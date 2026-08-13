@@ -1,0 +1,72 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "3. Debug and recovery — scoring, reporting, remembering",
+  "description": "What happens after a run fails: how it gets scored without inventing numbers, how it gets shown to a person, how the failure is remembered, and which tests would catch each of these breaking.",
+  "steps": [
+    {
+      "file": "packages/nodetrace/src/mergedReward.ts",
+      "line": 138,
+      "description": "**Scoring.** `computeMergedReward` derives the components it can actually read off the trace.\n\nThe rule is a three-way ladder, in strict order: a **supplied** value is carried verbatim; an unsupplied value that is **derivable** from the trace is derived; a component with neither is `0` **and** labelled `unscored:<name>`. There is no floor and no default credit anywhere."
+    },
+    {
+      "file": "packages/nodetrace/src/mergedReward.ts",
+      "line": 121,
+      "description": "**The ladder, written down.** Read the comment block here and then the per-component list below it.\n\nNotice `visualQuality`: there is no signal for it in a trace, so it is never derived — only supplied or unscored. Guessing it would be the easiest possible way to inflate a headline number, which is exactly why it is called out by name."
+    },
+    {
+      "file": "packages/nodetrace/test/mergedReward.test.ts",
+      "line": 131,
+      "description": "**The test that keeps that honest.** A supplied `visualQuality` is carried verbatim *and* carries no `unscored` label; an unsupplied one is `0` *and* labelled.\n\nThis is the assertion that would fail if someone introduced a default score 'so the numbers look complete'."
+    },
+    {
+      "file": "packages/nodetrace/src/storybook.ts",
+      "line": 300,
+      "description": "**Showing it to a person.** One merged trajectory becomes one self-contained HTML file — no server, no build, no network. A reviewer or a judge can be sent the file itself.\n\nIt is composed from small pure atom functions, one per visual card, so each can be tested alone rather than by string-matching a whole page."
+    },
+    {
+      "file": "packages/nodetrace/src/storybook.ts",
+      "line": 42,
+      "description": "**Why `esc` matters more than it looks.** Evidence claims and observed text come from web pages and from model output — neither is trusted input.\n\nRendering them unescaped would let a captured page inject live markup into the report *about* that page. `packages/nodetrace/test/storybook.test.ts:165` asserts a claim containing HTML is escaped rather than injected."
+    },
+    {
+      "file": "packages/nodetrace/test/storybook.test.ts",
+      "line": 107,
+      "description": "**The report cannot flatter the run.** Unsupplied reward components must surface in the rendered HTML as `unscored:<name>`, not as a zero and not as a blank.\n\nThe honesty rule survives all the way to the pixel a human actually reads, which is the only place it finally matters."
+    },
+    {
+      "file": "packages/nodemem/src/failureMemory.ts",
+      "line": 18,
+      "description": "**Remembering.** `classifyRootCause` maps a raw error string to a stable category — `agent_timeout`, `room_not_fresh`, `answer_key_contamination`, and so on.\n\nA stable category is what lets two failures a week apart be recognised as the same failure. Anything unmatched becomes `unclassified`, whose remediation hint literally says to add a rule here — the fallback asks to be improved rather than hiding the gap."
+    },
+    {
+      "file": "packages/nodemem/src/failureMemory.ts",
+      "line": 59,
+      "description": "**Note the `now` parameter.** Nothing in this repository reads the clock.\n\nPassing time in as an argument is what makes this function testable: the same failures plus the same `now` produce byte-identical patterns. The same discipline covers randomness — there is no `Math.random` anywhere in `packages/`."
+    },
+    {
+      "file": "packages/nodemem/src/failureMemory.ts",
+      "line": 81,
+      "description": "**The merge that closes the loop.** Patterns whose tasks now pass are dropped; incoming patterns are upserted by id; still-unresolved prior patterns are kept.\n\nSo the failure store shrinks as things genuinely get fixed, and `repairTargets` below returns exactly which tasks a re-run should attempt. A re-run does not repeat work that is already proven."
+    },
+    {
+      "file": "packages/nodeeval/src/bankerToolBenchFullSuiteGate.ts",
+      "line": 63,
+      "description": "**One task passing is not a suite passing.** This gate flips a claim from blocked to passed only when both sub-gates are earned: every task executed clean, and every clean task carries an official score.\n\nRead the header comment above. It reports completion, mean reward and pass-rate *separately* on purpose — '100 tasks executed and scored' is a different claim from '100 tasks passed', and collapsing the two is the specific dishonesty this file exists to prevent."
+    },
+    {
+      "file": "test/entrypoints.test.ts",
+      "line": 1,
+      "description": "**A defect that really shipped, now guarded.** `@noderl/nodeeval` and `@noderl/nodemem` both declared `\"main\": \"src/index.ts\"` while no such file existed.\n\nNothing failed, because no test ever imported through a package name — the broken door was never opened. A reader following the README would have hit 'module not found' on their first line of code."
+    },
+    {
+      "file": "test/entrypoints.test.ts",
+      "line": 31,
+      "description": "**This list is a contract, not a smoke test.** It names the symbols each package's documentation tells a reader to call.\n\nIf you add a headline capability, add it here. That is what makes this test fail when the public surface and the documentation drift apart — which is how they got out of step in the first place."
+    },
+    {
+      "file": "docs/codebase/CONCERNS.md",
+      "line": 1,
+      "description": "**What is still wrong.** Read this before planning work.\n\nThe honest summary: `nodemem` has no tests at all, the three `nodeeval` gate modules have no tests, and the live-capture half of `nodetrace` has none either. The pure loop that the demo exercises is well covered; the rest is not, and this file says which is which."
+    }
+  ]
+}

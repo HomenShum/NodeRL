@@ -18,10 +18,10 @@
 // TOLERANCE: all money values are treated as dollars-with-cents. Float comparisons
 // use a half-cent tolerance so that e.g. 100.00 and 100.004999… are treated as
 // equal. This is the domain tolerance; the aggregator (summarize) is exact/boolean.
-import { summarize, type OracleCheck, type VerifierResult } from "./oracleTypes";
+import { summarize, type OracleCheck, type VerifierResult } from "./oracleTypes.ts";
 
 /** Half a cent. Two money amounts within this are considered equal to the cent. */
-export const CASH_FLOW_TOLERANCE = 0.005;
+const CASH_FLOW_TOLERANCE = 0.005;
 
 /** A single line in a cash-flow section: a labeled signed dollar amount. */
 export interface CashFlowLine {

@@ -1,45 +1,54 @@
 # @noderl/nodemem
 
-Deterministic **replay / context memory**: rule-based episode compilation + multi-factor ranked
-retrieval. Pure functions — no database lock-in.
+What an agent should remember between runs, and what it should be handed at the start of the next
+one. Pure functions — storage is deliberately the caller's problem, so nothing here reaches for a
+database.
 
-## Status
+```ts
+import { classifyNoteworthy, compileEpisode, planRetrieval, rankFacts } from "@noderl/nodemem";
+```
 
-Core ~70% extracted. The compile + rank logic is pure and portable; the storage layer is left to
-the adopter. Failure-pattern persistence and outcome tagging are the net-new work.
+## Three jobs, plus a failure store
 
-## Extraction manifest (from the NodeRoom repo)
+| Module | Function | What it decides |
+|---|---|---|
+| `src/core/classifier.ts` | `classifyNoteworthy(text)` | Is this text worth remembering at all, what entity is it about, and what should happen next (research job / coach cue / index only / ignore)? |
+| `src/core/memoryCompiler.ts` | `compileEpisode(episode, now)` | One finished episode -> the durable entities, facts and decisions it should leave behind. `mergeEntities` folds them into what is already known. |
+| `src/core/retrievalPlanner.ts` | `planRetrieval(request)`, `rankFacts(facts, plan, now)` | Given the next goal, which memory shelves to read, through which lanes, and how to rank what comes back. |
+| `src/failureMemory.ts` | `buildFailurePatterns`, `mergeFailureMemory`, `repairTargets` | Turn per-task failures into deduped patterns, drop the ones that now pass, and return exactly which tasks a re-run should target. |
 
-| Source file | Role |
-|---|---|
-| `src/nodemem/core/memoryCompiler.ts` | `compileEpisode(episode, now)` — pure entity/fact extraction |
-| `src/nodemem/core/retrievalPlanner.ts` | `planRetrieval(req)` + `rankFacts(facts, plan, now)` — pure |
-| `src/nodemem/core/classifier.ts` | deterministic signal/entity detection |
-| `src/nodemem/core/types.ts` | `NodeMemEpisode/Entity/Fact`, `TaskKind`, `FactStatus`, **`NodeMemFailurePattern`** |
+`src/core/types.ts` holds the record shapes everything else is written in terms of —
+`NodeMemEpisode`, `NodeMemEntity`, `NodeMemFact`, `NodeMemDecision`, `NodeMemFailurePattern`,
+`NodeMemContextPack`, and the shelves they live on.
 
-**Leave behind:** `convex/nodemem.ts`, `convex/nodememCompile.ts` (mutations, room indexes, the
-global `process.env.NODEMEM_MODE` read).
+## How facts rank
 
-## Ranking model
+Facts sort by **status order** first (`source_backed` < `manual` < `graph_inferred` <
+`needs_review` < `superseded`), then by confidence. Anything older than 30 days is downgraded.
+Retrieval lanes — exact, bm25, semantic, graph, recent, visibility-filter — are selected by task
+kind, not fixed.
 
-Facts rank by **status order** (`source_backed` < `manual` < `graph_inferred` < `needs_review` <
-`superseded`), then by confidence; age > 30d downgrades risk. Retrieval lanes: exact / bm25 /
-semantic / graph / recent / visibility-filter, selected by task kind.
+The ordering is the honesty mechanism: a claim nobody sourced can never outrank a sourced one just
+because it is more recent or more confident.
 
-## Net-new (for RL replay)
+## Determinism
 
-- **Persist `NodeMemFailurePattern`** — the type exists (symptom / rootCause / regressionTest /
-  fixSummary / affectedSystems / receiptRefs) but is never stored. This is the failure-memory
-  that turns a repeated mistake into a one-time mistake.
-- **Outcome tagging** on episodes (success / failure) so memory can serve contrastive examples.
+`compileEpisode` and `buildFailurePatterns` take `now` as an argument rather than reading the clock.
+That is what makes their output testable: same episode plus same `now` gives the same records.
 
-## Honesty note (Debt 3)
+## Known gaps
 
-No recall-lift number is published yet. The 4-variant A/B in the source repo ran only the "bare"
-variant and has a known global-env-var isolation bug. NodeMem ships as "memory model + retrieval,
-benchmark re-running with per-variant isolation" until that is fixed.
+- **No tests.** This package has none, which is the largest test gap in the repo. See
+  [`../../docs/codebase/CONCERNS.md`](../../docs/codebase/CONCERNS.md).
+- **No recall-lift number is published.** The A/B in the source repo ran only the "bare" variant and
+  had a variant-isolation bug, so no benchmark claim is made here.
 
 ## Privacy
 
-Episode `rawText` and context-pack JSON can carry PII — ship **synthetic seeds only**; adopters
-redact before persisting real runs (`../../SECURITY.md`).
+Episode `rawText` and context-pack JSON can carry personal data. Ship synthetic seeds only, and
+redact before persisting real runs. See [`../../SECURITY.md`](../../SECURITY.md).
+
+## Provenance
+
+These sources began life inside the NodeRoom application and were vendored here when NodeRL was
+split out. This repository is now the canonical copy: edit it directly.

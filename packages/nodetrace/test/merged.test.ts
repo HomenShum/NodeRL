@@ -20,14 +20,14 @@ import {
   type NodeMergedTrajectory,
   type MergeMeta,
   type OuterTraceInput,
-} from "../src/merged";
+} from "../src/merged.ts";
 import {
   accountingInner,
   accountingOuter,
   accountingArtifacts,
   accountingEvidence,
   accountingMeta,
-} from "./merged.fixture";
+} from "./merged.fixture.ts";
 
 let passed = 0;
 let failed = 0;
