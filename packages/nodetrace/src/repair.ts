@@ -5,6 +5,13 @@
  * regression case. Pure + DETERMINISTIC (no Date.now/Math.random/new Date). It NEVER fabricates a
  * fix — it packages the exact ground-truth failure + evidence and asks the coding agent to trace the
  * root cause, propose the smallest shared fix, resolve unsourced claims, and add the regression.
+ *
+ * ONE-VALUE (a defect that really shipped): both functions resolve the reward through `resolveReward`
+ * below — explicit argument, else the reward ALREADY ON the trajectory, else a fresh derivation. The
+ * middle rung is the one that was missing: a trajectory merged with product-supplied components
+ * carried `t.reward.total`, `renderStorybook` badged that number, and the repair prompt quietly
+ * recomputed a different one from the trace alone. Same object, two totals, on two surfaces a reader
+ * compares side by side. Whatever the trajectory carries is what every surface must report.
  */
 import type { NodeMergedTrajectory, MergedReward, UiAssertion } from "./merged.ts";
 import { computeMergedReward } from "./mergedReward.ts";
@@ -19,9 +26,17 @@ export interface RegressionCase {
   expectation: string;
 }
 
+/**
+ * The single source of the number every surface prints: an explicitly passed reward, else the one the
+ * trajectory already carries, else — only when the trajectory carries none — a fresh derivation.
+ */
+function resolveReward(t: NodeMergedTrajectory, reward: MergedReward | undefined): MergedReward {
+  return reward ?? t.reward ?? computeMergedReward(t);
+}
+
 /** Extract a promotable regression case from a (typically failed) trajectory. */
 export function toRegressionCase(t: NodeMergedTrajectory, reward?: MergedReward): RegressionCase {
-  const r = reward ?? computeMergedReward(t);
+  const r = resolveReward(t, reward);
   const failed = t.outerTrace.uiAssertions.filter((a) => !a.passed);
   const needsReviewClaims = t.evidence.filter((e) => e.status === "needs_review").map((e) => e.claim);
   const expectation =
@@ -43,7 +58,7 @@ export function toRegressionCase(t: NodeMergedTrajectory, reward?: MergedReward)
 
 /** Build the coding-agent repair prompt (markdown). Deterministic; grounds every claim in the trace. */
 export function generateRepairPrompt(t: NodeMergedTrajectory, reward?: MergedReward): string {
-  const r = reward ?? computeMergedReward(t);
+  const r = resolveReward(t, reward);
   const failed = t.outerTrace.uiAssertions.filter((a) => !a.passed);
   const errorSteps = t.innerTrace.steps.filter((s) => s.error);
   const reopenFails = t.artifacts.filter((a) => a.reopenPassed === false);

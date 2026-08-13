@@ -41,8 +41,8 @@ Concretely, in this repository:
 
 ## Why a run has four slices
 
-The central data structure is `NodeMergedTrajectory` (`merged.ts:108`). It exists because **no single
-observer of an agent run sees the whole run.**
+The central data structure is `NodeMergedTrajectory` (`packages/nodetrace/src/merged.ts:108`). It
+exists because **no single observer of an agent run sees the whole run.**
 
 - The **outer** trace is what a browser-side check saw: the URL, screenshots, console errors, and the
   pass/fail assertions it made about the page. It knows what appeared. It has no idea why.
@@ -65,24 +65,26 @@ That is not a slogan; it is enforced in four named places, each of which is asse
 
 | Rule | What it forbids | Enforced at |
 |---|---|---|
-| `HONEST_SCORES` | a default or floor value standing in for a measurement | `merged.ts:233`, `mergedReward.ts:138` |
-| `HONEST_STATUS` | promoting a failed assertion or a `needs_review` claim | `merged.ts:240`, `pipeline.ts:120` |
-| `NO-LEAK` | inlining screenshot bytes instead of storing a path | `merged.ts:182` |
-| `DETERMINISTIC` | any `Date.now`, `Math.random`, or `new Date` in a pure path | `merged.ts:298` (`deterministicId`) |
+| `HONEST_SCORES` | a default or floor value standing in for a measurement | `labels.push` (`packages/nodetrace/src/merged.ts:233`), `computeMergedReward` (`packages/nodetrace/src/mergedReward.ts:138`) |
+| `HONEST_STATUS` | promoting a failed assertion or a `needs_review` claim | `ui_assertion_failed` (`packages/nodetrace/src/merged.ts:240`), `return { ok: false` (`packages/nodetrace/src/pipeline.ts:133`) |
+| `NO-LEAK` | inlining screenshot bytes instead of storing a path | `assertNotInlinedBytes` (`packages/nodetrace/src/merged.ts:182`) |
+| `DETERMINISTIC` | any `Date.now`, `Math.random`, or `new Date` in a pure path | `deterministicId` (`packages/nodetrace/src/trajectory.ts:125`) |
 
 The most consequential is the first, and its mechanism is worth stating exactly: **an unmeasured
 reward component is `0` *and* carries a label `unscored:<name>`.** The zero alone would be
 indistinguishable from a measured zero. The label is what preserves the difference between "we
 measured nothing" and "we measured badly" — all the way through to the rendered HTML report, which
-`packages/nodetrace/test/storybook.test.ts:107` asserts.
+`(c) HONEST_SCORES` (`packages/nodetrace/test/storybook.test.ts:107`) asserts.
 
 ## Two seams, deliberately
 
 The live-capture loop depends on two interfaces and no concrete implementations:
 
-- **`ReasoningModel`** (`types.ts:74`) — anything that returns a structured decision. Note it never
-  receives a browser handle. The model cannot click. It describes what it wants done.
-- **`BrowserSubstrate`** (`types.ts:86`) — the thing that opens, observes and acts on a page.
+- **`ReasoningModel`** (`packages/nodetrace/src/types.ts:74`) — anything that returns a structured
+  decision. Note it never receives a browser handle. The model cannot click. It describes what it
+  wants done, and the loop `.parse`s that description before acting on it.
+- **`BrowserSubstrate`** (`packages/nodetrace/src/types.ts:86`) — the thing that opens, observes and
+  acts on a page.
 
 The division of labour, from the header comment of `pipeline.ts`: **the loop owns reliability, the
 model owns judgement, the substrate owns the browser.** Each responsibility sits with the part that
@@ -91,17 +93,29 @@ ceiling. The loop cannot read a page; the model can.
 
 ## What is deliberately absent
 
-**Persistence.** Nothing here opens a database or writes a file. `toJSONL` returns a string;
-`mergeFailureMemory` returns a new array; `buildFailurePatterns` takes `now` as an argument rather
-than reading the clock.
+**Persistence.** Nothing anywhere in this repository opens a database or writes a file. `toJSONL`
+returns a string; `mergeFailureMemory` returns a new array; `buildFailurePatterns` takes `now` as a
+required argument rather than reading the clock.
 
-This is the property the whole design rests on. With no clock, no randomness and no IO, the same
-input produces a byte-identical output — which is what makes a trajectory *replayable* and a reward
+This is the property the loop half rests on. With no clock, no randomness and no IO, the same input
+produces a byte-identical output — which is what makes a trajectory *replayable* and a reward
 *auditable* by someone who does not trust you. Adopters bring their own storage.
 
+Be precise about which code that covers, because it is not all of it:
+
+| | Reads the network | Reads the clock | Reads the environment |
+|---|---|---|---|
+| the loop — `merged`, `mergedReward`, `repair`, `storybook`, `trajectory`, the `nodeeval` accounting oracles | no | no | no |
+| `nodemem` | no | `compileEpisode` and `rankFacts` default `now` to `Date.now()` — pass it for determinism | no |
+| `bankerToolBenchEvalLedger` | no | `buildBtbLedgerImport` defaults `generatedAt` to `new Date()` — pass it for determinism | no |
+| live capture — `pipeline`, `reasoning`, `substrate/*` | yes: `fetch` to Browserbase / Firecrawl, and the provider call the AI SDK makes | `Date.now` for the time budget, overridable via `now` | yes: the five API keys |
+
+No row writes a file. The distinction that matters is that a claim of *replayable* belongs to the
+top row: hand it the same trajectory and it returns the same bytes forever.
+
 **A framework.** No dependency-injection container, no plugin registry, no event bus. `pickSubstrate`
-(`substrate/index.ts:10`) is the entire tool registry: one function, two `if` statements, returning
-`null` when nothing is configured rather than fabricating a fake browser.
+(`packages/nodetrace/src/substrate/index.ts:10`) is the entire tool registry: one function, two `if`
+statements, returning `null` when nothing is configured rather than fabricating a fake browser.
 
 ## Reading order
 

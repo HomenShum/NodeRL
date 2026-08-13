@@ -33,7 +33,7 @@ packages/                 three libraries, an npm workspace each
 
 test/                     repo-level tests that belong to no single package
 ├── entrypoints.test.ts   every package imports by its own name
-└── tours.test.ts         every .tours step points at a real, non-blank line
+└── citations.test.ts     every cited line contains the symbol the citation names
 
 experiments/fr-a1-runs/   one real captured run; `npm run demo` runs the .mjs
 .tours/                   3 CodeTour walkthroughs

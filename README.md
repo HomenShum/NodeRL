@@ -25,7 +25,7 @@ Needs **Node 22.18 or newer** and nothing else. No API key, no database, no buil
 git clone https://github.com/HomenShum/NodeRL.git
 cd NodeRL
 npm install     # 19 packages, none of which the demo actually loads
-npm test        # 14 test files, 14 pass
+npm test        # 15 test files, 15 pass
 npm run demo    # one real failed run, end to end
 ```
 

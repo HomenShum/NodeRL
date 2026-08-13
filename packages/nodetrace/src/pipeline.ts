@@ -8,6 +8,12 @@
  * Every CaptureStep carries a screenshot + box → renders in the Trace tab (Flow graph + Steps) with
  * the highlight overlay. Failures return { ok:false, error } with the steps captured so far — never a
  * fake success (HONEST_STATUS). Bounded on steps + a single wall-clock budget (BOUND + TIMEOUT).
+ *
+ * VALIDATED: every model reply is `.parse`d against its Zod schema by the LOOP. The schema is also
+ * handed to the reasoner, but `ReasoningModel` is a swappable seam — a caller's implementation is
+ * under no obligation to validate anything, so a check that lives only inside the default reasoner
+ * is not a property of this loop. Parsing here is what makes "an invalid action is rejected at the
+ * seam" true for every implementation.
  */
 import { z } from "zod";
 import type { BrowserSubstrate, CaptureResult, CaptureStep, PageHandle, ReasoningModel } from "./types.ts";
@@ -83,13 +89,17 @@ export async function runCapture(opts: {
         const started = now();
         const rep = await page.representation();
         const shot = await page.screenshot();
-        const decision = await opts.reasoner.decide({
+        // The schema is HANDED to the reasoner, but `ReasoningModel` is a seam any caller may
+        // implement — only the default aiSdkReasoner validates against it. So the loop parses the
+        // reply itself: a model that returns something that is not an action is rejected HERE, not
+        // several steps deeper where the failure no longer names its cause.
+        const decision = DecisionSchema.parse(await opts.reasoner.decide({
           system: ACT_SYSTEM,
           instruction: opts.goal,
           context: { url: rep.url, title: rep.title, a11y: clipRepresentation(rep.a11y), screenshot: shot },
           schema: DecisionSchema,
           signal: ctl.signal,
-        });
+        }));
         if (decision.done || !decision.action) {
           steps.push({ phase: "Observe", label: decision.thought || "ready to extract", status: "ok", screenshotPng: shot.png, ms: now() - started });
           break;
@@ -103,13 +113,13 @@ export async function runCapture(opts: {
     // ── extract ──────────────────────────────────────────────────────────────────
     const rep = await page.representation();
     const shot = await page.screenshot();
-    const extracted = await opts.reasoner.decide({
+    const extracted = ExtractSchema.parse(await opts.reasoner.decide({
       system: EXTRACT_SYSTEM,
       instruction: opts.goal,
       context: { url: rep.url, title: rep.title, a11y: clipRepresentation(rep.a11y), screenshot: shot },
       schema: ExtractSchema,
       signal: ctl.signal,
-    });
+    }));
     const data: Record<string, unknown> = {};
     for (const f of extracted.fields.slice(0, CAPTURE_LIMITS.MAX_EXTRACT_FIELDS)) {
       data[f.name] = f.value;

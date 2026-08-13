@@ -30,7 +30,7 @@ Two consequences a new reader will notice immediately:
 | Command | What it does | How long |
 |---|---|---|
 | `npm install` | Fetch dependencies — `added 19 packages, and audited 23` | 4s |
-| `npm test` | Run 14 test files through Node's built-in runner | 3s |
+| `npm test` | Run 15 test files through Node's built-in runner | 2s |
 | `npm run typecheck` | `tsc --noEmit` over every `.ts` file, sources and tests | 6s |
 | `npm run demo` | One captured failed run → repair prompt + regression case | instant |
 
@@ -74,7 +74,7 @@ import { mergeTrajectory } from "@noderl/nodetrace/src/merged.ts";         // lo
 ```
 
 Verified by removing `zod` from `node_modules`: `npm run demo` still exits 0, while
-`test/entrypoints.test.ts` fails with `Cannot find package 'zod'` and the other 13 test files pass.
+`test/entrypoints.test.ts` fails with `Cannot find package 'zod'` and the other 14 test files pass.
 This is a deliberate trade — one discoverable entry point per package, at the cost of the root import
 pulling in more than a loop-only consumer strictly needs.
 

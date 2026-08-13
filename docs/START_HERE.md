@@ -59,7 +59,7 @@ because type stripping is not available. `package.json` declares `"engines": { "
 ## Step 2 — The primary user action: describe what the run did
 
 **File:** `experiments/fr-a1-runs/fr-a1-live-run-001-build.mjs`
-**Symbol:** the `outer`, `inner`, `meta` objects (lines 4, 14, 23)
+**Symbol:** `const outer` (line 4), `const inner` (line 14), `const meta` (line 23)
 **Called by:** the module body
 **Calls next:** `mergeTrajectory`
 
@@ -111,8 +111,9 @@ than merely documented, because each one had a way of going quietly wrong:
   contents into every copy of the trace.
 - **SEQUENTIAL** — `stepIndex` is re-stamped `0..n`, so a gap in what the caller supplied cannot
   become a gap in the training data.
-- **HONEST_SCORES** — a reward is attached **only** if the caller supplied one (line 321). A missing
-  score stays missing rather than becoming a zero that looks like a measurement.
+- **HONEST_SCORES** — a reward is attached **only** if the caller supplied one:
+  `if (meta.reward !== undefined)` (line 322). A missing score stays missing rather than becoming a
+  zero that looks like a measurement.
 
 **Core code**
 ```ts
@@ -127,7 +128,7 @@ export function mergeTrajectory(inner, outer, artifacts, evidence, meta): NodeMe
 ```
 
 **Input** — the four loose slices plus `meta`.
-**Output** — one `NodeMergedTrajectory` (type at line 108). Pure: the caller's arrays are copied, never
+**Output** — one `NodeMergedTrajectory` (line 108). Pure: the caller's arrays are copied, never
 mutated.
 **Failure behavior** — throws on a NO-LEAK violation. Everything else is total: absent optional
 fields become empty arrays, never `undefined` holes.
@@ -138,7 +139,7 @@ fields become empty arrays, never `undefined` holes.
 ## Step 4 — Agent orchestration
 
 **File:** `packages/nodetrace/src/pipeline.ts`
-**Symbol:** `runCapture` (line 56)
+**Symbol:** `runCapture` (line 62)
 **Called by:** your own harness — **not** by the demo
 **Calls next:** `reasoner.decide(...)` and `substrate.open/act/locate`
 
@@ -161,18 +162,26 @@ const decision = await opts.reasoner.decide({
 if (decision.done || !decision.action) { /* stop acting, go extract */ }
 ```
 
-`DecisionSchema` is a Zod schema, so a model reply that is not a valid action is rejected at the
-seam rather than halfway down the loop.
+`DecisionSchema` is a Zod schema, and the loop `.parse`s the reply against it —
+`DecisionSchema.parse(await opts.reasoner.decide` (line 96) — so a model reply that is not a valid
+action is rejected at the seam rather than halfway down the loop.
 
-**Input** — a URL, a goal, a `ReasoningModel`, a `BrowserSubstrate` (contracts at `types.ts:74` and
-`types.ts:86`).
-**Output** — a `CaptureResult` (`types.ts:55`): every step with its screenshot and the bounding box
-of the element acted on.
-**Failure behavior** — **returns**, never throws: `{ ok: false, error, steps }` at line 123, keeping
-the steps captured so far. A failed run is still a recorded run. This is the same honesty rule as
-Step 3, applied to control flow.
-**Next** — `toTrajectory` converts a `CaptureResult` into an exportable trajectory
-(`trajectory.ts:233`).
+The schema is *also* handed to the reasoner, and both matter. `ReasoningModel` is the swap-your-own-
+model seam: only the shipped `aiSdkReasoner` validates on its own, and a caller's implementation owes
+this loop nothing. Before the loop parsed, a reply with no `action` sailed past and died later in the
+extract step with `Cannot read properties of undefined`, which names neither the cause nor the
+culprit. `(a) SEAM` (`packages/nodetrace/test/pipeline.test.ts:55`) drives the loop with a model that
+lies and asserts the failure names the offending field.
+
+**Input** — a URL, a goal, a `ReasoningModel` (`packages/nodetrace/src/types.ts:74`), a
+`BrowserSubstrate` (`packages/nodetrace/src/types.ts:86`).
+**Output** — a `CaptureResult` (`packages/nodetrace/src/types.ts:55`): every step with its screenshot
+and the bounding box of the element acted on.
+**Failure behavior** — **returns**, never throws: `return { ok: false` (line 133), keeping the steps
+captured so far. A failed run is still a recorded run. This is the same honesty rule as Step 3,
+applied to control flow.
+**Next** — `toTrajectory` (`packages/nodetrace/src/trajectory.ts:233`) converts a `CaptureResult`
+into an exportable trajectory.
 
 ---
 
@@ -201,10 +210,10 @@ Browserbase is preferred because it can click and can report exact element boxes
 screenshot-and-extract only. With neither configured it returns `null` — it does not fabricate a
 fake browser, so the caller must handle "no substrate" explicitly.
 
-Every outbound URL first passes `assertCapturableUrl` (`guards.ts:71`), which rejects `localhost`,
-`.local`, `.internal` and private IP literals, and applies an optional host allowlist. Hard ceilings
-live in `CAPTURE_LIMITS` (`guards.ts:12`): 12 steps, a 60-second budget, 24k characters of page text,
-64 extracted fields.
+Every outbound URL first passes `assertCapturableUrl` (`packages/nodetrace/src/guards.ts:71`), which
+rejects `localhost`, `.local`, `.internal` and private IP literals, and applies an optional host
+allowlist. Hard ceilings live in `CAPTURE_LIMITS` (`packages/nodetrace/src/guards.ts:12`): 12 steps,
+a 60-second budget, 24k characters of page text, 64 extracted fields.
 
 **Input** — the process environment.
 **Output** — a `BrowserSubstrate`, or `null`.
@@ -217,18 +226,30 @@ live in `CAPTURE_LIMITS` (`guards.ts:12`): 12 steps, a 60-second budget, 24k cha
 
 **This stage does not exist in this repository, and that is a design decision, not a gap.**
 
-Every function in all three packages is pure. Nothing opens a database, writes a file, or mutates
-global state. The closest things to persistence, and what they actually do:
+Nothing anywhere in this repository opens a database, writes a file, or mutates global state. The
+closest things to persistence, and what they actually do:
 
 | What you might expect | What actually happens | Where |
 |---|---|---|
-| Save the trajectory | `toJSONL(trajectories)` returns a **string**, one trajectory per line, in sorted key order. The caller writes it. | `packages/nodetrace/src/trajectory.ts:464` |
-| Update the failure store | `mergeFailureMemory(existing, incoming, passed)` returns a **new array** — resolved patterns dropped, incoming upserted. | `packages/nodemem/src/failureMemory.ts:81` |
-| Record time | Nothing reads the clock. `buildFailurePatterns(failures, now)` takes `now` as an argument. | `packages/nodemem/src/failureMemory.ts:59` |
+| Save the trajectory | `toJSONL(trajectories)` returns a **string**, one trajectory per line, in sorted key order. The caller writes it. | `toJSONL` (`packages/nodetrace/src/trajectory.ts:464`) |
+| Update the failure store | `mergeFailureMemory(existing, incoming, passed)` returns a **new array** — resolved patterns dropped, incoming upserted. | `mergeFailureMemory` (`packages/nodemem/src/failureMemory.ts:81`) |
+| Record time | `buildFailurePatterns(failures, now)` takes `now` as a **required** argument — it cannot read the clock even if it wanted to. | `buildFailurePatterns` (`packages/nodemem/src/failureMemory.ts:59`) |
 
-The reason is testability, and it is the property the whole repo is built on: with no clock, no
-randomness and no IO, the same input always produces a byte-identical output. That is what makes a
-trajectory *replayable* and a reward *auditable*. Adopters choose their own storage.
+The reason is testability, and it is the property the loop is built on: with no clock, no randomness
+and no IO, the same input always produces a byte-identical output. That is what makes a trajectory
+*replayable* and a reward *auditable*. Adopters choose their own storage.
+
+Two qualifications, because "every function is pure" is the kind of sentence that quietly stops being
+true:
+
+- **The live-capture half reaches the network.** `substrate/browserbase.ts`, `substrate/firecrawl.ts`
+  and the provider call inside `reasoning.ts` all `fetch`, and the five environment variables are
+  read there. That is the whole point of that half — it drives a real browser with a real model — and
+  it is why the demo does not touch it.
+- **Three functions default the clock rather than requiring it.** `compileEpisode` and `rankFacts` in
+  `nodemem`, and `buildBtbLedgerImport` in `nodeeval`, fall back to `Date.now()` / `new Date()` when
+  the caller passes nothing. Each is deterministic *when you pass the value*, which the tests do.
+  `docs/codebase/ARCHITECTURE.md` has the per-module table.
 
 **Next** — rendering, Step 7.
 
@@ -252,12 +273,13 @@ It is assembled from small pure "atom" functions — one per visual card (`ChatM
 
 **Core code**
 ```ts
-export function esc(value: unknown): string { /* line 42 — escapes < > & " ' */ }
+function esc(value: unknown): string { /* escapes < > & " ' */ }
 ```
 
-`esc` matters more than it looks: evidence claims and observed text come from web pages and from
-model output. Rendering them unescaped would let a captured page inject live markup into the report
-about it. `packages/nodetrace/test/storybook.test.ts:165` asserts a claim containing HTML is escaped, not injected.
+`esc` (line 42) matters more than it looks: evidence claims and observed text come from web pages and
+from model output. Rendering them unescaped would let a captured page inject live markup into the
+report about it. `(f) ESCAPING` (`packages/nodetrace/test/storybook.test.ts:165`) asserts a claim
+containing HTML is escaped, not injected.
 
 **Input** — one `NodeMergedTrajectory`.
 **Output** — an HTML string. Deterministic: no timestamp, no nonce, array order preserved.
@@ -270,9 +292,12 @@ so the report cannot leak what the trace refused to.
 ## Step 8 — Failure and recovery
 
 **File:** `packages/nodetrace/src/repair.ts`
-**Symbol:** `generateRepairPrompt` (line 45) and `toRegressionCase` (line 23)
-**Called by:** the demo script, lines 36 and 38
-**Calls next:** `computeMergedReward` (`mergedReward.ts:138`)
+**Symbol:** `generateRepairPrompt` (line 60) and `toRegressionCase` (line 38)
+**Called by:** the demo script — `generateRepairPrompt(t)`
+(`experiments/fr-a1-runs/fr-a1-live-run-001-build.mjs:36`) and `toRegressionCase(t)`
+(`experiments/fr-a1-runs/fr-a1-live-run-001-build.mjs:38`)
+**Calls next:** `computeMergedReward` (`packages/nodetrace/src/mergedReward.ts:138`) — but only when
+the trajectory carries no reward of its own
 
 **Why this exists**
 This is the payoff, and the reason to keep a failed run at all. A failure is turned into two
@@ -296,6 +321,14 @@ component is carried verbatim; an unsupplied one that can be **derived** from th
 component with neither is `0` **and** labelled `unscored:<name>`. There is no floor and no default
 credit — an unmeasured thing is visibly unmeasured rather than quietly zero.
 
+Which reward gets *printed* is a separate question, and getting it wrong shipped a real defect: this
+prompt used to recompute a reward from the trace and ignore the one the trajectory was already
+carrying, so `npm run demo` announced `total reward: 0.238` for the very run whose HTML report badged
+`total 0.171`. Two surfaces, one object, two numbers, and no way for a reviewer to tell which was the
+run's. `resolveReward` (line 33) now settles it in one place — an explicitly passed reward, else the
+trajectory's own, else a fresh derivation — and `(f) ONE-VALUE`
+(`packages/nodetrace/test/repair.test.ts:75`) fails if the two surfaces ever disagree again.
+
 **Input** — one `NodeMergedTrajectory`.
 **Output** — a markdown prompt, and a `RegressionCase` carrying the failed assertions, the failure
 categories, and the unsourced claims that must be resolved or dropped.
@@ -307,20 +340,31 @@ that the passing assertions keep passing.
 
 ## Step 9 — The tests that prove this flow
 
-`npm test` runs 12 files through Node's built-in test runner. There is no test framework installed.
+`npm test` runs 15 files through Node's built-in test runner. There is no test framework installed.
 Each file is a plain script using `node:assert/strict`; a non-zero exit is a failure.
 
 | The claim | The test that would catch it breaking |
 |---|---|
-| Each package can be imported by its own name | `test/entrypoints.test.ts:63` |
-| Step indexes are contiguous after a merge | `packages/nodetrace/test/merged.test.ts:59` |
-| Screenshot bytes are rejected, not inlined | `packages/nodetrace/test/merged.test.ts:90` |
-| A failed assertion survives the merge unflipped | `packages/nodetrace/test/merged.test.ts:161` |
-| An unsupplied score is labelled, never floored | `packages/nodetrace/test/mergedReward.test.ts:131` |
-| The repair prompt quotes the real observed text | `packages/nodetrace/test/repair.test.ts:25` |
-| The same trace gives a byte-identical prompt | `packages/nodetrace/test/repair.test.ts:57` |
-| Report HTML escapes hostile claim text | `packages/nodetrace/test/storybook.test.ts:165` |
-| Each accounting oracle rejects a bad answer **by the right named check** | `packages/nodeeval/test/accounting_trialBalance.test.ts:98` |
+| Each package can be imported by its own name | `imports by package name` (`test/entrypoints.test.ts:63`) |
+| Step indexes are contiguous after a merge | `(a) SEQUENTIAL` (`packages/nodetrace/test/merged.test.ts:59`) |
+| Screenshot bytes are rejected, not inlined | `(c) NO-LEAK` (`packages/nodetrace/test/merged.test.ts:90`) |
+| A failed assertion survives the merge unflipped | `(f) HONEST_STATUS` (`packages/nodetrace/test/merged.test.ts:161`) |
+| An unsupplied score is labelled, never floored | `(e) SUPPLIED-WINS` (`packages/nodetrace/test/mergedReward.test.ts:131`) |
+| The repair prompt quotes the real observed text | `(a) GROUND-TRUTH` (`packages/nodetrace/test/repair.test.ts:27`) |
+| The same trace gives a byte-identical prompt | `(e) DETERMINISM` (`packages/nodetrace/test/repair.test.ts:59`) |
+| **The demo and the report quote the same reward** | `(f) ONE-VALUE` (`packages/nodetrace/test/repair.test.ts:75`) |
+| **A model reply that is not an action is rejected at the seam** | `(a) SEAM` (`packages/nodetrace/test/pipeline.test.ts:55`) |
+| Report HTML escapes hostile claim text | `(f) ESCAPING` (`packages/nodetrace/test/storybook.test.ts:165`) |
+| Each accounting oracle rejects a bad answer **by the right named check** | `debits_equal_credits` (`packages/nodeeval/test/accounting_trialBalance.test.ts:98`) |
+| **Every line number in this document points at the symbol it names** | `const DOC_FILES` (`test/citations.test.ts:108`) |
+
+That last row is what makes the rest of this document trustworthy rather than merely confident. Each
+citation above carries the symbol it is pointing at, and `test/citations.test.ts` asserts the cited
+line actually contains it — because a guard that only checks the number is *in range* proves the
+anchor is stable and says nothing about whether it is correct. The version before it passed while
+`docs/codebase/INTEGRATIONS.md` sent a reader to the OpenAI branch to read about the Anthropic
+default. A line reference written in neither citation form fails as unguarded; an escape hatch would
+make the whole test decorative.
 
 That last row is the anti-rubber-stamp rule, and it is the bar every oracle test is written to: a
 verifier that always returns "pass" would satisfy a test that only checks good input. So every
@@ -329,7 +373,7 @@ specific invariant that broke*.
 
 ## Where you would add one thing
 
-**A new reward component:** add it to `MERGED_REWARD_COMPONENTS` (`merged.ts:132`), derive it in
+**A new reward component:** add it to `MERGED_REWARD_COMPONENTS` (`packages/nodetrace/src/merged.ts:132`), derive it in
 `computeMergedReward` if the trace carries a signal for it, and if it does not — leave it unscored.
 Then add a case to `mergedReward.test.ts` proving an unsupplied value is labelled rather than
 floored.

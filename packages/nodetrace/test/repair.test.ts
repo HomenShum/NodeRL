@@ -5,7 +5,9 @@
  */
 import assert from "node:assert/strict";
 import { mergeTrajectory } from "../src/merged.ts";
+import { computeMergedReward } from "../src/mergedReward.ts";
 import { generateRepairPrompt, toRegressionCase } from "../src/repair.ts";
+import { renderStorybook } from "../src/storybook.ts";
 import {
   accountingOuter,
   accountingInner,
@@ -57,6 +59,41 @@ scenario("(d) NO-FABRICATION — prompt asks for the smallest fix; it does not i
 scenario("(e) DETERMINISM — same trajectory => byte-identical repair prompt + regression", () => {
   assert.equal(generateRepairPrompt(t), generateRepairPrompt(t));
   assert.equal(JSON.stringify(toRegressionCase(t)), JSON.stringify(toRegressionCase(t)));
+});
+
+/**
+ * (f) guards a defect that shipped: the repair prompt printed `total reward: 0.238` for the very
+ * trajectory whose storybook badge read `total 0.171`. Both surfaces were reading a different reward
+ * for one object — the prompt recomputed one from the trace and ignored the reward the trajectory was
+ * carrying. A reviewer comparing the two would have had no way to tell which number was the run's.
+ */
+const scored = mergeTrajectory(accountingInner, accountingOuter, accountingArtifacts, accountingEvidence, {
+  ...accountingMeta,
+  reward: { taskCompletion: 0.5, uiStateCorrectness: 0.5, evidenceGrounding: 0.2 },
+});
+
+scenario("(f) ONE-VALUE — repair prompt and storybook print the trajectory's reward, not two totals", () => {
+  const onTrajectory = scored.reward!.total.toFixed(3);
+  const inPrompt = generateRepairPrompt(scored).match(/total reward: ([\d.]+)/)?.[1];
+  const inStorybook = renderStorybook(scored).match(/verdict: FAIL · total ([\d.]+)/)?.[1];
+
+  assert.equal(inPrompt, onTrajectory, "repair prompt reports the reward stored on the trajectory");
+  assert.equal(inStorybook, onTrajectory, "storybook badge reports the same stored reward");
+
+  // And prove it is the STORED value being read, not a coincidence: the derived-from-trace reward
+  // for this same trajectory is a different number, and neither surface may print it.
+  const derived = computeMergedReward(scored).total.toFixed(3);
+  assert.notEqual(derived, onTrajectory, "fixture is only meaningful while the two differ");
+  assert.equal(generateRepairPrompt(scored).includes(derived), false, "the recomputed total is not printed");
+});
+
+scenario("(g) UNSCORED-TRAJECTORY — with no reward on the trajectory, the prompt derives one and says so", () => {
+  // `t` carries no reward (the fixture supplies none), so there is nothing to disagree with: the
+  // prompt derives, and the storybook — which never invents a number — shows no total at all.
+  assert.equal(t.reward, undefined);
+  const derived = computeMergedReward(t).total.toFixed(3);
+  assert.match(generateRepairPrompt(t), new RegExp(`total reward: ${derived}`));
+  assert.equal(renderStorybook(t).includes(" · total "), false, "no reward on the trace => no number rendered");
 });
 
 console.log(`\n${pass} passed, ${fail} failed`);

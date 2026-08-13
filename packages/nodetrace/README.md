@@ -24,8 +24,9 @@ This is what the tests cover and what `npm run demo` runs.
 | `src/storybook.ts` | `renderStorybook(t)` renders one trajectory as a single self-contained HTML page — no server, no build, no network. |
 | `src/trajectory.ts` | `toTrajectory(capture, meta)` and `toJSONL(...)` export `(state, action, observation, reward)` rows for SFT / DPO / RLVR pipelines. |
 
-Every function is deterministic: no `Date.now`, no `Math.random`, no `new Date`. The same input
-produces a byte-identical output, which is what makes a trajectory replayable.
+Every function in the table above is deterministic: no `Date.now`, no `Math.random`, no `new Date`.
+The same input produces a byte-identical output, which is what makes a trajectory replayable. The
+live-capture half below is the opposite: it fetches, it reads keys, and it reads the clock.
 
 ### 2. Live capture — needs an LLM key and a remote browser
 

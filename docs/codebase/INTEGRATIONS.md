@@ -24,7 +24,8 @@ do it.
 
 **Where:** `packages/nodetrace/src/reasoning.ts`
 **How it chooses:** by model id prefix. Anything starting `gpt`, `o1`, `o3` or `o4` routes to OpenAI;
-everything else routes to Anthropic (line 19). Default id is `claude-haiku-4-5`.
+everything else routes to Anthropic — `return anthropic(modelId)` (line 20). Default id is
+`claude-haiku-4-5`.
 
 ```ts
 aiSdkReasoner("claude-haiku-4-5")   // a model id string, not an options object
@@ -37,13 +38,13 @@ malformed `Authorization` header and a confusing 401.
 **If a key is missing:** the provider call fails, `runCapture` catches it and returns
 `{ ok: false, error }` with the steps collected so far. It does not throw and it does not retry.
 
-**To use a different model entirely:** implement `ReasoningModel` (`types.ts:74`) and pass it as
+**To use a different model entirely:** implement `ReasoningModel` (`packages/nodetrace/src/types.ts:74`) and pass it as
 `reasoner`. Nothing else changes — the pipeline never names a provider.
 
 ## The browser substrates
 
 **Where:** `packages/nodetrace/src/substrate/`
-**Selection:** `pickSubstrate(env)` (`substrate/index.ts:10`), in strict order:
+**Selection:** `pickSubstrate` (`packages/nodetrace/src/substrate/index.ts:10`), in strict order:
 
 | Order | Substrate | Requires | Can click? | Reports element boxes? |
 |---|---|---|---|---|
@@ -62,7 +63,7 @@ succeeding does not mean a browser is available.
 
 ## Outbound request safety
 
-Every capture URL passes `assertCapturableUrl` (`guards.ts:71`) before anything is opened. It
+Every capture URL passes `assertCapturableUrl` (`packages/nodetrace/src/guards.ts:71`) before anything is opened. It
 rejects:
 
 - non-`http`/`https` protocols,
@@ -76,7 +77,7 @@ in depth and cannot stop a domain that resolves to a private address. **For a pr
 surface, `allowHosts` is the real control.** The comment says this rather than implying the check is
 stronger than it is.
 
-Hard ceilings live in `CAPTURE_LIMITS` (`guards.ts:12`): 12 steps, 60 seconds total, 24k characters
+Hard ceilings live in `CAPTURE_LIMITS` (`packages/nodetrace/src/guards.ts:12`): 12 steps, 60 seconds total, 24k characters
 of page text sent to the model, 4MB per screenshot, 64 extracted fields. All are enforced in
 `pipeline.ts`, and the total budget is backed by an `AbortController` so an in-flight request is
 actually cancelled rather than merely ignored.

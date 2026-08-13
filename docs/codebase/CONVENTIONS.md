@@ -26,7 +26,7 @@ export function buildFailurePatterns(failures: TaskFailure[], now: number): Node
 ```
 
 That is what makes the output testable: same input plus same `now` gives a byte-identical result.
-Where an id must be derived, use `deterministicId` (`trajectory.ts:125`) — a sorted-key FNV-1a hash
+Where an id must be derived, use `deterministicId` (`packages/nodetrace/src/trajectory.ts:125`) — a sorted-key FNV-1a hash
 of stable fields — never a counter or a random value.
 
 ## 3. Never fabricate a number
@@ -43,14 +43,17 @@ number so the output looks complete, that is the exact failure this repository i
 
 ## 4. Failures are return values, not exceptions
 
+The capture loop's own failure path is `return { ok: false` (`packages/nodetrace/src/pipeline.ts:133`):
+
 ```ts
-return { ok: false, url: opts.url, steps, error: message };   // pipeline.ts:123
+return { ok: false, url: opts.url, steps, error: message };
 ```
 
 An operation that can fail for ordinary reasons returns a result carrying the failure, with whatever
 was collected before it. Reserve `throw` for a **violated invariant** — something that means the
-caller has a bug, not that the world was uncooperative. There are two: a screenshot passed as bytes
-(`merged.ts:182`), and an unsafe capture URL (`guards.ts:71`).
+caller has a bug, not that the world was uncooperative. There are two: a screenshot passed as bytes —
+`assertNotInlinedBytes` (`packages/nodetrace/src/merged.ts:182`) — and an unsafe capture URL —
+`assertCapturableUrl` (`packages/nodetrace/src/guards.ts:71`).
 
 ## 5. A file's header comment says *why*, not *what*
 

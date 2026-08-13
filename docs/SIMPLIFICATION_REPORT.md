@@ -133,7 +133,9 @@ Three, each guarding something that had no protection:
   restoring it makes it pass.
 - **`test/tours.test.ts`** — every `.tours/` step points at a file that exists, at a line in range,
   that is not blank. It caught a genuinely broken reference during authoring (a tour pointed at
-  `docs/codebase/CONCERNS.md` before that file was written).
+  `docs/codebase/CONCERNS.md` before that file was written). *Superseded after this baseline:
+  in-range-and-not-blank proved an anchor stable and not correct, so it became
+  `test/citations.test.ts`, which asserts the cited line matches the symbol named.*
 - **`packages/nodetrace/test/guards.test.ts`** — the URL guard, described above.
 
 No existing test was weakened, skipped, deleted, or had an expected value edited. The only test-body

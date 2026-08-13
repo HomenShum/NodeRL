@@ -44,9 +44,9 @@ justify than gap 1.
 flips to `passed` only when every expected task is both clean and scored. Assert completion, mean
 reward and pass-rate are reported as three separate numbers.
 
-## 3. The live-capture half of `nodetrace` is untested
+## 3. The live-capture half of `nodetrace` is thinly tested
 
-**The gap:** `pipeline.ts`, `reasoning.ts`, `substrate/browserbase.ts`, `substrate/firecrawl.ts`.
+**The gap:** `reasoning.ts`, `substrate/browserbase.ts`, `substrate/firecrawl.ts`.
 
 **Why it is ranked below gaps 1 and 2:** it needs a real model and a real remote browser to exercise
 end to end, so the cost of covering it is genuinely higher.
@@ -59,10 +59,12 @@ that rejects everything is as broken as one that accepts everything.
 
 Still open and cheap:
 
-- **`pickSubstrate` (`substrate/index.ts:10`)** takes `env` as a parameter precisely so it can be
-  tested with a fake environment. Three cases, no mocking required.
-- **`runCapture`** can be tested against a fake `ReasoningModel` and a fake `BrowserSubstrate` —
-  both are interfaces, and `now` is injectable — but that is a larger piece of work.
+- **`pickSubstrate` (`packages/nodetrace/src/substrate/index.ts:10`)** takes `env` as a parameter
+  precisely so it can be tested with a fake environment. Three cases, no mocking required.
+- **`runCapture` is now partly covered.** `packages/nodetrace/test/pipeline.test.ts` drives the loop
+  against a fake `ReasoningModel` and a fake `BrowserSubstrate` and asserts that a malformed model
+  reply is rejected at the seam. Still uncovered there: the step budget, the wall-clock budget, and
+  the box/highlight path.
 
 ## 4. The BankerToolBench numbers cannot be reproduced from this repository
 

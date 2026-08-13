@@ -6,66 +6,79 @@
     {
       "file": "experiments/fr-a1-runs/fr-a1-live-run-001-build.mjs",
       "line": 1,
+      "pattern": "^import \\{ mergeTrajectory \\}",
       "description": "**The entry point.** `npm run demo` runs this file.\n\nNotice the `.ts` extension on an import inside a `.mjs` file. That is why this repository has no build step: Node 22 strips the types and executes the TypeScript directly. There is no bundler, no loader and no transpile output anywhere."
     },
     {
       "file": "experiments/fr-a1-runs/fr-a1-live-run-001-build.mjs",
       "line": 8,
+      "pattern": "uiAssertions: \\[",
       "description": "**The ground truth.** These are the checks a browser-side reviewer made against the live page.\n\nOne passed: the assistant stated the correct reconciled amount. Two failed: it showed no arithmetic, and its five citations were generic 'how to reconcile' articles rather than anything about this user's numbers.\n\nA system that scores on the final number alone would call this a pass. Everything downstream exists so that it does not."
     },
     {
       "file": "experiments/fr-a1-runs/fr-a1-live-run-001-build.mjs",
       "line": 14,
+      "pattern": "^const inner = \\{",
       "description": "**The agent's own account of itself.** Each step carries its phase, what it did, what it observed, and what it cost.\n\nRead step one: the query was classified as `company_search` because no accounting or calculation category existed. That misroute is the root cause of the failure the outer assertions detected — but the outer check could not have known it, and the inner log could not have known the citations were weak. Joining the two is the point of the next step."
     },
     {
       "file": "packages/nodetrace/src/merged.ts",
       "line": 273,
+      "pattern": "^export function mergeTrajectory",
       "description": "**The trust boundary.** `mergeTrajectory` is where loose caller data becomes a `NodeMergedTrajectory` that the rest of the system may assume is well-formed.\n\nThree rules are enforced here in code rather than requested in a comment, because each had a way of going quietly wrong. Read the next three steps."
     },
     {
       "file": "packages/nodetrace/src/merged.ts",
       "line": 182,
+      "pattern": "^function assertNotInlinedBytes",
       "description": "**Rule 1 — NO-LEAK.** Screenshots must be stored paths, never bytes.\n\nThis throws on a `Uint8Array`, an `ArrayBuffer`, or a `data:` URI. Without it, a caller could inline a page screenshot into the trace, and every copy of that trace — including any training dataset built from it — would carry the pixels of whatever was on screen."
     },
     {
       "file": "packages/nodetrace/src/merged.ts",
-      "line": 283,
+      "line": 284,
+      "pattern": "\\{ \\.\\.\\.s, stepIndex: i \\}",
       "description": "**Rule 2 — SEQUENTIAL.** Step indexes are re-stamped `0..n`.\n\nWhatever the caller supplied is ignored. A gap in a caller's numbering must never become a gap in the exported training data. Note `{ ...s, stepIndex: i }`: each step is copied, so the caller's array is never mutated."
     },
     {
       "file": "packages/nodetrace/src/merged.ts",
       "line": 321,
+      "pattern": "HONEST_SCORES: attach a reward ONLY",
       "description": "**Rule 3 — HONEST_SCORES.** A reward is attached only if the caller supplied one.\n\nThis is the single most important line in the file. A merge that defaulted to a zero reward would be indistinguishable from a merge that measured zero. Here, an unmeasured run simply has no `reward` property at all."
     },
     {
       "file": "packages/nodetrace/src/merged.ts",
       "line": 233,
+      "pattern": "labels\\.push\\(`unscored:",
       "description": "**And when a reward IS supplied, partially.** Each component the caller did not provide becomes `0` *and* gets a label `unscored:<name>`.\n\nThe zero is not a score. The label is what tells a later reader which zeros were measured and which were merely absent — so no one can read an unmeasured component as a bad result."
     },
     {
       "file": "packages/nodetrace/src/merged.ts",
       "line": 240,
+      "pattern": "failureCategories\\.push\\(\"ui_assertion_failed\"\\)",
       "description": "**Failure categories come only from honest signals.** A failed UI assertion, a `needs_review` citation, a step that errored, an artifact that would not reopen, a console error.\n\nNothing here is inferred or guessed. Each category traces to a specific fact in the trace, which is what makes the categories usable as a training signal rather than as commentary."
     },
     {
       "file": "packages/nodetrace/src/repair.ts",
-      "line": 45,
+      "line": 60,
+      "pattern": "^export function generateRepairPrompt",
       "description": "**The payoff.** The failed run becomes instructions a coding agent can act on.\n\nRead what this function does *not* do: it never proposes a fix. It states which assertion failed and what was observed instead, then asks the coding agent to trace the root cause itself. A repair prompt that guessed at the fix would teach the next agent to guess too."
     },
     {
       "file": "packages/nodetrace/src/repair.ts",
-      "line": 61,
+      "line": 76,
+      "pattern": "ground truth — do NOT guess",
       "description": "**'Ground truth — do NOT guess'** is written into the prompt itself, followed by every failed assertion with its expected and observed text verbatim.\n\nThis is why the demo output quotes the actual model response back at you. The repair agent is given the evidence, not a summary of it."
     },
     {
       "file": "packages/nodetrace/src/repair.ts",
-      "line": 23,
+      "line": 38,
+      "pattern": "^export function toRegressionCase",
       "description": "**And the regression case.** The same failure, in machine-readable form: the failed assertions, the failure categories, and every unsourced claim that must be resolved with a real source or dropped.\n\nThis is what stops the loop from being a treadmill. A failure that is fixed and then quietly returns is caught, because the case outlives the fix."
     },
     {
       "file": "packages/nodetrace/test/repair.test.ts",
-      "line": 25,
+      "line": 27,
+      "pattern": "scenario\\(\"\\(a\\) GROUND-TRUTH",
       "description": "**The test that proves it.** It asserts the prompt names the failing assertion and contains `412.50` — the real observed delta from the trace, not a plausible-looking number.\n\nRun the whole suite with `npm test`. Next: tour 2, where a run like this is produced in the first place."
     }
   ]

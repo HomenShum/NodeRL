@@ -1,7 +1,9 @@
 # @noderl/nodeeval
 
-Decide whether a run actually earned the claim it is making. Two kinds of check live here, and both
-are pure functions — no file IO, no network, no clock, no randomness.
+Decide whether a run actually earned the claim it is making. Two kinds of check live here. No
+function in this package opens a file, reaches the network, or reads a random number. One reads the
+clock, and only as a default: `buildBtbLedgerImport` stamps `generatedAt` with `new Date()` unless the
+caller passes one, so pass it when you need the output to be byte-identical.
 
 ```ts
 import { verifyTrialBalance, evaluateFullSuiteGate } from "@noderl/nodeeval";

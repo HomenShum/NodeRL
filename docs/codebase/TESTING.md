@@ -1,7 +1,7 @@
 # Testing
 
 ```bash
-npm test        # 14 files, ~10s, no network, no keys
+npm test        # 15 files, ~2s, no network, no keys
 ```
 
 Node's built-in runner (`node --test`). No Jest, no Vitest, no Mocha, no config file.
@@ -42,7 +42,7 @@ oracle test asserts *both* directions:
 1. it **accepts** a correct answer, and
 2. it **rejects** a wrong one **by the right named check**.
 
-`packages/nodeeval/test/accounting_trialBalance.test.ts:98` is the pattern: it does not merely assert
+`debits_equal_credits` (`packages/nodeeval/test/accounting_trialBalance.test.ts:98`) is the pattern: it does not merely assert
 the bad input failed, it asserts `debits_equal_credits` specifically was the check that failed, and
 that the *other* invariants still passed — proving the failure is attributable rather than blanket.
 
@@ -76,13 +76,20 @@ library.
 **`test/entrypoints.test.ts`** — proves each package can be imported *by its own name* and exposes
 the symbols its documentation names. It exists because a real defect shipped: two packages declared
 `"main": "src/index.ts"` while no such file existed, and nothing caught it, because no test had ever
-imported through a package name. The `mustExport` list at line 31 is a contract — add to it when you
-add a headline capability.
+imported through a package name. The `const PACKAGES` (`test/entrypoints.test.ts:31`) list is a contract — add to
+it when you add a headline capability.
 
-**`test/tours.test.ts`** — proves every step in `.tours/` points at a file that exists, at a line
-within range, that is not blank. A walkthrough that silently opens the wrong line is worse than no
-walkthrough, because a new reader trusts it. When this fails, a file usually grew above the
-referenced line: open the tour, find the symbol, update the number.
+**`test/citations.test.ts`** — proves every line number the walkthroughs quote points at the thing
+they say it points at. Each `.tours/` step carries a `pattern` (CodeTour's own re-anchoring regex)
+and each citation in `docs/START_HERE.md` and `docs/codebase/` names its symbol; the test asserts the
+cited line matches. A line reference written in neither form fails as unguarded, because an escape
+hatch would make the test decorative.
+
+It replaced a version that checked only that the number was inside the file and the line was not
+blank — which proves an anchor is *stable* and says nothing about whether it is *correct*. That
+version passed while `INTEGRATIONS.md` pointed at the OpenAI branch to explain the Anthropic default.
+When this fails, a file usually grew above the referenced line: open the citation, find the symbol,
+update the number.
 
 ## Adding a test
 
