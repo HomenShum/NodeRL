@@ -24,8 +24,8 @@ Needs **Node 22.18 or newer** and nothing else. No API key, no database, no buil
 ```bash
 git clone https://github.com/HomenShum/NodeRL.git
 cd NodeRL
-npm install     # ~19 packages, all dev-only for the default path
-npm test        # 12 test files
+npm install     # 19 packages, none of which the demo actually loads
+npm test        # 14 test files, 14 pass
 npm run demo    # one real failed run, end to end
 ```
 
@@ -45,7 +45,7 @@ the order it actually executes.
 
 | Package | What it is | Depends on |
 |---|---|---|
-| [`packages/nodetrace`](packages/nodetrace) | Record a run, join its slices, score it, repair it, export it | nothing for the loop half; an LLM + remote browser for live capture |
+| [`packages/nodetrace`](packages/nodetrace) | Record a run, join its slices, score it, repair it, export it | the loop modules import nothing; live capture needs an LLM key + a remote browser |
 | [`packages/nodeeval`](packages/nodeeval) | Deterministic accounting oracles + suite-level proof gates | nothing |
 | [`packages/nodemem`](packages/nodemem) | Classify / compile / retrieve memory + a failure store | nothing |
 

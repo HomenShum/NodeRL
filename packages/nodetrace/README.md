@@ -60,7 +60,16 @@ so a failed run is still a recorded run.
 
 ## Dependencies
 
-The loop half has none. The live-capture half needs `ai`, `@ai-sdk/anthropic`, `@ai-sdk/openai` and
+The loop **modules** import nothing external — `merged.ts`, `mergedReward.ts`, `repair.ts`,
+`storybook.ts` and `trajectory.ts` import only each other. Importing them directly gives you the
+loop with zero dependencies loaded, which is exactly what `npm run demo` does.
+
+Be aware of the trade-off in `src/index.ts`: it re-exports **both** halves from one entry point, so
+`import { mergeTrajectory } from "@noderl/nodetrace"` also loads the capture half and therefore
+needs `zod` and the AI SDK present. Verified: with `zod` removed, `npm run demo` still exits 0 while
+`test/entrypoints.test.ts` fails on `Cannot find package 'zod'`.
+
+The live-capture half needs `ai`, `@ai-sdk/anthropic`, `@ai-sdk/openai` and
 `zod`, plus `playwright-core` (optional) for the Browserbase substrate. Bring your own API keys —
 this package bundles no secrets. See [`../../SECURITY.md`](../../SECURITY.md).
 

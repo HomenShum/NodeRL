@@ -29,9 +29,13 @@ Two consequences a new reader will notice immediately:
 
 | Command | What it does | How long |
 |---|---|---|
-| `npm install` | Fetch dependencies | ~15s |
-| `npm test` | Run 14 test files through Node's built-in runner | ~10s |
-| `npm run typecheck` | `tsc --noEmit` over every `.ts` file, sources and tests | ~5s |
+| `npm install` | Fetch dependencies — `added 19 packages, and audited 23` | 4s |
+| `npm test` | Run 14 test files through Node's built-in runner | 3s |
+| `npm run typecheck` | `tsc --noEmit` over every `.ts` file, sources and tests | 6s |
+| `npm run demo` | One captured failed run → repair prompt + regression case | instant |
+
+Measured on a fresh clone: Windows 11, Node v22.22.2, npm 10.9.7, warm npm cache. A cold cache makes
+`npm install` slower; nothing else touches the network.
 | `npm run demo` | Run one real failed agent run end to end and print the repair | instant |
 
 There is no `npm run build`, `npm start`, or `npm run lint`. Their absence is deliberate, not an
@@ -56,9 +60,23 @@ oversight.
 | `zod` | the schemas the model's replies are validated against |
 | `playwright-core` *(optional)* | driving the Browserbase substrate |
 
-`packages/nodeeval` and `packages/nodemem` declare **no dependencies at all**, and neither does the
-pure loop half of `nodetrace`. You can use the trace/reward/repair path with nothing installed but
-the two dev dependencies.
+`packages/nodeeval` and `packages/nodemem` declare **no dependencies at all**, and the loop modules
+inside `nodetrace` import nothing external either.
+
+**One caveat worth knowing before you rely on that.** `packages/nodetrace/src/index.ts` re-exports
+*both* halves from a single entry point, so importing the package root loads the capture half too and
+therefore needs `zod` and the AI SDK present. To use the loop with nothing loaded, import the module
+directly — which is exactly what `npm run demo` does:
+
+```ts
+import { mergeTrajectory } from "@noderl/nodetrace";                       // loads the capture half too
+import { mergeTrajectory } from "@noderl/nodetrace/src/merged.ts";         // loads nothing external
+```
+
+Verified by removing `zod` from `node_modules`: `npm run demo` still exits 0, while
+`test/entrypoints.test.ts` fails with `Cannot find package 'zod'` and the other 13 test files pass.
+This is a deliberate trade — one discoverable entry point per package, at the cost of the root import
+pulling in more than a loop-only consumer strictly needs.
 
 ## Test runner
 

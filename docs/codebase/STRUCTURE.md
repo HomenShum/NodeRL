@@ -61,10 +61,10 @@ first thing to understand about this repo.
 |  | The loop | Live capture |
 |---|---|---|
 | Files | `merged`, `mergedReward`, `repair`, `storybook`, `trajectory` | `pipeline`, `reasoning`, `guards`, `substrate/`, `types` |
-| Dependencies | none | `ai`, `@ai-sdk/*`, `zod`, `playwright-core` |
+| Dependencies imported by the modules | none | `ai`, `@ai-sdk/*`, `zod`, `playwright-core` |
 | Needs network / keys | no | yes |
 | Reads the clock or random | no | `Date.now` for the step budget only |
-| Test coverage | thorough | none |
+| Test coverage | thorough | `guards` only |
 | Exercised by `npm run demo` | yes | no |
 
 Both halves are exported from the same `src/index.ts`, in two clearly labelled sections. The loop
