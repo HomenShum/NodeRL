@@ -222,8 +222,18 @@ wrong is the useful part.
   keep a sentence intact would have traded a working detector for a tidier
   paragraph. The sentence was rewritten to drop the scheme instead; the probe's
   header now tells the next writer to do the same.
-- **Re-proved on a fresh clone, after the fix was pushed** — the check that
-  should have been run the first time. See the row below.
+- **Re-proved on a fresh clone of the pushed commit `14f0204`** — the check that
+  should have been run the first time, run this time in the order the mechanism
+  actually requires (commit, then measure, then push):
+
+  | Command, in a fresh `git clone` + `npm ci` | Result |
+  |---|---|
+  | `npm test` | 16 tests, **16 pass, 0 fail**, exit 0 |
+  | `npm run typecheck` | exit 0 |
+  | `npm run demo` | exit 0 under plain `node` |
+  | `node promotion/evidence/rendered-surface-probe.mjs` | exit 0, `surface_found: false` |
+  | `node promotion/evidence/audit-toolchain-check.mjs` | exit 0, both tools available |
+  | committed `rendered-surface-probe.json` vs. a fresh run | findings **identical** (only `generated_at` and `commit` differ, as they must) |
 - **Belief this killed:** "green `npm test` in the working tree means green on a
   fresh clone." For any check that reads `HEAD` rather than the working
   directory, those are different measurements, and only the second one is the one
