@@ -11,7 +11,9 @@ point), so under the `reduced` variant the surface a stranger actually meets is
 the README quickstart and the runnable scripts in the tree. Every journey below
 names the file it drives. Evidence here is captured terminal output plus an exit
 code; a screenshot is impossible where nothing renders, and that impossibility is
-itself scored — see conditions 3–6 in PRODUCT_GOAL.md.
+itself measured and scored — see conditions 3–10 in PRODUCT_GOAL.md, and
+`promotion/evidence/rendered-surface-probe.mjs` for the measurement that decides
+them.
 
 ## Journey shape
 

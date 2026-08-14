@@ -121,3 +121,71 @@ public repository.
   populating it is a content decision, not a refactor.
 - **Full evidence:** [`../docs/SIMPLIFICATION_REPORT.md`](../docs/SIMPLIFICATION_REPORT.md).
   Remaining gaps, ranked: [`../docs/codebase/CONCERNS.md`](../docs/codebase/CONCERNS.md).
+
+### Iteration 2 — 2026-08-14 (conditions 7 and 8: the audits that were unavailable)
+
+Measured at commit `b748ae8`, fresh `git clone`, Windows 11, Node v22.22.2 /
+npm 10.9.7, after `npm ci`.
+
+- **Journey exercised:** none new. This iteration closes a *measurement* gap, not
+  a product gap. Nothing a user does changed.
+- **Observed:** conditions 7 and 8 were UNVERIFIED with the reason "audit not
+  run". That reason conflates two states that need different responses — the
+  audit *tool* was missing (installable) versus the thing to audit was missing
+  (not installable). Nobody could tell from the scorecard which one NodeRL had,
+  so the row read as a to-do that a tool install would clear. It is not.
+- **Fixed:** measured both halves separately, each with a producer that can be
+  re-run rather than a sentence that must be believed.
+  - `promotion/evidence/audit-toolchain-check.mjs` → invokes `lighthouse@13.4.1`
+    and `@axe-core/cli@4.13.0` and records the version each tool printed about
+    itself. Both **available**. So the tooling is not the blocker.
+    (It found a real trap on the way: `execFileSync('npx', …)` fails on Windows
+    with ENOENT and then EINVAL — `.cmd` shim, plus Node's CVE-2024-27980 refusal
+    to spawn one without a shell. A hardcoded `"13.4.1"` string in the artifact
+    would have hidden that the check never actually ran.)
+  - `promotion/evidence/rendered-surface-probe.mjs` → asks five independent
+    questions of the committed tree: markup files, stylesheets, server entry
+    points, UI framework dependencies or `bin` fields, deployed page URLs. **All
+    five zero.** There is no rendered surface, so there is no target.
+  - `promotion/evidence/condition-07-wig-review.md` → the actual Web Interface
+    Guidelines review, performed against
+    <https://vercel.com/design/guidelines> (fetched 2026-08-14, reachable, its
+    category list reproduced in the record so the review can be re-read against
+    the same material). All eight categories walked with a per-category
+    disposition. **No Lighthouse number was used as a substitute** — there is no
+    Lighthouse number, and the two conditions are filed in two documents
+    precisely so that substitution cannot happen quietly.
+  - `promotion/evidence/condition-08-web-quality-audit.md` → the audit record,
+    stating what was not done and why: no page was fabricated on port 4915 to
+    give the tools something to score. A green Lighthouse run against a scratch
+    HTML file would be a real report about a file that is not this product.
+- **Re-proved:** `node promotion/evidence/rendered-surface-probe.mjs` → exit 0,
+  `surface_found: false`. `node promotion/evidence/audit-toolchain-check.mjs` →
+  exit 0, both tools available. `npm test` → **16/16**. `npm run typecheck` →
+  exit 0. `npm run demo` → exit 0 under plain `node`.
+- **Tests:** one added, `test/renderedSurfaceProbe.test.ts`, and it is the point
+  of the whole iteration. A probe that answered "no surface" on every input would
+  produce this same green result on a repo full of HTML, and the N/A verdict
+  resting on it would be a rubber stamp. So the test stands up throwaway git
+  repositories and proves each of the five checks fires **on its own**: an
+  `.html` file, a `react` dependency, a `.listen(` call, and a `*.vercel.app`
+  URL each turn the probe red independently. No existing test was weakened,
+  skipped or deleted; the suite went 15 → 16.
+- **Conditions newly moved:** 3, 4, 5, 6, 7, 8, 9, 10 → **N/A** (from
+  UNVERIFIED), each pointing at a committed artifact and a committed producer.
+  11 stays PASS with its evidence re-measured at `b748ae8` (the baseline's D3
+  caveat about an undeclared `tsx` runner no longer applies — `npm test` runs
+  under plain `node`).
+- **Deliberately NOT moved:** 1, 2 and 12. Their baseline reasons are stale —
+  they cite `scripts/extract-from-noderoom.mjs` and a README with no quickstart,
+  both of which Iteration 1 removed — but re-scoring them requires driving the
+  journeys, and reading someone else's log entry is not driving them. They are
+  flagged as stale in the scorecard preamble instead of being quietly upgraded.
+  **The scorecard therefore still reads 1/12 PASS.** Nothing here made NodeRL
+  more promotable; it made eight rows honest and one of them self-expiring.
+
+**The N/A verdict has an expiry date built in.** `rendered-surface-probe.mjs`
+exits 1 the moment any surface appears, and it runs inside `npm test` via its
+control. The day someone commits a demo page, the suite goes red and these eight
+rows must be re-scored by opening the thing — they cannot inherit "nothing to
+audit" from a tree that no longer exists.

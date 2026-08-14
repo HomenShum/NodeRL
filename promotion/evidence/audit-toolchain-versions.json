@@ -1,0 +1,22 @@
+{
+  "probe": "audit-toolchain-check",
+  "question": "Are the condition-8 audit tools installable on this machine?",
+  "generated_at": "2026-08-14T01:40:58.159Z",
+  "node": "v22.22.2",
+  "tools": {
+    "lighthouse@13.4.1": {
+      "command": "npx --yes lighthouse@13.4.1 --version",
+      "available": true,
+      "reported_version": "13.4.1",
+      "scores": "condition 8 — performance, accessibility, best-practices, Core Web Vitals"
+    },
+    "@axe-core/cli@4.13.0": {
+      "command": "npx --yes @axe-core/cli@4.13.0 --version",
+      "available": true,
+      "reported_version": "4.13.0",
+      "scores": "condition 8 — accessibility violations"
+    }
+  },
+  "all_available": true,
+  "note": "Availability of the tools is not a PASS for condition 8. A tool with nothing to point at produces no measurement. See rendered-surface-probe.json for the other half: NodeRL has no rendered surface, so neither tool was run against anything, and no Lighthouse score exists to be mistaken for a Web Interface Guidelines review (condition 7)."
+}
