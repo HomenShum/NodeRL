@@ -22,6 +22,12 @@
 //
 // Exit 0 = no rendered surface (7 and 8 stay NOT APPLICABLE).
 // Exit 1 = a surface exists (7 and 8 must be audited, not waived).
+//
+// Writing about this probe? It reads the repo, so it will read what you write
+// about it. Quote a deployed URL without its `https://` scheme
+// (`example.vercel.app`, not the full link) — the check scans Markdown on
+// purpose, because that is where a deployment gets announced, and the fix for a
+// sentence tripping it is to rewrite the sentence, never to exclude the file.
 
 import { execFileSync } from 'node:child_process';
 import { writeFileSync } from 'node:fs';

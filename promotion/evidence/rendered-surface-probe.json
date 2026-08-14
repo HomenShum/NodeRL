@@ -2,9 +2,9 @@
   "probe": "rendered-surface-probe",
   "question": "Does NodeRL have a rendered surface for conditions 7 and 8 to score?",
   "answer": "NO — 7 and 8 are NOT APPLICABLE",
-  "commit": "26893f5e8971cfd8830c00a6df1c0ebb2bc33bdc",
+  "commit": "a97d8aaa3b52ae1c0b098727044aaa06c083e69f",
   "node": "v22.22.2",
-  "generated_at": "2026-08-14T01:52:45.438Z",
+  "generated_at": "2026-08-14T01:57:49.227Z",
   "audit_toolchain_evidence": "promotion/evidence/audit-toolchain-versions.json",
   "checks": {
     "markup_files": {

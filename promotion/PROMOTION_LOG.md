@@ -196,9 +196,9 @@ wrong is the useful part.
   moment it was committed.
 - **Root cause:** the probe greps `HEAD`, so it could not see its own control
   until the control was committed — and a control test must contain the patterns
-  it proves fire. Four matches, none of them a surface: the fixture strings
-  `http.createServer(...).listen(4915)` and `https://noderl-demo.vercel.app` in
-  `test/renderedSurfaceProbe.test.ts`, plus two lines of **prose** in
+  it proves fire. Four matches, none of them a surface: two fixture strings in
+  `test/renderedSurfaceProbe.test.ts` (a `createServer(…).listen(…)` call and a
+  `noderl-demo.vercel.app` URL), plus two lines of **prose** in
   `PROMOTION_LOG.md` and `condition-07-wig-review.md` that quote `.listen(` while
   explaining what the probe looks for. A file whose job is to describe a pattern
   is not an instance of it.
@@ -213,12 +213,22 @@ wrong is the useful part.
   ordinary file still fires; new scenario (f) proves the same content at the
   excluded path does not, and that a third file gets no such immunity. The
   exclusion is asserted to be exactly two files wide.
+- **Then it happened again, and the second time the probe was right.** The fresh
+  clone of the fix was still red — on one line of the paragraph above, which had
+  quoted a full `https://…vercel.app` URL while describing the bug. That is not a
+  false positive to be excluded away: the deployed-URL check scans Markdown *on
+  purpose*, because a deployed page is announced in prose, and `PROMOTION_LOG.md`
+  is exactly where such an announcement would land. Blinding it to this file to
+  keep a sentence intact would have traded a working detector for a tidier
+  paragraph. The sentence was rewritten to drop the scheme instead; the probe's
+  header now tells the next writer to do the same.
 - **Re-proved on a fresh clone, after the fix was pushed** — the check that
   should have been run the first time. See the row below.
 - **Belief this killed:** "green `npm test` in the working tree means green on a
   fresh clone." For any check that reads `HEAD` rather than the working
   directory, those are different measurements, and only the second one is the one
-  a stranger gets.
+  a stranger gets. Corollary, learned the hard way twice in one hour: a gate that
+  reads the repo will read what you write *about* the gate.
 
 **The N/A verdict has an expiry date built in.** `rendered-surface-probe.mjs`
 exits 1 the moment any surface appears, and it runs inside `npm test` via its
