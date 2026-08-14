@@ -81,20 +81,35 @@ for (const relativePath of trackedPackageJsons) {
   if (manifest.bin) uiDependencyHits.push(`${relativePath}: bin field present`);
 }
 
-// Exclude the lock file (it lists transitive packages nobody imports) and this
-// probe itself (its own patterns would match).
-const sourceScope = [
-  '--',
-  ':!package-lock.json',
+// A file whose JOB is to describe these patterns is not an instance of them.
+// Exactly two files are in that position, and both are named here rather than
+// matched by a rule, so the exclusion cannot quietly widen: this probe, and the
+// control test that proves the probe fires (a control has to contain the thing
+// it detects). `test/renderedSurfaceProbe.test.ts` asserts this exclusion stays
+// this narrow — an ordinary file with the same content still reddens the gate.
+const SELF_REFERENTIAL = [
   ':!promotion/evidence/rendered-surface-probe.mjs',
+  ':!test/renderedSurfaceProbe.test.ts',
 ];
+
+// A server entry point is code. Markdown cannot bind a port, so prose that
+// quotes `.listen(` while explaining this probe is not a server — scoping the
+// grep to source files is what makes the check mean what it says.
+const CODE_GLOBS = ['*.ts', '*.mts', '*.cts', '*.js', '*.mjs', '*.cjs'];
+
+// A deployed page, unlike a server, is typically announced in prose — so this
+// one deliberately keeps scanning Markdown. It only skips the lock file, which
+// lists transitive packages nobody imports.
+const DEPLOY_SCOPE = ['--', ':!package-lock.json', ...SELF_REFERENTIAL];
 
 const checks = {
   markup_files: git('ls-files', ...MARKUP_GLOBS),
   stylesheet_files: git('ls-files', ...STYLE_GLOBS),
-  server_entrypoints: gitAllowEmpty('grep', '-nIE', SERVER_PATTERN, 'HEAD', ...sourceScope),
+  server_entrypoints: gitAllowEmpty(
+    'grep', '-nIE', SERVER_PATTERN, 'HEAD', '--', ...CODE_GLOBS, ...SELF_REFERENTIAL,
+  ),
   ui_dependencies_or_bin: uiDependencyHits,
-  deployed_urls: gitAllowEmpty('grep', '-nIE', DEPLOY_URL_PATTERN, 'HEAD', ...sourceScope),
+  deployed_urls: gitAllowEmpty('grep', '-nIE', DEPLOY_URL_PATTERN, 'HEAD', ...DEPLOY_SCOPE),
 };
 
 const surfaceFound = Object.values(checks).some((hits) => hits.length > 0);

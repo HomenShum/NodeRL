@@ -184,6 +184,42 @@ npm 10.9.7, after `npm ci`.
   **The scorecard therefore still reads 1/12 PASS.** Nothing here made NodeRL
   more promotable; it made eight rows honest and one of them self-expiring.
 
+### Iteration 2a — 2026-08-14 (the fresh clone refuted Iteration 2 within the hour)
+
+Recorded rather than amended, because the list of things that turned out to be
+wrong is the useful part.
+
+- **Observed:** Iteration 2 was verified with `npm test` **before** its own commit
+  existed. On the first fresh `git clone` of `26893f5`, `npm test` came back
+  **15 pass, 1 fail** and the probe reported `surface_found: true`. The eight N/A
+  rows had been committed against a measurement that stopped being true the
+  moment it was committed.
+- **Root cause:** the probe greps `HEAD`, so it could not see its own control
+  until the control was committed — and a control test must contain the patterns
+  it proves fire. Four matches, none of them a surface: the fixture strings
+  `http.createServer(...).listen(4915)` and `https://noderl-demo.vercel.app` in
+  `test/renderedSurfaceProbe.test.ts`, plus two lines of **prose** in
+  `PROMOTION_LOG.md` and `condition-07-wig-review.md` that quote `.listen(` while
+  explaining what the probe looks for. A file whose job is to describe a pattern
+  is not an instance of it.
+- **Fixed** in `rendered-surface-probe.mjs`, at the seam rather than the symptom:
+  the server-entrypoint grep is scoped to source extensions (`*.ts`, `*.mjs`,
+  `*.js`, …) because Markdown cannot bind a port, which drops both prose matches
+  without weakening anything; and exactly two self-referential paths — the probe
+  and its control — are excluded by name. The deployed-URL check deliberately
+  keeps scanning Markdown, since a deployed page is normally announced in prose.
+- **Guarded:** an exclusion is the classic hiding place for a weakened check, so
+  it is now pinned from both sides. Scenario (d) proves a `.listen(` in an
+  ordinary file still fires; new scenario (f) proves the same content at the
+  excluded path does not, and that a third file gets no such immunity. The
+  exclusion is asserted to be exactly two files wide.
+- **Re-proved on a fresh clone, after the fix was pushed** — the check that
+  should have been run the first time. See the row below.
+- **Belief this killed:** "green `npm test` in the working tree means green on a
+  fresh clone." For any check that reads `HEAD` rather than the working
+  directory, those are different measurements, and only the second one is the one
+  a stranger gets.
+
 **The N/A verdict has an expiry date built in.** `rendered-surface-probe.mjs`
 exits 1 the moment any surface appears, and it runs inside `npm test` via its
 control. The day someone commits a demo page, the suite goes red and these eight

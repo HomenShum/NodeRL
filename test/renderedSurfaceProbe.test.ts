@@ -21,10 +21,11 @@
  * Each vector is proved to fire on its own, because four dead checks hiding
  * behind one live one is the same rubber stamp wearing a longer coat.
  *
- * Then (f) runs the probe against THIS repository, which is what gives the N/A
- * verdict an expiry date: the day a demo page, a stylesheet, a server or a
- * deployed URL lands here, `npm test` goes red and points at the eight
- * scorecard rows that have to be re-scored by opening the page.
+ * Then (f) pins the probe's one exclusion at exactly two files wide, and (g)
+ * runs the probe against THIS repository — which is what gives the N/A verdict
+ * an expiry date: the day a demo page, a stylesheet, a server or a deployed URL
+ * lands here, `npm test` goes red and points at the eight scorecard rows that
+ * have to be re-scored by opening the page.
  *
  * Run: npm test   (or: node --test test/renderedSurfaceProbe.test.ts)
  */
@@ -133,7 +134,35 @@ vector("a server that binds a port", "server_entrypoints", (dir) =>
 vector("a deployed page URL in a doc", "deployed_urls", (dir) =>
   writeFileSync(join(dir, "README.md"), "# fixture\n\nLive at https://noderl-demo.vercel.app\n"));
 
-// (f) The live claim. The scorecard scores conditions 3-10 N/A on the premise
+// (f) The exclusion, pinned at exactly two files wide.
+//
+// The probe skips itself and this file, because a control has to contain the
+// patterns it proves fire — the first fresh-clone run of this mechanism went red
+// on its own fixture strings. An exclusion is also the classic hiding place for
+// a weakened check, so it is asserted here from both sides: (d) above already
+// proved `srv.mjs` with a `.listen(` DOES fire; this proves the same content at
+// the excluded path does NOT, and that a THIRD file gets no such immunity.
+{
+  const dir = makeFixture();
+  try {
+    const server = 'import http from "node:http";\nhttp.createServer(() => {}).listen(4915);\n';
+    mkdirSync(join(dir, "test"), { recursive: true });
+    writeFileSync(join(dir, "test", "renderedSurfaceProbe.test.ts"), server);
+    commit(dir);
+    scenario("the two self-referential files are excluded, and only those two", () => {
+      assert.equal(runProbe(dir).code, 0, "the control's own fixture strings must not redden the gate");
+      writeFileSync(join(dir, "test", "somethingElse.test.ts"), server);
+      commit(dir);
+      const { code, report } = runProbe(dir);
+      assert.equal(code, 1, "the same content in any other file must still fire");
+      assert.equal(report.checks.server_entrypoints.count, 1, "exactly the non-excluded file fires");
+    });
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+}
+
+// (g) The live claim. The scorecard scores conditions 3-10 N/A on the premise
 // that THIS repository has no rendered surface. Running the probe against the
 // fixtures above proves the probe works; running it here is what keeps the
 // scorecard honest. When someone commits a demo page, this line goes red and
