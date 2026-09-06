@@ -1,0 +1,154 @@
+{
+  "schema": "noderl-generated-surface-review/v1",
+  "at": "2026-09-06T01:26:11.387865+00:00",
+  "namedProof": "NODERL-GENERATED-SURFACE-DETECTION-01",
+  "baseCommit": "f126a12125a225df72c85e5bccbe1301b64f1a52",
+  "baseTree": "bd3b9d57c96b374d8296f405179b7ce10c209744",
+  "status": "LOCAL_SOURCE_CHECKS_PASS_DETECTED_INTERFACE_REQUIRES_AUDIT_SHARED_CI_PENDING",
+  "sourceBindings": [
+    {
+      "path": "promotion/evidence/rendered-surface-probe.mjs",
+      "bytes": 7194,
+      "sha256": "8d570cf6f3a1ee92736a3996986f43f5c3752f937a5b3966ab8c5fe9d14a503b"
+    },
+    {
+      "path": "test/renderedSurfaceProbe.test.ts",
+      "bytes": 8908,
+      "sha256": "95267ad61d19f2d9223c17dd52f3b35ca9ea23b066258c4ed81bcf1e47e17d4d"
+    },
+    {
+      "path": "promotion/evidence/rendered-surface-probe.json",
+      "bytes": 1703,
+      "sha256": "9755070af6164a0c961fc494c2c6c527d2c022c5da5dba9d903c11575d03f915"
+    },
+    {
+      "path": "promotion/evidence/condition-07-wig-review.md",
+      "bytes": 6752,
+      "sha256": "279680861d24a531f0cfbe3616606ddc8623af283ecc2917ae749e898c391cea"
+    },
+    {
+      "path": "promotion/evidence/condition-08-web-quality-audit.md",
+      "bytes": 4502,
+      "sha256": "60c9f72276b5a20a6e94da38cc52a5f3f60ac308432cd03e92689c7c781b932f"
+    },
+    {
+      "path": "promotion/PRODUCT_GOAL.md",
+      "bytes": 12676,
+      "sha256": "80717a1fd399c1b6d5fa9a2714a790280a489d9805862e8df1b2033b5b015dc8"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 7408,
+      "sha256": "db75b90e63efe7285dff2dd3516e4f348e4c64ec9bbde7687971dd9d9d1990fa"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 492,
+      "sha256": "48abf0d61321f17926b3831dbf2b22eef7b6407193d90c29b7b8ddccb3a32d9b"
+    }
+  ],
+  "bindingBoundary": "Eight changed source/config/document owners; this receipt excludes itself. Raw byte identities, not a whole-source or Git-filter equivalence claim.",
+  "unchangedRenderer": {
+    "path": "packages/nodetrace/src/storybook.ts",
+    "bytes": 20886,
+    "sha256": "cc7686f7b75d541a6eb95e7e5686d949786186ec2ab25f023abb4956c6372a97"
+  },
+  "protectedOriginalFiles": 380,
+  "immutableHistoricalPacketFiles": 285,
+  "historicalReportSource": "702759ae7854f165eedb051a98b679dfdfe06e95",
+  "oldDetector": {
+    "scenariosPassed": 8,
+    "scenariosFailed": 3,
+    "exitCode": 1,
+    "meaning": "Original detector misses two generated-markup fixtures and the actual renderer; original output retained."
+  },
+  "finalChecks": {
+    "normalTestFiles": 16,
+    "testFileFailures": 0,
+    "detectorScenarios": 12,
+    "detectorFailures": 0,
+    "typecheck": "PASS",
+    "recordedDemo": "PASS",
+    "probeExitCode": 1,
+    "generatedMarkupMatches": 4,
+    "commands": [
+      {
+        "name": "final-normal-test",
+        "args": [
+          "C:/nvm4w/nodejs/node.exe",
+          "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+          "test"
+        ],
+        "exitCode": 0,
+        "seconds": 11.906
+      },
+      {
+        "name": "final-normal-typecheck",
+        "args": [
+          "C:/nvm4w/nodejs/node.exe",
+          "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+          "run",
+          "typecheck"
+        ],
+        "exitCode": 0,
+        "seconds": 1.344
+      },
+      {
+        "name": "final-normal-demo",
+        "args": [
+          "C:/nvm4w/nodejs/node.exe",
+          "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+          "run",
+          "demo"
+        ],
+        "exitCode": 0,
+        "seconds": 0.328
+      }
+    ]
+  },
+  "sourceAndDetectorIdentity": "The probe inspects committed HEAD while its own executing file is separately hashed. Captured JSON names f126, not a fabricated future commit.",
+  "gitBudget": {
+    "totalMilliseconds": 30000,
+    "maximumOutputBytesPerCommand": 1048576,
+    "timeoutAndParseErrors": "Propagate as failure, never an empty surface result."
+  },
+  "operatorEvidence": [
+    {
+      "path": "E6k-surface-repair-01/old-detector-new-scenarios.stdout.txt",
+      "sha256": "716a08ad75ec7506cc35ee4e248b97c18623c554735d7e05151f1df3aac8ee60",
+      "meaning": "Operator-retained raw reference, not a promised path in a fresh clone"
+    },
+    {
+      "path": "E6k-surface-repair-01/old-detector-new-scenarios.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "meaning": "Operator-retained raw reference, not a promised path in a fresh clone"
+    },
+    {
+      "path": "E6k-surface-repair-01/final-normal-test.stdout.txt",
+      "sha256": "dbeb9581629da2e1867a0d8ec63c199af1f0c2004d4731f313bcd81274dfa557",
+      "meaning": "Operator-retained raw reference, not a promised path in a fresh clone"
+    },
+    {
+      "path": "E6k-surface-repair-01/final-normal-typecheck.stdout.txt",
+      "sha256": "2eaf80bc4878add206f78acd487fc389b151321f177900f688e9d9590db29fd4",
+      "meaning": "Operator-retained raw reference, not a promised path in a fresh clone"
+    },
+    {
+      "path": "E6k-surface-repair-01/final-normal-demo.stdout.txt",
+      "sha256": "38bf7bf5e8fc2e5aa17820e52e3f23d13196e5759a17a59f607e9520e1d72329",
+      "meaning": "Operator-retained raw reference, not a promised path in a fresh clone"
+    },
+    {
+      "path": "E6k-surface-repair-01/bounded-probe-write.stdout.txt",
+      "sha256": "9755070af6164a0c961fc494c2c6c527d2c022c5da5dba9d903c11575d03f915",
+      "meaning": "Operator-retained raw reference, not a promised path in a fresh clone"
+    }
+  ],
+  "ci": "One ordinary Ubuntu/Node22 workflow configured; actual shared PR/main execution is still pending. No protected-branch enforcement claim.",
+  "limitations": [
+    "Detection tests do not complete Web Interface Guidelines, Lighthouse, axe, human, device or performance review.",
+    "Prior N/A records are explicitly historical. All complete portfolio dimensions and promotion remain unresolved.",
+    "No renderer/example changes and no new browser, provider or deployment proof.",
+    "Historical packet-only verification remains valid. Its optional source-root check targets the old raw snapshot and intentionally fails on changed current source."
+  ]
+}

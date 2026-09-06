@@ -1,48 +1,38 @@
 #!/usr/bin/env node
-// Producer for PROMOTION conditions 7 and 8 on NodeRL.
+// Detect committed rendered-surface markers before assessing promotion audits.
+// A generated HTML report counts even when its markup lives in TypeScript.
+// Exit 1 means a surface was found and requires an actual review; it is not a
+// detector-test failure or a completed audit. Exit 0 means no heuristic marker
+// was found, not automatic permission to score UI conditions N/A.
 //
-// Conditions 7 (Web Interface Guidelines review) and 8 (web-quality audit:
-// accessibility, performance, Core Web Vitals) both score a rendered surface.
-// Both toolchains are installable here — `lighthouse@13.4.1` and
-// `@axe-core/cli@4.13.0` resolve and print their versions (recorded in the
-// artifact alongside this probe). So the question that decides 7 and 8 is not
-// "is the tool available" but "is there a page to point it at".
+// node promotion/evidence/rendered-surface-probe.mjs
+// node promotion/evidence/rendered-surface-probe.mjs --write
 //
-// This script answers that question with committed evidence instead of prose,
-// and it is a gate, not a dumper: it exits 1 the moment a rendered surface
-// appears in the tree. That matters because a NOT APPLICABLE verdict is only
-// honest while the premise holds. The day someone commits an .html, a .tsx, a
-// stylesheet, a server entry point or a UI framework dependency, this probe
-// goes red and forces 7 and 8 to be re-scored by actually running the audits,
-// rather than inheriting a stale "nothing to audit" from a tree that no longer
-// exists.
-//
-//   node promotion/evidence/rendered-surface-probe.mjs
-//   node promotion/evidence/rendered-surface-probe.mjs --write   # refresh JSON
-//
-// Exit 0 = no rendered surface (7 and 8 stay NOT APPLICABLE).
-// Exit 1 = a surface exists (7 and 8 must be audited, not waived).
-//
-// Writing about this probe? It reads the repo, so it will read what you write
-// about it. Quote a deployed URL without its `https://` scheme
-// (`example.vercel.app`, not the full link) — the check scans Markdown on
-// purpose, because that is where a deployment gets announced, and the fix for a
-// sentence tripping it is to rewrite the sentence, never to exclude the file.
+// Every inspected source path/content comes from HEAD. The executing detector
+// can be uncommitted; its separate hash makes that distinction explicit.
 
 import { execFileSync } from 'node:child_process';
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const git = (...args) =>
-  execFileSync('git', args, { cwd: repoRoot, encoding: 'utf8' })
-    .split('\n')
-    .map((line) => line.trim())
-    .filter(Boolean);
+const deadline = Date.now() + 30_000;
+const gitText = (...args) => {
+  const remaining = deadline - Date.now();
+  if (remaining <= 0) throw new Error('Source inspection exceeded its 30-second budget');
+  return execFileSync('git', ['--no-optional-locks', ...args], {
+    cwd: repoRoot, encoding: 'utf8', timeout: remaining, maxBuffer: 1024 * 1024,
+  });
+};
+const git = (...args) => gitText(...args)
+  .split('\n')
+  .map((line) => line.trim())
+  .filter(Boolean);
 
-// `git grep` and `git ls-files` exit 1 on "no matches", which is the expected
-// answer here — treat it as an empty result, not as a crash.
+// `git grep` exits 1 on no matches. Only that status is an empty result;
+// genuine Git errors propagate and must not become an absence claim.
 const gitAllowEmpty = (...args) => {
   try {
     return git(...args);
@@ -54,8 +44,9 @@ const gitAllowEmpty = (...args) => {
 
 // Every file extension that renders in a browser, plus the ones that compile
 // into something that does.
-const MARKUP_GLOBS = ['*.html', '*.htm', '*.tsx', '*.jsx', '*.vue', '*.svelte', '*.astro'];
-const STYLE_GLOBS = ['*.css', '*.scss', '*.sass', '*.less', '*.styl'];
+const MARKUP_SUFFIXES = ['.html', '.htm', '.tsx', '.jsx', '.vue', '.svelte', '.astro'];
+const STYLE_SUFFIXES = ['.css', '.scss', '.sass', '.less', '.styl'];
+const GENERATED_MARKUP_PATTERN = '<!doctype[[:space:]]+html([[:space:]>])|<(html|style|body)([[:space:]>])';
 
 // Something in the tree that binds a port and serves a page.
 const SERVER_PATTERN =
@@ -69,11 +60,12 @@ const UI_DEPENDENCIES =
 const DEPLOY_URL_PATTERN =
   'https?://[A-Za-z0-9.-]*(vercel\\.app|netlify\\.app|github\\.io|pages\\.dev|render\\.com|fly\\.dev|surge\\.sh)';
 
-const trackedPackageJsons = git('ls-files', '*package.json');
+const trackedPaths = git('ls-tree', '-r', '--name-only', 'HEAD');
+const trackedPackageJsons = trackedPaths.filter((name) => name.endsWith('package.json'));
 const uiDependencyHits = [];
 for (const relativePath of trackedPackageJsons) {
   const manifest = JSON.parse(
-    execFileSync('git', ['show', `HEAD:${relativePath}`], { cwd: repoRoot, encoding: 'utf8' }),
+    gitText('show', `HEAD:${relativePath}`),
   );
   const declared = {
     ...(manifest.dependencies ?? {}),
@@ -109,8 +101,11 @@ const CODE_GLOBS = ['*.ts', '*.mts', '*.cts', '*.js', '*.mjs', '*.cjs'];
 const DEPLOY_SCOPE = ['--', ':!package-lock.json', ...SELF_REFERENTIAL];
 
 const checks = {
-  markup_files: git('ls-files', ...MARKUP_GLOBS),
-  stylesheet_files: git('ls-files', ...STYLE_GLOBS),
+  markup_files: trackedPaths.filter((name) => MARKUP_SUFFIXES.some((suffix) => name.endsWith(suffix))),
+  stylesheet_files: trackedPaths.filter((name) => STYLE_SUFFIXES.some((suffix) => name.endsWith(suffix))),
+  generated_markup: gitAllowEmpty(
+    'grep', '-niIE', GENERATED_MARKUP_PATTERN, 'HEAD', '--', ...CODE_GLOBS, ...SELF_REFERENTIAL,
+  ),
   server_entrypoints: gitAllowEmpty(
     'grep', '-nIE', SERVER_PATTERN, 'HEAD', '--', ...CODE_GLOBS, ...SELF_REFERENTIAL,
   ),
@@ -123,8 +118,15 @@ const surfaceFound = Object.values(checks).some((hits) => hits.length > 0);
 const artifact = {
   probe: 'rendered-surface-probe',
   question: 'Does NodeRL have a rendered surface for conditions 7 and 8 to score?',
-  answer: surfaceFound ? 'YES — audit it' : 'NO — 7 and 8 are NOT APPLICABLE',
+  answer: surfaceFound ? 'YES — audit it' : 'NO MARKERS FOUND — applicability remains unverified',
   commit: git('rev-parse', 'HEAD')[0],
+  source_tree: git('rev-parse', 'HEAD^{tree}')[0],
+  source_snapshot: 'Committed HEAD paths and contents; index and working source are not inspected',
+  detector: {
+    path: 'promotion/evidence/rendered-surface-probe.mjs',
+    sha256: createHash('sha256').update(readFileSync(fileURLToPath(import.meta.url))).digest('hex'),
+    source: 'Executed working file; may differ from the detector committed at the inspected HEAD',
+  },
   node: process.version,
   generated_at: new Date().toISOString(),
   // The other half of the 7/8 verdict — whether the audit TOOLS exist — is a

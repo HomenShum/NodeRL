@@ -1,10 +1,17 @@
 {
   "probe": "rendered-surface-probe",
   "question": "Does NodeRL have a rendered surface for conditions 7 and 8 to score?",
-  "answer": "NO — 7 and 8 are NOT APPLICABLE",
-  "commit": "a97d8aaa3b52ae1c0b098727044aaa06c083e69f",
+  "answer": "YES — audit it",
+  "commit": "f126a12125a225df72c85e5bccbe1301b64f1a52",
+  "source_tree": "bd3b9d57c96b374d8296f405179b7ce10c209744",
+  "source_snapshot": "Committed HEAD paths and contents; index and working source are not inspected",
+  "detector": {
+    "path": "promotion/evidence/rendered-surface-probe.mjs",
+    "sha256": "8d570cf6f3a1ee92736a3996986f43f5c3752f937a5b3966ab8c5fe9d14a503b",
+    "source": "Executed working file; may differ from the detector committed at the inspected HEAD"
+  },
   "node": "v22.22.2",
-  "generated_at": "2026-08-14T01:57:49.227Z",
+  "generated_at": "2026-09-06T01:22:20.997Z",
   "audit_toolchain_evidence": "promotion/evidence/audit-toolchain-versions.json",
   "checks": {
     "markup_files": {
@@ -14,6 +21,15 @@
     "stylesheet_files": {
       "count": 0,
       "matches": []
+    },
+    "generated_markup": {
+      "count": 4,
+      "matches": [
+        "HEAD:packages/nodetrace/src/storybook.ts:405:    `<!doctype html>` +",
+        "HEAD:packages/nodetrace/src/storybook.ts:406:    `<html lang=\"en\"><head><meta charset=\"utf-8\">` +",
+        "HEAD:packages/nodetrace/src/storybook.ts:409:    `<style>${STORYBOOK_CSS}</style>` +",
+        "HEAD:packages/nodetrace/src/storybook.ts:410:    `</head><body class=\"nt-storybook\" data-trajectory-id=\"${esc(t.trajectoryId)}\">` +"
+      ]
     },
     "server_entrypoints": {
       "count": 0,
@@ -28,5 +44,5 @@
       "matches": []
     }
   },
-  "surface_found": false
+  "surface_found": true
 }

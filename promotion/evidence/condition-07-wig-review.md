@@ -1,5 +1,10 @@
 # Condition 7 — Web Interface Guidelines review
 
+> **Current applicability correction, 2026-09-06: the historical N/A premise below is invalid.** NodeRL's public `renderStorybook` library generates a complete HTML report from TypeScript. The repaired detector identifies `packages/nodetrace/src/storybook.ts`; its deliberate exit 1 requires an actual audit. The prior review, source identities and original measurements below are retained as history, not current acceptance. The Web Interface Guidelines condition remains **UNVERIFIED**. The local report repair has scoped rendered evidence; no complete Lighthouse, axe, human or performance approval is inferred. See [current handoff](../../HANDOFF.md) and [current probe output](rendered-surface-probe.json).
+
+## Historical review retained verbatim
+
+
 **Verdict: NOT APPLICABLE — no rendered surface exists to review.**
 
 Not PASS. A condition with no artifact to score cannot be passed, and this one
