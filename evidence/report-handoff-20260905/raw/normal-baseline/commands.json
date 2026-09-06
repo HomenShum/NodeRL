@@ -1,0 +1,200 @@
+[
+  {
+    "name": "head-before",
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exitCode": 0,
+    "seconds": 0.047,
+    "stdoutSha256": "cda5050162888d466cb3b742fc69161c2a64efd77cc646bef3aecdb8289dafc8",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "branch-before",
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "branch",
+      "--show-current"
+    ],
+    "exitCode": 0,
+    "seconds": 0.031,
+    "stdoutSha256": "6403203dd5a0867eb14d104ee8a73730bd72dd9ad92e78d996a6dba0a5dcfc01",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "status-before",
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "status",
+      "--porcelain=v1",
+      "-uall"
+    ],
+    "exitCode": 0,
+    "seconds": 0.125,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "remote-current",
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exitCode": 0,
+    "seconds": 0.797,
+    "stdoutSha256": "61b949aaefbbdd4ac6e69cb780ec4467049b8c38ea81439d4c069b04019a43a5",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "preserve-old-tip",
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "branch",
+      "codex/recovery-noderl-main-20260905",
+      "dc4d66824fd1c05050ae999634ab0225137d4672"
+    ],
+    "exitCode": 0,
+    "seconds": 0.032,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "exact-fast-forward",
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "merge",
+      "--ff-only",
+      "4b06939b8fd9121e2ba73887df2dd799eae2f1aa"
+    ],
+    "exitCode": 0,
+    "seconds": 0.093,
+    "stdoutSha256": "681e2acbe5f3bbbc792e89fef6260ede5adbe5d1fe377686f54232a1d7d536d4",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "head-after",
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exitCode": 0,
+    "seconds": 0.047,
+    "stdoutSha256": "60044d296e70875619a821f0c2652a1c01c6a42a98271e9fbb8a474aaee903f6",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "tree-after",
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "rev-parse",
+      "HEAD^{tree}"
+    ],
+    "exitCode": 0,
+    "seconds": 0.031,
+    "stdoutSha256": "daba56b6f64c9c997ac588aa8e42cbac577762c9100564430347ac2647134693",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "source-paths",
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "ls-files",
+      "-z"
+    ],
+    "exitCode": 0,
+    "seconds": 0.047,
+    "stdoutSha256": "2077bae3e261948ee12db0c5c2f9bb85ebb75051d6c1c8c76abfff6874bc3dd1",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "normal-ci",
+    "argv": [
+      "C:/nvm4w/nodejs/node.exe",
+      "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+      "ci"
+    ],
+    "exitCode": 0,
+    "seconds": 1.75,
+    "stdoutSha256": "6168d1e0eb9bc52c45886a3b7aa9bf693ba964021ab877a8f06270e245b0d8a0",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "normal-tests",
+    "argv": [
+      "C:/nvm4w/nodejs/node.exe",
+      "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+      "test"
+    ],
+    "exitCode": 0,
+    "seconds": 6.89,
+    "stdoutSha256": "4e88b2ffa57ee08ff405f68816f88cdc4e7e589d0412b761b41e82dfeb65b58e",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "normal-typecheck",
+    "argv": [
+      "C:/nvm4w/nodejs/node.exe",
+      "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+      "run",
+      "typecheck"
+    ],
+    "exitCode": 0,
+    "seconds": 7.781,
+    "stdoutSha256": "2eaf80bc4878add206f78acd487fc389b151321f177900f688e9d9590db29fd4",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "normal-demo",
+    "argv": [
+      "C:/nvm4w/nodejs/node.exe",
+      "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+      "run",
+      "demo"
+    ],
+    "exitCode": 0,
+    "seconds": 0.329,
+    "stdoutSha256": "38bf7bf5e8fc2e5aa17820e52e3f23d13196e5759a17a59f607e9520e1d72329",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "status-final",
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "status",
+      "--porcelain=v1",
+      "-uall"
+    ],
+    "exitCode": 0,
+    "seconds": 0.046,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "preserved-old-final",
+    "argv": [
+      "git",
+      "--no-optional-locks",
+      "rev-parse",
+      "codex/recovery-noderl-main-20260905"
+    ],
+    "exitCode": 0,
+    "seconds": 0.032,
+    "stdoutSha256": "cda5050162888d466cb3b742fc69161c2a64efd77cc646bef3aecdb8289dafc8",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

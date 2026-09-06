@@ -1,0 +1,15 @@
+{
+  "selector": "[data-testid=\"room-url\"]",
+  "label": "D: caller URL remains an executable link",
+  "rect": {
+    "x": 24,
+    "y": 117.28125,
+    "width": 336.875,
+    "height": 38
+  },
+  "raw": "before-script-uri-390-raw.png",
+  "annotated": "before-script-uri-390-boundary-3px.png",
+  "sourceHtmlSha256": "554f44e516d01b8dcbb22301c5e836b3835b44d41c1111b399e11e764859d613",
+  "mechanism": "Temporary 3 px native DOM overlay on actual unchanged report; no product/source style changes; exact page.content restoration.",
+  "untouched": "All report content, totals, data, native layout, and source HTML outside the temporary overlay remain unchanged."
+}

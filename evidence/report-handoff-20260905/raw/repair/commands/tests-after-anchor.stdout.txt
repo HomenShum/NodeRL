@@ -1,0 +1,421 @@
+
+> noderl@0.1.0 test
+> node --test "test/*.test.ts" "packages/*/test/*.test.ts"
+
+TAP version 13
+# GOOD result: {
+#   "verifier": "arApAging",
+#   "passed": true,
+#   "checks": [
+#     {
+#       "name": "bucket_partition",
+#       "passed": true,
+#       "detail": "all 4 invoice(s) land in exactly one bucket by daysOverdue"
+#     },
+#     {
+#       "name": "bucket_sums_total",
+#       "passed": true,
+#       "detail": "bucket amounts reconcile to total outstanding 1000.00 (tol 0.005)"
+#     },
+#     {
+#       "name": "reserve_monotonic",
+#       "passed": true,
+#       "detail": "reserve rates are monotonic non-decreasing across 4 bucket(s)"
+#     }
+#   ],
+#   "score": 1
+# }
+# BAD(sums) result: {
+#   "verifier": "arApAging",
+#   "passed": false,
+#   "checks": [
+#     {
+#       "name": "bucket_partition",
+#       "passed": true,
+#       "detail": "all 4 invoice(s) land in exactly one bucket by daysOverdue"
+#     },
+#     {
+#       "name": "bucket_sums_total",
+#       "passed": false,
+#       "detail": "sums off: claimedBucketTotal=1799.00, recomputedTotal=1000.00, totalOutstanding=1000.00; bucket \\"31-60\\" claimed 999.00 != recomputed 200.00"
+#     },
+#     {
+#       "name": "reserve_monotonic",
+#       "passed": true,
+#       "detail": "reserve rates are monotonic non-decreasing across 4 bucket(s)"
+#     }
+#   ],
+#   "score": 0.6666666666666666
+# }
+# BAD(mono) result: {
+#   "verifier": "arApAging",
+#   "passed": false,
+#   "checks": [
+#     {
+#       "name": "bucket_partition",
+#       "passed": true,
+#       "detail": "all 4 invoice(s) land in exactly one bucket by daysOverdue"
+#     },
+#     {
+#       "name": "bucket_sums_total",
+#       "passed": true,
+#       "detail": "bucket amounts reconcile to total outstanding 1000.00 (tol 0.005)"
+#     },
+#     {
+#       "name": "reserve_monotonic",
+#       "passed": false,
+#       "detail": "reserve monotonicity violated: bucket \\"90+\\" rate 0.1 < older-money floor \\"61-90\\" rate 0.5"
+#     }
+#   ],
+#   "score": 0.6666666666666666
+# }
+# BAD(partition) result: {
+#   "verifier": "arApAging",
+#   "passed": false,
+#   "checks": [
+#     {
+#       "name": "bucket_partition",
+#       "passed": false,
+#       "detail": "partition violated: invoice\#0 (daysOverdue=11) matched 0 buckets"
+#     },
+#     {
+#       "name": "bucket_sums_total",
+#       "passed": false,
+#       "detail": "sums off: claimedBucketTotal=1000.00, recomputedTotal=900.00, totalOutstanding=1000.00; bucket \\"0-30\\" claimed 100.00 != recomputed 0.00"
+#     },
+#     {
+#       "name": "reserve_monotonic",
+#       "passed": true,
+#       "detail": "reserve rates are monotonic non-decreasing across 4 bucket(s)"
+#     }
+#   ],
+#   "score": 0.3333333333333333
+# }
+# RESULT: PASS (accepts GOOD, rejects BAD on each invariant, deterministic)
+# Subtest: packages\\nodeeval\\test\\accounting_arApAging.test.ts
+ok 1 - packages\\nodeeval\\test\\accounting_arApAging.test.ts
+  ---
+  duration_ms: 317.3967
+  type: 'test'
+  ...
+#   ok:   GOOD reconciliation -> passed === true, score === 1
+#   ok:   BAD (ending cash off by 1.00) -> passed === false, names ending_cash_tie
+#   ok:   BAD (unbalanced JE) -> passed === false, names the specific je_1_balanced
+#   ok:   tolerance: half-cent delta still ties; full-cent delta fails
+#   ok:   deterministic: identical input -> identical result (good & bad)
+# RESULT: PASS (5 scenarios — accepts GOOD, rejects BAD by named check, deterministic)
+# Subtest: packages\\nodeeval\\test\\accounting_bankReconciliation.test.ts
+ok 2 - packages\\nodeeval\\test\\accounting_bankReconciliation.test.ts
+  ---
+  duration_ms: 306.4035
+  type: 'test'
+  ...
+#   ok:   GOOD fixture accepted (passed=true, score=1)
+#   ok:   GOOD fixture with sub-cent float noise accepted (tolerance honored)
+#   ok:   BAD fixture (broken cash tie-out) rejected; failing check named
+#   ok:   BAD fixture (operating not anchored on net income) rejected; failing check named
+#   ok:   deterministic (identical output for identical input)
+# RESULT: PASS (accepts GOOD, rejects BAD by named check, deterministic)
+# Subtest: packages\\nodeeval\\test\\accounting_cashFlowIndirect.test.ts
+ok 3 - packages\\nodeeval\\test\\accounting_cashFlowIndirect.test.ts
+  ---
+  duration_ms: 296.741
+  type: 'test'
+  ...
+#   ok:   GOOD accepted (passed=true, score=1, 12 checks)
+#   ok:   BAD rejected (failing check: balances[entry 0] — debits 300.30 != credits 300.29 (delta 0.01 > 0.005))
+#   ok:   BAD (unknown account) rejected (failing check: accounts_exist[entry 0][line 1])
+#   ok:   BAD (negative amounts) rejected (failing checks: no_negative[entry 0][line 0], no_negative[entry 0][line 1])
+#   ok:   deterministic (identical output for identical input)
+# RESULT: PASS (accepts GOOD, rejects BAD across 3 invariants, deterministic)
+# Subtest: packages\\nodeeval\\test\\accounting_journalEntry.test.ts
+ok 4 - packages\\nodeeval\\test\\accounting_journalEntry.test.ts
+  ---
+  duration_ms: 286.9344
+  type: 'test'
+  ...
+#   ok:   GOOD input -> passed === true
+#   ok:   GOOD input -> score === 1 (2/2)
+#   ok:   verifier name preserved
+#   ok:   checks preserved
+#   ok:   BAD input -> passed === false (rejects a wrong input)
+#   ok:   BAD input -> score === 0.5 (1/2)
+#   ok:   empty checks -> passed === true (vacuous)
+#   ok:   empty checks -> score === 1 (0/0 convention)
+#   ok:   deterministic: identical output for identical input
+#   ok:   checks are a defensive copy (input mutation ignored)
+# RESULT: PASS (accepts GOOD, rejects BAD, deterministic)
+# Subtest: packages\\nodeeval\\test\\accounting_oracleTypes.test.ts
+ok 5 - packages\\nodeeval\\test\\accounting_oracleTypes.test.ts
+  ---
+  duration_ms: 275.3306
+  type: 'test'
+  ...
+# GOOD result: {
+#   "verifier": "trialBalance",
+#   "passed": true,
+#   "checks": [
+#     {
+#       "name": "input_well_formed",
+#       "passed": true,
+#       "detail": "all 4 account rows have finite, non-negative debit/credit"
+#     },
+#     {
+#       "name": "debits_equal_credits",
+#       "passed": true,
+#       "detail": "debits 1500.00 == credits 1500.00 (|delta| <= 0.005)"
+#     },
+#     {
+#       "name": "net_income_links_to_equity",
+#       "passed": true,
+#       "detail": "net income 300.00 (revenue 500.00 - expense 200.00) closes into equity: assets 1300.00 == liab 0.00 + equity 1000.00 + NI 300.00"
+#     },
+#     {
+#       "name": "balance_sheet_balances",
+#       "passed": true,
+#       "detail": "assets 1300.00 == liabilities 0.00 + equity 1300.00 (|delta| <= 0.005)"
+#     }
+#   ],
+#   "score": 1
+# }
+#   ok:   verifier name is 'trialBalance'
+#   ok:   GOOD trial balance -> passed === true (accepts a correct input)
+#   ok:   GOOD trial balance -> score === 1 (all checks pass)
+#   ok:   GOOD: debits_equal_credits passes
+#   ok:   GOOD: net_income_links_to_equity passes
+#   ok:   GOOD: balance_sheet_balances passes
+#   ok:   GOOD (within half-cent tolerance) -> passed === true
+# BAD result: {
+#   "verifier": "trialBalance",
+#   "passed": false,
+#   "checks": [
+#     {
+#       "name": "input_well_formed",
+#       "passed": true,
+#       "detail": "all 4 account rows have finite, non-negative debit/credit"
+#     },
+#     {
+#       "name": "debits_equal_credits",
+#       "passed": false,
+#       "detail": "debits 1600.00 != credits 1500.00 (delta 100.00 > 0.005)"
+#     },
+#     {
+#       "name": "net_income_links_to_equity",
+#       "passed": false,
+#       "detail": "net income 300.00 does not reconcile: assets 1400.00 != liab 0.00 + equity 1000.00 + NI 300.00 = 1300.00 (delta 100.00 > 0.005)"
+#     },
+#     {
+#       "name": "balance_sheet_balances",
+#       "passed": false,
+#       "detail": "assets 1400.00 != liabilities 0.00 + equity 1300.00 (delta 100.00 > 0.005)"
+#     }
+#   ],
+#   "score": 0.25
+# }
+#   ok:   BAD trial balance -> passed === false (rejects a wrong input)
+#   ok:   BAD trial balance -> score < 1 (at least one check failed)
+#   ok:   BAD: the failing check 'debits_equal_credits' is present by name
+#   ok:   BAD: debits_equal_credits is the named failing invariant
+#   ok:   BAD: failing check detail reports the exact unbalanced totals
+#   ok:   BAD: balance_sheet_balances also fails
+#   ok:   anchor: contra-equity + revenue keeps debits==credits (isolates the equation term)
+#   ok:   anchor: correctly-classified balanced books pass all checks
+#   ok:   BAD (malformed) -> passed === false
+#   ok:   BAD (malformed): input_well_formed is the named failing invariant
+#   ok:   deterministic: identical output for identical input
+#   ok:   deterministic: identical output for identical BAD input
+# RESULT: PASS (accepts GOOD, rejects BAD by named check, deterministic)
+# Subtest: packages\\nodeeval\\test\\accounting_trialBalance.test.ts
+ok 6 - packages\\nodeeval\\test\\accounting_trialBalance.test.ts
+  ---
+  duration_ms: 259.0571
+  type: 'test'
+  ...
+#   PASS  (a) SSRF — every internal address form is rejected
+#   PASS  (b) NOT-BLANKET — ordinary public URLs are still accepted
+#   PASS  (c) ALLOWLIST — when allowHosts is set, it is the real control
+#   PASS  (d) BOUND_READ — page text is clipped to the model's input budget
+# 4 passed, 0 failed
+# RESULT: PASS (rejects 23 internal address forms, still accepts public URLs)
+# Subtest: packages\\nodetrace\\test\\guards.test.ts
+ok 7 - packages\\nodetrace\\test\\guards.test.ts
+  ---
+  duration_ms: 249.2443
+  type: 'test'
+  ...
+#   PASS  (a) SEQUENTIAL — stepIndex is contiguous 0..n regardless of input
+#   PASS  (b) DETERMINISM — same inputs => same trajectoryId + byte-identical object
+#   PASS  (c) NO-LEAK — screenshots are paths; inlined bytes are rejected
+#   PASS  (d) ROUND-TRIP — fixture survives JSON.stringify -> JSON.parse
+#   PASS  (e) HONEST_SCORES — partial reward zero-fills + labels; no reward => none
+#   PASS  (f) HONEST_STATUS — failing assertion + needs_review evidence survive and categorize
+# 6 passed, 0 failed
+# Subtest: packages\\nodetrace\\test\\merged.test.ts
+ok 8 - packages\\nodetrace\\test\\merged.test.ts
+  ---
+  duration_ms: 235.157
+  type: 'test'
+  ...
+#   PASS  (a) DERIVE-TASK — taskCompletion reflects 2/3 passed UI assertions
+#   PASS  (b) DERIVE-EVIDENCE — evidenceGrounding = 2/3 (source_backed / total)
+#   PASS  (c) HONEST_STATUS — failed assertion + needs_review evidence appear in failureCategories
+#   PASS  (d) HONEST_SCORES — unsupplied visualQuality is 0 + 'unscored:visualQuality' (no floor)
+#   PASS  (e) SUPPLIED-WINS — a supplied visualQuality is carried verbatim (no unscored label)
+#   PASS  (f) BUDGET-DERIVE — with a documented budget, cost/latency efficiency derive from step sums
+#   PASS  (g) DETERMINISM — same trajectory => byte-identical reward
+# 7 passed, 0 failed
+# Subtest: packages\\nodetrace\\test\\mergedReward.test.ts
+ok 9 - packages\\nodetrace\\test\\mergedReward.test.ts
+  ---
+  duration_ms: 220.5293
+  type: 'test'
+  ...
+#   PASS  (a) SEAM — a reply that is not a valid action is rejected by the loop, naming the field
+#   PASS  (b) HAPPY PATH — a well-formed reply still runs through to extraction
+#   PASS  (c) EXTRACT IS PARSED TOO — a malformed extraction fails rather than writing junk
+# 3 passed, 0 failed
+# Subtest: packages\\nodetrace\\test\\pipeline.test.ts
+ok 10 - packages\\nodetrace\\test\\pipeline.test.ts
+  ---
+  duration_ms: 207.24
+  type: 'test'
+  ...
+#   PASS  (a) GROUND-TRUTH — prompt names the failing assertion + observed delta, not a guess
+#   PASS  (b) EVIDENCE-GATE — needs_review claim surfaces as must-resolve, never silently accepted
+#   PASS  (c) REGRESSION — a promotable regression case captures the real failure
+#   PASS  (d) NO-FABRICATION — prompt asks for the smallest fix; it does not invent one
+#   PASS  (e) DETERMINISM — same trajectory => byte-identical repair prompt + regression
+#   PASS  (f) ONE-VALUE — repair prompt and storybook print the trajectory's reward, not two totals
+#   PASS  (g) UNSCORED-TRAJECTORY — with no reward on the trajectory, the prompt derives one and says so
+# 7 passed, 0 failed
+# Subtest: packages\\nodetrace\\test\\repair.test.ts
+ok 11 - packages\\nodetrace\\test\\repair.test.ts
+  ---
+  duration_ms: 183.2832
+  type: 'test'
+  ...
+#   PASS  (a) CONTENT — HTML contains room goal, needs_review evidence card, cost badge, verdict badge
+#   PASS  (b) HONEST_STATUS — failing UI assertion => FAIL verdict; needs_review never promoted
+#   PASS  (c) HONEST_SCORES — unsupplied reward components surface as unscored:<name>, no floor
+#   PASS  (d) DETERMINISM — same trajectory => byte-identical HTML
+#   PASS  (e) NO-LEAK — no raw screenshot bytes/data: URIs inlined; paths render as text; bytes throw
+#   PASS  (f) ESCAPING — a claim containing HTML is escaped, not injected as live markup
+#   PASS  A curator can inspect untrusted room addresses without making executable schemes active
+#   PASS  A reviewer distinguishes missing, partial and fully recorded costs across repeated reports
+#   PASS  An empty handoff explains absent artifacts without inventing a score or hiding review evidence
+# 9 passed, 0 failed
+# Subtest: packages\\nodetrace\\test\\storybook.test.ts
+ok 12 - packages\\nodetrace\\test\\storybook.test.ts
+  ---
+  duration_ms: 170.1387
+  type: 'test'
+  ...
+#   PASS  (a) HAPPY multi-step ok:true -> valid JSONL, sequential stepIndex, screenshots by path, supplied rewards carried
+#   PASS  (b) FAILURE ok:false + error + risk step -> honest failure trajectory, error preserved, reward NOT positive-coerced, failureCategories populated
+#   PASS  (c) DETERMINISM: same input twice -> byte-identical JSONL
+#   PASS  (d) NO-LEAK: a step with screenshotPng -> bytes absent from JSONL, path present in outputs.screenshots
+#   PASS  (e) HONEST_SCORES: omit taskSuccess -> 0 + 'unscored:taskSuccess' label, not a floor
+# 5 passed, 0 failed
+# Subtest: packages\\nodetrace\\test\\trajectory.test.ts
+ok 13 - packages\\nodetrace\\test\\trajectory.test.ts
+  ---
+  duration_ms: 159.9793
+  type: 'test'
+  ...
+#   PASS  the .tours directory actually contains tours
+#   PASS  01-primary-user-flow.tour — is a well-formed tour with a title and steps
+#   PASS  01-primary-user-flow.tour — every step's line matches the symbol the step claims
+#   PASS  02-agent-execution.tour — is a well-formed tour with a title and steps
+#   PASS  02-agent-execution.tour — every step's line matches the symbol the step claims
+#   PASS  03-debug-and-recovery.tour — is a well-formed tour with a title and steps
+#   PASS  03-debug-and-recovery.tour — every step's line matches the symbol the step claims
+#   PASS  docs/START_HERE.md — every cited line contains the symbol the sentence names
+#   PASS  docs/codebase/ARCHITECTURE.md — every cited line contains the symbol the sentence names
+#   PASS  docs/codebase/CONCERNS.md — every cited line contains the symbol the sentence names
+#   PASS  docs/codebase/CONVENTIONS.md — every cited line contains the symbol the sentence names
+#   PASS  docs/codebase/INTEGRATIONS.md — every cited line contains the symbol the sentence names
+#   PASS  docs/codebase/STACK.md — every cited line contains the symbol the sentence names
+#   PASS  docs/codebase/STRUCTURE.md — every cited line contains the symbol the sentence names
+#   PASS  docs/codebase/TESTING.md — every cited line contains the symbol the sentence names
+# 15 passed, 0 failed
+# Subtest: test\\citations.test.ts
+ok 14 - test\\citations.test.ts
+  ---
+  duration_ms: 215.5913
+  type: 'test'
+  ...
+#   PASS  @noderl/nodetrace — package.json points at a file that exists
+#   PASS  @noderl/nodetrace — imports by package name and exposes its public API
+#   PASS  @noderl/nodeeval — package.json points at a file that exists
+#   PASS  @noderl/nodeeval — imports by package name and exposes its public API
+#   PASS  @noderl/nodemem — package.json points at a file that exists
+#   PASS  @noderl/nodemem — imports by package name and exposes its public API
+# 6 passed, 0 failed
+# Subtest: test\\entrypoints.test.ts
+ok 15 - test\\entrypoints.test.ts
+  ---
+  duration_ms: 486.6424
+  type: 'test'
+  ...
+# warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+#   PASS  bare tree -> probe passes, surface_found false
+# warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'demo.html', LF will be replaced by CRLF the next time Git touches it
+# FAIL: a rendered surface exists. Conditions 7 and 8 must now be audited
+# (lighthouse + @axe-core/cli against the served page, plus a real Web
+# Interface Guidelines review) — they can no longer be NOT APPLICABLE.
+#   PASS  one .html file -> probe fails, markup_files fires
+# warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+# FAIL: a rendered surface exists. Conditions 7 and 8 must now be audited
+# (lighthouse + @axe-core/cli against the served page, plus a real Web
+# Interface Guidelines review) — they can no longer be NOT APPLICABLE.
+#   PASS  a UI framework dependency -> probe fails, ui_dependencies_or_bin fires
+# warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'srv.mjs', LF will be replaced by CRLF the next time Git touches it
+# FAIL: a rendered surface exists. Conditions 7 and 8 must now be audited
+# (lighthouse + @axe-core/cli against the served page, plus a real Web
+# Interface Guidelines review) — they can no longer be NOT APPLICABLE.
+#   PASS  a server that binds a port -> probe fails, server_entrypoints fires
+# warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+# FAIL: a rendered surface exists. Conditions 7 and 8 must now be audited
+# (lighthouse + @axe-core/cli against the served page, plus a real Web
+# Interface Guidelines review) — they can no longer be NOT APPLICABLE.
+#   PASS  a deployed page URL in a doc -> probe fails, deployed_urls fires
+# warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'test/renderedSurfaceProbe.test.ts', LF will be replaced by CRLF the next time Git touches it
+# warning: in the working copy of 'test/somethingElse.test.ts', LF will be replaced by CRLF the next time Git touches it
+# FAIL: a rendered surface exists. Conditions 7 and 8 must now be audited
+# (lighthouse + @axe-core/cli against the served page, plus a real Web
+# Interface Guidelines review) — they can no longer be NOT APPLICABLE.
+#   PASS  the two self-referential files are excluded, and only those two
+#   PASS  this repository -> no rendered surface, so conditions 3-10 stay N/A
+# 7 passed, 0 failed
+# Subtest: test\\renderedSurfaceProbe.test.ts
+ok 16 - test\\renderedSurfaceProbe.test.ts
+  ---
+  duration_ms: 5586.7934
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5890.5442

@@ -1,0 +1,33 @@
+import { createRequire } from 'node:module';
+import { pathToFileURL } from 'node:url';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { mkdtemp, writeFile } from 'node:fs/promises';
+
+const fromRepo = createRequire(join(process.cwd(), 'package.json'));
+const { mergeTrajectory, computeMergedReward, renderStorybook,
+  generateRepairPrompt, toRegressionCase } = await import(
+  pathToFileURL(fromRepo.resolve('@noderl/nodetrace')).href
+);
+const trace = mergeTrajectory(
+  { steps: [] },
+  { url: 'https://example.invalid/synthetic-review', screenshots: [],
+    uiAssertions: [{ id: 'cash-ties', expected: 'Reconciliation delta is zero',
+      observed: 'Synthetic example: delta is 412.50', passed: false }] },
+  [],
+  [{ factId: 'source-gap', claim: 'An uncleared check explains the delta', status: 'needs_review' }],
+  { runId: 'synthetic-handoff-example', userGoal: 'Review an unresolved reconciliation' }
+);
+// This is a derived reward, deliberately carried by every report surface.
+trace.reward = computeMergedReward(trace);
+const output = await mkdtemp(join(tmpdir(), 'noderl-review-'));
+const files = {
+  'trace.json': JSON.stringify(trace, null, 2),
+  'report.html': renderStorybook(trace),
+  'repair.md': generateRepairPrompt(trace),
+  'regression.json': JSON.stringify(toRegressionCase(trace), null, 2),
+};
+for (const [name, bytes] of Object.entries(files)) {
+  await writeFile(join(output, name), bytes, { flag: 'wx' });
+}
+console.log(output);

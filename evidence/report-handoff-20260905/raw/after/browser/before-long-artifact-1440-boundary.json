@@ -1,0 +1,15 @@
+{
+  "selector": "[data-atom=\"artifact-tab\"]",
+  "label": "B: complete artifact/path wraps within report",
+  "rect": {
+    "x": 294,
+    "y": 655.78125,
+    "width": 852,
+    "height": 134
+  },
+  "raw": "before-long-artifact-1440-raw.png",
+  "annotated": "before-long-artifact-1440-boundary-3px.png",
+  "sourceHtmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd",
+  "mechanism": "Temporary 3 px native DOM overlay on actual unchanged report; no product/source style changes; exact page.content restoration.",
+  "untouched": "All report content, totals, data, native layout, and source HTML outside the temporary overlay remain unchanged."
+}

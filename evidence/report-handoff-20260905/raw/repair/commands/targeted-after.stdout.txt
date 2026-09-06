@@ -1,0 +1,26 @@
+TAP version 13
+#   PASS  (a) CONTENT — HTML contains room goal, needs_review evidence card, cost badge, verdict badge
+#   PASS  (b) HONEST_STATUS — failing UI assertion => FAIL verdict; needs_review never promoted
+#   PASS  (c) HONEST_SCORES — unsupplied reward components surface as unscored:<name>, no floor
+#   PASS  (d) DETERMINISM — same trajectory => byte-identical HTML
+#   PASS  (e) NO-LEAK — no raw screenshot bytes/data: URIs inlined; paths render as text; bytes throw
+#   PASS  (f) ESCAPING — a claim containing HTML is escaped, not injected as live markup
+#   PASS  A curator can inspect untrusted room addresses without making executable schemes active
+#   PASS  A reviewer distinguishes missing, partial and fully recorded costs across repeated reports
+#   PASS  An empty handoff explains absent artifacts without inventing a score or hiding review evidence
+# 9 passed, 0 failed
+# Subtest: packages\\nodetrace\\test\\storybook.test.ts
+ok 1 - packages\\nodetrace\\test\\storybook.test.ts
+  ---
+  duration_ms: 135.4418
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 140.9615

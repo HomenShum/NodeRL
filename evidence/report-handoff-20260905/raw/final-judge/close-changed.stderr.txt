@@ -1,0 +1,3 @@
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/nodetrace/src/storybook.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'packages/nodetrace/test/storybook.test.ts', LF will be replaced by CRLF the next time Git touches it

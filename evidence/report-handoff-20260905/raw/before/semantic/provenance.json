@@ -1,0 +1,32 @@
+{
+  "synthetic": true,
+  "persona": "An accountant reviewing a failed bank reconciliation before handing a repair to a developer.",
+  "sourceFixture": {
+    "path": "D:\\VSCode Projects\\cafecorner_nodebench\\nodebench_ai4\\NodeRL\\packages\\nodetrace\\test\\merged.fixture.ts",
+    "sha256": "8b160bafdc97447c22d58eeeda0ea84f43b8d6e8b5b405150f6b6daf71ba92b5"
+  },
+  "changes": [
+    "runId",
+    "userGoal",
+    "outer.url"
+  ],
+  "imports": {
+    "@noderl/nodetrace": {
+      "resolved": "D:\\VSCode Projects\\cafecorner_nodebench\\nodebench_ai4\\NodeRL\\packages\\nodetrace\\src\\index.ts",
+      "sha256": "62cf3481b3f75753454a64ea646c11c2aa02b4068080849faacbd414287f5068"
+    },
+    "@noderl/nodemem": {
+      "resolved": "D:\\VSCode Projects\\cafecorner_nodebench\\nodebench_ai4\\NodeRL\\packages\\nodemem\\src\\index.ts",
+      "sha256": "282ed0c250ff32e970e2876c4f4d9710f444c105f4655ee314a028a19f661eef"
+    },
+    "@noderl/nodeeval": {
+      "resolved": "D:\\VSCode Projects\\cafecorner_nodebench\\nodebench_ai4\\NodeRL\\packages\\nodeeval\\src\\index.ts",
+      "sha256": "1cc29b65d8c6b1772799be2bd7ceebe13e5395990821dc480d7fc18bea1b0389"
+    }
+  },
+  "modelExecuted": false,
+  "workbookProduced": false,
+  "screenshotReferencesExist": false,
+  "commandsExecuted": false,
+  "packageMode": "source workspace public exports; not a tarball or installed CLI"
+}

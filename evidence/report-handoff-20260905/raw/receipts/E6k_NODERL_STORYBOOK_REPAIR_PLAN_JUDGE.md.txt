@@ -1,0 +1,27 @@
+# NodeRL first-use and repair-plan judgment
+
+Builder. **Approve the four-owner repair plan with its bound after-proof addendum. Source guard CLOSED.** An evaluator needs to open a failed-run report without executing its supplied URL or mistaking missing costs for free work. The current renderer fails those requirements; the first-use record is evidence of those failures, not readiness certification.
+
+**Re your request:** use planner, worker and judge, including visual/responsive/interaction standards — the actual first-use artifacts, preserved source and minimal repair scope have been independently reviewed.
+
+25 finite checks passed. All 242 frozen artifacts (12,302,996 bytes), all 101 current source files and HEAD/refs/index entries remain exact. I reopened the eleven saved trace/HTML/repair/regression bundles and viewed 15 actual screenshots, including native URI execution, 320 clipping, 390 enlarged text, all six supplemental labelled boundaries and offline file reopening. No application or browser proof was rerun.
+
+The original results remain **98/99 semantic checks**, one separately failed mixed-cost check, and **129/145 browser checks** across 30 cells. There are 90 PNGs including supplemental boundaries; the native offline file reopening passed 3/3. Synthetic workbook paths, model labels and recorded reopen success are not new workbook, provider or screenshot verification.
+
+The plan correctly fixes five causes in `packages/nodetrace/src/storybook.ts`:
+
+- Attribute escaping still leaves an executable script-scheme href. Keep only parsed absolute HTTP/HTTPS as links; preserve every other supplied value as escaped inert text.
+- Cost summation discards presence. Distinguish unknown, partial known subtotal/coverage and fully recorded amounts, including zero.
+- An always-present empty Artifacts wrapper prevents the existing absence message. Reuse that existing message.
+- Unbroken caller strings and flex minimum widths cause overflow. Wrap and bound the current report content without hiding, shrinking or truncating it.
+- White text on the existing FAIL and NEEDS REVIEW backgrounds measures 3.352238:1 and 2.524063:1. Change the observed filled labels’ foreground only and measure the actual result.
+
+The existing `storybook.test.ts`, a new concise HANDOFF and a small README correction complete the four-owner scope. Preserve merge, reward, pricing, evidence, failure-memory and provider contracts. The addendum requires valid/unsafe URL controls, native non-execution, all cost-presence cases, and a failing exit status for any required after-proof assertion, fatal, console/request/source or cleanup failure. Original failed reports must remain immutable. Shared CI and any publication stay separate.
+
+One nonblocking evidence caveat: the original closure probe labels Winsock **10035** as refused. Installed Python identifies it as **WSAEWOULDBLOCK**. That probe alone does not prove refusal. The browser/server closures were awaited, and my current read-only listener query found no listener on 4995. Preserve and qualify the original probe; do not retroactively rewrite it.
+
+Plan SHA-256: `52a55e14a9006dfce2e3a05744c523829d3c3d95bd1895964498e6eb0e7aaf44`. Required addendum: `e258bf49f46ee37ebcae6bffaddcbed6c1b134580aea825af25dfbc3c0e5636a`. Original manifest: `c1f18d78c4ca78d963c2f51be70faf1f7df038ffbf27928a2e49ff59c6b618b7`.
+
+[Structured judgment](E6k_NODERL_STORYBOOK_REPAIR_PLAN_JUDGE.json) · [25 checks](E6k-noderl-storybook-plan-judge-01/checks.json) · [Viewed pixels](E6k-noderl-storybook-plan-judge-01/viewed-pixels.json) · [Reopened artifact analysis](E6k-noderl-storybook-plan-judge-01/independent-reopened-artifacts.json) · [Closing guard](E6k-noderl-storybook-plan-judge-01/closing-guard.json)
+
+Full grades remain null. This approves the plan, with current unsafe-report handoff still held until the repaired source and actual proof are independently judged.

@@ -1,0 +1,8 @@
+{
+  "exitCode": 0,
+  "seconds": 6.188313007354736,
+  "command": [
+    "npm",
+    "test"
+  ]
+}

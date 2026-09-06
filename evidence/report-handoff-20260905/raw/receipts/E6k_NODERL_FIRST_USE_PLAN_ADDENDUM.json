@@ -1,0 +1,16 @@
+{
+  "at": "2026-09-06T00:01:45.553555+00:00",
+  "request": "Independent judge clarifies nonzero final after-proof acceptance and exact URI/cost cases.",
+  "originalReceiptSha256": "d6ecabdb71ad1bf5f26b0db7bb0397a3e34519b7155582e22aa792f8fe4d682a",
+  "originalManifestSha256": "c1f18d78c4ca78d963c2f51be70faf1f7df038ffbf27928a2e49ff59c6b618b7",
+  "originalPlanSha256": "52a55e14a9006dfce2e3a05744c523829d3c3d95bd1895964498e6eb0e7aaf44",
+  "addendumMdSha256": "ecb1fb388095c0e2d8faccffef1a3ca3c460db852be48b39e8b0e759b427c491",
+  "sourceChanged": false,
+  "oldEvidenceChanged": false,
+  "ownerListChanged": false,
+  "requirements": [
+    "Final after observer must exit nonzero on every required assertion failure, fatal, console/request/source/cleanup failure, retaining its raw receipt.",
+    "Exact visible URL text remains; absolute HTTP/HTTPS active, script/data/file/relative/malformed inactive, normalization variants and native non-execution.",
+    "Cost: empty/all missing, all explicit zeros, mixed known/missing including a known zero, and complete finite sums."
+  ]
+}

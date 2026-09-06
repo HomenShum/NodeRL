@@ -1,0 +1,7 @@
+{
+  "path": "HANDOFF.md",
+  "beforeProofSha256": "56e219e60fb8033f83171e12856161e8876fc14c3124bcab4fca0d3ec32b7c7c",
+  "finalSha256": "b19353892e5dd10dc91152ad8d391dc817b4d3ada27e5c074e0486e02e856aba",
+  "change": "One current verification/status paragraph updated after successful checks. Runnable code block and product/runtime sources unchanged.",
+  "browserSourceBindingMeaning": "All 102 files were stable throughout after-01. Final handoff status is an explicit metadata-only successor to its recorded source hash."
+}

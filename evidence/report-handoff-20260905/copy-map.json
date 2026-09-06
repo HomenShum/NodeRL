@@ -1,0 +1,3461 @@
+{
+  "originBase": "Operator portfolio-recovery-20260904 packet; relative origin values are provenance, not paths to read from a recipient machine.",
+  "copies": [
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/absent-cost/regression.json",
+      "scope": "before",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "copy": "examples/before/absent-cost/regression.json",
+      "copiedSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/absent-cost/repair.md",
+      "scope": "before",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "copy": "examples/before/absent-cost/repair.md.txt",
+      "copiedSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/absent-cost/report.html",
+      "scope": "before",
+      "bytes": 11849,
+      "sha256": "f11ddb2f20068c3609ef0185f089fbf511775fadc8ba69c3add3c653a020796a",
+      "copy": "examples/before/absent-cost/report.html.txt",
+      "copiedSha256": "f11ddb2f20068c3609ef0185f089fbf511775fadc8ba69c3add3c653a020796a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/absent-cost/trace.json",
+      "scope": "before",
+      "bytes": 4802,
+      "sha256": "e0a0e4d048522bf9f8e23b282e1cfba0562713054aaec9fa9f088eb3a56a193a",
+      "copy": "examples/before/absent-cost/trace.json",
+      "copiedSha256": "e0a0e4d048522bf9f8e23b282e1cfba0562713054aaec9fa9f088eb3a56a193a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/accounting/regression.json",
+      "scope": "before",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "copy": "examples/before/absent-cost/regression.json",
+      "copiedSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/accounting/repair.md",
+      "scope": "before",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "copy": "examples/before/absent-cost/repair.md.txt",
+      "copiedSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/accounting/report.html",
+      "scope": "before",
+      "bytes": 12418,
+      "sha256": "1ed7e96bcf59eebb879f78f43af10db595c0315699a3a4ee4ecd0eb6ac2822ae",
+      "copy": "examples/before/accounting/report.html.txt",
+      "copiedSha256": "1ed7e96bcf59eebb879f78f43af10db595c0315699a3a4ee4ecd0eb6ac2822ae",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/accounting/trace.json",
+      "scope": "before",
+      "bytes": 5405,
+      "sha256": "429b64ed3c69eef59822e19ea3be56ab0c472d532489e735dfe77ffc5f228ed4",
+      "copy": "examples/before/accounting/trace.json",
+      "copiedSha256": "429b64ed3c69eef59822e19ea3be56ab0c472d532489e735dfe77ffc5f228ed4",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/derived-reward.json",
+      "scope": "before",
+      "bytes": 631,
+      "sha256": "6d41d9bc446cd8c923b12c027a4c89516c5dd68737d873a7785172b58a587aff",
+      "copy": "raw/before/semantic/derived-reward.json",
+      "copiedSha256": "6d41d9bc446cd8c923b12c027a4c89516c5dd68737d873a7785172b58a587aff",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/empty/derived-reward.json",
+      "scope": "before",
+      "bytes": 437,
+      "sha256": "4c4f1d9377f8915327742fa01d1d195caaf8d9708a8257ba2936ac2d54e2cf17",
+      "copy": "examples/before/empty/derived-reward.json",
+      "copiedSha256": "4c4f1d9377f8915327742fa01d1d195caaf8d9708a8257ba2936ac2d54e2cf17",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/empty/regression.json",
+      "scope": "before",
+      "bytes": 357,
+      "sha256": "b3de0ba1e29f1512dcbd4986473342ccd3ce3fc51f5a6e3fbf85e7a0d47e1187",
+      "copy": "examples/before/empty/regression.json",
+      "copiedSha256": "b3de0ba1e29f1512dcbd4986473342ccd3ce3fc51f5a6e3fbf85e7a0d47e1187",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/empty/repair.md",
+      "scope": "before",
+      "bytes": 1055,
+      "sha256": "5a53805e167bfdefa236480c46fef7b5886ca8f85ee15d3a5ae100774112640e",
+      "copy": "examples/before/empty/repair.md.txt",
+      "copiedSha256": "5a53805e167bfdefa236480c46fef7b5886ca8f85ee15d3a5ae100774112640e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/empty/report.html",
+      "scope": "before",
+      "bytes": 5942,
+      "sha256": "cc8ffcf43e2370480e9a5c889242390022f10254a680191a5c04c65567ab40f9",
+      "copy": "examples/before/empty/report.html.txt",
+      "copiedSha256": "cc8ffcf43e2370480e9a5c889242390022f10254a680191a5c04c65567ab40f9",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/empty/trace.json",
+      "scope": "before",
+      "bytes": 333,
+      "sha256": "dd3508a364d6c016031af987acbf0cbbb6f45862d53e39320c1dd125ddae854a",
+      "copy": "examples/before/empty/trace.json",
+      "copiedSha256": "dd3508a364d6c016031af987acbf0cbbb6f45862d53e39320c1dd125ddae854a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/input.json",
+      "scope": "before",
+      "bytes": 4876,
+      "sha256": "a3cab69ebf990c1abfaf1c400e701759d30e93c9543ded168d625584dadf2a9a",
+      "copy": "raw/before/semantic/input.json",
+      "copiedSha256": "a3cab69ebf990c1abfaf1c400e701759d30e93c9543ded168d625584dadf2a9a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/long-unicode/regression.json",
+      "scope": "before",
+      "bytes": 1069,
+      "sha256": "efee61bdb6b146f872b61f11b25ce48b4690678ea7bbc217cb34940cf441e272",
+      "copy": "examples/before/long-unicode/regression.json",
+      "copiedSha256": "efee61bdb6b146f872b61f11b25ce48b4690678ea7bbc217cb34940cf441e272",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/long-unicode/repair.md",
+      "scope": "before",
+      "bytes": 2679,
+      "sha256": "a38807f9f8f66092a4e8b0d534ae1d8e5ca2c27873f879a46116a1050b074a12",
+      "copy": "examples/before/long-unicode/repair.md.txt",
+      "copiedSha256": "a38807f9f8f66092a4e8b0d534ae1d8e5ca2c27873f879a46116a1050b074a12",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/long-unicode/report.html",
+      "scope": "before",
+      "bytes": 13883,
+      "sha256": "5972eb3b988861db2d538ee60bd66b4f84b5badfe936c2a3ee4aea3e2627212e",
+      "copy": "examples/before/long-unicode/report.html.txt",
+      "copiedSha256": "5972eb3b988861db2d538ee60bd66b4f84b5badfe936c2a3ee4aea3e2627212e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/long-unicode/trace.json",
+      "scope": "before",
+      "bytes": 6643,
+      "sha256": "6ab7b091fb38706326876d83150ac66dc0ffcee5d24ec7977339b4564c8211c5",
+      "copy": "examples/before/long-unicode/trace.json",
+      "copiedSha256": "6ab7b091fb38706326876d83150ac66dc0ffcee5d24ec7977339b4564c8211c5",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/memory.json",
+      "scope": "before",
+      "bytes": 85767,
+      "sha256": "d1a24934957b6fd2d9d928590363b8de7e87c66a98bc438be7a67cc6f9230346",
+      "copy": "raw/before/semantic/memory.json",
+      "copiedSha256": "d1a24934957b6fd2d9d928590363b8de7e87c66a98bc438be7a67cc6f9230346",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/mixed-cost/regression.json",
+      "scope": "before",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "copy": "examples/before/absent-cost/regression.json",
+      "copiedSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/mixed-cost/repair.md",
+      "scope": "before",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "copy": "examples/before/absent-cost/repair.md.txt",
+      "copiedSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/mixed-cost/report.html",
+      "scope": "before",
+      "bytes": 12409,
+      "sha256": "8700a7324368270901af2e13a3810f7cd914448f1e44cb855f7b92b21c258b40",
+      "copy": "examples/before/mixed-cost/report.html.txt",
+      "copiedSha256": "8700a7324368270901af2e13a3810f7cd914448f1e44cb855f7b92b21c258b40",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/mixed-cost/trace.json",
+      "scope": "before",
+      "bytes": 5378,
+      "sha256": "bf0467b1edde82641d8555765c3bae069d6bed372fc47b3be1640e4a4f1fe45b",
+      "copy": "examples/before/mixed-cost/trace.json",
+      "copiedSha256": "bf0467b1edde82641d8555765c3bae069d6bed372fc47b3be1640e4a4f1fe45b",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/mixed-cost-report.json",
+      "scope": "before",
+      "bytes": 458,
+      "sha256": "98297d10e84c1758f4abbd1cbb83fa0a2730eef929a3f5fdabc45867e7d0265d",
+      "copy": "raw/before/semantic/mixed-cost-report.json",
+      "copiedSha256": "98297d10e84c1758f4abbd1cbb83fa0a2730eef929a3f5fdabc45867e7d0265d",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/provenance.json",
+      "scope": "before",
+      "bytes": 1367,
+      "sha256": "c8ef3be7d1a3e33930480551f9717f72954ab061ff75dfdd8a7ecaed7cb8d3c4",
+      "copy": "raw/before/semantic/provenance.json",
+      "copiedSha256": "c8ef3be7d1a3e33930480551f9717f72954ab061ff75dfdd8a7ecaed7cb8d3c4",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/report-cases.json",
+      "scope": "before",
+      "bytes": 3093,
+      "sha256": "e56a06826f5c5abc5830fb593e4c1ed2f8f04886a68fd05e9472d3cf40248e94",
+      "copy": "raw/before/semantic/report-cases.json",
+      "copiedSha256": "e56a06826f5c5abc5830fb593e4c1ed2f8f04886a68fd05e9472d3cf40248e94",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/script-uri/regression.json",
+      "scope": "before",
+      "bytes": 787,
+      "sha256": "b1f15a2c76981fd6fe5aa781731dc6f502a9d883e8612a9833cf0d0eaafd8848",
+      "copy": "examples/before/script-uri/regression.json",
+      "copiedSha256": "b1f15a2c76981fd6fe5aa781731dc6f502a9d883e8612a9833cf0d0eaafd8848",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/script-uri/repair.md",
+      "scope": "before",
+      "bytes": 2013,
+      "sha256": "ddfab90a24a4eb664c5873f8895edb8903779572fa24828a2de513651a5c239f",
+      "copy": "examples/before/script-uri/repair.md.txt",
+      "copiedSha256": "ddfab90a24a4eb664c5873f8895edb8903779572fa24828a2de513651a5c239f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/script-uri/report.html",
+      "scope": "before",
+      "bytes": 12552,
+      "sha256": "554f44e516d01b8dcbb22301c5e836b3835b44d41c1111b399e11e764859d613",
+      "copy": "examples/before/script-uri/report.html.txt",
+      "copiedSha256": "554f44e516d01b8dcbb22301c5e836b3835b44d41c1111b399e11e764859d613",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/script-uri/trace.json",
+      "scope": "before",
+      "bytes": 5456,
+      "sha256": "553559ab799104692d0cfa76c9a9f0d45139bdd876889f82994b9d8f8d1dab3e",
+      "copy": "examples/before/script-uri/trace.json",
+      "copiedSha256": "553559ab799104692d0cfa76c9a9f0d45139bdd876889f82994b9d8f8d1dab3e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/semantic-report.json",
+      "scope": "before",
+      "bytes": 14039,
+      "sha256": "9e77c63f1b2270cbc5e67cac87914ec2d6c22e248053c8786f15ae138ad3e1fd",
+      "copy": "raw/before/semantic/semantic-report.json",
+      "copiedSha256": "9e77c63f1b2270cbc5e67cac87914ec2d6c22e248053c8786f15ae138ad3e1fd",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/accounting-390-boundary-3px.png",
+      "scope": "before",
+      "bytes": 47723,
+      "sha256": "162d1d6916c261e5a9e95893aa5a083199918a36b0d637e2c9a89bdaaeed5a7c",
+      "copy": "pixels/before/supplemental-accounting-390-boundary-3px.png",
+      "copiedSha256": "162d1d6916c261e5a9e95893aa5a083199918a36b0d637e2c9a89bdaaeed5a7c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/accounting-390-raw.png",
+      "scope": "before",
+      "bytes": 48045,
+      "sha256": "a2d82970f61f841edc693c83cde1644f979ded1bf66838f580865ddc169eb770",
+      "copy": "pixels/before/supplemental-accounting-390-raw.png",
+      "copiedSha256": "a2d82970f61f841edc693c83cde1644f979ded1bf66838f580865ddc169eb770",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/empty-390-boundary-3px.png",
+      "scope": "before",
+      "bytes": 26663,
+      "sha256": "309f23d029e5e6b62e230a548b3177776aa225725bb5716a164e3e386216d860",
+      "copy": "pixels/before/supplemental-empty-390-boundary-3px.png",
+      "copiedSha256": "309f23d029e5e6b62e230a548b3177776aa225725bb5716a164e3e386216d860",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/empty-390-raw.png",
+      "scope": "before",
+      "bytes": 26052,
+      "sha256": "7b66070f1ef4b802efed732de4e8beac68fc13e7cff70ffa3682f90eb6432b74",
+      "copy": "pixels/before/supplemental-empty-390-raw.png",
+      "copiedSha256": "7b66070f1ef4b802efed732de4e8beac68fc13e7cff70ffa3682f90eb6432b74",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/mixed-cost-390-boundary-3px.png",
+      "scope": "before",
+      "bytes": 52838,
+      "sha256": "fab8c3c859cfc1e9b7643ebfeaed95a2d64f922218b81212a9a90602129e4c3c",
+      "copy": "pixels/before/supplemental-mixed-cost-390-boundary-3px.png",
+      "copiedSha256": "fab8c3c859cfc1e9b7643ebfeaed95a2d64f922218b81212a9a90602129e4c3c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/mixed-cost-390-raw.png",
+      "scope": "before",
+      "bytes": 52759,
+      "sha256": "145e58362c5b9706ea508e5cae52a999507e04563aa1303a7b7acad3d227cddc",
+      "copy": "pixels/before/supplemental-mixed-cost-390-raw.png",
+      "copiedSha256": "145e58362c5b9706ea508e5cae52a999507e04563aa1303a7b7acad3d227cddc",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/report.json",
+      "scope": "before",
+      "bytes": 5674,
+      "sha256": "a170a7fb3b13c3b0588d7a51de419eb6376b629163da7f204ebf7af6c9f368f0",
+      "copy": "raw/before/boundary-addendum/report.json",
+      "copiedSha256": "a170a7fb3b13c3b0588d7a51de419eb6376b629163da7f204ebf7af6c9f368f0",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum-command.json",
+      "scope": "before",
+      "bytes": 83,
+      "sha256": "6e05328cd5d359b4fd7683214d50eaeefab440c1f3e3b1d9fa69d9f5a84ae625",
+      "copy": "raw/before/commands/boundary-addendum-command.json",
+      "copiedSha256": "6e05328cd5d359b4fd7683214d50eaeefab440c1f3e3b1d9fa69d9f5a84ae625",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/absent-cost-1440x960-normal.json",
+      "scope": "before",
+      "bytes": 19483,
+      "sha256": "946d2d8fdea6165d3f1dcc61211256717f2bf88d94f355340ccb0f268e81fe78",
+      "copy": "raw/before/browser/absent-cost-1440x960-normal.json",
+      "copiedSha256": "946d2d8fdea6165d3f1dcc61211256717f2bf88d94f355340ccb0f268e81fe78",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/absent-reward-1440x960-normal.json",
+      "scope": "before",
+      "bytes": 19558,
+      "sha256": "5601a829eea413d9cf659ae26393eb9b786b9a6f7afe4a4a97506a109cba0c75",
+      "copy": "raw/before/browser/absent-reward-1440x960-normal.json",
+      "copiedSha256": "5601a829eea413d9cf659ae26393eb9b786b9a6f7afe4a4a97506a109cba0c75",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1024x768-normal.json",
+      "scope": "before",
+      "bytes": 21933,
+      "sha256": "49c14c9c86daf4cfda9e2d6e050130116f10238542077b47e03845f980f06a71",
+      "copy": "raw/before/browser/accounting-1024x768-normal.json",
+      "copiedSha256": "49c14c9c86daf4cfda9e2d6e050130116f10238542077b47e03845f980f06a71",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1024x768-normal.png",
+      "scope": "before",
+      "bytes": 62529,
+      "sha256": "0ee45ae02b89fd166eed9b7fd582f98d4acf7831a12e00d7d811366975370685",
+      "copy": "pixels/before/accounting-1024x768-normal.png",
+      "copiedSha256": "0ee45ae02b89fd166eed9b7fd582f98d4acf7831a12e00d7d811366975370685",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1440x960-normal.json",
+      "scope": "before",
+      "bytes": 21969,
+      "sha256": "740f6c5230ca616915020f03e33152b27f3f44a745c36ec79356d93cba145b76",
+      "copy": "raw/before/browser/accounting-1440x960-normal.json",
+      "copiedSha256": "740f6c5230ca616915020f03e33152b27f3f44a745c36ec79356d93cba145b76",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1440x960-normal.png",
+      "scope": "before",
+      "bytes": 85331,
+      "sha256": "f1f15efe54e693db126e63b014b6a00e94c9f25bfa2150176c913661c00a37ec",
+      "copy": "pixels/before/accounting-1440x960-normal.png",
+      "copiedSha256": "f1f15efe54e693db126e63b014b6a00e94c9f25bfa2150176c913661c00a37ec",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1440x960-reduced.json",
+      "scope": "before",
+      "bytes": 21968,
+      "sha256": "cfbd8ce578d5eb0d39da37210baa44ff457033cb5d629b041452d815babc74c5",
+      "copy": "raw/before/browser/accounting-1440x960-reduced.json",
+      "copiedSha256": "cfbd8ce578d5eb0d39da37210baa44ff457033cb5d629b041452d815babc74c5",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1440x960-reduced.png",
+      "scope": "before",
+      "bytes": 85331,
+      "sha256": "f1f15efe54e693db126e63b014b6a00e94c9f25bfa2150176c913661c00a37ec",
+      "copy": "pixels/before/accounting-1440x960-normal.png",
+      "copiedSha256": "f1f15efe54e693db126e63b014b6a00e94c9f25bfa2150176c913661c00a37ec",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1440x960-text200-font-transform.json",
+      "scope": "before",
+      "bytes": 2741,
+      "sha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "copy": "raw/before/browser/accounting-1440x960-text200-font-transform.json",
+      "copiedSha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1440x960-text200.json",
+      "scope": "before",
+      "bytes": 21972,
+      "sha256": "18407e6f6698908b1b14f4f854ed0dd45f33cb53a8e48441ceec9d691476d086",
+      "copy": "raw/before/browser/accounting-1440x960-text200.json",
+      "copiedSha256": "18407e6f6698908b1b14f4f854ed0dd45f33cb53a8e48441ceec9d691476d086",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1440x960-text200.png",
+      "scope": "before",
+      "bytes": 117548,
+      "sha256": "007d881306bc5a3d7496c51c6b9bb1a2c53c6461b9170026878ae3ce1738f51d",
+      "copy": "pixels/before/accounting-1440x960-text200.png",
+      "copiedSha256": "007d881306bc5a3d7496c51c6b9bb1a2c53c6461b9170026878ae3ce1738f51d",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1920x1080-normal.json",
+      "scope": "before",
+      "bytes": 21971,
+      "sha256": "da41f850d8862660bcceb77b0081c262a6bcd739a95092d5f21af123608dabc1",
+      "copy": "raw/before/browser/accounting-1920x1080-normal.json",
+      "copiedSha256": "da41f850d8862660bcceb77b0081c262a6bcd739a95092d5f21af123608dabc1",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1920x1080-normal.png",
+      "scope": "before",
+      "bytes": 99340,
+      "sha256": "82ff44c92e1ed76051958835b84f160379f7ed93990db5f24fa77ebc6b6c2627",
+      "copy": "pixels/before/accounting-1920x1080-normal.png",
+      "copiedSha256": "82ff44c92e1ed76051958835b84f160379f7ed93990db5f24fa77ebc6b6c2627",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-320x800-normal.json",
+      "scope": "before",
+      "bytes": 21895,
+      "sha256": "b45b4fb21a59bd3216734a12f8778e390f7514a4ce2c45e072a0a38eddb1f14f",
+      "copy": "raw/before/browser/accounting-320x800-normal.json",
+      "copiedSha256": "b45b4fb21a59bd3216734a12f8778e390f7514a4ce2c45e072a0a38eddb1f14f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-320x800-normal.png",
+      "scope": "before",
+      "bytes": 43339,
+      "sha256": "a281e08add988c544ad7520687678912a3f8776cc9a9b0f37bfa96cbfc46f086",
+      "copy": "pixels/before/accounting-320x800-normal.png",
+      "copiedSha256": "a281e08add988c544ad7520687678912a3f8776cc9a9b0f37bfa96cbfc46f086",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-360x800-normal.json",
+      "scope": "before",
+      "bytes": 21897,
+      "sha256": "03950f59fb62ad568f56c2ca842a7e086413cf767c8e3f1c0d7510fe4a94131a",
+      "copy": "raw/before/browser/accounting-360x800-normal.json",
+      "copiedSha256": "03950f59fb62ad568f56c2ca842a7e086413cf767c8e3f1c0d7510fe4a94131a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-360x800-normal.png",
+      "scope": "before",
+      "bytes": 49611,
+      "sha256": "86398046163f5c7a19d29b0b9550c89bccf76a1f479c6a7ce5b04f22140fe955",
+      "copy": "pixels/before/accounting-360x800-normal.png",
+      "copiedSha256": "86398046163f5c7a19d29b0b9550c89bccf76a1f479c6a7ce5b04f22140fe955",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-390-native-tab.json",
+      "scope": "before",
+      "bytes": 19171,
+      "sha256": "0652532027cdc6bc7ddf41b3b10a3f7263261d88f86a9e03ab1e93e2b671286f",
+      "copy": "raw/before/browser/accounting-390-native-tab.json",
+      "copiedSha256": "0652532027cdc6bc7ddf41b3b10a3f7263261d88f86a9e03ab1e93e2b671286f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-390x844-normal.json",
+      "scope": "before",
+      "bytes": 21891,
+      "sha256": "17b4ff75f17db17424aca26ec34288fd31c0ae3df9fdf69cff3890a22aa83957",
+      "copy": "raw/before/browser/accounting-390x844-normal.json",
+      "copiedSha256": "17b4ff75f17db17424aca26ec34288fd31c0ae3df9fdf69cff3890a22aa83957",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-390x844-normal.png",
+      "scope": "before",
+      "bytes": 52869,
+      "sha256": "e4bdfdb07f7866bdf15fb6da37bc2b6d064cff8992309630cffb1b7c7390f2c2",
+      "copy": "pixels/before/accounting-390x844-normal.png",
+      "copiedSha256": "e4bdfdb07f7866bdf15fb6da37bc2b6d064cff8992309630cffb1b7c7390f2c2",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-390x844-reduced.json",
+      "scope": "before",
+      "bytes": 21890,
+      "sha256": "e44a1e3b1c94eb1ddf55ade1a5ae16480137a18a81bf984a44979ac15badbc9a",
+      "copy": "raw/before/browser/accounting-390x844-reduced.json",
+      "copiedSha256": "e44a1e3b1c94eb1ddf55ade1a5ae16480137a18a81bf984a44979ac15badbc9a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-390x844-reduced.png",
+      "scope": "before",
+      "bytes": 52869,
+      "sha256": "e4bdfdb07f7866bdf15fb6da37bc2b6d064cff8992309630cffb1b7c7390f2c2",
+      "copy": "pixels/before/accounting-390x844-normal.png",
+      "copiedSha256": "e4bdfdb07f7866bdf15fb6da37bc2b6d064cff8992309630cffb1b7c7390f2c2",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-390x844-text200-font-transform.json",
+      "scope": "before",
+      "bytes": 2741,
+      "sha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "copy": "raw/before/browser/accounting-1440x960-text200-font-transform.json",
+      "copiedSha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-390x844-text200.json",
+      "scope": "before",
+      "bytes": 23425,
+      "sha256": "cb8da8987a84112a29746a37fb61071af4119143c75bb9f39ffa485a4d87ef8a",
+      "copy": "raw/before/browser/accounting-390x844-text200.json",
+      "copiedSha256": "cb8da8987a84112a29746a37fb61071af4119143c75bb9f39ffa485a4d87ef8a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-390x844-text200.png",
+      "scope": "before",
+      "bytes": 58706,
+      "sha256": "2de28bbdf3fd87b9dc938aeaee225f4d0918a7eb89bbd062fa043cb971dd1902",
+      "copy": "pixels/before/accounting-390x844-text200.png",
+      "copiedSha256": "2de28bbdf3fd87b9dc938aeaee225f4d0918a7eb89bbd062fa043cb971dd1902",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-768x1024-normal.json",
+      "scope": "before",
+      "bytes": 21928,
+      "sha256": "cd6859ed5b78d2d5c19ca4258a5fab9390c4de7d8f583b76ecb8caeb5dd14ecf",
+      "copy": "raw/before/browser/accounting-768x1024-normal.json",
+      "copiedSha256": "cd6859ed5b78d2d5c19ca4258a5fab9390c4de7d8f583b76ecb8caeb5dd14ecf",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-768x1024-normal.png",
+      "scope": "before",
+      "bytes": 83494,
+      "sha256": "9c605f7ea6841fceb17a9d62b1b3aee4d7d3f3e552995e37636ea88fcd524931",
+      "copy": "pixels/before/accounting-768x1024-normal.png",
+      "copiedSha256": "9c605f7ea6841fceb17a9d62b1b3aee4d7d3f3e552995e37636ea88fcd524931",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-reloaded.json",
+      "scope": "before",
+      "bytes": 21891,
+      "sha256": "17b4ff75f17db17424aca26ec34288fd31c0ae3df9fdf69cff3890a22aa83957",
+      "copy": "raw/before/browser/accounting-390x844-normal.json",
+      "copiedSha256": "17b4ff75f17db17424aca26ec34288fd31c0ae3df9fdf69cff3890a22aa83957",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-absent-cost-1440-boundary.json",
+      "scope": "before",
+      "bytes": 666,
+      "sha256": "58a8f8517dc398624884ab50f9503bffbef0e355f894b11f122ff58488c09148",
+      "copy": "raw/before/browser/before-absent-cost-1440-boundary.json",
+      "copiedSha256": "58a8f8517dc398624884ab50f9503bffbef0e355f894b11f122ff58488c09148",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-absent-cost-1440-state.json",
+      "scope": "before",
+      "bytes": 19483,
+      "sha256": "946d2d8fdea6165d3f1dcc61211256717f2bf88d94f355340ccb0f268e81fe78",
+      "copy": "raw/before/browser/absent-cost-1440x960-normal.json",
+      "copiedSha256": "946d2d8fdea6165d3f1dcc61211256717f2bf88d94f355340ccb0f268e81fe78",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-absent-cost-390-boundary-3px.png",
+      "scope": "before",
+      "bytes": 49319,
+      "sha256": "fbf17a9566dc850c55cca40ee152c04758c013ac107a348cbdbd6ed5242018b4",
+      "copy": "pixels/before/before-absent-cost-390-boundary-3px.png",
+      "copiedSha256": "fbf17a9566dc850c55cca40ee152c04758c013ac107a348cbdbd6ed5242018b4",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-absent-cost-390-boundary.json",
+      "scope": "before",
+      "bytes": 664,
+      "sha256": "0d1f3d3dd98fdf9ec110678be9bd05fd28633bb751e53d4f9fd52789b7c0178c",
+      "copy": "raw/before/browser/before-absent-cost-390-boundary.json",
+      "copiedSha256": "0d1f3d3dd98fdf9ec110678be9bd05fd28633bb751e53d4f9fd52789b7c0178c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-absent-cost-390-raw.png",
+      "scope": "before",
+      "bytes": 48875,
+      "sha256": "0bea546ba3a27377b177325c0a6a28c484f97d3d3eece1598066d34b3eea7abd",
+      "copy": "pixels/before/before-absent-cost-390-raw.png",
+      "copiedSha256": "0bea546ba3a27377b177325c0a6a28c484f97d3d3eece1598066d34b3eea7abd",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-absent-cost-390-state.json",
+      "scope": "before",
+      "bytes": 19419,
+      "sha256": "115c40078860c61c5946707533bc35b12872d9fc66cf52d81bca41098e56764f",
+      "copy": "raw/before/browser/before-absent-cost-390-state.json",
+      "copiedSha256": "115c40078860c61c5946707533bc35b12872d9fc66cf52d81bca41098e56764f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-long-artifact-1440-boundary.json",
+      "scope": "before",
+      "bytes": 671,
+      "sha256": "63e253d6155fc22e455b2cd34d4767d5aac0f88c0d5af97982cb09f3710192f9",
+      "copy": "raw/before/browser/before-long-artifact-1440-boundary.json",
+      "copiedSha256": "63e253d6155fc22e455b2cd34d4767d5aac0f88c0d5af97982cb09f3710192f9",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-long-artifact-1440-state.json",
+      "scope": "before",
+      "bytes": 29022,
+      "sha256": "f4256c752468866ff6249cadfd3ae85334dc0904d63bc3d8251e7045336e5dce",
+      "copy": "raw/before/browser/before-long-artifact-1440-state.json",
+      "copiedSha256": "f4256c752468866ff6249cadfd3ae85334dc0904d63bc3d8251e7045336e5dce",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-long-artifact-390-boundary-3px.png",
+      "scope": "before",
+      "bytes": 47757,
+      "sha256": "f9b6ad91546335aedd9028026ddeda3f4758b3f98bc70312d2c7bab5834b155e",
+      "copy": "pixels/before/before-long-artifact-390-boundary-3px.png",
+      "copiedSha256": "f9b6ad91546335aedd9028026ddeda3f4758b3f98bc70312d2c7bab5834b155e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-long-artifact-390-boundary.json",
+      "scope": "before",
+      "bytes": 669,
+      "sha256": "36c3247a74436e4ae950d0d52e9bced2527fa73794f60405895ba7ae2244c8bd",
+      "copy": "raw/before/browser/before-long-artifact-390-boundary.json",
+      "copiedSha256": "36c3247a74436e4ae950d0d52e9bced2527fa73794f60405895ba7ae2244c8bd",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-long-artifact-390-raw.png",
+      "scope": "before",
+      "bytes": 48577,
+      "sha256": "e64b5b84ee461fa5dca07654d2c963e78f74870703c9ea116d46eb40c7e5d773",
+      "copy": "pixels/before/before-long-artifact-390-raw.png",
+      "copiedSha256": "e64b5b84ee461fa5dca07654d2c963e78f74870703c9ea116d46eb40c7e5d773",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-long-artifact-390-state.json",
+      "scope": "before",
+      "bytes": 29621,
+      "sha256": "6d89e1826ffdafd444941d5532842bba40c003c182fd65bbaa26a391b2c33c25",
+      "copy": "raw/before/browser/before-long-artifact-390-state.json",
+      "copiedSha256": "6d89e1826ffdafd444941d5532842bba40c003c182fd65bbaa26a391b2c33c25",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-script-uri-390-boundary-3px.png",
+      "scope": "before",
+      "bytes": 52955,
+      "sha256": "4ca9874db0b5bde3d9cb7ed4fb6629804d66bcb6e675754a6afd19d8e46cb64a",
+      "copy": "pixels/before/before-script-uri-390-boundary-3px.png",
+      "copiedSha256": "4ca9874db0b5bde3d9cb7ed4fb6629804d66bcb6e675754a6afd19d8e46cb64a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-script-uri-390-boundary.json",
+      "scope": "before",
+      "bytes": 656,
+      "sha256": "4bd503354fb1e79ffb97a99e9dc06377fac4a27f9801414868156fb75142bee7",
+      "copy": "raw/before/browser/before-script-uri-390-boundary.json",
+      "copiedSha256": "4bd503354fb1e79ffb97a99e9dc06377fac4a27f9801414868156fb75142bee7",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-script-uri-390-raw.png",
+      "scope": "before",
+      "bytes": 52572,
+      "sha256": "26c5cb0b62456c53244f419dd8b44822999e424a23a9326bbc5f34c26e63d81d",
+      "copy": "pixels/before/before-script-uri-390-raw.png",
+      "copiedSha256": "26c5cb0b62456c53244f419dd8b44822999e424a23a9326bbc5f34c26e63d81d",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-script-uri-390-state.json",
+      "scope": "before",
+      "bytes": 22037,
+      "sha256": "72051490b969e30c6ef5c229884095eb2bc8eee298e8342d2f29fa63005139ea",
+      "copy": "raw/before/browser/before-script-uri-390-state.json",
+      "copiedSha256": "72051490b969e30c6ef5c229884095eb2bc8eee298e8342d2f29fa63005139ea",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-verdict-1440-boundary.json",
+      "scope": "before",
+      "bytes": 646,
+      "sha256": "02ffd88f47c56b2a49b57fcbc5c8ab86a73b164353167a185f69a42a81e28064",
+      "copy": "raw/before/browser/before-verdict-1440-boundary.json",
+      "copiedSha256": "02ffd88f47c56b2a49b57fcbc5c8ab86a73b164353167a185f69a42a81e28064",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-verdict-1440-state.json",
+      "scope": "before",
+      "bytes": 21969,
+      "sha256": "740f6c5230ca616915020f03e33152b27f3f44a745c36ec79356d93cba145b76",
+      "copy": "raw/before/browser/accounting-1440x960-normal.json",
+      "copiedSha256": "740f6c5230ca616915020f03e33152b27f3f44a745c36ec79356d93cba145b76",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-verdict-390-boundary-3px.png",
+      "scope": "before",
+      "bytes": 52678,
+      "sha256": "a259e30ee490457c7671a7b9a8a36bb6f4abb161e00094a11452d8f1bbef60fd",
+      "copy": "pixels/before/before-verdict-390-boundary-3px.png",
+      "copiedSha256": "a259e30ee490457c7671a7b9a8a36bb6f4abb161e00094a11452d8f1bbef60fd",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-verdict-390-boundary.json",
+      "scope": "before",
+      "bytes": 643,
+      "sha256": "0409601491f5866dc0c82db9db7633457984b689cdc756e479e081a73e0c6c32",
+      "copy": "raw/before/browser/before-verdict-390-boundary.json",
+      "copiedSha256": "0409601491f5866dc0c82db9db7633457984b689cdc756e479e081a73e0c6c32",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-verdict-390-raw.png",
+      "scope": "before",
+      "bytes": 52869,
+      "sha256": "e4bdfdb07f7866bdf15fb6da37bc2b6d064cff8992309630cffb1b7c7390f2c2",
+      "copy": "pixels/before/accounting-390x844-normal.png",
+      "copiedSha256": "e4bdfdb07f7866bdf15fb6da37bc2b6d064cff8992309630cffb1b7c7390f2c2",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-verdict-390-state.json",
+      "scope": "before",
+      "bytes": 21891,
+      "sha256": "17b4ff75f17db17424aca26ec34288fd31c0ae3df9fdf69cff3890a22aa83957",
+      "copy": "raw/before/browser/accounting-390x844-normal.json",
+      "copiedSha256": "17b4ff75f17db17424aca26ec34288fd31c0ae3df9fdf69cff3890a22aa83957",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/controlled-observation-1440x960-normal.json",
+      "scope": "before",
+      "bytes": 21937,
+      "sha256": "7474a4ff2beda117b6dd8bc7d2f53bfc6dc1fbc3611db65accbb08c151ef3f8f",
+      "copy": "raw/before/browser/controlled-observation-1440x960-normal.json",
+      "copiedSha256": "7474a4ff2beda117b6dd8bc7d2f53bfc6dc1fbc3611db65accbb08c151ef3f8f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/empty-1440x960-normal.json",
+      "scope": "before",
+      "bytes": 3973,
+      "sha256": "049a2272a1bae6d46e107d67f934c93ea8f9b03a9f8cab2d6b269c80e41250a8",
+      "copy": "raw/before/browser/empty-1440x960-normal.json",
+      "copiedSha256": "049a2272a1bae6d46e107d67f934c93ea8f9b03a9f8cab2d6b269c80e41250a8",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/empty-visible-states.json",
+      "scope": "before",
+      "bytes": 3973,
+      "sha256": "049a2272a1bae6d46e107d67f934c93ea8f9b03a9f8cab2d6b269c80e41250a8",
+      "copy": "raw/before/browser/empty-1440x960-normal.json",
+      "copiedSha256": "049a2272a1bae6d46e107d67f934c93ea8f9b03a9f8cab2d6b269c80e41250a8",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1024x768-normal.json",
+      "scope": "before",
+      "bytes": 29633,
+      "sha256": "bc60945fd7cf14a870d2e3e7ba8bd9c1519c3b6423a01db14c2a7ffb3d1374ca",
+      "copy": "raw/before/browser/long-unicode-1024x768-normal.json",
+      "copiedSha256": "bc60945fd7cf14a870d2e3e7ba8bd9c1519c3b6423a01db14c2a7ffb3d1374ca",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1440x960-normal.json",
+      "scope": "before",
+      "bytes": 29674,
+      "sha256": "5bd502ecc13699ad272ba9815167a0c2d861655c9435d67b5605f424055bad45",
+      "copy": "raw/before/browser/long-unicode-1440x960-normal.json",
+      "copiedSha256": "5bd502ecc13699ad272ba9815167a0c2d861655c9435d67b5605f424055bad45",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1440x960-normal.png",
+      "scope": "before",
+      "bytes": 89279,
+      "sha256": "7324318d1641d27fabad2afe0c373761d77b973889c9f7e502f96ba44d76fdb5",
+      "copy": "pixels/before/long-unicode-1440x960-normal.png",
+      "copiedSha256": "7324318d1641d27fabad2afe0c373761d77b973889c9f7e502f96ba44d76fdb5",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1440x960-reduced.json",
+      "scope": "before",
+      "bytes": 29673,
+      "sha256": "dfff3b6f3e52a39a6bbc4f26ebafae2c9aa4448bfb529b452861a61457fcd7fb",
+      "copy": "raw/before/browser/long-unicode-1440x960-reduced.json",
+      "copiedSha256": "dfff3b6f3e52a39a6bbc4f26ebafae2c9aa4448bfb529b452861a61457fcd7fb",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1440x960-reduced.png",
+      "scope": "before",
+      "bytes": 89279,
+      "sha256": "7324318d1641d27fabad2afe0c373761d77b973889c9f7e502f96ba44d76fdb5",
+      "copy": "pixels/before/long-unicode-1440x960-normal.png",
+      "copiedSha256": "7324318d1641d27fabad2afe0c373761d77b973889c9f7e502f96ba44d76fdb5",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1440x960-text200-font-transform.json",
+      "scope": "before",
+      "bytes": 2741,
+      "sha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "copy": "raw/before/browser/accounting-1440x960-text200-font-transform.json",
+      "copiedSha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1440x960-text200.json",
+      "scope": "before",
+      "bytes": 29689,
+      "sha256": "ad0aa5ab6c207f83f5bddf9d5a8e65c891c2554507236e6af7ebedea71d7849f",
+      "copy": "raw/before/browser/long-unicode-1440x960-text200.json",
+      "copiedSha256": "ad0aa5ab6c207f83f5bddf9d5a8e65c891c2554507236e6af7ebedea71d7849f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1440x960-text200.png",
+      "scope": "before",
+      "bytes": 113936,
+      "sha256": "3236a157a829483cc7b31d4e4d7cfe694a51de38a41fe018c582093d127aa9d4",
+      "copy": "pixels/before/long-unicode-1440x960-text200.png",
+      "copiedSha256": "3236a157a829483cc7b31d4e4d7cfe694a51de38a41fe018c582093d127aa9d4",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1920x1080-normal.json",
+      "scope": "before",
+      "bytes": 29676,
+      "sha256": "ac8ee14fcbc6b20c0c5924bd35a42a8193d6c276136b445f7243757207c12576",
+      "copy": "raw/before/browser/long-unicode-1920x1080-normal.json",
+      "copiedSha256": "ac8ee14fcbc6b20c0c5924bd35a42a8193d6c276136b445f7243757207c12576",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-320x800-normal.json",
+      "scope": "before",
+      "bytes": 29631,
+      "sha256": "5411d365ce8d51f49a43b41d94de2d2ef71f7f8bd02a96fde8c6a6736b01c541",
+      "copy": "raw/before/browser/long-unicode-320x800-normal.json",
+      "copiedSha256": "5411d365ce8d51f49a43b41d94de2d2ef71f7f8bd02a96fde8c6a6736b01c541",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-360x800-normal.json",
+      "scope": "before",
+      "bytes": 29618,
+      "sha256": "d3c6a32c812f9750531fd4b7d3047b062f0462a220cdc7bee192e4363e45fca9",
+      "copy": "raw/before/browser/long-unicode-360x800-normal.json",
+      "copiedSha256": "d3c6a32c812f9750531fd4b7d3047b062f0462a220cdc7bee192e4363e45fca9",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-390x844-normal.json",
+      "scope": "before",
+      "bytes": 29618,
+      "sha256": "c25b11e10ee21a2f5564d219c64dd8c933bce565eaaed4e35695941bde958e89",
+      "copy": "raw/before/browser/long-unicode-390x844-normal.json",
+      "copiedSha256": "c25b11e10ee21a2f5564d219c64dd8c933bce565eaaed4e35695941bde958e89",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-390x844-normal.png",
+      "scope": "before",
+      "bytes": 58598,
+      "sha256": "150e093d639420151decdeee315172f42a7b4613d98b4a6f47849370b21484e9",
+      "copy": "pixels/before/long-unicode-390x844-normal.png",
+      "copiedSha256": "150e093d639420151decdeee315172f42a7b4613d98b4a6f47849370b21484e9",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-390x844-reduced.json",
+      "scope": "before",
+      "bytes": 29617,
+      "sha256": "bd19e49cada79fee75b6bea2d2fde7afc87a3f520ac37577fb7af99d9caed4a1",
+      "copy": "raw/before/browser/long-unicode-390x844-reduced.json",
+      "copiedSha256": "bd19e49cada79fee75b6bea2d2fde7afc87a3f520ac37577fb7af99d9caed4a1",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-390x844-reduced.png",
+      "scope": "before",
+      "bytes": 58598,
+      "sha256": "150e093d639420151decdeee315172f42a7b4613d98b4a6f47849370b21484e9",
+      "copy": "pixels/before/long-unicode-390x844-normal.png",
+      "copiedSha256": "150e093d639420151decdeee315172f42a7b4613d98b4a6f47849370b21484e9",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-390x844-text200-font-transform.json",
+      "scope": "before",
+      "bytes": 2741,
+      "sha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "copy": "raw/before/browser/accounting-1440x960-text200-font-transform.json",
+      "copiedSha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-390x844-text200.json",
+      "scope": "before",
+      "bytes": 29655,
+      "sha256": "334f67d14fb99d1c18cb994a495c3816c26a3ac1dc7e69b395da64584293266a",
+      "copy": "raw/before/browser/long-unicode-390x844-text200.json",
+      "copiedSha256": "334f67d14fb99d1c18cb994a495c3816c26a3ac1dc7e69b395da64584293266a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-390x844-text200.png",
+      "scope": "before",
+      "bytes": 53181,
+      "sha256": "6916efde88cde0d0ce50f87541d82dae3118c5b499bdd3316c6212f806c71305",
+      "copy": "pixels/before/long-unicode-390x844-text200.png",
+      "copiedSha256": "6916efde88cde0d0ce50f87541d82dae3118c5b499bdd3316c6212f806c71305",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-768x1024-normal.json",
+      "scope": "before",
+      "bytes": 29629,
+      "sha256": "e62d864af7e7c7a505e7950bcab61ee8db2d271eb746537576b06c2fc1d6bdc7",
+      "copy": "raw/before/browser/long-unicode-768x1024-normal.json",
+      "copiedSha256": "e62d864af7e7c7a505e7950bcab61ee8db2d271eb746537576b06c2fc1d6bdc7",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/mixed-cost-1440x960-normal.json",
+      "scope": "before",
+      "bytes": 21951,
+      "sha256": "f51885522819289e7bff72a6716f8dd8e147e0487fbcb2bccf1f4d4378152850",
+      "copy": "raw/before/browser/mixed-cost-1440x960-normal.json",
+      "copiedSha256": "f51885522819289e7bff72a6716f8dd8e147e0487fbcb2bccf1f4d4378152850",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/positive-conflict-1440x960-normal.json",
+      "scope": "before",
+      "bytes": 21007,
+      "sha256": "e9ba462ad85cd1e71fa127dadfc2f5efc59634354879c21e15a568c509d182be",
+      "copy": "raw/before/browser/positive-conflict-1440x960-normal.json",
+      "copiedSha256": "e9ba462ad85cd1e71fa127dadfc2f5efc59634354879c21e15a568c509d182be",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/report.json",
+      "scope": "before",
+      "bytes": 54082,
+      "sha256": "2f49811d7a9ce0e9312062dacad1076cc61525d15214ba3916b70662c7929f5e",
+      "copy": "raw/before/browser/report.json",
+      "copiedSha256": "2f49811d7a9ce0e9312062dacad1076cc61525d15214ba3916b70662c7929f5e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/runtime-start.json",
+      "scope": "before",
+      "bytes": 195,
+      "sha256": "2b14c84a848b51a13be0114e4aa630e895de4ebd2840f77b6fc052a1d7fd247b",
+      "copy": "raw/before/browser/runtime-start.json",
+      "copiedSha256": "2b14c84a848b51a13be0114e4aa630e895de4ebd2840f77b6fc052a1d7fd247b",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/script-uri-native-activated.json",
+      "scope": "before",
+      "bytes": 19223,
+      "sha256": "c41ee8c331215f05d179e6e6c2ffc7a82bc9c56258038b21064fd931c87c2b79",
+      "copy": "raw/before/browser/script-uri-native-activated.json",
+      "copiedSha256": "c41ee8c331215f05d179e6e6c2ffc7a82bc9c56258038b21064fd931c87c2b79",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/script-uri-native-activated.png",
+      "scope": "before",
+      "bytes": 53157,
+      "sha256": "b0333a5b86626d100d51cacc180ddbd34386a776a99922794bd382d33dc09ee6",
+      "copy": "pixels/before/script-uri-native-activated.png",
+      "copiedSha256": "b0333a5b86626d100d51cacc180ddbd34386a776a99922794bd382d33dc09ee6",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/script-uri-native-focus.json",
+      "scope": "before",
+      "bytes": 19316,
+      "sha256": "3a6e8ca8753f2e51658ad930b713471dee8d00ae18cfd176004fe1eb92327e09",
+      "copy": "raw/before/browser/script-uri-native-focus.json",
+      "copiedSha256": "3a6e8ca8753f2e51658ad930b713471dee8d00ae18cfd176004fe1eb92327e09",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/script-uri-native-focus.png",
+      "scope": "before",
+      "bytes": 53120,
+      "sha256": "d427e3ceebad8279ba1a2cb732188a94d9ca94e1e10b876c85a8296cbbff6b02",
+      "copy": "pixels/before/script-uri-native-focus.png",
+      "copiedSha256": "d427e3ceebad8279ba1a2cb732188a94d9ca94e1e10b876c85a8296cbbff6b02",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/zero-cost-1440x960-normal.json",
+      "scope": "before",
+      "bytes": 19553,
+      "sha256": "9c23e3f85f97f03ff08c8ebbe6a5224d3463ac883e927cfd49a584acdbf76318",
+      "copy": "raw/before/browser/zero-cost-1440x960-normal.json",
+      "copiedSha256": "9c23e3f85f97f03ff08c8ebbe6a5224d3463ac883e927cfd49a584acdbf76318",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/zero-vs-unknown-1440x960-normal.json",
+      "scope": "before",
+      "bytes": 22265,
+      "sha256": "ee8dd7f0ed5c49c0171c72c8b771b9992db82837ba447721d51321e136ada342",
+      "copy": "raw/before/browser/zero-vs-unknown-1440x960-normal.json",
+      "copiedSha256": "ee8dd7f0ed5c49c0171c72c8b771b9992db82837ba447721d51321e136ada342",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/consume-command.json",
+      "scope": "before",
+      "bytes": 327,
+      "sha256": "c6cc97bd2bf52b68d764bc44612ea7d236874019b05a9bdd5ea744182435d275",
+      "copy": "raw/before/commands/consume-command.json",
+      "copiedSha256": "c6cc97bd2bf52b68d764bc44612ea7d236874019b05a9bdd5ea744182435d275",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/file-reopen/reopened-file-1440.png",
+      "scope": "before",
+      "bytes": 85116,
+      "sha256": "c1bc7d16ebdc5ec407b6375c19ebf3f720eea0695992f90e1a4b76be25450408",
+      "copy": "pixels/before/reopened-file-1440.png",
+      "copiedSha256": "c1bc7d16ebdc5ec407b6375c19ebf3f720eea0695992f90e1a4b76be25450408",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/file-reopen/report.json",
+      "scope": "before",
+      "bytes": 3956,
+      "sha256": "c056aaf668f7a0c55bbfcf59be3dd90ccb1ad561683112db8c53a8269b94dc37",
+      "copy": "raw/before/file-reopen/report.json",
+      "copiedSha256": "c056aaf668f7a0c55bbfcf59be3dd90ccb1ad561683112db8c53a8269b94dc37",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/observe-command.json",
+      "scope": "before",
+      "bytes": 354,
+      "sha256": "4bda01bc8c7d105e0216466ae2c837a70f56445a3b31e5e0573e7594a19c2c63",
+      "copy": "raw/before/commands/observe-command.json",
+      "copiedSha256": "4bda01bc8c7d105e0216466ae2c837a70f56445a3b31e5e0573e7594a19c2c63",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/reopen-file-command.json",
+      "scope": "before",
+      "bytes": 83,
+      "sha256": "d98c2e7ef2a51dd390d3c2d977d1be7c959cf31616d3f9827f0ff25534535648",
+      "copy": "raw/before/commands/reopen-file-command.json",
+      "copiedSha256": "d98c2e7ef2a51dd390d3c2d977d1be7c959cf31616d3f9827f0ff25534535648",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/absent-cost/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "copy": "examples/before/absent-cost/regression.json",
+      "copiedSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/absent-cost/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "copy": "examples/before/absent-cost/repair.md.txt",
+      "copiedSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/absent-cost/report.html",
+      "scope": "repair",
+      "bytes": 11922,
+      "sha256": "736373abfa0e8262b4f845b531f1a7101b82067bb0dc9b3710f60f99691cc0d0",
+      "copy": "examples/after/absent-cost/report.html.txt",
+      "copiedSha256": "736373abfa0e8262b4f845b531f1a7101b82067bb0dc9b3710f60f99691cc0d0",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/absent-cost/trace.json",
+      "scope": "repair",
+      "bytes": 4802,
+      "sha256": "e0a0e4d048522bf9f8e23b282e1cfba0562713054aaec9fa9f088eb3a56a193a",
+      "copy": "examples/before/absent-cost/trace.json",
+      "copiedSha256": "e0a0e4d048522bf9f8e23b282e1cfba0562713054aaec9fa9f088eb3a56a193a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/accounting/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "copy": "examples/before/absent-cost/regression.json",
+      "copiedSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/accounting/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "copy": "examples/before/absent-cost/repair.md.txt",
+      "copiedSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/accounting/report.html",
+      "scope": "repair",
+      "bytes": 12484,
+      "sha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5",
+      "copy": "examples/after/accounting/report.html.txt",
+      "copiedSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/accounting/trace.json",
+      "scope": "repair",
+      "bytes": 5405,
+      "sha256": "429b64ed3c69eef59822e19ea3be56ab0c472d532489e735dfe77ffc5f228ed4",
+      "copy": "examples/before/accounting/trace.json",
+      "copiedSha256": "429b64ed3c69eef59822e19ea3be56ab0c472d532489e735dfe77ffc5f228ed4",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/derived-reward.json",
+      "scope": "repair",
+      "bytes": 631,
+      "sha256": "6d41d9bc446cd8c923b12c027a4c89516c5dd68737d873a7785172b58a587aff",
+      "copy": "raw/before/semantic/derived-reward.json",
+      "copiedSha256": "6d41d9bc446cd8c923b12c027a4c89516c5dd68737d873a7785172b58a587aff",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/empty/derived-reward.json",
+      "scope": "repair",
+      "bytes": 437,
+      "sha256": "4c4f1d9377f8915327742fa01d1d195caaf8d9708a8257ba2936ac2d54e2cf17",
+      "copy": "examples/before/empty/derived-reward.json",
+      "copiedSha256": "4c4f1d9377f8915327742fa01d1d195caaf8d9708a8257ba2936ac2d54e2cf17",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/empty/regression.json",
+      "scope": "repair",
+      "bytes": 357,
+      "sha256": "b3de0ba1e29f1512dcbd4986473342ccd3ce3fc51f5a6e3fbf85e7a0d47e1187",
+      "copy": "examples/before/empty/regression.json",
+      "copiedSha256": "b3de0ba1e29f1512dcbd4986473342ccd3ce3fc51f5a6e3fbf85e7a0d47e1187",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/empty/repair.md",
+      "scope": "repair",
+      "bytes": 1055,
+      "sha256": "5a53805e167bfdefa236480c46fef7b5886ca8f85ee15d3a5ae100774112640e",
+      "copy": "examples/before/empty/repair.md.txt",
+      "copiedSha256": "5a53805e167bfdefa236480c46fef7b5886ca8f85ee15d3a5ae100774112640e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/empty/report.html",
+      "scope": "repair",
+      "bytes": 6028,
+      "sha256": "a334d6613cf2fd43c2a422082e73bbed574745ed9d783cb63383305fda388f9f",
+      "copy": "examples/after/empty/report.html.txt",
+      "copiedSha256": "a334d6613cf2fd43c2a422082e73bbed574745ed9d783cb63383305fda388f9f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/empty/trace.json",
+      "scope": "repair",
+      "bytes": 333,
+      "sha256": "dd3508a364d6c016031af987acbf0cbbb6f45862d53e39320c1dd125ddae854a",
+      "copy": "examples/before/empty/trace.json",
+      "copiedSha256": "dd3508a364d6c016031af987acbf0cbbb6f45862d53e39320c1dd125ddae854a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/input.json",
+      "scope": "repair",
+      "bytes": 4876,
+      "sha256": "a3cab69ebf990c1abfaf1c400e701759d30e93c9543ded168d625584dadf2a9a",
+      "copy": "raw/before/semantic/input.json",
+      "copiedSha256": "a3cab69ebf990c1abfaf1c400e701759d30e93c9543ded168d625584dadf2a9a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/long-unicode/regression.json",
+      "scope": "repair",
+      "bytes": 1069,
+      "sha256": "efee61bdb6b146f872b61f11b25ce48b4690678ea7bbc217cb34940cf441e272",
+      "copy": "examples/before/long-unicode/regression.json",
+      "copiedSha256": "efee61bdb6b146f872b61f11b25ce48b4690678ea7bbc217cb34940cf441e272",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/long-unicode/repair.md",
+      "scope": "repair",
+      "bytes": 2679,
+      "sha256": "a38807f9f8f66092a4e8b0d534ae1d8e5ca2c27873f879a46116a1050b074a12",
+      "copy": "examples/before/long-unicode/repair.md.txt",
+      "copiedSha256": "a38807f9f8f66092a4e8b0d534ae1d8e5ca2c27873f879a46116a1050b074a12",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/long-unicode/report.html",
+      "scope": "repair",
+      "bytes": 13949,
+      "sha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd",
+      "copy": "examples/after/long-unicode/report.html.txt",
+      "copiedSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/long-unicode/trace.json",
+      "scope": "repair",
+      "bytes": 6643,
+      "sha256": "6ab7b091fb38706326876d83150ac66dc0ffcee5d24ec7977339b4564c8211c5",
+      "copy": "examples/before/long-unicode/trace.json",
+      "copiedSha256": "6ab7b091fb38706326876d83150ac66dc0ffcee5d24ec7977339b4564c8211c5",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/memory.json",
+      "scope": "repair",
+      "bytes": 85767,
+      "sha256": "d1a24934957b6fd2d9d928590363b8de7e87c66a98bc438be7a67cc6f9230346",
+      "copy": "raw/before/semantic/memory.json",
+      "copiedSha256": "d1a24934957b6fd2d9d928590363b8de7e87c66a98bc438be7a67cc6f9230346",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/mixed-cost/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "copy": "examples/before/absent-cost/regression.json",
+      "copiedSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/mixed-cost/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "copy": "examples/before/absent-cost/repair.md.txt",
+      "copiedSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/mixed-cost/report.html",
+      "scope": "repair",
+      "bytes": 12493,
+      "sha256": "e72bf47d059d9b5f05e7c8892f13031ef963faf03e0a6d21ee3380b800cbdb45",
+      "copy": "examples/after/mixed-cost/report.html.txt",
+      "copiedSha256": "e72bf47d059d9b5f05e7c8892f13031ef963faf03e0a6d21ee3380b800cbdb45",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/mixed-cost/trace.json",
+      "scope": "repair",
+      "bytes": 5378,
+      "sha256": "bf0467b1edde82641d8555765c3bae069d6bed372fc47b3be1640e4a4f1fe45b",
+      "copy": "examples/before/mixed-cost/trace.json",
+      "copiedSha256": "bf0467b1edde82641d8555765c3bae069d6bed372fc47b3be1640e4a4f1fe45b",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/mixed-cost-report.json",
+      "scope": "repair",
+      "bytes": 475,
+      "sha256": "1423acaf343f2315e562fdc17e2400ea44a3c174f46acddc9db0b5b3a06dcf4f",
+      "copy": "raw/after/semantic/mixed-cost-report.json",
+      "copiedSha256": "1423acaf343f2315e562fdc17e2400ea44a3c174f46acddc9db0b5b3a06dcf4f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/protected-artifact-bindings.json",
+      "scope": "repair",
+      "bytes": 8437,
+      "sha256": "3787d3a27c1ea03217f2fa2978a0d4d9534677371947234c4745d20e661c960b",
+      "copy": "raw/repair/protected-artifact-bindings.json",
+      "copiedSha256": "3787d3a27c1ea03217f2fa2978a0d4d9534677371947234c4745d20e661c960b",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/provenance.json",
+      "scope": "repair",
+      "bytes": 1367,
+      "sha256": "c8ef3be7d1a3e33930480551f9717f72954ab061ff75dfdd8a7ecaed7cb8d3c4",
+      "copy": "raw/before/semantic/provenance.json",
+      "copiedSha256": "c8ef3be7d1a3e33930480551f9717f72954ab061ff75dfdd8a7ecaed7cb8d3c4",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/report-cases.json",
+      "scope": "repair",
+      "bytes": 6769,
+      "sha256": "b4c4cebf4772b822d7a1b5386697be17101da5c6cbbafeaf0e321ede355ccd10",
+      "copy": "raw/after/semantic/report-cases.json",
+      "copiedSha256": "b4c4cebf4772b822d7a1b5386697be17101da5c6cbbafeaf0e321ede355ccd10",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/script-uri/regression.json",
+      "scope": "repair",
+      "bytes": 787,
+      "sha256": "b1f15a2c76981fd6fe5aa781731dc6f502a9d883e8612a9833cf0d0eaafd8848",
+      "copy": "examples/before/script-uri/regression.json",
+      "copiedSha256": "b1f15a2c76981fd6fe5aa781731dc6f502a9d883e8612a9833cf0d0eaafd8848",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/script-uri/repair.md",
+      "scope": "repair",
+      "bytes": 2013,
+      "sha256": "ddfab90a24a4eb664c5873f8895edb8903779572fa24828a2de513651a5c239f",
+      "copy": "examples/before/script-uri/repair.md.txt",
+      "copiedSha256": "ddfab90a24a4eb664c5873f8895edb8903779572fa24828a2de513651a5c239f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/script-uri/report.html",
+      "scope": "repair",
+      "bytes": 12497,
+      "sha256": "6ae9207ae849eeef0b6cd2e8eb6ff07c2cd46c9a6f6827112a2fb7415c65d3cd",
+      "copy": "examples/after/script-uri/report.html.txt",
+      "copiedSha256": "6ae9207ae849eeef0b6cd2e8eb6ff07c2cd46c9a6f6827112a2fb7415c65d3cd",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/script-uri/trace.json",
+      "scope": "repair",
+      "bytes": 5456,
+      "sha256": "553559ab799104692d0cfa76c9a9f0d45139bdd876889f82994b9d8f8d1dab3e",
+      "copy": "examples/before/script-uri/trace.json",
+      "copiedSha256": "553559ab799104692d0cfa76c9a9f0d45139bdd876889f82994b9d8f8d1dab3e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/semantic-report.json",
+      "scope": "repair",
+      "bytes": 13844,
+      "sha256": "ec3baec9c62d01aa7883885330f7eb0d6fff088332fc6235c37b9deb3bb5dd39",
+      "copy": "raw/after/semantic/semantic-report.json",
+      "copiedSha256": "ec3baec9c62d01aa7883885330f7eb0d6fff088332fc6235c37b9deb3bb5dd39",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/accounting-390-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 47624,
+      "sha256": "7649c97a8176ccdfa6abc7dde6b2294707a4c990a45626f4d5f60272967d7179",
+      "copy": "pixels/after/supplemental-accounting-390-boundary-3px.png",
+      "copiedSha256": "7649c97a8176ccdfa6abc7dde6b2294707a4c990a45626f4d5f60272967d7179",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/accounting-390-raw.png",
+      "scope": "repair",
+      "bytes": 48057,
+      "sha256": "4459a4dcf9ba094780cc07cba393bb62f58f184fdb25b4e442eedf97ec871faf",
+      "copy": "pixels/after/supplemental-accounting-390-raw.png",
+      "copiedSha256": "4459a4dcf9ba094780cc07cba393bb62f58f184fdb25b4e442eedf97ec871faf",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/empty-390-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 28023,
+      "sha256": "87feaab88c258f6019d28ad7181801f8bbac8fe59e4131b638b21b38adc40c4b",
+      "copy": "pixels/after/supplemental-empty-390-boundary-3px.png",
+      "copiedSha256": "87feaab88c258f6019d28ad7181801f8bbac8fe59e4131b638b21b38adc40c4b",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/empty-390-raw.png",
+      "scope": "repair",
+      "bytes": 27480,
+      "sha256": "4bc74ce28ff8f26c8a33445b2312f2d6bf82cd4cd44384cfd63aae0bafd737e2",
+      "copy": "pixels/after/supplemental-empty-390-raw.png",
+      "copiedSha256": "4bc74ce28ff8f26c8a33445b2312f2d6bf82cd4cd44384cfd63aae0bafd737e2",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/mixed-cost-390-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 54004,
+      "sha256": "70a1c15696ef662d3586e8b572dc2c37fe2c9dadd184673dbf2fc09aeffd9172",
+      "copy": "pixels/after/supplemental-mixed-cost-390-boundary-3px.png",
+      "copiedSha256": "70a1c15696ef662d3586e8b572dc2c37fe2c9dadd184673dbf2fc09aeffd9172",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/mixed-cost-390-raw.png",
+      "scope": "repair",
+      "bytes": 53519,
+      "sha256": "d1f8e3dfe4d110ac6e5b66743b6d290d510156d44e06fcc57596ca1546fbc2b4",
+      "copy": "pixels/after/supplemental-mixed-cost-390-raw.png",
+      "copiedSha256": "d1f8e3dfe4d110ac6e5b66743b6d290d510156d44e06fcc57596ca1546fbc2b4",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/report.json",
+      "scope": "repair",
+      "bytes": 5748,
+      "sha256": "19d34291e266c0d69b9f7b9c53cc6c8036947631285127043a803936aa8de588",
+      "copy": "raw/after/boundary-addendum/report.json",
+      "copiedSha256": "19d34291e266c0d69b9f7b9c53cc6c8036947631285127043a803936aa8de588",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum.command.json",
+      "scope": "repair",
+      "bytes": 1195,
+      "sha256": "c05f71637d9af3e2e8dab389076ccc7144d1e8f0001027182f7b3eb2e34ace06",
+      "copy": "raw/after/commands/boundary-addendum.command.json",
+      "copiedSha256": "c05f71637d9af3e2e8dab389076ccc7144d1e8f0001027182f7b3eb2e34ace06",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/absent-cost-1440x960-normal.json",
+      "scope": "repair",
+      "bytes": 19502,
+      "sha256": "8707d1c551d91d50f106d634d907fd0a741bf24b8f85b3a1513c6a9dbad4955c",
+      "copy": "raw/after/browser/absent-cost-1440x960-normal.json",
+      "copiedSha256": "8707d1c551d91d50f106d634d907fd0a741bf24b8f85b3a1513c6a9dbad4955c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/absent-reward-1440x960-normal.json",
+      "scope": "repair",
+      "bytes": 19551,
+      "sha256": "dc144a4c70bb7f0069e9bb8d341d4fde2eb61069697363e576a3c20ef22e9eb9",
+      "copy": "raw/after/browser/absent-reward-1440x960-normal.json",
+      "copiedSha256": "dc144a4c70bb7f0069e9bb8d341d4fde2eb61069697363e576a3c20ef22e9eb9",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1024x768-normal.json",
+      "scope": "repair",
+      "bytes": 21918,
+      "sha256": "9e37f1c99a072bdaf4b7552c3722073b8c912773aca7475255956db05196641a",
+      "copy": "raw/after/browser/accounting-1024x768-normal.json",
+      "copiedSha256": "9e37f1c99a072bdaf4b7552c3722073b8c912773aca7475255956db05196641a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1024x768-normal.png",
+      "scope": "repair",
+      "bytes": 62469,
+      "sha256": "31c8c428a3f41f5f25df081e647e482d24c5b38edc375ad6785a0db8c2b81ef8",
+      "copy": "pixels/after/accounting-1024x768-normal.png",
+      "copiedSha256": "31c8c428a3f41f5f25df081e647e482d24c5b38edc375ad6785a0db8c2b81ef8",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1440x960-normal.json",
+      "scope": "repair",
+      "bytes": 21954,
+      "sha256": "dbc909a29f8ceba874c1056ee9ef085d9307c41804c9888d4747a8aaac4aac33",
+      "copy": "raw/after/browser/accounting-1440x960-normal.json",
+      "copiedSha256": "dbc909a29f8ceba874c1056ee9ef085d9307c41804c9888d4747a8aaac4aac33",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1440x960-normal.png",
+      "scope": "repair",
+      "bytes": 85230,
+      "sha256": "5529323ae1dcc25a536c82f200a9a15d9836adc2940c15165a7599da5ab049d3",
+      "copy": "pixels/after/accounting-1440x960-normal.png",
+      "copiedSha256": "5529323ae1dcc25a536c82f200a9a15d9836adc2940c15165a7599da5ab049d3",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1440x960-reduced.json",
+      "scope": "repair",
+      "bytes": 21953,
+      "sha256": "745a64539a757923302c4d3787bd1d9b80cb3feea6d37eb7793708b66920fe7b",
+      "copy": "raw/after/browser/accounting-1440x960-reduced.json",
+      "copiedSha256": "745a64539a757923302c4d3787bd1d9b80cb3feea6d37eb7793708b66920fe7b",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1440x960-reduced.png",
+      "scope": "repair",
+      "bytes": 85230,
+      "sha256": "5529323ae1dcc25a536c82f200a9a15d9836adc2940c15165a7599da5ab049d3",
+      "copy": "pixels/after/accounting-1440x960-normal.png",
+      "copiedSha256": "5529323ae1dcc25a536c82f200a9a15d9836adc2940c15165a7599da5ab049d3",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1440x960-text200-font-transform.json",
+      "scope": "repair",
+      "bytes": 2741,
+      "sha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "copy": "raw/before/browser/accounting-1440x960-text200-font-transform.json",
+      "copiedSha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1440x960-text200.json",
+      "scope": "repair",
+      "bytes": 21957,
+      "sha256": "a0d52621bfc5c39cfac954a895d6c4046cba6029a0a1b5d7192dffef6c95f046",
+      "copy": "raw/after/browser/accounting-1440x960-text200.json",
+      "copiedSha256": "a0d52621bfc5c39cfac954a895d6c4046cba6029a0a1b5d7192dffef6c95f046",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1440x960-text200.png",
+      "scope": "repair",
+      "bytes": 117695,
+      "sha256": "e18636e0887e9c746e52f3cc81a57e4d609f4292d716f8d87d3bea06494bc3f2",
+      "copy": "pixels/after/accounting-1440x960-text200.png",
+      "copiedSha256": "e18636e0887e9c746e52f3cc81a57e4d609f4292d716f8d87d3bea06494bc3f2",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1920x1080-normal.json",
+      "scope": "repair",
+      "bytes": 21956,
+      "sha256": "e7a13285fd7e5a35b421566bb87f0cb4f0052abb9a0fc2813c6f76a6e4798f37",
+      "copy": "raw/after/browser/accounting-1920x1080-normal.json",
+      "copiedSha256": "e7a13285fd7e5a35b421566bb87f0cb4f0052abb9a0fc2813c6f76a6e4798f37",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1920x1080-normal.png",
+      "scope": "repair",
+      "bytes": 99265,
+      "sha256": "dde88b51b41988a366d2ea20642a11ee72b14ccef883b9d75ce3895f45a46eaa",
+      "copy": "pixels/after/accounting-1920x1080-normal.png",
+      "copiedSha256": "dde88b51b41988a366d2ea20642a11ee72b14ccef883b9d75ce3895f45a46eaa",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-320x800-normal.json",
+      "scope": "repair",
+      "bytes": 21880,
+      "sha256": "6d3e3b43ec751b1f993a812135ded46afdc9e93e0d44819935beb0e4abd6dd41",
+      "copy": "raw/after/browser/accounting-320x800-normal.json",
+      "copiedSha256": "6d3e3b43ec751b1f993a812135ded46afdc9e93e0d44819935beb0e4abd6dd41",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-320x800-normal.png",
+      "scope": "repair",
+      "bytes": 43274,
+      "sha256": "8d21bfe1c3b2b869e1a005388bba89ada9ca4517d5748bec95c03f46f544d28d",
+      "copy": "pixels/after/accounting-320x800-normal.png",
+      "copiedSha256": "8d21bfe1c3b2b869e1a005388bba89ada9ca4517d5748bec95c03f46f544d28d",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-360x800-normal.json",
+      "scope": "repair",
+      "bytes": 21882,
+      "sha256": "d1efd6dc9e4f31c8f88158f1dec2428793992719d1af1012c3bfc46bfe2adbbd",
+      "copy": "raw/after/browser/accounting-360x800-normal.json",
+      "copiedSha256": "d1efd6dc9e4f31c8f88158f1dec2428793992719d1af1012c3bfc46bfe2adbbd",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-360x800-normal.png",
+      "scope": "repair",
+      "bytes": 49502,
+      "sha256": "b424166f1ca3210901d5b129b5c4543706f90dc14d786d22b649eef3440609af",
+      "copy": "pixels/after/accounting-360x800-normal.png",
+      "copiedSha256": "b424166f1ca3210901d5b129b5c4543706f90dc14d786d22b649eef3440609af",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-390-native-tab.json",
+      "scope": "repair",
+      "bytes": 19156,
+      "sha256": "e2614a413df5a86c68f77b1a6c96369a9dcb0cf5742a815e136ef1c0417a417e",
+      "copy": "raw/after/browser/accounting-390-native-tab.json",
+      "copiedSha256": "e2614a413df5a86c68f77b1a6c96369a9dcb0cf5742a815e136ef1c0417a417e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-390x844-normal.json",
+      "scope": "repair",
+      "bytes": 21876,
+      "sha256": "0a328ad8939c5a78b9b2882b217b4f66496c1e6e592277ec47a1a1eea68984e0",
+      "copy": "raw/after/browser/accounting-390x844-normal.json",
+      "copiedSha256": "0a328ad8939c5a78b9b2882b217b4f66496c1e6e592277ec47a1a1eea68984e0",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-390x844-normal.png",
+      "scope": "repair",
+      "bytes": 52762,
+      "sha256": "5daf26c06151bd514384a24a9bb16c0827c36f09731788c0eb61b6d99d19f655",
+      "copy": "pixels/after/accounting-390x844-normal.png",
+      "copiedSha256": "5daf26c06151bd514384a24a9bb16c0827c36f09731788c0eb61b6d99d19f655",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-390x844-reduced.json",
+      "scope": "repair",
+      "bytes": 21875,
+      "sha256": "66662fd2539d7cba6563ef32ddeff0bf4b5366b9d0ee908229dd7b2aa04714b0",
+      "copy": "raw/after/browser/accounting-390x844-reduced.json",
+      "copiedSha256": "66662fd2539d7cba6563ef32ddeff0bf4b5366b9d0ee908229dd7b2aa04714b0",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-390x844-reduced.png",
+      "scope": "repair",
+      "bytes": 52762,
+      "sha256": "5daf26c06151bd514384a24a9bb16c0827c36f09731788c0eb61b6d99d19f655",
+      "copy": "pixels/after/accounting-390x844-normal.png",
+      "copiedSha256": "5daf26c06151bd514384a24a9bb16c0827c36f09731788c0eb61b6d99d19f655",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-390x844-text200-font-transform.json",
+      "scope": "repair",
+      "bytes": 2741,
+      "sha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "copy": "raw/before/browser/accounting-1440x960-text200-font-transform.json",
+      "copiedSha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-390x844-text200.json",
+      "scope": "repair",
+      "bytes": 21897,
+      "sha256": "a17a772fa780d3d21ed716ddb8c2387ceeba340795a710ec4445e3d72c1fcc29",
+      "copy": "raw/after/browser/accounting-390x844-text200.json",
+      "copiedSha256": "a17a772fa780d3d21ed716ddb8c2387ceeba340795a710ec4445e3d72c1fcc29",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-390x844-text200.png",
+      "scope": "repair",
+      "bytes": 58873,
+      "sha256": "f29dd4df57a7ffecedcdc8326d9ce32c9c5790c7438d259f060dd09ef6167b59",
+      "copy": "pixels/after/accounting-390x844-text200.png",
+      "copiedSha256": "f29dd4df57a7ffecedcdc8326d9ce32c9c5790c7438d259f060dd09ef6167b59",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-768x1024-normal.json",
+      "scope": "repair",
+      "bytes": 21913,
+      "sha256": "69e4899fcd431faa4f6ce35282aad790c17831df672b4797fd696655c5a582ba",
+      "copy": "raw/after/browser/accounting-768x1024-normal.json",
+      "copiedSha256": "69e4899fcd431faa4f6ce35282aad790c17831df672b4797fd696655c5a582ba",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-768x1024-normal.png",
+      "scope": "repair",
+      "bytes": 83432,
+      "sha256": "1fc54d450277c523f0039a088ca4e63105d79f83dbb5e9510d42fb94e4fe557e",
+      "copy": "pixels/after/accounting-768x1024-normal.png",
+      "copiedSha256": "1fc54d450277c523f0039a088ca4e63105d79f83dbb5e9510d42fb94e4fe557e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-reloaded.json",
+      "scope": "repair",
+      "bytes": 21876,
+      "sha256": "0a328ad8939c5a78b9b2882b217b4f66496c1e6e592277ec47a1a1eea68984e0",
+      "copy": "raw/after/browser/accounting-390x844-normal.json",
+      "copiedSha256": "0a328ad8939c5a78b9b2882b217b4f66496c1e6e592277ec47a1a1eea68984e0",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-absent-cost-1440-boundary.json",
+      "scope": "repair",
+      "bytes": 675,
+      "sha256": "d307c83004d7def8d3061843ef0c060db0197c4d4aa92d44d4240145cc06a2de",
+      "copy": "raw/after/browser/before-absent-cost-1440-boundary.json",
+      "copiedSha256": "d307c83004d7def8d3061843ef0c060db0197c4d4aa92d44d4240145cc06a2de",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-absent-cost-1440-state.json",
+      "scope": "repair",
+      "bytes": 19502,
+      "sha256": "8707d1c551d91d50f106d634d907fd0a741bf24b8f85b3a1513c6a9dbad4955c",
+      "copy": "raw/after/browser/absent-cost-1440x960-normal.json",
+      "copiedSha256": "8707d1c551d91d50f106d634d907fd0a741bf24b8f85b3a1513c6a9dbad4955c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-absent-cost-390-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 49307,
+      "sha256": "ce90867562a39e875b8fb3aaa45b3a3eac106790860cbd2928840280bd78360d",
+      "copy": "pixels/after/before-absent-cost-390-boundary-3px.png",
+      "copiedSha256": "ce90867562a39e875b8fb3aaa45b3a3eac106790860cbd2928840280bd78360d",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-absent-cost-390-boundary.json",
+      "scope": "repair",
+      "bytes": 673,
+      "sha256": "ed7f35cf43e82b63df839e15099b47328027ed24489bdeff6177c6e088417580",
+      "copy": "raw/after/browser/before-absent-cost-390-boundary.json",
+      "copiedSha256": "ed7f35cf43e82b63df839e15099b47328027ed24489bdeff6177c6e088417580",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-absent-cost-390-raw.png",
+      "scope": "repair",
+      "bytes": 48849,
+      "sha256": "89882a8e8f56af0b77dbe800071976e50b02f49ec0cbc9218847bc4b02014b46",
+      "copy": "pixels/after/before-absent-cost-390-raw.png",
+      "copiedSha256": "89882a8e8f56af0b77dbe800071976e50b02f49ec0cbc9218847bc4b02014b46",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-absent-cost-390-state.json",
+      "scope": "repair",
+      "bytes": 19438,
+      "sha256": "47ca6c693915d5c152d9677292d4c8ccedac29e897560d0765d129ffce6a26db",
+      "copy": "raw/after/browser/before-absent-cost-390-state.json",
+      "copiedSha256": "47ca6c693915d5c152d9677292d4c8ccedac29e897560d0765d129ffce6a26db",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-long-artifact-1440-boundary.json",
+      "scope": "repair",
+      "bytes": 669,
+      "sha256": "58be50bc04662c3dac5cac3057b3aa5e19dcb0049ce503455db3c54422fbff57",
+      "copy": "raw/after/browser/before-long-artifact-1440-boundary.json",
+      "copiedSha256": "58be50bc04662c3dac5cac3057b3aa5e19dcb0049ce503455db3c54422fbff57",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-long-artifact-1440-state.json",
+      "scope": "repair",
+      "bytes": 26032,
+      "sha256": "a55cc21b0222b877151af16fc3b6d8f628dc07cf1fecccd1066fbebd061db6c5",
+      "copy": "raw/after/browser/before-long-artifact-1440-state.json",
+      "copiedSha256": "a55cc21b0222b877151af16fc3b6d8f628dc07cf1fecccd1066fbebd061db6c5",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-long-artifact-390-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 44246,
+      "sha256": "8699dc17d126dc91711dc354c120d5f6ee9fe83c41667119b44ca04e08a543b7",
+      "copy": "pixels/after/before-long-artifact-390-boundary-3px.png",
+      "copiedSha256": "8699dc17d126dc91711dc354c120d5f6ee9fe83c41667119b44ca04e08a543b7",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-long-artifact-390-boundary.json",
+      "scope": "repair",
+      "bytes": 668,
+      "sha256": "80644a39b3ebe386de0259aa35c27ae8bac9ce641748737a0ad8de52a5858183",
+      "copy": "raw/after/browser/before-long-artifact-390-boundary.json",
+      "copiedSha256": "80644a39b3ebe386de0259aa35c27ae8bac9ce641748737a0ad8de52a5858183",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-long-artifact-390-raw.png",
+      "scope": "repair",
+      "bytes": 45886,
+      "sha256": "d3f89bd4a1d344411f697f46b6a024dfe1e3205da0d2cf98b38633ccf78ea30a",
+      "copy": "pixels/after/before-long-artifact-390-raw.png",
+      "copiedSha256": "d3f89bd4a1d344411f697f46b6a024dfe1e3205da0d2cf98b38633ccf78ea30a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-long-artifact-390-state.json",
+      "scope": "repair",
+      "bytes": 25994,
+      "sha256": "057330f10a199fa22d24387d423c3b1f77a94d1797165ca62c9361a96955d8aa",
+      "copy": "raw/after/browser/before-long-artifact-390-state.json",
+      "copiedSha256": "057330f10a199fa22d24387d423c3b1f77a94d1797165ca62c9361a96955d8aa",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-script-uri-390-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 52648,
+      "sha256": "02720e522668af0d31655dbea7f2859085702aeba0418b79b443f1cccac9b022",
+      "copy": "pixels/after/before-script-uri-390-boundary-3px.png",
+      "copiedSha256": "02720e522668af0d31655dbea7f2859085702aeba0418b79b443f1cccac9b022",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-script-uri-390-boundary.json",
+      "scope": "repair",
+      "bytes": 650,
+      "sha256": "0dd4f6f77a5c70447e4520d98b781fd4bb397672cbe23856356024d6019bceae",
+      "copy": "raw/after/browser/before-script-uri-390-boundary.json",
+      "copiedSha256": "0dd4f6f77a5c70447e4520d98b781fd4bb397672cbe23856356024d6019bceae",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-script-uri-390-raw.png",
+      "scope": "repair",
+      "bytes": 52435,
+      "sha256": "20d9a85309160d40b12f1478b21875d13b3fb18f64847882716b2b7d18561ac3",
+      "copy": "pixels/after/before-script-uri-390-raw.png",
+      "copiedSha256": "20d9a85309160d40b12f1478b21875d13b3fb18f64847882716b2b7d18561ac3",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-script-uri-390-state.json",
+      "scope": "repair",
+      "bytes": 22025,
+      "sha256": "b91a305410e10bb2e72b7b9e5f110642b12e87ad25a14f4d69fffd73326cc31a",
+      "copy": "raw/after/browser/before-script-uri-390-state.json",
+      "copiedSha256": "b91a305410e10bb2e72b7b9e5f110642b12e87ad25a14f4d69fffd73326cc31a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-verdict-1440-boundary.json",
+      "scope": "repair",
+      "bytes": 655,
+      "sha256": "8d00042a38d1594e988d827cd68d4e5120c15ea9fd8403bbe80f834311f9466e",
+      "copy": "raw/after/browser/before-verdict-1440-boundary.json",
+      "copiedSha256": "8d00042a38d1594e988d827cd68d4e5120c15ea9fd8403bbe80f834311f9466e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-verdict-1440-state.json",
+      "scope": "repair",
+      "bytes": 21954,
+      "sha256": "dbc909a29f8ceba874c1056ee9ef085d9307c41804c9888d4747a8aaac4aac33",
+      "copy": "raw/after/browser/accounting-1440x960-normal.json",
+      "copiedSha256": "dbc909a29f8ceba874c1056ee9ef085d9307c41804c9888d4747a8aaac4aac33",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-verdict-390-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 52686,
+      "sha256": "1bfa3bd7671177fe71ee89f9ad5d4ced8c5b2b87649f9f900aacd8051f8b4aab",
+      "copy": "pixels/after/before-verdict-390-boundary-3px.png",
+      "copiedSha256": "1bfa3bd7671177fe71ee89f9ad5d4ced8c5b2b87649f9f900aacd8051f8b4aab",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-verdict-390-boundary.json",
+      "scope": "repair",
+      "bytes": 652,
+      "sha256": "6901604c77b8a1e6a3fe656449f86821161eafe2041369c6d0837dc41462b2e1",
+      "copy": "raw/after/browser/before-verdict-390-boundary.json",
+      "copiedSha256": "6901604c77b8a1e6a3fe656449f86821161eafe2041369c6d0837dc41462b2e1",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-verdict-390-raw.png",
+      "scope": "repair",
+      "bytes": 52762,
+      "sha256": "5daf26c06151bd514384a24a9bb16c0827c36f09731788c0eb61b6d99d19f655",
+      "copy": "pixels/after/accounting-390x844-normal.png",
+      "copiedSha256": "5daf26c06151bd514384a24a9bb16c0827c36f09731788c0eb61b6d99d19f655",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-verdict-390-state.json",
+      "scope": "repair",
+      "bytes": 21876,
+      "sha256": "0a328ad8939c5a78b9b2882b217b4f66496c1e6e592277ec47a1a1eea68984e0",
+      "copy": "raw/after/browser/accounting-390x844-normal.json",
+      "copiedSha256": "0a328ad8939c5a78b9b2882b217b4f66496c1e6e592277ec47a1a1eea68984e0",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/controlled-observation-1440x960-normal.json",
+      "scope": "repair",
+      "bytes": 21922,
+      "sha256": "d6db87199be9deb94790451a90222a5512807d6fcd3a7524f095e5fb83d2505b",
+      "copy": "raw/after/browser/controlled-observation-1440x960-normal.json",
+      "copiedSha256": "d6db87199be9deb94790451a90222a5512807d6fcd3a7524f095e5fb83d2505b",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/cost-mixed-zero-1440x960-normal.json",
+      "scope": "repair",
+      "bytes": 21986,
+      "sha256": "63ac7b94fac47cd1dcf2d46b2e2d4637769f1d73eb8a3ae380d019dfd4fa3bd0",
+      "copy": "raw/after/browser/cost-mixed-zero-1440x960-normal.json",
+      "copiedSha256": "63ac7b94fac47cd1dcf2d46b2e2d4637769f1d73eb8a3ae380d019dfd4fa3bd0",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/empty-1440x960-normal.json",
+      "scope": "repair",
+      "bytes": 4047,
+      "sha256": "3fa2ae36fc56bf79e699d87221d5f04d35bed581c2f238f3d672ed79ac488916",
+      "copy": "raw/after/browser/empty-1440x960-normal.json",
+      "copiedSha256": "3fa2ae36fc56bf79e699d87221d5f04d35bed581c2f238f3d672ed79ac488916",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/empty-visible-states.json",
+      "scope": "repair",
+      "bytes": 4047,
+      "sha256": "3fa2ae36fc56bf79e699d87221d5f04d35bed581c2f238f3d672ed79ac488916",
+      "copy": "raw/after/browser/empty-1440x960-normal.json",
+      "copiedSha256": "3fa2ae36fc56bf79e699d87221d5f04d35bed581c2f238f3d672ed79ac488916",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1024x768-normal.json",
+      "scope": "repair",
+      "bytes": 25994,
+      "sha256": "a0f88e1607eff2425cbd2bd37d6ac09ba96a1a7552e396c5b310841c7acb611d",
+      "copy": "raw/after/browser/long-unicode-1024x768-normal.json",
+      "copiedSha256": "a0f88e1607eff2425cbd2bd37d6ac09ba96a1a7552e396c5b310841c7acb611d",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1440x960-normal.json",
+      "scope": "repair",
+      "bytes": 26032,
+      "sha256": "a55cc21b0222b877151af16fc3b6d8f628dc07cf1fecccd1066fbebd061db6c5",
+      "copy": "raw/after/browser/before-long-artifact-1440-state.json",
+      "copiedSha256": "a55cc21b0222b877151af16fc3b6d8f628dc07cf1fecccd1066fbebd061db6c5",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1440x960-normal.png",
+      "scope": "repair",
+      "bytes": 96676,
+      "sha256": "afa7ec767f2f895bb84fae3344468a7b3495ac73fdcd336413df7699f6601888",
+      "copy": "pixels/after/long-unicode-1440x960-normal.png",
+      "copiedSha256": "afa7ec767f2f895bb84fae3344468a7b3495ac73fdcd336413df7699f6601888",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1440x960-reduced.json",
+      "scope": "repair",
+      "bytes": 26031,
+      "sha256": "c4eddcf9d5502b03797d1c1df048380b8d79785c83f704f2e0180d0d6ee01503",
+      "copy": "raw/after/browser/long-unicode-1440x960-reduced.json",
+      "copiedSha256": "c4eddcf9d5502b03797d1c1df048380b8d79785c83f704f2e0180d0d6ee01503",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1440x960-reduced.png",
+      "scope": "repair",
+      "bytes": 96676,
+      "sha256": "afa7ec767f2f895bb84fae3344468a7b3495ac73fdcd336413df7699f6601888",
+      "copy": "pixels/after/long-unicode-1440x960-normal.png",
+      "copiedSha256": "afa7ec767f2f895bb84fae3344468a7b3495ac73fdcd336413df7699f6601888",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1440x960-text200-font-transform.json",
+      "scope": "repair",
+      "bytes": 2741,
+      "sha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "copy": "raw/before/browser/accounting-1440x960-text200-font-transform.json",
+      "copiedSha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1440x960-text200.json",
+      "scope": "repair",
+      "bytes": 26042,
+      "sha256": "8133b423a15a589154a9730ff0b4d0c04d95e7260fad0c43c0121629850873dd",
+      "copy": "raw/after/browser/long-unicode-1440x960-text200.json",
+      "copiedSha256": "8133b423a15a589154a9730ff0b4d0c04d95e7260fad0c43c0121629850873dd",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1440x960-text200.png",
+      "scope": "repair",
+      "bytes": 109825,
+      "sha256": "f295c73ad29704e37c10d9070f8684f7b841f53c1e07e40ded56974d6b94f934",
+      "copy": "pixels/after/long-unicode-1440x960-text200.png",
+      "copiedSha256": "f295c73ad29704e37c10d9070f8684f7b841f53c1e07e40ded56974d6b94f934",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1920x1080-normal.json",
+      "scope": "repair",
+      "bytes": 26036,
+      "sha256": "f664742bf7a176e1bf6ed977eacaca4e7ec6bce502379e8ca8f69644998bae86",
+      "copy": "raw/after/browser/long-unicode-1920x1080-normal.json",
+      "copiedSha256": "f664742bf7a176e1bf6ed977eacaca4e7ec6bce502379e8ca8f69644998bae86",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-320x800-normal.json",
+      "scope": "repair",
+      "bytes": 25991,
+      "sha256": "22ae269148a764a242e727a7e16beed1d10471499a52e152927ea44dc84f5d76",
+      "copy": "raw/after/browser/long-unicode-320x800-normal.json",
+      "copiedSha256": "22ae269148a764a242e727a7e16beed1d10471499a52e152927ea44dc84f5d76",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-360x800-normal.json",
+      "scope": "repair",
+      "bytes": 25991,
+      "sha256": "fbf65ec5df135a0a6679a3999771f36284492b02f816f5f3fd92b56aac07f9d0",
+      "copy": "raw/after/browser/long-unicode-360x800-normal.json",
+      "copiedSha256": "fbf65ec5df135a0a6679a3999771f36284492b02f816f5f3fd92b56aac07f9d0",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-390x844-normal.json",
+      "scope": "repair",
+      "bytes": 25987,
+      "sha256": "b28cac67034b20df339be3246191651f09e079d1048d90c5b66577037adde14e",
+      "copy": "raw/after/browser/long-unicode-390x844-normal.json",
+      "copiedSha256": "b28cac67034b20df339be3246191651f09e079d1048d90c5b66577037adde14e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-390x844-normal.png",
+      "scope": "repair",
+      "bytes": 58647,
+      "sha256": "0577cc659841cd335e2f7a839600f62fbf0fa57082e4d2780ca8bd5ee34f528c",
+      "copy": "pixels/after/long-unicode-390x844-normal.png",
+      "copiedSha256": "0577cc659841cd335e2f7a839600f62fbf0fa57082e4d2780ca8bd5ee34f528c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-390x844-reduced.json",
+      "scope": "repair",
+      "bytes": 25986,
+      "sha256": "018721c3ba8fa7127483224d216226dff0c90d44393ac2aa6152149001317a94",
+      "copy": "raw/after/browser/long-unicode-390x844-reduced.json",
+      "copiedSha256": "018721c3ba8fa7127483224d216226dff0c90d44393ac2aa6152149001317a94",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-390x844-reduced.png",
+      "scope": "repair",
+      "bytes": 58647,
+      "sha256": "0577cc659841cd335e2f7a839600f62fbf0fa57082e4d2780ca8bd5ee34f528c",
+      "copy": "pixels/after/long-unicode-390x844-normal.png",
+      "copiedSha256": "0577cc659841cd335e2f7a839600f62fbf0fa57082e4d2780ca8bd5ee34f528c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-390x844-text200-font-transform.json",
+      "scope": "repair",
+      "bytes": 2741,
+      "sha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "copy": "raw/before/browser/accounting-1440x960-text200-font-transform.json",
+      "copiedSha256": "1a2c2f16ad45e832c06c86e23645f434da05d48e6103afbc32e667b5610ec560",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-390x844-text200.json",
+      "scope": "repair",
+      "bytes": 25992,
+      "sha256": "310e347bff04c9beb338c33b1334bbb73211256edda4cf888852e71ecff95ff6",
+      "copy": "raw/after/browser/long-unicode-390x844-text200.json",
+      "copiedSha256": "310e347bff04c9beb338c33b1334bbb73211256edda4cf888852e71ecff95ff6",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-390x844-text200.png",
+      "scope": "repair",
+      "bytes": 46120,
+      "sha256": "288c8a1eeb69813b9ac93db52e4632cadd4e04456e19d39e7d9e0eed96ba2b10",
+      "copy": "pixels/after/long-unicode-390x844-text200.png",
+      "copiedSha256": "288c8a1eeb69813b9ac93db52e4632cadd4e04456e19d39e7d9e0eed96ba2b10",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-768x1024-normal.json",
+      "scope": "repair",
+      "bytes": 25992,
+      "sha256": "1eeb8cc70c2cb2bf189717cc7b02a7c8aac9dd4da70d00f03aebaf83d6f1b5e3",
+      "copy": "raw/after/browser/long-unicode-768x1024-normal.json",
+      "copiedSha256": "1eeb8cc70c2cb2bf189717cc7b02a7c8aac9dd4da70d00f03aebaf83d6f1b5e3",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/mixed-cost-1440x960-normal.json",
+      "scope": "repair",
+      "bytes": 22017,
+      "sha256": "e2fc7ed92114d6fc9b236a4f7be3e82ab762fccbefd27ba3d24172dc790a69b4",
+      "copy": "raw/after/browser/mixed-cost-1440x960-normal.json",
+      "copiedSha256": "e2fc7ed92114d6fc9b236a4f7be3e82ab762fccbefd27ba3d24172dc790a69b4",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/positive-conflict-1440x960-normal.json",
+      "scope": "repair",
+      "bytes": 20992,
+      "sha256": "3080515661b572066f87c72d5f2de52e39d3cefccb01be8f07cfc457479239ba",
+      "copy": "raw/after/browser/positive-conflict-1440x960-normal.json",
+      "copiedSha256": "3080515661b572066f87c72d5f2de52e39d3cefccb01be8f07cfc457479239ba",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/report.json",
+      "scope": "repair",
+      "bytes": 69267,
+      "sha256": "9e7427cdbec8c6c33ba34087f9dd2ee6289bc38d1d6b3a3884e8ddff0a68f916",
+      "copy": "raw/after/browser/report.json",
+      "copiedSha256": "9e7427cdbec8c6c33ba34087f9dd2ee6289bc38d1d6b3a3884e8ddff0a68f916",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/runtime-start.json",
+      "scope": "repair",
+      "bytes": 211,
+      "sha256": "34616f236deabde9b61a52f8c41c92acfbb8846ad622e5b59ff8f78f126754cf",
+      "copy": "raw/after/browser/runtime-start.json",
+      "copiedSha256": "34616f236deabde9b61a52f8c41c92acfbb8846ad622e5b59ff8f78f126754cf",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/script-uri-native-activated.json",
+      "scope": "repair",
+      "bytes": 22025,
+      "sha256": "b91a305410e10bb2e72b7b9e5f110642b12e87ad25a14f4d69fffd73326cc31a",
+      "copy": "raw/after/browser/before-script-uri-390-state.json",
+      "copiedSha256": "b91a305410e10bb2e72b7b9e5f110642b12e87ad25a14f4d69fffd73326cc31a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/script-uri-native-activated.png",
+      "scope": "repair",
+      "bytes": 52435,
+      "sha256": "20d9a85309160d40b12f1478b21875d13b3fb18f64847882716b2b7d18561ac3",
+      "copy": "pixels/after/before-script-uri-390-raw.png",
+      "copiedSha256": "20d9a85309160d40b12f1478b21875d13b3fb18f64847882716b2b7d18561ac3",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/script-uri-native-focus.json",
+      "scope": "repair",
+      "bytes": 22025,
+      "sha256": "b91a305410e10bb2e72b7b9e5f110642b12e87ad25a14f4d69fffd73326cc31a",
+      "copy": "raw/after/browser/before-script-uri-390-state.json",
+      "copiedSha256": "b91a305410e10bb2e72b7b9e5f110642b12e87ad25a14f4d69fffd73326cc31a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/script-uri-native-focus.png",
+      "scope": "repair",
+      "bytes": 52435,
+      "sha256": "20d9a85309160d40b12f1478b21875d13b3fb18f64847882716b2b7d18561ac3",
+      "copy": "pixels/after/before-script-uri-390-raw.png",
+      "copiedSha256": "20d9a85309160d40b12f1478b21875d13b3fb18f64847882716b2b7d18561ac3",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/script-uri-native-pointer.json",
+      "scope": "repair",
+      "bytes": 22025,
+      "sha256": "b91a305410e10bb2e72b7b9e5f110642b12e87ad25a14f4d69fffd73326cc31a",
+      "copy": "raw/after/browser/before-script-uri-390-state.json",
+      "copiedSha256": "b91a305410e10bb2e72b7b9e5f110642b12e87ad25a14f4d69fffd73326cc31a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-data-native-focus.json",
+      "scope": "repair",
+      "bytes": 21923,
+      "sha256": "26818dadef0d6f7f89e848421e45a44c266e39882de75a521fc5857749223a46",
+      "copy": "raw/after/browser/uri-data-native-focus.json",
+      "copiedSha256": "26818dadef0d6f7f89e848421e45a44c266e39882de75a521fc5857749223a46",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-empty-native-focus.json",
+      "scope": "repair",
+      "bytes": 21720,
+      "sha256": "ff45e25dd0043d5ebea54ac70f1fb952ff988dd48c3bf64f8380acaa276999f2",
+      "copy": "raw/after/browser/uri-empty-native-focus.json",
+      "copiedSha256": "ff45e25dd0043d5ebea54ac70f1fb952ff988dd48c3bf64f8380acaa276999f2",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-file-native-focus.json",
+      "scope": "repair",
+      "bytes": 21824,
+      "sha256": "bd431cd439a2044ec8da6f56e5aa890dca6a28b9ea49c9f67c0a05e5cd5c1c95",
+      "copy": "raw/after/browser/uri-file-native-focus.json",
+      "copiedSha256": "bd431cd439a2044ec8da6f56e5aa890dca6a28b9ea49c9f67c0a05e5cd5c1c95",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-malformed-native-focus.json",
+      "scope": "repair",
+      "bytes": 21764,
+      "sha256": "36551417856485d9624f5ad2baaa31512709a3ae087e1ba0ed5c532e76d94d57",
+      "copy": "raw/after/browser/uri-malformed-native-focus.json",
+      "copiedSha256": "36551417856485d9624f5ad2baaa31512709a3ae087e1ba0ed5c532e76d94d57",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-not-url-native-focus.json",
+      "scope": "repair",
+      "bytes": 21767,
+      "sha256": "afc53ce1c017f809ac9d7ee792e78f8c32e76e8ec854f76fae6cebb241b19a5c",
+      "copy": "raw/after/browser/uri-not-url-native-focus.json",
+      "copiedSha256": "afc53ce1c017f809ac9d7ee792e78f8c32e76e8ec854f76fae6cebb241b19a5c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-relative-native-focus.json",
+      "scope": "repair",
+      "bytes": 21778,
+      "sha256": "2eea21ecb758629c5be45a94826671eac7116654ba719dd5f21af2dca3bf9537",
+      "copy": "raw/after/browser/uri-relative-native-focus.json",
+      "copiedSha256": "2eea21ecb758629c5be45a94826671eac7116654ba719dd5f21af2dca3bf9537",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-safe-http-arrived.json",
+      "scope": "repair",
+      "bytes": 21876,
+      "sha256": "0a328ad8939c5a78b9b2882b217b4f66496c1e6e592277ec47a1a1eea68984e0",
+      "copy": "raw/after/browser/accounting-390x844-normal.json",
+      "copiedSha256": "0a328ad8939c5a78b9b2882b217b4f66496c1e6e592277ec47a1a1eea68984e0",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-safe-http-arrived.png",
+      "scope": "repair",
+      "bytes": 52762,
+      "sha256": "5daf26c06151bd514384a24a9bb16c0827c36f09731788c0eb61b6d99d19f655",
+      "copy": "pixels/after/accounting-390x844-normal.png",
+      "copiedSha256": "5daf26c06151bd514384a24a9bb16c0827c36f09731788c0eb61b6d99d19f655",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-safe-http-native-focus.json",
+      "scope": "repair",
+      "bytes": 19112,
+      "sha256": "713924a9d6566f7e247f28764c92755e092c9a6a38754246908c47f516eada0b",
+      "copy": "raw/after/browser/uri-safe-http-native-focus.json",
+      "copiedSha256": "713924a9d6566f7e247f28764c92755e092c9a6a38754246908c47f516eada0b",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-safe-https-arrived.json",
+      "scope": "repair",
+      "bytes": 21891,
+      "sha256": "538a0fe5a10d5f2c7977dd176c10bcf94393926db01687ebbcece68b328e636c",
+      "copy": "raw/after/browser/uri-safe-https-arrived.json",
+      "copiedSha256": "538a0fe5a10d5f2c7977dd176c10bcf94393926db01687ebbcece68b328e636c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-safe-https-arrived.png",
+      "scope": "repair",
+      "bytes": 52643,
+      "sha256": "78af5023c99681373f467f0cd17df52a34c5a2821b67ad640421447b834c79ca",
+      "copy": "pixels/after/uri-safe-https-arrived.png",
+      "copiedSha256": "78af5023c99681373f467f0cd17df52a34c5a2821b67ad640421447b834c79ca",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-safe-https-native-focus.json",
+      "scope": "repair",
+      "bytes": 19137,
+      "sha256": "187cba3c700123bb1647c8e43cfbcf915fe636fbe01a8029b4b6e14965fe0af4",
+      "copy": "raw/after/browser/uri-safe-https-native-focus.json",
+      "copiedSha256": "187cba3c700123bb1647c8e43cfbcf915fe636fbe01a8029b4b6e14965fe0af4",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-safe-uppercase-native-focus.json",
+      "scope": "repair",
+      "bytes": 19157,
+      "sha256": "734ccec00cbf61412199edbab9366f519df79b089e3106399f68e6dddc199992",
+      "copy": "raw/after/browser/uri-safe-uppercase-native-focus.json",
+      "copiedSha256": "734ccec00cbf61412199edbab9366f519df79b089e3106399f68e6dddc199992",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-scheme-relative-native-focus.json",
+      "scope": "repair",
+      "bytes": 21812,
+      "sha256": "eff8c8a641100201f6a988e84abd1f4c3361016fdf81deb7f6d00e6d6953cb23",
+      "copy": "raw/after/browser/uri-scheme-relative-native-focus.json",
+      "copiedSha256": "eff8c8a641100201f6a988e84abd1f4c3361016fdf81deb7f6d00e6d6953cb23",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-script-newline-native-focus.json",
+      "scope": "repair",
+      "bytes": 21919,
+      "sha256": "59b08bec04f3929c6e8d22eb8591684498114b64e82e34158d3ad8f2de470bd6",
+      "copy": "raw/after/browser/uri-script-newline-native-focus.json",
+      "copiedSha256": "59b08bec04f3929c6e8d22eb8591684498114b64e82e34158d3ad8f2de470bd6",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/uri-script-space-native-focus.json",
+      "scope": "repair",
+      "bytes": 21920,
+      "sha256": "1517e8f6a3217d445150ab8ad3a5cdc97b437ba0c30ca288eca616999fac734c",
+      "copy": "raw/after/browser/uri-script-space-native-focus.json",
+      "copiedSha256": "1517e8f6a3217d445150ab8ad3a5cdc97b437ba0c30ca288eca616999fac734c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/zero-cost-1440x960-normal.json",
+      "scope": "repair",
+      "bytes": 19546,
+      "sha256": "50e37ab585570a19cdef422f0f36f2fc8a3299de68f17d16c07141f95193fd3a",
+      "copy": "raw/after/browser/zero-cost-1440x960-normal.json",
+      "copiedSha256": "50e37ab585570a19cdef422f0f36f2fc8a3299de68f17d16c07141f95193fd3a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/zero-vs-unknown-1440x960-normal.json",
+      "scope": "repair",
+      "bytes": 22250,
+      "sha256": "d06930aa1ca269f53f30987ffa8b765c37c1e0df924fd2fa06aac351db9d4111",
+      "copy": "raw/after/browser/zero-vs-unknown-1440x960-normal.json",
+      "copiedSha256": "d06930aa1ca269f53f30987ffa8b765c37c1e0df924fd2fa06aac351db9d4111",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/consume-mixed-cost.command.json",
+      "scope": "repair",
+      "bytes": 751,
+      "sha256": "4f31e20ea49b11a98f6d584754c94d9b09ed48199234b27eb4f844f40c91f783",
+      "copy": "raw/after/commands/consume-mixed-cost.command.json",
+      "copiedSha256": "4f31e20ea49b11a98f6d584754c94d9b09ed48199234b27eb4f844f40c91f783",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/consume.command.json",
+      "scope": "repair",
+      "bytes": 739,
+      "sha256": "ed62dfe3d3fc3d4e4bbea9aa42b66b8272b69dfb0580759eff0621cc756a6326",
+      "copy": "raw/after/commands/consume.command.json",
+      "copiedSha256": "ed62dfe3d3fc3d4e4bbea9aa42b66b8272b69dfb0580759eff0621cc756a6326",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/controller-results.json",
+      "scope": "repair",
+      "bytes": 2440,
+      "sha256": "da51bb677766c4b0f62492a0b8fd2982b0810eb1dd76454fde949313af17c518",
+      "copy": "raw/repair/recorder/controller-results.json",
+      "copiedSha256": "da51bb677766c4b0f62492a0b8fd2982b0810eb1dd76454fde949313af17c518",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/controller-resume-results.json",
+      "scope": "repair",
+      "bytes": 5010,
+      "sha256": "4847a0011f9a5894caefe7692339cad30bf527456f423d677e53482d41b4b649",
+      "copy": "raw/repair/recorder/controller-resume-results.json",
+      "copiedSha256": "4847a0011f9a5894caefe7692339cad30bf527456f423d677e53482d41b4b649",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/extra-cases.command.json",
+      "scope": "repair",
+      "bytes": 744,
+      "sha256": "16bc7d3de505302b65350b5bda9eb198b1e48197b6bc064c33e97d6b6560a25c",
+      "copy": "raw/repair/recorder/extra-cases.command.json",
+      "copiedSha256": "16bc7d3de505302b65350b5bda9eb198b1e48197b6bc064c33e97d6b6560a25c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/extra-cases.stderr.txt",
+      "scope": "repair",
+      "bytes": 694,
+      "sha256": "3a7735cb4dfe4d84032f4850f05c00457c5cb6aa325460ce06509c2ce27cabac",
+      "copy": "raw/repair/recorder/extra-cases.stderr.txt",
+      "copiedSha256": "3a7735cb4dfe4d84032f4850f05c00457c5cb6aa325460ce06509c2ce27cabac",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/file-reopen/reopened-file-1440.png",
+      "scope": "repair",
+      "bytes": 85015,
+      "sha256": "74ccb281e4b62fcdece1f9cebe8c2b87ddd2d7d3daad70d80613898e9fc3c978",
+      "copy": "pixels/after/reopened-file-1440.png",
+      "copiedSha256": "74ccb281e4b62fcdece1f9cebe8c2b87ddd2d7d3daad70d80613898e9fc3c978",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/file-reopen/report.json",
+      "scope": "repair",
+      "bytes": 3969,
+      "sha256": "603620cf332bae0c5f61452f46e2f3aa856db5627e1d304d89de1c64871d5e4e",
+      "copy": "raw/after/file-reopen/report.json",
+      "copiedSha256": "603620cf332bae0c5f61452f46e2f3aa856db5627e1d304d89de1c64871d5e4e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/observe.command.json",
+      "scope": "repair",
+      "bytes": 1382,
+      "sha256": "8022cb074550a99c547bbfca4cd88e685642bff26ae486b6af7c7ea62d12bfab",
+      "copy": "raw/after/commands/observe.command.json",
+      "copiedSha256": "8022cb074550a99c547bbfca4cd88e685642bff26ae486b6af7c7ea62d12bfab",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/recorder-path-correction.json",
+      "scope": "repair",
+      "bytes": 534,
+      "sha256": "b873d6bd00e1c46641bba47eac6cf5b6c7fe3c9c68977aa274557dd3f86ab571",
+      "copy": "raw/repair/recorder/recorder-path-correction.json",
+      "copiedSha256": "b873d6bd00e1c46641bba47eac6cf5b6c7fe3c9c68977aa274557dd3f86ab571",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/reopen-file.command.json",
+      "scope": "repair",
+      "bytes": 1187,
+      "sha256": "f99aaed723c68617b83a67ab72c97fa0280c74efa59b9085d9ae68c11f0c4d4a",
+      "copy": "raw/after/commands/reopen-file.command.json",
+      "copiedSha256": "f99aaed723c68617b83a67ab72c97fa0280c74efa59b9085d9ae68c11f0c4d4a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/verify-protected-artifacts.command.json",
+      "scope": "repair",
+      "bytes": 760,
+      "sha256": "b4c16ed7496d4b1d5b208d15fc1c6678a810c49aeb811fa98f5ffe8b114a5821",
+      "copy": "raw/after/commands/verify-protected-artifacts.command.json",
+      "copiedSha256": "b4c16ed7496d4b1d5b208d15fc1c6678a810c49aeb811fa98f5ffe8b114a5821",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/citation-addendum.json",
+      "scope": "repair",
+      "bytes": 432,
+      "sha256": "72242b1e87a511556d974cb26be2d8a22837a5d6bdb652a98f5bca0b2def2a09",
+      "copy": "raw/repair/citation-addendum.json",
+      "copiedSha256": "72242b1e87a511556d974cb26be2d8a22837a5d6bdb652a98f5bca0b2def2a09",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/FINAL_PROOF.md",
+      "scope": "repair",
+      "bytes": 2961,
+      "sha256": "950d213d3b2394f88e20aca331e62ea82bed80d6e704ca7e1b0df4a008755388",
+      "copy": "raw/repair/FINAL_PROOF.md.txt",
+      "copiedSha256": "950d213d3b2394f88e20aca331e62ea82bed80d6e704ca7e1b0df4a008755388",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/handoff-example.json",
+      "scope": "repair",
+      "bytes": 2652,
+      "sha256": "6ef922f52c9786396498e1fc9b75a271b21ce769ec497273b2cab47d699e903b",
+      "copy": "raw/repair/handoff-example.json",
+      "copiedSha256": "6ef922f52c9786396498e1fc9b75a271b21ce769ec497273b2cab47d699e903b",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/handoff-example.mjs",
+      "scope": "repair",
+      "bytes": 1481,
+      "sha256": "6857b28922a24ac7767a76f8423b3425f871c42672b7009342f235cfea51026c",
+      "copy": "examples/handoff-example.mjs.txt",
+      "copiedSha256": "6857b28922a24ac7767a76f8423b3425f871c42672b7009342f235cfea51026c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/handoff-final-status-binding.json",
+      "scope": "repair",
+      "bytes": 531,
+      "sha256": "9df0734dd2826ca041ad826f7633c5d8f3e17da7cb48cc54e5597bca61395455",
+      "copy": "raw/repair/handoff-final-status-binding.json",
+      "copiedSha256": "9df0734dd2826ca041ad826f7633c5d8f3e17da7cb48cc54e5597bca61395455",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/handoff-temp/noderl-review-nO2DU2/regression.json",
+      "scope": "repair",
+      "bytes": 617,
+      "sha256": "24e04f9fe761afe11ccd8e1b3b0085133e487d3624e2a558d04e4d730dd99bfd",
+      "copy": "examples/handoff-output/regression.json",
+      "copiedSha256": "24e04f9fe761afe11ccd8e1b3b0085133e487d3624e2a558d04e4d730dd99bfd",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/handoff-temp/noderl-review-nO2DU2/repair.md",
+      "scope": "repair",
+      "bytes": 1563,
+      "sha256": "01ab4c9c063033d07623f2d0229eb71d4242e5bba64431930e4cd29b557a2673",
+      "copy": "examples/handoff-output/repair.md.txt",
+      "copiedSha256": "01ab4c9c063033d07623f2d0229eb71d4242e5bba64431930e4cd29b557a2673",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/handoff-temp/noderl-review-nO2DU2/report.html",
+      "scope": "repair",
+      "bytes": 7210,
+      "sha256": "31b51b09f12f327a664a5a93f2a85ce0a39e0d029ddd086eaabeaebaddccdefb",
+      "copy": "examples/handoff-output/report.html.txt",
+      "copiedSha256": "31b51b09f12f327a664a5a93f2a85ce0a39e0d029ddd086eaabeaebaddccdefb",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/handoff-temp/noderl-review-nO2DU2/trace.json",
+      "scope": "repair",
+      "bytes": 1122,
+      "sha256": "9b9800813fc4cc3d38beca16534a67cc3d5894957b75c74dcf0a66b80d014f8b",
+      "copy": "examples/handoff-output/trace.json",
+      "copiedSha256": "9b9800813fc4cc3d38beca16534a67cc3d5894957b75c74dcf0a66b80d014f8b",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/lf-normalization.json",
+      "scope": "repair",
+      "bytes": 489,
+      "sha256": "4c6e37e1dabdb75d3732a88b52d411f68996087d7144f3ed36af19b331a0d377",
+      "copy": "raw/repair/lf-normalization.json",
+      "copiedSha256": "4c6e37e1dabdb75d3732a88b52d411f68996087d7144f3ed36af19b331a0d377",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/runtime-final-closure.json",
+      "scope": "repair",
+      "bytes": 329,
+      "sha256": "fc25d194a612a17bf51320603e8699d7ff13956cb038644d76846c4e21f5cb20",
+      "copy": "raw/repair/runtime-final-closure.json",
+      "copiedSha256": "fc25d194a612a17bf51320603e8699d7ff13956cb038644d76846c4e21f5cb20",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/source-final.json",
+      "scope": "repair",
+      "bytes": 38777,
+      "sha256": "bbc41f741902fae3309decc9b665ec0c5b5facdee87ad91e3a89a81086e5c8bd",
+      "copy": "raw/repair/source-final.json",
+      "copiedSha256": "bbc41f741902fae3309decc9b665ec0c5b5facdee87ad91e3a89a81086e5c8bd",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/targeted-after.json",
+      "scope": "repair",
+      "bytes": 58,
+      "sha256": "88ceeb608ab23dc58aac3c7c69e27fa23ad93cc9001858937e7ab5e1d7c00023",
+      "copy": "raw/repair/commands/targeted-after.json",
+      "copiedSha256": "88ceeb608ab23dc58aac3c7c69e27fa23ad93cc9001858937e7ab5e1d7c00023",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/targeted-after.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/targeted-after.stdout.txt",
+      "scope": "repair",
+      "bytes": 1166,
+      "sha256": "3d23c29f0d07ab81d7a3134ec7cab1982ab32e30352e024b144b9a2f421b9c6f",
+      "copy": "raw/repair/commands/targeted-after.stdout.txt",
+      "copiedSha256": "3d23c29f0d07ab81d7a3134ec7cab1982ab32e30352e024b144b9a2f421b9c6f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/targeted-before.json",
+      "scope": "repair",
+      "bytes": 128,
+      "sha256": "24d587b0d9338aa86ed2458859359bc3149a4b4c36d814c3e9e32c384389428f",
+      "copy": "raw/repair/commands/targeted-before.json",
+      "copiedSha256": "24d587b0d9338aa86ed2458859359bc3149a4b4c36d814c3e9e32c384389428f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/targeted-before.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/targeted-before.stdout.txt",
+      "scope": "repair",
+      "bytes": 3739,
+      "sha256": "2943dc825975467b0dcb37fa4e74fa8e6ae145685373d2d12f150cdeba385b5c",
+      "copy": "raw/repair/commands/targeted-before.stdout.txt",
+      "copiedSha256": "2943dc825975467b0dcb37fa4e74fa8e6ae145685373d2d12f150cdeba385b5c",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/tests-after-anchor.json",
+      "scope": "repair",
+      "bytes": 102,
+      "sha256": "5d2a25c25156ab9f967271ea8bed262142af493f34bccb529faf10f5d5cf0b03",
+      "copy": "raw/repair/commands/tests-after-anchor.json",
+      "copiedSha256": "5d2a25c25156ab9f967271ea8bed262142af493f34bccb529faf10f5d5cf0b03",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/tests-after-anchor.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/tests-after-anchor.stdout.txt",
+      "scope": "repair",
+      "bytes": 20464,
+      "sha256": "2fdabfe68a5dd228ad19a78440b3f8d422e6c23789a5f78e4470b5cdc58d617d",
+      "copy": "raw/repair/commands/tests-after-anchor.stdout.txt",
+      "copiedSha256": "2fdabfe68a5dd228ad19a78440b3f8d422e6c23789a5f78e4470b5cdc58d617d",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/tests.json",
+      "scope": "repair",
+      "bytes": 102,
+      "sha256": "f5162960b130d2eb3e3b6e87aa8c0ad0427605aee5f09d8a56a7375296c07a73",
+      "copy": "raw/repair/commands/tests.json",
+      "copiedSha256": "f5162960b130d2eb3e3b6e87aa8c0ad0427605aee5f09d8a56a7375296c07a73",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/tests.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/tests.stdout.txt",
+      "scope": "repair",
+      "bytes": 21293,
+      "sha256": "6e64206880bae20abe18e441c476360d91abbf62158b8c820253e6f6cc945ce7",
+      "copy": "raw/repair/commands/tests.stdout.txt",
+      "copiedSha256": "6e64206880bae20abe18e441c476360d91abbf62158b8c820253e6f6cc945ce7",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/typecheck.json",
+      "scope": "repair",
+      "bytes": 120,
+      "sha256": "ed7fd537567de2260096f58aba5b4b57da9e873befd13c68d53612a4d38756d2",
+      "copy": "raw/repair/commands/typecheck.json",
+      "copiedSha256": "ed7fd537567de2260096f58aba5b4b57da9e873befd13c68d53612a4d38756d2",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/typecheck.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/typecheck.stdout.txt",
+      "scope": "repair",
+      "bytes": 59,
+      "sha256": "2eaf80bc4878add206f78acd487fc389b151321f177900f688e9d9590db29fd4",
+      "copy": "raw/repair/commands/typecheck.stdout.txt",
+      "copiedSha256": "2eaf80bc4878add206f78acd487fc389b151321f177900f688e9d9590db29fd4",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/commands.json",
+      "scope": "normal-baseline",
+      "bytes": 5828,
+      "sha256": "1f44f027c3ca7af35929d135657371cdb3fa1bbae8af9f28168376993d200638",
+      "copy": "raw/normal-baseline/commands.json",
+      "copiedSha256": "1f44f027c3ca7af35929d135657371cdb3fa1bbae8af9f28168376993d200638",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/normal-ci.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/normal-ci.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 138,
+      "sha256": "6168d1e0eb9bc52c45886a3b7aa9bf693ba964021ab877a8f06270e245b0d8a0",
+      "copy": "raw/normal-baseline/normal-ci.stdout.txt",
+      "copiedSha256": "6168d1e0eb9bc52c45886a3b7aa9bf693ba964021ab877a8f06270e245b0d8a0",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/normal-demo.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/normal-demo.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 4316,
+      "sha256": "38bf7bf5e8fc2e5aa17820e52e3f23d13196e5759a17a59f607e9520e1d72329",
+      "copy": "raw/normal-baseline/normal-demo.stdout.txt",
+      "copiedSha256": "38bf7bf5e8fc2e5aa17820e52e3f23d13196e5759a17a59f607e9520e1d72329",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/normal-tests.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/normal-tests.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 20608,
+      "sha256": "4e88b2ffa57ee08ff405f68816f88cdc4e7e589d0412b761b41e82dfeb65b58e",
+      "copy": "raw/normal-baseline/normal-tests.stdout.txt",
+      "copiedSha256": "4e88b2ffa57ee08ff405f68816f88cdc4e7e589d0412b761b41e82dfeb65b58e",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/normal-typecheck.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/normal-typecheck.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 59,
+      "sha256": "2eaf80bc4878add206f78acd487fc389b151321f177900f688e9d9590db29fd4",
+      "copy": "raw/repair/commands/typecheck.stdout.txt",
+      "copiedSha256": "2eaf80bc4878add206f78acd487fc389b151321f177900f688e9d9590db29fd4",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k_NODERL_CURRENT_BASELINE.json",
+      "scope": "top-receipt",
+      "bytes": 2201,
+      "sha256": "1d5e905e8b980203d13f2d1badd2d4c665fcbbded6989d7e521cd2d993e170a0",
+      "copy": "raw/receipts/E6k_NODERL_CURRENT_BASELINE.json",
+      "copiedSha256": "1d5e905e8b980203d13f2d1badd2d4c665fcbbded6989d7e521cd2d993e170a0",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k_NODERL_CURRENT_BASELINE_JUDGE.json",
+      "scope": "top-receipt",
+      "bytes": 9322,
+      "sha256": "161494fab22798e2cf48e7f97b985d5003437aaf64351bc3343aeda430476033",
+      "copy": "raw/receipts/E6k_NODERL_CURRENT_BASELINE_JUDGE.json",
+      "copiedSha256": "161494fab22798e2cf48e7f97b985d5003437aaf64351bc3343aeda430476033",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k_NODERL_FIRST_USE_RECEIPT.json",
+      "scope": "top-receipt",
+      "bytes": 8755,
+      "sha256": "d6ecabdb71ad1bf5f26b0db7bb0397a3e34519b7155582e22aa792f8fe4d682a",
+      "copy": "raw/receipts/E6k_NODERL_FIRST_USE_RECEIPT.json",
+      "copiedSha256": "d6ecabdb71ad1bf5f26b0db7bb0397a3e34519b7155582e22aa792f8fe4d682a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k_NODERL_FIRST_USE_RECEIPT.md",
+      "scope": "top-receipt",
+      "bytes": 2282,
+      "sha256": "7dbe85e5f7fc1a52b3c7c52dfe9afd136d7fe9e86ea79c497c59fe9b519c779f",
+      "copy": "raw/receipts/E6k_NODERL_FIRST_USE_RECEIPT.md.txt",
+      "copiedSha256": "7dbe85e5f7fc1a52b3c7c52dfe9afd136d7fe9e86ea79c497c59fe9b519c779f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k_NODERL_FIRST_USE_PLAN_ADDENDUM.json",
+      "scope": "top-receipt",
+      "bytes": 1078,
+      "sha256": "e258bf49f46ee37ebcae6bffaddcbed6c1b134580aea825af25dfbc3c0e5636a",
+      "copy": "raw/receipts/E6k_NODERL_FIRST_USE_PLAN_ADDENDUM.json",
+      "copiedSha256": "e258bf49f46ee37ebcae6bffaddcbed6c1b134580aea825af25dfbc3c0e5636a",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k_NODERL_STORYBOOK_REPAIR_PLAN_JUDGE.json",
+      "scope": "top-receipt",
+      "bytes": 17082,
+      "sha256": "97e44ed711bb203d8220b5ae0e6a2b7b1b138a40da0e3c03f7cadedfbf16b9e7",
+      "copy": "raw/receipts/E6k_NODERL_STORYBOOK_REPAIR_PLAN_JUDGE.json",
+      "copiedSha256": "97e44ed711bb203d8220b5ae0e6a2b7b1b138a40da0e3c03f7cadedfbf16b9e7",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k_NODERL_STORYBOOK_REPAIR_PLAN_JUDGE.md",
+      "scope": "top-receipt",
+      "bytes": 3952,
+      "sha256": "58c7095a9bbb8750e5482d01c6d0254c8bec47a400730359dc6aef89c536b53f",
+      "copy": "raw/receipts/E6k_NODERL_STORYBOOK_REPAIR_PLAN_JUDGE.md.txt",
+      "copiedSha256": "58c7095a9bbb8750e5482d01c6d0254c8bec47a400730359dc6aef89c536b53f",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k_NODERL_REPORT_REPAIR_RECEIPT.json",
+      "scope": "top-receipt",
+      "bytes": 5956,
+      "sha256": "f98b57a1e227feb967687f4179461b307a27fd99d095a0b9801ffe03139ac446",
+      "copy": "raw/receipts/E6k_NODERL_REPORT_REPAIR_RECEIPT.json",
+      "copiedSha256": "f98b57a1e227feb967687f4179461b307a27fd99d095a0b9801ffe03139ac446",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k_NODERL_REPORT_REPAIR_RECEIPT.md",
+      "scope": "top-receipt",
+      "bytes": 2025,
+      "sha256": "0fb503336766f9eecfb6f2a2c3a2585824093ea01f891d26da62cf5db55ae9a3",
+      "copy": "raw/receipts/E6k_NODERL_REPORT_REPAIR_RECEIPT.md.txt",
+      "copiedSha256": "0fb503336766f9eecfb6f2a2c3a2585824093ea01f891d26da62cf5db55ae9a3",
+      "transformation": "NONE; exact raw bytes. Extension may be inert and identical-byte duplicates share a copy."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-branch.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-branch.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 37,
+      "sha256": "a3058c0e774c49b757566650bf11426a4bb7a85cb431fe86802ed63d165f63b4",
+      "copy": "raw/final-judge/close-branch.stdout.raw",
+      "copiedSha256": "a3058c0e774c49b757566650bf11426a4bb7a85cb431fe86802ed63d165f63b4",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-cached-diff.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-cached-diff.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-cell-readback.json",
+      "scope": "final-independent-judge",
+      "bytes": 4865,
+      "sha256": "6d3a42cee0fbb4556118954384b8f4b8517c83318d74e7c2974043253e74f9d2",
+      "copy": "raw/final-judge/close-cell-readback.json",
+      "copiedSha256": "6d3a42cee0fbb4556118954384b8f4b8517c83318d74e7c2974043253e74f9d2",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-changed.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 364,
+      "sha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "copy": "raw/final-judge/close-changed.stderr.txt",
+      "copiedSha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-changed.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 122,
+      "sha256": "1f16eb6a1c4e43fe37697f32477eb8c0001a76ced9c06258805b029278ecdb35",
+      "copy": "raw/final-judge/close-changed.stdout.raw",
+      "copiedSha256": "1f16eb6a1c4e43fe37697f32477eb8c0001a76ced9c06258805b029278ecdb35",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-diff-check.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 364,
+      "sha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "copy": "raw/final-judge/close-changed.stderr.txt",
+      "copiedSha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-diff-check.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-diff.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 364,
+      "sha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "copy": "raw/final-judge/close-changed.stderr.txt",
+      "copiedSha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-diff.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 11047,
+      "sha256": "84d03781adf6338cc824af540e8176f21475ca0671749e591ef4b7f3a4bbba56",
+      "copy": "raw/final-judge/close-diff.stdout.raw",
+      "copiedSha256": "84d03781adf6338cc824af540e8176f21475ca0671749e591ef4b7f3a4bbba56",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-head.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-head.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 41,
+      "sha256": "60044d296e70875619a821f0c2652a1c01c6a42a98271e9fbb8a474aaee903f6",
+      "copy": "raw/final-judge/close-head.stdout.raw",
+      "copiedSha256": "60044d296e70875619a821f0c2652a1c01c6a42a98271e9fbb8a474aaee903f6",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-index-path.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-index-path.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 11,
+      "sha256": "742e1586a644af64934a892663d03c75415bfb01edafdfdd924a8627573bfb9c",
+      "copy": "raw/final-judge/close-index-path.stdout.raw",
+      "copiedSha256": "742e1586a644af64934a892663d03c75415bfb01edafdfdd924a8627573bfb9c",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-index.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-index.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 8602,
+      "sha256": "25579f2a848e57626b4f83ce1f856c527b7e0a322befb7c666351d1fff515aa8",
+      "copy": "raw/final-judge/close-index.stdout.raw",
+      "copiedSha256": "25579f2a848e57626b4f83ce1f856c527b7e0a322befb7c666351d1fff515aa8",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-refs.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-refs.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 366,
+      "sha256": "1f810e139a62ae92611d9294285d51cf08f327743820974f6ba05a5323ae2d26",
+      "copy": "raw/final-judge/close-refs.stdout.raw",
+      "copiedSha256": "1f810e139a62ae92611d9294285d51cf08f327743820974f6ba05a5323ae2d26",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-status.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-status.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 148,
+      "sha256": "9d0dcc32cd6d09b414d955d51c4c6563e4f4e03c9b14ef9f163512d79100c81b",
+      "copy": "raw/final-judge/close-status.stdout.raw",
+      "copiedSha256": "9d0dcc32cd6d09b414d955d51c4c6563e4f4e03c9b14ef9f163512d79100c81b",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-untracked.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-untracked.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 11,
+      "sha256": "338536fccf4cb194596507ba254597bdbf32746d663ef450bacc2e4dd25cf1ee",
+      "copy": "raw/final-judge/close-untracked.stdout.raw",
+      "copiedSha256": "338536fccf4cb194596507ba254597bdbf32746d663ef450bacc2e4dd25cf1ee",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/close-verification.json",
+      "scope": "final-independent-judge",
+      "bytes": 34683,
+      "sha256": "7667120b09adca6eb15e743dd869d72943366c2bece88f04d0951603dd65fbcb",
+      "copy": "raw/final-judge/close-verification.json",
+      "copiedSha256": "7667120b09adca6eb15e743dd869d72943366c2bece88f04d0951603dd65fbcb",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/judge-renderer-replay.mjs.txt",
+      "scope": "final-independent-judge",
+      "bytes": 4091,
+      "sha256": "b4c425bc2e937788180d26d074f90023a5abb5c36524e6859a507098b1fb82ad",
+      "copy": "raw/final-judge/judge-renderer-replay.mjs.txt",
+      "copiedSha256": "b4c425bc2e937788180d26d074f90023a5abb5c36524e6859a507098b1fb82ad",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/judge-source-verification.py.txt",
+      "scope": "final-independent-judge",
+      "bytes": 9916,
+      "sha256": "a68a06e2aedaa173dd00cb9f8bf4c7e4dbc6701224e5e13bceae19b860c710aa",
+      "copy": "raw/final-judge/judge-source-verification.py.txt",
+      "copiedSha256": "a68a06e2aedaa173dd00cb9f8bf4c7e4dbc6701224e5e13bceae19b860c710aa",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/manifest.json",
+      "scope": "final-independent-judge",
+      "bytes": 9329,
+      "sha256": "37c1193ab7541d5b98b7b108c711eb44dd95451138c3ccb21144d25e35b30d8e",
+      "copy": "raw/final-judge/manifest.json",
+      "copiedSha256": "37c1193ab7541d5b98b7b108c711eb44dd95451138c3ccb21144d25e35b30d8e",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-branch.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-branch.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 37,
+      "sha256": "a3058c0e774c49b757566650bf11426a4bb7a85cb431fe86802ed63d165f63b4",
+      "copy": "raw/final-judge/close-branch.stdout.raw",
+      "copiedSha256": "a3058c0e774c49b757566650bf11426a4bb7a85cb431fe86802ed63d165f63b4",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-cached-diff.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-cached-diff.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-cell-readback.json",
+      "scope": "final-independent-judge",
+      "bytes": 4865,
+      "sha256": "6d3a42cee0fbb4556118954384b8f4b8517c83318d74e7c2974043253e74f9d2",
+      "copy": "raw/final-judge/close-cell-readback.json",
+      "copiedSha256": "6d3a42cee0fbb4556118954384b8f4b8517c83318d74e7c2974043253e74f9d2",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-changed.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 364,
+      "sha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "copy": "raw/final-judge/close-changed.stderr.txt",
+      "copiedSha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-changed.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 122,
+      "sha256": "1f16eb6a1c4e43fe37697f32477eb8c0001a76ced9c06258805b029278ecdb35",
+      "copy": "raw/final-judge/close-changed.stdout.raw",
+      "copiedSha256": "1f16eb6a1c4e43fe37697f32477eb8c0001a76ced9c06258805b029278ecdb35",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-diff-check.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 364,
+      "sha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "copy": "raw/final-judge/close-changed.stderr.txt",
+      "copiedSha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-diff-check.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-diff.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 364,
+      "sha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "copy": "raw/final-judge/close-changed.stderr.txt",
+      "copiedSha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-diff.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 11047,
+      "sha256": "84d03781adf6338cc824af540e8176f21475ca0671749e591ef4b7f3a4bbba56",
+      "copy": "raw/final-judge/close-diff.stdout.raw",
+      "copiedSha256": "84d03781adf6338cc824af540e8176f21475ca0671749e591ef4b7f3a4bbba56",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-head.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-head.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 41,
+      "sha256": "60044d296e70875619a821f0c2652a1c01c6a42a98271e9fbb8a474aaee903f6",
+      "copy": "raw/final-judge/close-head.stdout.raw",
+      "copiedSha256": "60044d296e70875619a821f0c2652a1c01c6a42a98271e9fbb8a474aaee903f6",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-index-path.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-index-path.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 11,
+      "sha256": "742e1586a644af64934a892663d03c75415bfb01edafdfdd924a8627573bfb9c",
+      "copy": "raw/final-judge/close-index-path.stdout.raw",
+      "copiedSha256": "742e1586a644af64934a892663d03c75415bfb01edafdfdd924a8627573bfb9c",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-index.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-index.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 8602,
+      "sha256": "25579f2a848e57626b4f83ce1f856c527b7e0a322befb7c666351d1fff515aa8",
+      "copy": "raw/final-judge/close-index.stdout.raw",
+      "copiedSha256": "25579f2a848e57626b4f83ce1f856c527b7e0a322befb7c666351d1fff515aa8",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-refs.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-refs.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 366,
+      "sha256": "1f810e139a62ae92611d9294285d51cf08f327743820974f6ba05a5323ae2d26",
+      "copy": "raw/final-judge/close-refs.stdout.raw",
+      "copiedSha256": "1f810e139a62ae92611d9294285d51cf08f327743820974f6ba05a5323ae2d26",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-status.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-status.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 148,
+      "sha256": "9d0dcc32cd6d09b414d955d51c4c6563e4f4e03c9b14ef9f163512d79100c81b",
+      "copy": "raw/final-judge/close-status.stdout.raw",
+      "copiedSha256": "9d0dcc32cd6d09b414d955d51c4c6563e4f4e03c9b14ef9f163512d79100c81b",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-untracked.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "raw/repair/commands/targeted-after.stderr.txt",
+      "copiedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-untracked.stdout.raw",
+      "scope": "final-independent-judge",
+      "bytes": 11,
+      "sha256": "338536fccf4cb194596507ba254597bdbf32746d663ef450bacc2e4dd25cf1ee",
+      "copy": "raw/final-judge/close-untracked.stdout.raw",
+      "copiedSha256": "338536fccf4cb194596507ba254597bdbf32746d663ef450bacc2e4dd25cf1ee",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/open-verification.json",
+      "scope": "final-independent-judge",
+      "bytes": 34434,
+      "sha256": "c2a6b2f220668ad61c736068575e187d67070f86829e7a7badd1792cec723546",
+      "copy": "raw/final-judge/open-verification.json",
+      "copiedSha256": "c2a6b2f220668ad61c736068575e187d67070f86829e7a7badd1792cec723546",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/pure-renderer-command.json",
+      "scope": "final-independent-judge",
+      "bytes": 91,
+      "sha256": "95719e1e7183bc96515c661bc609a4f7ca7a9a5054b3c2c8284919175be75f4b",
+      "copy": "raw/final-judge/pure-renderer-command.json",
+      "copiedSha256": "95719e1e7183bc96515c661bc609a4f7ca7a9a5054b3c2c8284919175be75f4b",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/pure-renderer-freeze.json",
+      "scope": "final-independent-judge",
+      "bytes": 589,
+      "sha256": "51aba96dde327516800be84eb6d9ea4a402f8a27c270e654f7ce0739cf5006db",
+      "copy": "raw/final-judge/pure-renderer-freeze.json",
+      "copiedSha256": "51aba96dde327516800be84eb6d9ea4a402f8a27c270e654f7ce0739cf5006db",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/pure-renderer-replay.json",
+      "scope": "final-independent-judge",
+      "bytes": 16032,
+      "sha256": "478ec775f55f0212ade9c268e3371a67140bfd07a03d04c9b8be1da59fb273ca",
+      "copy": "raw/final-judge/pure-renderer-replay.json",
+      "copiedSha256": "478ec775f55f0212ade9c268e3371a67140bfd07a03d04c9b8be1da59fb273ca",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/pure-renderer.stderr.txt",
+      "scope": "final-independent-judge",
+      "bytes": 187,
+      "sha256": "2e11a6d01a3b808d2a38ea1e285b5c9fb1ec1042a1fd35a3b3400a3a2a5eadde",
+      "copy": "raw/final-judge/pure-renderer.stderr.txt",
+      "copiedSha256": "2e11a6d01a3b808d2a38ea1e285b5c9fb1ec1042a1fd35a3b3400a3a2a5eadde",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/pure-renderer.stdout.txt",
+      "scope": "final-independent-judge",
+      "bytes": 74,
+      "sha256": "d1956669ef1e572a97c10d50f7a2fc7c49645e00a803709198580afb97e021b5",
+      "copy": "raw/final-judge/pure-renderer.stdout.txt",
+      "copiedSha256": "d1956669ef1e572a97c10d50f7a2fc7c49645e00a803709198580afb97e021b5",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k-noderl-report-final-judge-01/viewed-pixels-and-contrast.json",
+      "scope": "final-independent-judge",
+      "bytes": 5941,
+      "sha256": "d90feb040884248666ffb6ac3ebae856507dc98197a3484a9da7800febbfe486",
+      "copy": "raw/final-judge/viewed-pixels-and-contrast.json",
+      "copiedSha256": "d90feb040884248666ffb6ac3ebae856507dc98197a3484a9da7800febbfe486",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k_NODERL_REPORT_REPAIR_FINAL_JUDGE.json",
+      "scope": "final-independent-judge",
+      "bytes": 8530,
+      "sha256": "7afa4f905baf8146c7488a0c4c180ae39fdb67a96959e1c4f3bc6c1a586039e0",
+      "copy": "raw/final-judge/E6k_NODERL_REPORT_REPAIR_FINAL_JUDGE.json",
+      "copiedSha256": "7afa4f905baf8146c7488a0c4c180ae39fdb67a96959e1c4f3bc6c1a586039e0",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    },
+    {
+      "origin": "E6k_NODERL_REPORT_REPAIR_FINAL_JUDGE.md",
+      "scope": "final-independent-judge",
+      "bytes": 5214,
+      "sha256": "a0eb0a86d004d9a074ace93c609e485bd4bf512238732220a5e4d4334ad2a4d1",
+      "copy": "raw/final-judge/E6k_NODERL_REPORT_REPAIR_FINAL_JUDGE.md.txt",
+      "copiedSha256": "a0eb0a86d004d9a074ace93c609e485bd4bf512238732220a5e4d4334ad2a4d1",
+      "transformation": "NONE; exact raw bytes. Inert names and byte-identical deduplication only."
+    }
+  ]
+}

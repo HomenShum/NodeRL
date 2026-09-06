@@ -1,0 +1,14 @@
+node:fs:440
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open 'C:\Users\hshum\.codex\worktrees\5dba\nodebench-ai\docs\plans\E6k-noderl-first-use-01\artifacts\report-cases.json'
+    at Object.readFileSync (node:fs:440:20)
+    at file:///C:/Users/hshum/.codex/worktrees/5dba/nodebench-ai/docs/plans/portfolio-recovery-20260904/E6k-noderl-report-repair-01/after-01/extra-cases.mjs:38:35 {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\E6k-noderl-first-use-01\\artifacts\\report-cases.json'
+}
+
+Node.js v22.22.2

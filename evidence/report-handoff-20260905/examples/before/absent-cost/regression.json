@@ -1,0 +1,21 @@
+{
+  "id": "regression_mtraj_326496295ccea416",
+  "fromTrajectory": "mtraj_326496295ccea416",
+  "userGoal": "Synthetic accountant review: March bank reconciliation",
+  "failedAssertions": [
+    {
+      "id": "assert-ending-cash-ties",
+      "expected": "reconciled ending cash equals the bank statement ending balance (delta = 0.00)",
+      "observed": "reconciled ending cash is off by 412.50 vs bank statement",
+      "passed": false
+    }
+  ],
+  "failureCategories": [
+    "ui_assertion_failed",
+    "evidence_needs_review"
+  ],
+  "needsReviewClaims": [
+    "Check #1042 for 412.50 is uncleared and explains the reconciliation delta"
+  ],
+  "expectation": "Re-running \"Synthetic accountant review: March bank reconciliation\" must make these 1 assertion(s) pass: assert-ending-cash-ties"
+}

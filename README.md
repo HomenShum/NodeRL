@@ -24,8 +24,8 @@ Needs **Node 22.18 or newer** and nothing else. No API key, no database, no buil
 ```bash
 git clone https://github.com/HomenShum/NodeRL.git
 cd NodeRL
-npm install     # 19 packages, none of which the demo actually loads
-npm test        # 15 test files, 15 pass
+npm ci          # install the locked source-workspace dependencies
+npm test        # run the current repository and package scenarios
 npm run demo    # one real failed run, end to end
 ```
 
@@ -40,6 +40,8 @@ runs `tsc` as a checker only.
 
 **New here? Read [`docs/START_HERE.md`](docs/START_HERE.md)** — it walks the demo through the code in
 the order it actually executes.
+
+For setup, a runnable saved-report example and current verification limits, read [`HANDOFF.md`](HANDOFF.md).
 
 ## The three packages
 

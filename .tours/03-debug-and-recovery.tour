@@ -23,7 +23,7 @@
     },
     {
       "file": "packages/nodetrace/src/storybook.ts",
-      "line": 300,
+      "line": 319,
       "pattern": "^export function renderStorybook",
       "description": "**Showing it to a person.** One merged trajectory becomes one self-contained HTML file — no server, no build, no network. A reviewer or a judge can be sent the file itself.\n\nIt is composed from small pure atom functions, one per visual card, so each can be tested alone rather than by string-matching a whole page."
     },

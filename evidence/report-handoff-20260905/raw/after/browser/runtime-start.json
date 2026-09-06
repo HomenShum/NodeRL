@@ -1,0 +1,12 @@
+{
+  "pid": 11644,
+  "at": "2026-09-06T00:21:37.159Z",
+  "listen": {
+    "address": "127.0.0.1",
+    "family": "IPv4",
+    "port": 4995
+  },
+  "playwright": "1.61.1",
+  "sourceFiles": 102,
+  "ownedReports": 24
+}

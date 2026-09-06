@@ -1,0 +1,110 @@
+from pathlib import Path
+import hashlib, json, subprocess, sys, re
+
+P=Path('C:/Users/hshum/.codex/worktrees/5dba/nodebench-ai/docs/plans/portfolio-recovery-20260904')
+R=Path('D:/VSCode Projects/cafecorner_nodebench/nodebench_ai4/NodeRL')
+O=P/'E6k-noderl-report-repair-01'
+B=P/'E6k-noderl-first-use-01'
+J=P/'E6k-noderl-report-final-judge-01'
+phase=sys.argv[1]
+sha=lambda b: hashlib.sha256(b).hexdigest()
+read=lambda f: json.loads(f.read_text(encoding='utf-8-sig'))
+checks=[]
+def check(name, value, actual=None):
+    checks.append({'name':name,'pass':bool(value),'actual':actual})
+    if not value: raise AssertionError(name+': '+str(actual))
+def write(name,value):
+    (J/name).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+def git(name,args):
+    p=subprocess.run(['git','--no-optional-locks','-C',str(R),*args],capture_output=True)
+    (J/(phase+'-'+name+'.stdout.raw')).write_bytes(p.stdout)
+    (J/(phase+'-'+name+'.stderr.txt')).write_bytes(p.stderr)
+    check('Git '+name+' exits zero',p.returncode==0,p.returncode)
+    return p.stdout
+try:
+    receipt=read(P/'E6k_NODERL_REPORT_REPAIR_RECEIPT.json')
+    check('Exact frozen operator receipt',sha((P/'E6k_NODERL_REPORT_REPAIR_RECEIPT.json').read_bytes())=='f98b57a1e227feb967687f4179461b307a27fd99d095a0b9801ffe03139ac446')
+    source=read(O/'source-final.json'); mf=read(O/'manifest.json')
+    check('Exact source/manifest documents',sha((O/'source-final.json').read_bytes())=='bbc41f741902fae3309decc9b665ec0c5b5facdee87ad91e3a89a81086e5c8bd' and sha((O/'manifest.json').read_bytes())=='27d6f4e333c0a67309c3af8a2cd97c8aaf5d5eeaf8fae9a0c9e8058e634223c6')
+    for root,m,expected in [(O,mf,386),(B,read(B/'manifest.json'),242)]:
+        rows=m['rows']; bad=[]
+        for row in rows:
+            f=root/row['path']; raw=f.read_bytes()
+            if len(raw)!=row['bytes'] or sha(raw)!=row['sha256']: bad.append(row['path'])
+        check(root.name+' exact artifact hashes/count/bytes',not bad and len(rows)==expected and sum(r['bytes'] for r in rows)==m['bytes'],bad)
+    current=[]
+    for row in source['sourceFiles']:
+        f=R/row['path']; raw=f.read_bytes()
+        current.append({'path':row['path'],'bytes':len(raw),'sha256':sha(raw)})
+    check('All102 current source files match freeze',current==source['sourceFiles'],len(current))
+    before={x['path']:x for x in read(O/'before/source.json')}
+    check('97 original protected files match initial custody',len(source['protectedOriginalFiles'])==97 and all(row==before[row['path']] for row in source['protectedOriginalFiles']))
+    check('Five-owner digest exact',sha(json.dumps(source['ownedFiles'],sort_keys=True,separators=(',',':')).encode())==receipt['sourceDigest'])
+    for row in source['ownedFiles']:
+        raw=(R/row['path']).read_bytes()
+        blob=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
+        filtered=git('filtered-'+row['path'].replace('/','_'),['hash-object','--path='+row['path'],'--stdin']) if False else subprocess.run(['git','--no-optional-locks','-C',str(R),'hash-object','--path='+row['path'],'--stdin'],input=raw,capture_output=True)
+        check('Owned raw and future-filtered blob '+row['path'],blob==row['rawGitBlobSha1'] and filtered.returncode==0 and filtered.stdout.decode().strip()==row['prospectiveFilteredGitBlobSha1'])
+    outputs={}
+    for name in ['head','branch','refs','index','status','diff','diff-check','changed','untracked','cached-diff','index-path']:
+        raw=git(name,source['git'][name]['args']);outputs[name]=sha(raw)
+        check('Frozen current Git output '+name,sha(raw)==source['git'][name]['sha256'])
+    indexpath=Path((J/(phase+'-index-path.stdout.raw')).read_text().strip())
+    if not indexpath.is_absolute(): indexpath=R/indexpath
+    indexsha=sha(indexpath.read_bytes())
+    check('Final raw index metadata stable',indexsha==source['rawCurrentIndexSha256'])
+    check('Original stage entries unchanged', (O/'before/index.raw').read_bytes()==(O/'final-index.stdout.raw').read_bytes())
+    oldrefs=set((O/'before/refs.raw').read_text().splitlines());newrefs=set((J/(phase+'-refs.stdout.raw')).read_text().splitlines())
+    check('All old refs preserved; exactly one approved new branch',oldrefs<=newrefs and newrefs-oldrefs=={'refs/heads/codex/noderl-report-handoff-20260905 4b06939b8fd9121e2ba73887df2dd799eae2f1aa'})
+    tourbefore=(O/'before/tour-anchor.tour.txt').read_bytes();tour=(R/'.tours/03-debug-and-recovery.tour').read_bytes()
+    check('Only exact CodeTour300-to319 bytes change',tour==tourbefore.replace(b'"line": 300,',b'"line": 319,',1))
+    check('Current declaration really line319',(R/'packages/nodetrace/src/storybook.ts').read_text(encoding='utf-8').splitlines()[318].startswith('export function renderStorybook'))
+    check('New lines have no Git whitespace errors',(J/(phase+'-diff-check.stdout.raw')).read_bytes()==b'')
+    protected=read(O/'after-01/artifacts/protected-artifact-bindings.json')
+    for row in protected['bindings']:
+        a=(B/'artifacts'/row['path']).read_bytes(); b=(O/'after-01/artifacts'/row['path']).read_bytes()
+        check('Reopened protected output '+row['path'],a==b and sha(a)==row['beforeSha256']==row['afterSha256'])
+        if row['path'].endswith('.json'): json.loads(b)
+        else: b.decode('utf-8')
+    check('Exactly33 original trace/repair/regression outputs',len(protected['bindings'])==33)
+    report=read(O/'after-01/browser/report.json')
+    check('Browser actual230 assertions31cells complete',len(report['checks'])==230 and report['passed']==230 and len(report['cells'])==31 and all(x['pass'] for x in report['checks']))
+    check('Browser error and closure honesty',report['fatal'] is None and all(report[k]==[] for k in ['failed','blocked','errors','sourceChanged']) and report['closure']=={'contextClosed':True,'browserClosed':True,'serverListening':False})
+    check('94 PNG arithmetic',len(report['captures'])==81 and len(list(O.rglob('*.png')))==94)
+    cellsummary=[]
+    for cell in report['cells']:
+        state=read(O/'after-01/browser'/cell['state'])
+        check('Saved layout '+cell['id'],state['viewport']['width']==cell['width'] and state['document']['width']<=cell['width']+1 and len(state['overflow'])==0)
+        cellsummary.append({'id':cell['id'],'width':cell['width'],'documentWidth':state['document']['width'],'documentHeight':state['document']['height'],'outlyingElements':len(state['overflow'])})
+    write(phase+'-cell-readback.json',cellsummary)
+    for f in (O/'after-01/browser').glob('*font-transform.json'):
+        v=read(f);check('Actual doubled-font vectors '+f.name,len(v['before'])==len(v['after']) and all(abs(float(a[:-2])*2-float(b[:-2]))<.01 for a,b in zip(v['before'],v['after'])))
+    boundaries=read(O/'after-01/boundary-addendum/report.json')
+    check('Six supplemental exact overlay restorations',len(boundaries['rows'])==6 and all(r['exactRestoration'] for r in boundaries['rows']))
+    semantic=read(O/'after-01/artifacts/semantic-report.json')
+    check('Semantic99 actual booleans',len(semantic['checks'])==99 and semantic['passed']==99 and all(x['pass'] for x in semantic['checks']))
+    check('Mixed cost distinguishes recorded coverage',read(O/'after-01/artifacts/mixed-cost-report.json')['check']['pass'])
+    reopen=read(O/'after-01/file-reopen/report.json')
+    check('Native saved file reopen three actual checks',len(reopen['checks'])==3 and all(x['pass'] for x in reopen['checks']) and reopen['errors']==[] and reopen['blocked']==[] and reopen['state']['url'].startswith('file:///'))
+    handoff=read(O/'handoff-example.json')
+    block=re.search(r'```js\n(.*?)\n```',(R/'HANDOFF.md').read_text(encoding='utf-8'),re.S).group(1)+'\n'
+    check('Exact current handoff runnable example unchanged',sha(block.encode())==handoff['codeBlockSha256'] and block.encode()==(O/'handoff-example.mjs').read_bytes())
+    for row in handoff['files']:
+        f=Path(row['path']);raw=f.read_bytes();check('Actual handoff output '+f.name,len(raw)==row['bytes'] and sha(raw)==row['sha256'])
+        if f.suffix=='.json': json.loads(raw)
+    check('Handoff executed4checks andzeroexit',handoff['exitCode']==0 and len(handoff['checks'])==4 and all(x['pass'] for x in handoff['checks']))
+    for name,code in [('targeted-before',1),('targeted-after',0),('tests',1),('tests-after-anchor',0),('typecheck',0)]:
+        check('Recorded command exit '+name,read(O/(name+'.json'))['exitCode']==code)
+    check('Original owner negative scenario groups retained','6 passed, 3 failed' in (O/'targeted-before.stdout.txt').read_text(encoding='utf-8'))
+    check('Current renderer scenarios nine actual passes','9 passed, 0 failed' in (O/'targeted-after.stdout.txt').read_text(encoding='utf-8'))
+    testlog=(O/'tests-after-anchor.stdout.txt').read_text(encoding='utf-8')
+    check('Normal native file-level tests16pass',all(t in testlog for t in ['# tests 16','# pass 16','# fail 0','# skipped 0']))
+    check('Inherited UI applicability misclassification disclosed','this repository -> no rendered surface' in testlog and 'N/A' in testlog)
+    if phase=='close':
+        replay=read(J/'pure-renderer-replay.json');check('Independent actual-owner replay and original knockouts',replay['status']=='PASS' and replay['fetchAttempts']==0)
+        opening=read(J/'open-verification.json');check('Judge entire source/Git guard unchanged',opening['source']==current and opening['git']==outputs and opening['rawIndexSha256']==indexsha)
+    write(phase+'-verification.json',{'status':'PASS','checks':checks,'source':current,'git':outputs,'rawIndexSha256':indexsha,'guard':'CLOSED' if phase=='close' else 'OPEN'})
+    print(json.dumps({'phase':phase,'status':'PASS','checks':len(checks),'sourceFiles':len(current),'operatorArtifacts':386,'originalArtifacts':242}))
+except Exception as e:
+    write(phase+'-FAILED.json',{'status':'FAIL','error':repr(e),'checks':checks})
+    raise

@@ -1,0 +1,79 @@
+[
+  {
+    "name": "accounting",
+    "file": "accounting/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "429b64ed3c69eef59822e19ea3be56ab0c472d532489e735dfe77ffc5f228ed4",
+    "htmlSha256": "1ed7e96bcf59eebb879f78f43af10db595c0315699a3a4ee4ecd0eb6ac2822ae"
+  },
+  {
+    "name": "absent-reward",
+    "file": "absent-reward/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "2609ca9d278b51c514f2d48573a1f7da9904ca606bbf9aadfbb463c5d6335c82",
+    "htmlSha256": "afde1b2e44d644dc8bd3c508224f85ecda42fa6796729ea156c60e61582c5f8c"
+  },
+  {
+    "name": "zero-vs-unknown",
+    "file": "zero-vs-unknown/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "36b35fed704a37f16dc005fb7d3d9b8048f274a30517afce16c9e4b114e61547",
+    "htmlSha256": "796ef784d9d3e98c44f88693a2b9a4b24d2bf18fe0abd926ead90c410a447df1"
+  },
+  {
+    "name": "positive-conflict",
+    "file": "positive-conflict/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "4ef63d5d2658a2ca06a2826d0d9eadfa5931b045e13feab989e995902720ca74",
+    "htmlSha256": "c1f95269ba24ce59e3aa40e2982865faf3e5c242acfca177e3b731c03c5eaf3f"
+  },
+  {
+    "name": "empty",
+    "file": "empty/report.html",
+    "expectedVerdict": "unverified",
+    "traceSha256": "dd3508a364d6c016031af987acbf0cbbb6f45862d53e39320c1dd125ddae854a",
+    "htmlSha256": "cc8ffcf43e2370480e9a5c889242390022f10254a680191a5c04c65567ab40f9"
+  },
+  {
+    "name": "absent-cost",
+    "file": "absent-cost/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "e0a0e4d048522bf9f8e23b282e1cfba0562713054aaec9fa9f088eb3a56a193a",
+    "htmlSha256": "f11ddb2f20068c3609ef0185f089fbf511775fadc8ba69c3add3c653a020796a"
+  },
+  {
+    "name": "zero-cost",
+    "file": "zero-cost/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "b4decc06d4592f487583771dc77974e42e4c0a3108c508a2de4a7caa82809d1a",
+    "htmlSha256": "cc4b87fcd7b064e1377da3a2c7cbfd76901a34b16ff0cb55fb0e8d71efb1356f"
+  },
+  {
+    "name": "long-unicode",
+    "file": "long-unicode/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "6ab7b091fb38706326876d83150ac66dc0ffcee5d24ec7977339b4564c8211c5",
+    "htmlSha256": "5972eb3b988861db2d538ee60bd66b4f84b5badfe936c2a3ee4aea3e2627212e"
+  },
+  {
+    "name": "script-uri",
+    "file": "script-uri/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "553559ab799104692d0cfa76c9a9f0d45139bdd876889f82994b9d8f8d1dab3e",
+    "htmlSha256": "554f44e516d01b8dcbb22301c5e836b3835b44d41c1111b399e11e764859d613"
+  },
+  {
+    "name": "controlled-observation",
+    "file": "controlled-observation/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "818c6f109edb7d58fe535df644c0aa07b81b54ee348c0a1e7e746577306cab25",
+    "htmlSha256": "428a286b691e17589fbca906acc600cbfa881a8495328d9775beae0b010fa3be"
+  },
+  {
+    "name": "mixed-cost",
+    "file": "mixed-cost/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "bf0467b1edde82641d8555765c3bae069d6bed372fc47b3be1640e4a4f1fe45b",
+    "htmlSha256": "8700a7324368270901af2e13a3810f7cd914448f1e44cb855f7b92b21c258b40"
+  }
+]

@@ -1,0 +1,2561 @@
+{
+  "started": "2026-09-06T00:21:37.159Z",
+  "finished": "2026-09-06T00:21:48.488Z",
+  "status": "PASS",
+  "fatal": null,
+  "cells": [
+    {
+      "id": "accounting-320x800-normal",
+      "name": "accounting",
+      "width": 320,
+      "height": 800,
+      "mode": "normal",
+      "png": "accounting-320x800-normal.png",
+      "state": "accounting-320x800-normal.json",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5"
+    },
+    {
+      "id": "long-unicode-320x800-normal",
+      "name": "long-unicode",
+      "width": 320,
+      "height": 800,
+      "mode": "normal",
+      "png": "long-unicode-320x800-normal.png",
+      "state": "long-unicode-320x800-normal.json",
+      "sourceHtmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd"
+    },
+    {
+      "id": "accounting-360x800-normal",
+      "name": "accounting",
+      "width": 360,
+      "height": 800,
+      "mode": "normal",
+      "png": "accounting-360x800-normal.png",
+      "state": "accounting-360x800-normal.json",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5"
+    },
+    {
+      "id": "long-unicode-360x800-normal",
+      "name": "long-unicode",
+      "width": 360,
+      "height": 800,
+      "mode": "normal",
+      "png": "long-unicode-360x800-normal.png",
+      "state": "long-unicode-360x800-normal.json",
+      "sourceHtmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd"
+    },
+    {
+      "id": "accounting-390x844-normal",
+      "name": "accounting",
+      "width": 390,
+      "height": 844,
+      "mode": "normal",
+      "png": "accounting-390x844-normal.png",
+      "state": "accounting-390x844-normal.json",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5"
+    },
+    {
+      "id": "long-unicode-390x844-normal",
+      "name": "long-unicode",
+      "width": 390,
+      "height": 844,
+      "mode": "normal",
+      "png": "long-unicode-390x844-normal.png",
+      "state": "long-unicode-390x844-normal.json",
+      "sourceHtmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd"
+    },
+    {
+      "id": "accounting-768x1024-normal",
+      "name": "accounting",
+      "width": 768,
+      "height": 1024,
+      "mode": "normal",
+      "png": "accounting-768x1024-normal.png",
+      "state": "accounting-768x1024-normal.json",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5"
+    },
+    {
+      "id": "long-unicode-768x1024-normal",
+      "name": "long-unicode",
+      "width": 768,
+      "height": 1024,
+      "mode": "normal",
+      "png": "long-unicode-768x1024-normal.png",
+      "state": "long-unicode-768x1024-normal.json",
+      "sourceHtmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd"
+    },
+    {
+      "id": "accounting-1024x768-normal",
+      "name": "accounting",
+      "width": 1024,
+      "height": 768,
+      "mode": "normal",
+      "png": "accounting-1024x768-normal.png",
+      "state": "accounting-1024x768-normal.json",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5"
+    },
+    {
+      "id": "long-unicode-1024x768-normal",
+      "name": "long-unicode",
+      "width": 1024,
+      "height": 768,
+      "mode": "normal",
+      "png": "long-unicode-1024x768-normal.png",
+      "state": "long-unicode-1024x768-normal.json",
+      "sourceHtmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd"
+    },
+    {
+      "id": "accounting-1440x960-normal",
+      "name": "accounting",
+      "width": 1440,
+      "height": 960,
+      "mode": "normal",
+      "png": "accounting-1440x960-normal.png",
+      "state": "accounting-1440x960-normal.json",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5"
+    },
+    {
+      "id": "long-unicode-1440x960-normal",
+      "name": "long-unicode",
+      "width": 1440,
+      "height": 960,
+      "mode": "normal",
+      "png": "long-unicode-1440x960-normal.png",
+      "state": "long-unicode-1440x960-normal.json",
+      "sourceHtmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd"
+    },
+    {
+      "id": "accounting-1920x1080-normal",
+      "name": "accounting",
+      "width": 1920,
+      "height": 1080,
+      "mode": "normal",
+      "png": "accounting-1920x1080-normal.png",
+      "state": "accounting-1920x1080-normal.json",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5"
+    },
+    {
+      "id": "long-unicode-1920x1080-normal",
+      "name": "long-unicode",
+      "width": 1920,
+      "height": 1080,
+      "mode": "normal",
+      "png": "long-unicode-1920x1080-normal.png",
+      "state": "long-unicode-1920x1080-normal.json",
+      "sourceHtmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd"
+    },
+    {
+      "id": "accounting-390x844-text200",
+      "name": "accounting",
+      "width": 390,
+      "height": 844,
+      "mode": "text200",
+      "png": "accounting-390x844-text200.png",
+      "state": "accounting-390x844-text200.json",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5"
+    },
+    {
+      "id": "long-unicode-390x844-text200",
+      "name": "long-unicode",
+      "width": 390,
+      "height": 844,
+      "mode": "text200",
+      "png": "long-unicode-390x844-text200.png",
+      "state": "long-unicode-390x844-text200.json",
+      "sourceHtmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd"
+    },
+    {
+      "id": "accounting-390x844-reduced",
+      "name": "accounting",
+      "width": 390,
+      "height": 844,
+      "mode": "reduced",
+      "png": "accounting-390x844-reduced.png",
+      "state": "accounting-390x844-reduced.json",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5"
+    },
+    {
+      "id": "long-unicode-390x844-reduced",
+      "name": "long-unicode",
+      "width": 390,
+      "height": 844,
+      "mode": "reduced",
+      "png": "long-unicode-390x844-reduced.png",
+      "state": "long-unicode-390x844-reduced.json",
+      "sourceHtmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd"
+    },
+    {
+      "id": "accounting-1440x960-text200",
+      "name": "accounting",
+      "width": 1440,
+      "height": 960,
+      "mode": "text200",
+      "png": "accounting-1440x960-text200.png",
+      "state": "accounting-1440x960-text200.json",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5"
+    },
+    {
+      "id": "long-unicode-1440x960-text200",
+      "name": "long-unicode",
+      "width": 1440,
+      "height": 960,
+      "mode": "text200",
+      "png": "long-unicode-1440x960-text200.png",
+      "state": "long-unicode-1440x960-text200.json",
+      "sourceHtmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd"
+    },
+    {
+      "id": "accounting-1440x960-reduced",
+      "name": "accounting",
+      "width": 1440,
+      "height": 960,
+      "mode": "reduced",
+      "png": "accounting-1440x960-reduced.png",
+      "state": "accounting-1440x960-reduced.json",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5"
+    },
+    {
+      "id": "long-unicode-1440x960-reduced",
+      "name": "long-unicode",
+      "width": 1440,
+      "height": 960,
+      "mode": "reduced",
+      "png": "long-unicode-1440x960-reduced.png",
+      "state": "long-unicode-1440x960-reduced.json",
+      "sourceHtmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd"
+    },
+    {
+      "id": "absent-reward-1440x960-normal",
+      "name": "absent-reward",
+      "width": 1440,
+      "height": 960,
+      "mode": "normal",
+      "png": "absent-reward-1440x960-normal.png",
+      "state": "absent-reward-1440x960-normal.json",
+      "sourceHtmlSha256": "32bfb731ddc9568ebac35553d43757960bf58734ebf57733d27aef0231a660e0"
+    },
+    {
+      "id": "zero-vs-unknown-1440x960-normal",
+      "name": "zero-vs-unknown",
+      "width": 1440,
+      "height": 960,
+      "mode": "normal",
+      "png": "zero-vs-unknown-1440x960-normal.png",
+      "state": "zero-vs-unknown-1440x960-normal.json",
+      "sourceHtmlSha256": "0d8a2dd91db042b4e9447dfc890baeac6b32612d1802c4e7fc135ff50c19eb90"
+    },
+    {
+      "id": "positive-conflict-1440x960-normal",
+      "name": "positive-conflict",
+      "width": 1440,
+      "height": 960,
+      "mode": "normal",
+      "png": "positive-conflict-1440x960-normal.png",
+      "state": "positive-conflict-1440x960-normal.json",
+      "sourceHtmlSha256": "37ab2fe37609313f10e9bd6b09fabe87c40ef5889218e770aa19cc223cd4cdea"
+    },
+    {
+      "id": "empty-1440x960-normal",
+      "name": "empty",
+      "width": 1440,
+      "height": 960,
+      "mode": "normal",
+      "png": "empty-1440x960-normal.png",
+      "state": "empty-1440x960-normal.json",
+      "sourceHtmlSha256": "a334d6613cf2fd43c2a422082e73bbed574745ed9d783cb63383305fda388f9f"
+    },
+    {
+      "id": "absent-cost-1440x960-normal",
+      "name": "absent-cost",
+      "width": 1440,
+      "height": 960,
+      "mode": "normal",
+      "png": "absent-cost-1440x960-normal.png",
+      "state": "absent-cost-1440x960-normal.json",
+      "sourceHtmlSha256": "736373abfa0e8262b4f845b531f1a7101b82067bb0dc9b3710f60f99691cc0d0"
+    },
+    {
+      "id": "zero-cost-1440x960-normal",
+      "name": "zero-cost",
+      "width": 1440,
+      "height": 960,
+      "mode": "normal",
+      "png": "zero-cost-1440x960-normal.png",
+      "state": "zero-cost-1440x960-normal.json",
+      "sourceHtmlSha256": "5b64b42778c61e1bd63c742c00c80cfba79745e06f740778520c6ef9946ca8d4"
+    },
+    {
+      "id": "mixed-cost-1440x960-normal",
+      "name": "mixed-cost",
+      "width": 1440,
+      "height": 960,
+      "mode": "normal",
+      "png": "mixed-cost-1440x960-normal.png",
+      "state": "mixed-cost-1440x960-normal.json",
+      "sourceHtmlSha256": "e72bf47d059d9b5f05e7c8892f13031ef963faf03e0a6d21ee3380b800cbdb45"
+    },
+    {
+      "id": "cost-mixed-zero-1440x960-normal",
+      "name": "cost-mixed-zero",
+      "width": 1440,
+      "height": 960,
+      "mode": "normal",
+      "png": "cost-mixed-zero-1440x960-normal.png",
+      "state": "cost-mixed-zero-1440x960-normal.json",
+      "sourceHtmlSha256": "d6bd4eb08f09c2079f9ad1f5d7ade295fcbc6f1e1f60c9f9ca1a875768f4a5f7"
+    },
+    {
+      "id": "controlled-observation-1440x960-normal",
+      "name": "controlled-observation",
+      "width": 1440,
+      "height": 960,
+      "mode": "normal",
+      "png": "controlled-observation-1440x960-normal.png",
+      "state": "controlled-observation-1440x960-normal.json",
+      "sourceHtmlSha256": "04267b4283b334d01bde40dd17b8defdddef94678d6059dd83dad742bb38b222"
+    }
+  ],
+  "captures": [
+    {
+      "path": "accounting-320x800-normal.png",
+      "sha256": "8d21bfe1c3b2b869e1a005388bba89ada9ca4517d5748bec95c03f46f544d28d",
+      "bytes": 43274,
+      "fullPage": false
+    },
+    {
+      "path": "accounting-320x800-normal-full.png",
+      "sha256": "fe27002ef0de90aac3f6e6096fa4fece822a632079ee4586c664f212c99d6bde",
+      "bytes": 152240,
+      "fullPage": true
+    },
+    {
+      "path": "long-unicode-320x800-normal.png",
+      "sha256": "321cc2656675e7d66f8c2a7b59d783b7bb325ee59354479dc16074b2eeef7b42",
+      "bytes": 48733,
+      "fullPage": false
+    },
+    {
+      "path": "long-unicode-320x800-normal-full.png",
+      "sha256": "6619fe5b2757915a9fe109a0cad1b71bbb48e3345c1276930f3fcb5a7e0bc64e",
+      "bytes": 184918,
+      "fullPage": true
+    },
+    {
+      "path": "accounting-360x800-normal.png",
+      "sha256": "b424166f1ca3210901d5b129b5c4543706f90dc14d786d22b649eef3440609af",
+      "bytes": 49502,
+      "fullPage": false
+    },
+    {
+      "path": "accounting-360x800-normal-full.png",
+      "sha256": "85aff541a11a6aceb8560c72d872e719a431e6df27f60e51299726ec26c4f45c",
+      "bytes": 150649,
+      "fullPage": true
+    },
+    {
+      "path": "long-unicode-360x800-normal.png",
+      "sha256": "5f709c74c3301062c517b08459f00a4cab699332c16c56debdc829e5370f6134",
+      "bytes": 57521,
+      "fullPage": false
+    },
+    {
+      "path": "long-unicode-360x800-normal-full.png",
+      "sha256": "dec766fd71e1ebdf5fee51fd1fd6662b979aee08a5d9a54fc8d04ea2e82ab966",
+      "bytes": 183462,
+      "fullPage": true
+    },
+    {
+      "path": "accounting-390x844-normal.png",
+      "sha256": "5daf26c06151bd514384a24a9bb16c0827c36f09731788c0eb61b6d99d19f655",
+      "bytes": 52762,
+      "fullPage": false
+    },
+    {
+      "path": "accounting-390x844-normal-full.png",
+      "sha256": "8d547c4668bfa32a64c07064386006e76b3d48b3663896840180cda5dad88a4f",
+      "bytes": 150376,
+      "fullPage": true
+    },
+    {
+      "path": "long-unicode-390x844-normal.png",
+      "sha256": "0577cc659841cd335e2f7a839600f62fbf0fa57082e4d2780ca8bd5ee34f528c",
+      "bytes": 58647,
+      "fullPage": false
+    },
+    {
+      "path": "long-unicode-390x844-normal-full.png",
+      "sha256": "f9032b3258c789dd0a387c2a0b2f1649f48ae7e0eca30e4a7ad187d405eba6c8",
+      "bytes": 189524,
+      "fullPage": true
+    },
+    {
+      "path": "accounting-768x1024-normal.png",
+      "sha256": "1fc54d450277c523f0039a088ca4e63105d79f83dbb5e9510d42fb94e4fe557e",
+      "bytes": 83432,
+      "fullPage": false
+    },
+    {
+      "path": "accounting-768x1024-normal-full.png",
+      "sha256": "79ee840a7ccf215344866b273853aabf73aecfb7597312312e510342e0b955d3",
+      "bytes": 148563,
+      "fullPage": true
+    },
+    {
+      "path": "long-unicode-768x1024-normal.png",
+      "sha256": "fd263e0a70d4b3dd8493059f6ec3a7d0c0e5662c7ec9f69f966a7c48a5f467c2",
+      "bytes": 94435,
+      "fullPage": false
+    },
+    {
+      "path": "long-unicode-768x1024-normal-full.png",
+      "sha256": "9b3ce1b60ba8e7e2f3b3cb2fa8611d86514ae01f78b9c0731fe5b6a23d010fc9",
+      "bytes": 193077,
+      "fullPage": true
+    },
+    {
+      "path": "accounting-1024x768-normal.png",
+      "sha256": "31c8c428a3f41f5f25df081e647e482d24c5b38edc375ad6785a0db8c2b81ef8",
+      "bytes": 62469,
+      "fullPage": false
+    },
+    {
+      "path": "accounting-1024x768-normal-full.png",
+      "sha256": "5d6ce78d122f7d9763d04911142e18b4a899d35e563842489efce29f7264195d",
+      "bytes": 153618,
+      "fullPage": true
+    },
+    {
+      "path": "long-unicode-1024x768-normal.png",
+      "sha256": "f23fee13eb7d896a905e095ff83f408778c463ba73c865330d03d8ef1858605c",
+      "bytes": 79440,
+      "fullPage": false
+    },
+    {
+      "path": "long-unicode-1024x768-normal-full.png",
+      "sha256": "158c5c3ce8892eb56120a7091a729948a6c5db7fcbc0b9fcafed442e19c242cc",
+      "bytes": 198152,
+      "fullPage": true
+    },
+    {
+      "path": "accounting-1440x960-normal.png",
+      "sha256": "5529323ae1dcc25a536c82f200a9a15d9836adc2940c15165a7599da5ab049d3",
+      "bytes": 85230,
+      "fullPage": false
+    },
+    {
+      "path": "accounting-1440x960-normal-full.png",
+      "sha256": "9ca52fea7d9919af8ff101ed8e9a5cfa15db0a6a564501519656f4427dcd6dcf",
+      "bytes": 160242,
+      "fullPage": true
+    },
+    {
+      "path": "long-unicode-1440x960-normal.png",
+      "sha256": "afa7ec767f2f895bb84fae3344468a7b3495ac73fdcd336413df7699f6601888",
+      "bytes": 96676,
+      "fullPage": false
+    },
+    {
+      "path": "long-unicode-1440x960-normal-full.png",
+      "sha256": "d47131b961967faa73d185945192b70bd076596dc41807411588f7cccbf04433",
+      "bytes": 205371,
+      "fullPage": true
+    },
+    {
+      "path": "accounting-1920x1080-normal.png",
+      "sha256": "dde88b51b41988a366d2ea20642a11ee72b14ccef883b9d75ce3895f45a46eaa",
+      "bytes": 99265,
+      "fullPage": false
+    },
+    {
+      "path": "accounting-1920x1080-normal-full.png",
+      "sha256": "623814e888605c24cdf87cfb81c37f81bea3e6d91a08f16d4bd563145bd03c9d",
+      "bytes": 164819,
+      "fullPage": true
+    },
+    {
+      "path": "long-unicode-1920x1080-normal.png",
+      "sha256": "916e1252421c2c46ae2b57bf737849a99e8b8a3daab5305bd1ceab2c8e05c434",
+      "bytes": 111554,
+      "fullPage": false
+    },
+    {
+      "path": "long-unicode-1920x1080-normal-full.png",
+      "sha256": "b7a5bb3e464d4d2776378abf4af0c91af772311dc710bb67908ead2b668d9575",
+      "bytes": 211025,
+      "fullPage": true
+    },
+    {
+      "path": "accounting-390x844-text200.png",
+      "sha256": "f29dd4df57a7ffecedcdc8326d9ce32c9c5790c7438d259f060dd09ef6167b59",
+      "bytes": 58873,
+      "fullPage": false
+    },
+    {
+      "path": "accounting-390x844-text200-full.png",
+      "sha256": "2e719dd8d37c66fb1b0c9548a6dbb512665c9c93aa568961d939719e716b81c6",
+      "bytes": 490895,
+      "fullPage": true
+    },
+    {
+      "path": "long-unicode-390x844-text200.png",
+      "sha256": "288c8a1eeb69813b9ac93db52e4632cadd4e04456e19d39e7d9e0eed96ba2b10",
+      "bytes": 46120,
+      "fullPage": false
+    },
+    {
+      "path": "long-unicode-390x844-text200-full.png",
+      "sha256": "4e73ae2300b04da6130ea9765f254255e749abbabcbb174d699e77182f69be39",
+      "bytes": 674530,
+      "fullPage": true
+    },
+    {
+      "path": "accounting-390x844-reduced.png",
+      "sha256": "5daf26c06151bd514384a24a9bb16c0827c36f09731788c0eb61b6d99d19f655",
+      "bytes": 52762,
+      "fullPage": false
+    },
+    {
+      "path": "accounting-390x844-reduced-full.png",
+      "sha256": "8d547c4668bfa32a64c07064386006e76b3d48b3663896840180cda5dad88a4f",
+      "bytes": 150376,
+      "fullPage": true
+    },
+    {
+      "path": "long-unicode-390x844-reduced.png",
+      "sha256": "0577cc659841cd335e2f7a839600f62fbf0fa57082e4d2780ca8bd5ee34f528c",
+      "bytes": 58647,
+      "fullPage": false
+    },
+    {
+      "path": "long-unicode-390x844-reduced-full.png",
+      "sha256": "f9032b3258c789dd0a387c2a0b2f1649f48ae7e0eca30e4a7ad187d405eba6c8",
+      "bytes": 189524,
+      "fullPage": true
+    },
+    {
+      "path": "accounting-1440x960-text200.png",
+      "sha256": "e18636e0887e9c746e52f3cc81a57e4d609f4292d716f8d87d3bea06494bc3f2",
+      "bytes": 117695,
+      "fullPage": false
+    },
+    {
+      "path": "accounting-1440x960-text200-full.png",
+      "sha256": "7ea2247e6e32378b922373a0425a54eb076377dfefdfc45516d6fab6ae140bb7",
+      "bytes": 445084,
+      "fullPage": true
+    },
+    {
+      "path": "long-unicode-1440x960-text200.png",
+      "sha256": "f295c73ad29704e37c10d9070f8684f7b841f53c1e07e40ded56974d6b94f934",
+      "bytes": 109825,
+      "fullPage": false
+    },
+    {
+      "path": "long-unicode-1440x960-text200-full.png",
+      "sha256": "9a736c4c8433cb8a6e37e34a38eeecc07ba3335bee2c11667820bdeb869f895e",
+      "bytes": 586183,
+      "fullPage": true
+    },
+    {
+      "path": "accounting-1440x960-reduced.png",
+      "sha256": "5529323ae1dcc25a536c82f200a9a15d9836adc2940c15165a7599da5ab049d3",
+      "bytes": 85230,
+      "fullPage": false
+    },
+    {
+      "path": "accounting-1440x960-reduced-full.png",
+      "sha256": "9ca52fea7d9919af8ff101ed8e9a5cfa15db0a6a564501519656f4427dcd6dcf",
+      "bytes": 160242,
+      "fullPage": true
+    },
+    {
+      "path": "long-unicode-1440x960-reduced.png",
+      "sha256": "afa7ec767f2f895bb84fae3344468a7b3495ac73fdcd336413df7699f6601888",
+      "bytes": 96676,
+      "fullPage": false
+    },
+    {
+      "path": "long-unicode-1440x960-reduced-full.png",
+      "sha256": "d47131b961967faa73d185945192b70bd076596dc41807411588f7cccbf04433",
+      "bytes": 205371,
+      "fullPage": true
+    },
+    {
+      "path": "absent-reward-1440x960-normal.png",
+      "sha256": "62c97f32d9d2becb65e5ab61332266ae6d030826d33859a196aa8f44eee421f4",
+      "bytes": 85158,
+      "fullPage": false
+    },
+    {
+      "path": "absent-reward-1440x960-normal-full.png",
+      "sha256": "a7d734e0c84f0c91a6ee23b793c57755d6392da5f71d7f4ac787a40770598122",
+      "bytes": 148609,
+      "fullPage": true
+    },
+    {
+      "path": "zero-vs-unknown-1440x960-normal.png",
+      "sha256": "0611f043a24db3b9060a68e4fdd4ec2a3c373c83548af5423ddf90bc948fcfe0",
+      "bytes": 84475,
+      "fullPage": false
+    },
+    {
+      "path": "zero-vs-unknown-1440x960-normal-full.png",
+      "sha256": "9a3bfef06b888b2323d4016c0690f40bd00b3fccc35cf481328e3a7e030b9162",
+      "bytes": 163358,
+      "fullPage": true
+    },
+    {
+      "path": "positive-conflict-1440x960-normal.png",
+      "sha256": "b3f4791b70c5caba8a8741fd072fd66274226b372d12f98712ed62331de9658b",
+      "bytes": 81192,
+      "fullPage": false
+    },
+    {
+      "path": "positive-conflict-1440x960-normal-full.png",
+      "sha256": "2212a11db47efd3b061fef91b5f14c322eb166e8d0407ff66cb359ce2cbf5ed3",
+      "bytes": 154737,
+      "fullPage": true
+    },
+    {
+      "path": "empty-1440x960-normal.png",
+      "sha256": "c79dfb4163ce25dbccb4cf1b1cc5e5ea1e718003322130df1633e63ab34e4984",
+      "bytes": 32044,
+      "fullPage": false
+    },
+    {
+      "path": "empty-1440x960-normal-full.png",
+      "sha256": "c79dfb4163ce25dbccb4cf1b1cc5e5ea1e718003322130df1633e63ab34e4984",
+      "bytes": 32044,
+      "fullPage": true
+    },
+    {
+      "path": "absent-cost-1440x960-normal.png",
+      "sha256": "b37958afc290fbbfa21a90492fbac46e5c764d96f57f78f6939d327a8e1d36b4",
+      "bytes": 84501,
+      "fullPage": false
+    },
+    {
+      "path": "absent-cost-1440x960-normal-full.png",
+      "sha256": "a9e0481d3cf8d050496c9e8514d383e01cf36479530df9dff30f1c4fd8b41269",
+      "bytes": 147886,
+      "fullPage": true
+    },
+    {
+      "path": "zero-cost-1440x960-normal.png",
+      "sha256": "31783d66afef82526e4bdaaa41e048389ad42eae48844b7539cfa39a5a8a476f",
+      "bytes": 85194,
+      "fullPage": false
+    },
+    {
+      "path": "zero-cost-1440x960-normal-full.png",
+      "sha256": "996467f7774ed15051749e39a42e5ba91b962a06929f266ee3d7dbf1e859e19a",
+      "bytes": 148646,
+      "fullPage": true
+    },
+    {
+      "path": "mixed-cost-1440x960-normal.png",
+      "sha256": "cd98300367141e23aa672fc021bd65f5cc2bb364d2a3d9cb9b35b4c8683fbf60",
+      "bytes": 86359,
+      "fullPage": false
+    },
+    {
+      "path": "mixed-cost-1440x960-normal-full.png",
+      "sha256": "0a40351a8db846b02104ec23b2117211a8f0c6f4fad196e21a4a3583bd7b00e7",
+      "bytes": 161312,
+      "fullPage": true
+    },
+    {
+      "path": "cost-mixed-zero-1440x960-normal.png",
+      "sha256": "51d939f0bea4b21ecbfb7a056198b6cd4d7f3e953b46833c47869b379704d32c",
+      "bytes": 86036,
+      "fullPage": false
+    },
+    {
+      "path": "cost-mixed-zero-1440x960-normal-full.png",
+      "sha256": "906d617b5cb5d3f7efd71ce06538488ad2c135248e8e4d8f6c23460d9f315fe5",
+      "bytes": 160814,
+      "fullPage": true
+    },
+    {
+      "path": "controlled-observation-1440x960-normal.png",
+      "sha256": "0957512ea12654a5716ea26474288e28c5e82670eaa2f062e82b09e0fb760843",
+      "bytes": 84870,
+      "fullPage": false
+    },
+    {
+      "path": "controlled-observation-1440x960-normal-full.png",
+      "sha256": "56829eb244ae112352b59d1b3ee77280a7ae84f4dfec1632b2e6612bf4d8b8c7",
+      "bytes": 159871,
+      "fullPage": true
+    },
+    {
+      "path": "accounting-390-native-tab.png",
+      "sha256": "b3cc54f62902d6c9022c95d645386520f4d034bf670ecce4fa4bfa680a6e5936",
+      "bytes": 53091,
+      "fullPage": false
+    },
+    {
+      "path": "before-verdict-390-raw.png",
+      "sha256": "5daf26c06151bd514384a24a9bb16c0827c36f09731788c0eb61b6d99d19f655",
+      "bytes": 52762,
+      "fullPage": false
+    },
+    {
+      "path": "before-verdict-390-boundary-3px.png",
+      "sha256": "1bfa3bd7671177fe71ee89f9ad5d4ced8c5b2b87649f9f900aacd8051f8b4aab",
+      "bytes": 52686,
+      "fullPage": false
+    },
+    {
+      "path": "before-long-artifact-390-raw.png",
+      "sha256": "d3f89bd4a1d344411f697f46b6a024dfe1e3205da0d2cf98b38633ccf78ea30a",
+      "bytes": 45886,
+      "fullPage": false
+    },
+    {
+      "path": "before-long-artifact-390-boundary-3px.png",
+      "sha256": "8699dc17d126dc91711dc354c120d5f6ee9fe83c41667119b44ca04e08a543b7",
+      "bytes": 44246,
+      "fullPage": false
+    },
+    {
+      "path": "before-absent-cost-390-raw.png",
+      "sha256": "89882a8e8f56af0b77dbe800071976e50b02f49ec0cbc9218847bc4b02014b46",
+      "bytes": 48849,
+      "fullPage": false
+    },
+    {
+      "path": "before-absent-cost-390-boundary-3px.png",
+      "sha256": "ce90867562a39e875b8fb3aaa45b3a3eac106790860cbd2928840280bd78360d",
+      "bytes": 49307,
+      "fullPage": false
+    },
+    {
+      "path": "before-verdict-1440-raw.png",
+      "sha256": "5529323ae1dcc25a536c82f200a9a15d9836adc2940c15165a7599da5ab049d3",
+      "bytes": 85230,
+      "fullPage": false
+    },
+    {
+      "path": "before-verdict-1440-boundary-3px.png",
+      "sha256": "adc9739d5bec09d5d61644a4fd6a18acc9831f09d1ea7a6c4e9c70d1deb86e6f",
+      "bytes": 85970,
+      "fullPage": false
+    },
+    {
+      "path": "before-long-artifact-1440-raw.png",
+      "sha256": "afa7ec767f2f895bb84fae3344468a7b3495ac73fdcd336413df7699f6601888",
+      "bytes": 96676,
+      "fullPage": false
+    },
+    {
+      "path": "before-long-artifact-1440-boundary-3px.png",
+      "sha256": "07dbbfd4a10d5a130f9441369e0819c8d131ac927f90fff1a4c7fed3f7ca0edc",
+      "bytes": 97377,
+      "fullPage": false
+    },
+    {
+      "path": "before-absent-cost-1440-raw.png",
+      "sha256": "b37958afc290fbbfa21a90492fbac46e5c764d96f57f78f6939d327a8e1d36b4",
+      "bytes": 84501,
+      "fullPage": false
+    },
+    {
+      "path": "before-absent-cost-1440-boundary-3px.png",
+      "sha256": "2758ea4adcc108e02f3b44eb74d9b79aeb5e6e31a8652426b36ad5342db99052",
+      "bytes": 85711,
+      "fullPage": false
+    },
+    {
+      "path": "before-script-uri-390-raw.png",
+      "sha256": "20d9a85309160d40b12f1478b21875d13b3fb18f64847882716b2b7d18561ac3",
+      "bytes": 52435,
+      "fullPage": false
+    },
+    {
+      "path": "before-script-uri-390-boundary-3px.png",
+      "sha256": "02720e522668af0d31655dbea7f2859085702aeba0418b79b443f1cccac9b022",
+      "bytes": 52648,
+      "fullPage": false
+    },
+    {
+      "path": "script-uri-native-focus.png",
+      "sha256": "20d9a85309160d40b12f1478b21875d13b3fb18f64847882716b2b7d18561ac3",
+      "bytes": 52435,
+      "fullPage": false
+    },
+    {
+      "path": "script-uri-native-activated.png",
+      "sha256": "20d9a85309160d40b12f1478b21875d13b3fb18f64847882716b2b7d18561ac3",
+      "bytes": 52435,
+      "fullPage": false
+    },
+    {
+      "path": "uri-safe-http-arrived.png",
+      "sha256": "5daf26c06151bd514384a24a9bb16c0827c36f09731788c0eb61b6d99d19f655",
+      "bytes": 52762,
+      "fullPage": false
+    },
+    {
+      "path": "uri-safe-https-arrived.png",
+      "sha256": "78af5023c99681373f467f0cd17df52a34c5a2821b67ad640421447b834c79ca",
+      "bytes": 52643,
+      "fullPage": false
+    }
+  ],
+  "checks": [
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-320x800-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "accounting-320x800-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-320x800-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 320,
+        "document": 320
+      }
+    },
+    {
+      "name": "accounting-320x800-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-320x800-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "long-unicode-320x800-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-320x800-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 320,
+        "document": 320
+      }
+    },
+    {
+      "name": "long-unicode-320x800-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-360x800-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "accounting-360x800-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-360x800-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 360,
+        "document": 360
+      }
+    },
+    {
+      "name": "accounting-360x800-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-360x800-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "long-unicode-360x800-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-360x800-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 360,
+        "document": 360
+      }
+    },
+    {
+      "name": "long-unicode-360x800-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-390x844-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "accounting-390x844-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-390x844-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 390,
+        "document": 390
+      }
+    },
+    {
+      "name": "accounting-390x844-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-390x844-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "long-unicode-390x844-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-390x844-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 390,
+        "document": 390
+      }
+    },
+    {
+      "name": "long-unicode-390x844-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-768x1024-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "accounting-768x1024-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-768x1024-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 768,
+        "document": 768
+      }
+    },
+    {
+      "name": "accounting-768x1024-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-768x1024-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "long-unicode-768x1024-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-768x1024-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 768,
+        "document": 768
+      }
+    },
+    {
+      "name": "long-unicode-768x1024-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-1024x768-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "accounting-1024x768-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-1024x768-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1024,
+        "document": 1024
+      }
+    },
+    {
+      "name": "accounting-1024x768-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-1024x768-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "long-unicode-1024x768-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-1024x768-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1024,
+        "document": 1024
+      }
+    },
+    {
+      "name": "long-unicode-1024x768-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-1440x960-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "accounting-1440x960-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-1440x960-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "accounting-1440x960-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-1440x960-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "long-unicode-1440x960-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-1440x960-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "long-unicode-1440x960-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-1920x1080-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "accounting-1920x1080-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-1920x1080-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1920,
+        "document": 1920
+      }
+    },
+    {
+      "name": "accounting-1920x1080-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-1920x1080-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "long-unicode-1920x1080-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-1920x1080-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1920,
+        "document": 1920
+      }
+    },
+    {
+      "name": "long-unicode-1920x1080-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-390x844-text200: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "accounting-390x844-text200: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-390x844-text200: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 390,
+        "document": 390
+      }
+    },
+    {
+      "name": "accounting-390x844-text200: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-390x844-text200: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "long-unicode-390x844-text200: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-390x844-text200: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 390,
+        "document": 390
+      }
+    },
+    {
+      "name": "long-unicode-390x844-text200: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-390x844-reduced: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "accounting-390x844-reduced: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-390x844-reduced: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 390,
+        "document": 390
+      }
+    },
+    {
+      "name": "accounting-390x844-reduced: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-390x844-reduced: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "long-unicode-390x844-reduced: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-390x844-reduced: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 390,
+        "document": 390
+      }
+    },
+    {
+      "name": "long-unicode-390x844-reduced: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-1440x960-text200: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "accounting-1440x960-text200: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-1440x960-text200: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "accounting-1440x960-text200: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-1440x960-text200: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "long-unicode-1440x960-text200: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-1440x960-text200: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "long-unicode-1440x960-text200: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-1440x960-reduced: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "accounting-1440x960-reduced: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting-1440x960-reduced: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "accounting-1440x960-reduced: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-1440x960-reduced: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "long-unicode-1440x960-reduced: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode-1440x960-reduced: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "long-unicode-1440x960-reduced: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-reward: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-reward-1440x960-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "absent-reward-1440x960-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-reward-1440x960-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "absent-reward-1440x960-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-vs-unknown: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-vs-unknown-1440x960-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "zero-vs-unknown-1440x960-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-vs-unknown-1440x960-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "zero-vs-unknown-1440x960-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "positive-conflict: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "positive-conflict-1440x960-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "positive-conflict-1440x960-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "positive-conflict-1440x960-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "positive-conflict-1440x960-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty-1440x960-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "empty-1440x960-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty-1440x960-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "empty-1440x960-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost-1440x960-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "absent-cost-1440x960-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost-1440x960-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "absent-cost-1440x960-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-cost: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-cost-1440x960-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "zero-cost-1440x960-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-cost-1440x960-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "zero-cost-1440x960-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "mixed-cost: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "mixed-cost-1440x960-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "mixed-cost-1440x960-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "mixed-cost-1440x960-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "mixed-cost-1440x960-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "cost-mixed-zero: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "cost-mixed-zero-1440x960-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "cost-mixed-zero-1440x960-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "cost-mixed-zero-1440x960-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "cost-mixed-zero-1440x960-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "controlled-observation: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "controlled-observation-1440x960-normal: full caller strings remain in DOM",
+      "pass": true,
+      "actual": {
+        "goal": true,
+        "artifacts": true,
+        "sources": true,
+        "screenshots": true
+      }
+    },
+    {
+      "name": "controlled-observation-1440x960-normal: honest verdict remains visible",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "controlled-observation-1440x960-normal: no document horizontal overflow",
+      "pass": true,
+      "actual": {
+        "viewport": 1440,
+        "document": 1440
+      }
+    },
+    {
+      "name": "controlled-observation-1440x960-normal: no literal markup execution or injected image",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Native Tab reaches the real room URL link",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reload preserves failure and needs-review from saved file",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Empty artifacts section explains absence",
+      "pass": true,
+      "actual": "NODEROOM RUN\nNo run evidence supplied\nhttps://example.invalid/empty\nverdict: UNVERIFIED\ncost: not recorded\nrun: SYNTHETIC-EMPTY\nUI ASSERTIONS\nno UI assertions\nARTIFACTS\nno artifacts produced\nAGENT TRACE\nno reasoning steps recorded\nEVIDENCE\nno evidence grounded\nFOCUS BOXES\nno screenshots captured\nDeterministic render of trajectory mtraj_ced8a3b839bddce8. Screenshots are paths only (no inlined bytes)."
+    },
+    {
+      "name": "FAIL badge: normal small-text contrast at least 4.5",
+      "pass": true,
+      "actual": {
+        "foreground": "rgb(14, 17, 22)",
+        "background": [
+          248,
+          81,
+          73
+        ],
+        "ratio": 5.641444785773366,
+        "fontSize": "12px",
+        "fontWeight": "600"
+      }
+    },
+    {
+      "name": "NEEDS REVIEW badge: normal small-text contrast at least 4.5",
+      "pass": true,
+      "actual": {
+        "foreground": "rgb(14, 17, 22)",
+        "background": [
+          210,
+          153,
+          34
+        ],
+        "ratio": 7.492470255226981,
+        "fontSize": "11px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "before-verdict-390: overlay restores exact rendered DOM",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "before-long-artifact-390: overlay restores exact rendered DOM",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "before-absent-cost-390: overlay restores exact rendered DOM",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "before-verdict-1440: overlay restores exact rendered DOM",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "before-long-artifact-1440: overlay restores exact rendered DOM",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "before-absent-cost-1440: overlay restores exact rendered DOM",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "script-uri: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "before-script-uri-390: overlay restores exact rendered DOM",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Native pointer and keyboard cannot execute a supplied script scheme",
+      "pass": true,
+      "actual": {
+        "pointerGoal": "Synthetic link safety review — no external source",
+        "actualGoal": "Synthetic link safety review — no external source",
+        "mechanism": "Native pointer click then Tab/Enter; inert text does not execute the original benign canary."
+      }
+    },
+    {
+      "name": "uri-safe-http: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-safe-http: exact address text and intended interactivity",
+      "pass": true,
+      "actual": {
+        "tag": "A",
+        "text": "http://127.0.0.1:4995/accounting",
+        "href": "http://127.0.0.1:4995/accounting",
+        "tabIndex": 0
+      }
+    },
+    {
+      "name": "uri-safe-http: native keyboard respects link boundary",
+      "pass": true,
+      "actual": "room-url"
+    },
+    {
+      "name": "uri-safe-http: native safe navigation reaches owned artifact",
+      "pass": true,
+      "actual": {
+        "url": "http://127.0.0.1:4995/accounting",
+        "fixtureTransport": "Owned loopback HTTP"
+      }
+    },
+    {
+      "name": "uri-safe-https: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-safe-https: exact address text and intended interactivity",
+      "pass": true,
+      "actual": {
+        "tag": "A",
+        "text": "https://example.invalid/owned-accounting",
+        "href": "https://example.invalid/owned-accounting",
+        "tabIndex": 0
+      }
+    },
+    {
+      "name": "uri-safe-https: native keyboard respects link boundary",
+      "pass": true,
+      "actual": "room-url"
+    },
+    {
+      "name": "uri-safe-https: native safe navigation reaches owned artifact",
+      "pass": true,
+      "actual": {
+        "url": "https://example.invalid/owned-accounting",
+        "fixtureTransport": "Local route fulfillment, not TLS endpoint"
+      }
+    },
+    {
+      "name": "uri-safe-uppercase: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-safe-uppercase: exact address text and intended interactivity",
+      "pass": true,
+      "actual": {
+        "tag": "A",
+        "text": "HTTPS://example.invalid/review?first=1&second=2",
+        "href": "HTTPS://example.invalid/review?first=1&second=2",
+        "tabIndex": 0
+      }
+    },
+    {
+      "name": "uri-safe-uppercase: native keyboard respects link boundary",
+      "pass": true,
+      "actual": "room-url"
+    },
+    {
+      "name": "uri-script-space: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-script-space: exact address text and intended interactivity",
+      "pass": true,
+      "actual": {
+        "tag": "SPAN",
+        "text": " JaVaScRiPt:document.body.dataset.canary='executed';void 0",
+        "href": null,
+        "tabIndex": -1
+      }
+    },
+    {
+      "name": "uri-script-space: native keyboard respects link boundary",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-script-newline: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-script-newline: exact address text and intended interactivity",
+      "pass": true,
+      "actual": {
+        "tag": "SPAN",
+        "text": "java\nscript:document.body.dataset.canary='executed';void 0",
+        "href": null,
+        "tabIndex": -1
+      }
+    },
+    {
+      "name": "uri-script-newline: native keyboard respects link boundary",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-data: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-data: exact address text and intended interactivity",
+      "pass": true,
+      "actual": {
+        "tag": "SPAN",
+        "text": "data:text/html,<script>document.body.dataset.canary=1</script>",
+        "href": null,
+        "tabIndex": -1
+      }
+    },
+    {
+      "name": "uri-data: native keyboard respects link boundary",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-file: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-file: exact address text and intended interactivity",
+      "pass": true,
+      "actual": {
+        "tag": "SPAN",
+        "text": "file:///synthetic-report.html",
+        "href": null,
+        "tabIndex": -1
+      }
+    },
+    {
+      "name": "uri-file: native keyboard respects link boundary",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-relative: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-relative: exact address text and intended interactivity",
+      "pass": true,
+      "actual": {
+        "tag": "SPAN",
+        "text": "/relative-room",
+        "href": null,
+        "tabIndex": -1
+      }
+    },
+    {
+      "name": "uri-relative: native keyboard respects link boundary",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-scheme-relative: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-scheme-relative: exact address text and intended interactivity",
+      "pass": true,
+      "actual": {
+        "tag": "SPAN",
+        "text": "//example.invalid/room",
+        "href": null,
+        "tabIndex": -1
+      }
+    },
+    {
+      "name": "uri-scheme-relative: native keyboard respects link boundary",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-malformed: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-malformed: exact address text and intended interactivity",
+      "pass": true,
+      "actual": {
+        "tag": "SPAN",
+        "text": "https://",
+        "href": null,
+        "tabIndex": -1
+      }
+    },
+    {
+      "name": "uri-malformed: native keyboard respects link boundary",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-not-url: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-not-url: exact address text and intended interactivity",
+      "pass": true,
+      "actual": {
+        "tag": "SPAN",
+        "text": "not a URL",
+        "href": null,
+        "tabIndex": -1
+      }
+    },
+    {
+      "name": "uri-not-url: native keyboard respects link boundary",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-empty: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "uri-empty: exact address text and intended interactivity",
+      "pass": true,
+      "actual": {
+        "tag": "SPAN",
+        "text": "",
+        "href": null,
+        "tabIndex": -1
+      }
+    },
+    {
+      "name": "uri-empty: native keyboard respects link boundary",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty: actual cost-presence disclosure",
+      "pass": true,
+      "actual": "cost: not recorded"
+    },
+    {
+      "name": "absent-cost: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost: actual cost-presence disclosure",
+      "pass": true,
+      "actual": "cost: not recorded"
+    },
+    {
+      "name": "zero-cost: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-cost: actual cost-presence disclosure",
+      "pass": true,
+      "actual": "cost: $0.00"
+    },
+    {
+      "name": "mixed-cost: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "mixed-cost: actual cost-presence disclosure",
+      "pass": true,
+      "actual": "known cost: $0.01 (3/4 steps)"
+    },
+    {
+      "name": "cost-mixed-zero: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "cost-mixed-zero: actual cost-presence disclosure",
+      "pass": true,
+      "actual": "known cost: $0.00 (1/4 steps)"
+    },
+    {
+      "name": "accounting: actual saved HTML response bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: actual cost-presence disclosure",
+      "pass": true,
+      "actual": "cost: $0.01"
+    },
+    {
+      "name": "All external requests remained absent",
+      "pass": true,
+      "actual": []
+    },
+    {
+      "name": "No console, page, or request errors",
+      "pass": true,
+      "actual": []
+    },
+    {
+      "name": "All 102 source and handoff files remain exact after browser",
+      "pass": true,
+      "actual": []
+    }
+  ],
+  "passed": 230,
+  "failed": [],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/absent-reward"
+    },
+    {
+      "method": "GET",
+      "path": "/zero-vs-unknown"
+    },
+    {
+      "method": "GET",
+      "path": "/positive-conflict"
+    },
+    {
+      "method": "GET",
+      "path": "/empty"
+    },
+    {
+      "method": "GET",
+      "path": "/absent-cost"
+    },
+    {
+      "method": "GET",
+      "path": "/zero-cost"
+    },
+    {
+      "method": "GET",
+      "path": "/mixed-cost"
+    },
+    {
+      "method": "GET",
+      "path": "/cost-mixed-zero"
+    },
+    {
+      "method": "GET",
+      "path": "/controlled-observation"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/empty"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/absent-cost"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/long-unicode"
+    },
+    {
+      "method": "GET",
+      "path": "/absent-cost"
+    },
+    {
+      "method": "GET",
+      "path": "/script-uri"
+    },
+    {
+      "method": "GET",
+      "path": "/uri-safe-http"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    },
+    {
+      "method": "GET",
+      "path": "/uri-safe-https"
+    },
+    {
+      "method": "GET",
+      "path": "/uri-safe-uppercase"
+    },
+    {
+      "method": "GET",
+      "path": "/uri-script-space"
+    },
+    {
+      "method": "GET",
+      "path": "/uri-script-newline"
+    },
+    {
+      "method": "GET",
+      "path": "/uri-data"
+    },
+    {
+      "method": "GET",
+      "path": "/uri-file"
+    },
+    {
+      "method": "GET",
+      "path": "/uri-relative"
+    },
+    {
+      "method": "GET",
+      "path": "/uri-scheme-relative"
+    },
+    {
+      "method": "GET",
+      "path": "/uri-malformed"
+    },
+    {
+      "method": "GET",
+      "path": "/uri-not-url"
+    },
+    {
+      "method": "GET",
+      "path": "/uri-empty"
+    },
+    {
+      "method": "GET",
+      "path": "/empty"
+    },
+    {
+      "method": "GET",
+      "path": "/absent-cost"
+    },
+    {
+      "method": "GET",
+      "path": "/zero-cost"
+    },
+    {
+      "method": "GET",
+      "path": "/mixed-cost"
+    },
+    {
+      "method": "GET",
+      "path": "/cost-mixed-zero"
+    },
+    {
+      "method": "GET",
+      "path": "/accounting"
+    }
+  ],
+  "blocked": [],
+  "errors": [],
+  "fulfilled": [
+    {
+      "cell": "uri-safe-https",
+      "url": "https://example.invalid/owned-accounting",
+      "meaning": "Native link navigation fulfilled from owned local HTML bytes; no TLS/network endpoint certification."
+    }
+  ],
+  "sourceChanged": [],
+  "closure": {
+    "contextClosed": true,
+    "browserClosed": true,
+    "serverListening": false
+  },
+  "limitations": [
+    "Synthetic report fixture; no actual workbook, screenshot capture, model run, human approval, durable service, or NodeRoom repair command execution.",
+    "Chromium desktop emulation only; computed text doubling is not native zoom or a real device.",
+    "No full numeric UI or product grade."
+  ],
+  "fullGrades": null
+}

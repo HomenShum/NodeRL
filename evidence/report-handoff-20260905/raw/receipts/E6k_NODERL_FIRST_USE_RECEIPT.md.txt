@@ -1,0 +1,13 @@
+# NodeRL first-use receipt
+
+The current source can produce and reopen its failed-run handoff artifacts, but the generated report is not ready to hand to an unguarded recipient. A native keyboard activation executed a caller-supplied script URL; missing/partial costs looked complete, long paths overflowed, two status labels had insufficient contrast, and an empty artifacts section omitted its explanation.
+
+Current main is 4b06939b8fd9121e2ba73887df2dd799eae2f1aa. All 101 source files, HEAD, refs, index and clean status remain exact. Root's previous normal install/tests/typecheck/demo were reused. No product edit, provider/model call, generated NodeRoom command, real workbook or screenshot capture occurred.
+
+The external API proof passed 98 of 99 checks; the separately requested mixed-cost assertion also failed. Browser proof passed 129 of 145 checks across 30 cells and retained all 16 failures. Native offline file reopening passed 3 of 3 checks. There are 90 actual PNGs in total: 77 matrix/action/boundary captures, one file reopen, and 12 supplemental boundaries. All decode, and the exact worker-viewed subset is recorded. Owned browser contexts and server are closed; port 4995 refuses connections.
+
+Evidence: [FIRST_USE.md](E6k-noderl-first-use-01/FIRST_USE.md), [semantic result](E6k-noderl-first-use-01/artifacts/semantic-report.json), [browser result](E6k-noderl-first-use-01/browser/report.json), [actual URI activation](E6k-noderl-first-use-01/browser/script-uri-native-activated.png), [minimal repair plan](E6k-noderl-first-use-01/REPAIR_PLAN.md).
+
+The manifest binds 242 external files (12302996 bytes), SHA256 c1f18d78c4ca78d963c2f51be70faf1f7df038ffbf27928a2e49ff59c6b618b7. The exact four-owner proposal is in repair-plan.json, SHA256 52a55e14a9006dfce2e3a05744c523829d3c3d95bd1895964498e6eb0e7aaf44. No implementation or integration is included. Full UI/product grades remain unassigned; the report findings and omitted live/durable/real-device work are explicit holds.
+
+**Re your request:** Make each repo usable and ready for developer/user handoff, including visual and interaction standards — the actual NodeRL artifact journey is now preserved, its failures are reproducible, and the smallest report-owner repair is ready for independent review.

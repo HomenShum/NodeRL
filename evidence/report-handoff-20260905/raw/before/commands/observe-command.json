@@ -1,0 +1,10 @@
+{
+  "exitCode": 0,
+  "seconds": 9.893304824829102,
+  "command": [
+    "node",
+    "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-first-use-01\\observe.mjs"
+  ],
+  "deadlineSeconds": 240,
+  "environment": "Child system/runtime allowlist only; no provider environment inherited."
+}

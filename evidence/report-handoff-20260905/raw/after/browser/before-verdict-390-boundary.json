@@ -1,0 +1,15 @@
+{
+  "selector": "[data-testid=\"verdict-badge\"]",
+  "label": "A: failure label contrast repaired",
+  "rect": {
+    "x": 24,
+    "y": 169.28125,
+    "width": 155.765625,
+    "height": 28
+  },
+  "raw": "before-verdict-390-raw.png",
+  "annotated": "before-verdict-390-boundary-3px.png",
+  "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5",
+  "mechanism": "Temporary 3 px native DOM overlay on actual unchanged report; no product/source style changes; exact page.content restoration.",
+  "untouched": "All report content, totals, data, native layout, and source HTML outside the temporary overlay remain unchanged."
+}

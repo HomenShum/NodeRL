@@ -1,0 +1,7 @@
+{
+  "cause": "The external extension walked one parent too far to the preserved baseline. All new report files had already been written before the binding read failed.",
+  "originalScriptSha256": "62f9a0dee56b4c59b2ca10ceb1ef24ef19f87330ca600b210be03bbe6daffec4",
+  "rawFailure": "extra-cases.stderr.txt",
+  "correction": "Separate verify-protected-artifacts.mjs reads the correct baseline location and binds existing generated files. No artifact regeneration or source change.",
+  "originalControllerResultsPreserved": true
+}

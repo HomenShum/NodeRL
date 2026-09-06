@@ -75,11 +75,21 @@ function usd(n: number): string {
 
 /** Room header: the user goal + the live room URL the outer proof drove. */
 function RoomHeaderAtom(goal: string, url: string): string {
+  let linkable = false;
+  try {
+    const protocol = new URL(url).protocol;
+    linkable = protocol === "http:" || protocol === "https:";
+  } catch {
+    // Preserve malformed or non-absolute addresses as evidence, without making them active links.
+  }
+  const address = linkable
+    ? `<a class="nt-room-url" data-testid="room-url" href="${esc(url)}">${esc(url)}</a>`
+    : `<span class="nt-room-url" data-testid="room-url">${esc(url)}</span>`;
   return (
     `<header class="nt-room-header" data-atom="room-header">` +
     `<div class="nt-room-kicker">NodeRoom run</div>` +
     `<h1 class="nt-room-goal" data-testid="room-goal">${esc(goal)}</h1>` +
-    `<a class="nt-room-url" data-testid="room-url" href="${esc(url)}">${esc(url)}</a>` +
+    address +
     `</header>`
   );
 }
@@ -157,12 +167,21 @@ function EvidenceCardAtom(evidence: MergedEvidence): string {
 /** Cost badge: sums the per-step costUsd off the inner trace. Derived from the trace only (HONEST_SCORES). */
 function CostBadgeAtom(steps: MergedStep[]): string {
   let sum = 0;
+  let recorded = 0;
   for (const s of steps) {
-    if (typeof s.costUsd === "number" && Number.isFinite(s.costUsd)) sum += s.costUsd;
+    if (typeof s.costUsd === "number" && Number.isFinite(s.costUsd)) {
+      sum += s.costUsd;
+      recorded++;
+    }
   }
+  const label = recorded === 0
+    ? "cost: not recorded"
+    : recorded === steps.length
+      ? `cost: ${usd(sum)}`
+      : `known cost: ${usd(sum)} (${recorded}/${steps.length} steps)`;
   return (
     `<span class="nt-badge nt-cost-badge" data-atom="cost-badge" data-testid="cost-badge">` +
-    `cost: ${esc(usd(sum))}` +
+    esc(label) +
     `</span>`
   );
 }
@@ -230,7 +249,7 @@ const STORYBOOK_CSS = `
 *{box-sizing:border-box}
 body.nt-storybook{margin:0;background:var(--nt-bg);color:var(--nt-fg);
 font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
-.nt-wrap{max-width:900px;margin:0 auto;padding:24px}
+.nt-wrap{max-width:900px;margin:0 auto;padding:24px;overflow-wrap:anywhere}
 .nt-room-header{border-bottom:1px solid var(--nt-border);padding-bottom:16px;margin-bottom:16px}
 .nt-room-kicker{color:var(--nt-muted);text-transform:uppercase;letter-spacing:.08em;font-size:11px}
 .nt-room-goal{margin:.2em 0;font-size:22px}
@@ -239,11 +258,11 @@ font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-s
 .nt-badge{display:inline-block;padding:4px 10px;border-radius:999px;font-weight:600;font-size:12px;
 border:1px solid var(--nt-border);background:var(--nt-panel)}
 .nt-verdict-pass{color:#fff;background:var(--nt-pass);border-color:var(--nt-pass)}
-.nt-verdict-fail{color:#fff;background:var(--nt-fail);border-color:var(--nt-fail)}
+.nt-verdict-fail{color:var(--nt-bg);background:var(--nt-fail);border-color:var(--nt-fail)}
 .nt-verdict-unverified{color:var(--nt-warn);border-color:var(--nt-warn)}
 .nt-section-title{margin:24px 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--nt-muted)}
 .nt-artifact-tabs{display:flex;gap:8px;flex-wrap:wrap}
-.nt-artifact-tab{background:var(--nt-panel);border:1px solid var(--nt-border);border-radius:8px;padding:8px 12px;font-size:13px}
+.nt-artifact-tab{background:var(--nt-panel);border:1px solid var(--nt-border);border-radius:8px;padding:8px 12px;font-size:13px;min-width:0;max-width:100%}
 .nt-artifact-kind{display:inline-block;background:#21262d;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;text-transform:uppercase}
 .nt-artifact-id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .nt-reopen{margin-left:8px;font-size:11px}
@@ -260,7 +279,7 @@ border-radius:8px;padding:10px 12px;margin-bottom:8px}
 .nt-evidence-head{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
 .nt-evidence-claim{font-weight:600}
 .nt-evidence-flag{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--nt-border);white-space:nowrap}
-.nt-needs-review{color:#fff;background:var(--nt-warn);border-color:var(--nt-warn)}
+.nt-needs-review{color:var(--nt-bg);background:var(--nt-warn);border-color:var(--nt-warn)}
 .nt-status-source_backed{color:var(--nt-pass)}
 .nt-evidence-quote{margin:8px 0;padding:6px 10px;border-left:2px solid var(--nt-border);color:var(--nt-fg)}
 .nt-evidence-noquote,.nt-evidence-nosource{color:var(--nt-muted);font-style:italic;font-size:12px}
@@ -326,7 +345,7 @@ export function renderStorybook(t: NodeMergedTrajectory): string {
 
   const artifacts = section(
     "Artifacts",
-    `<div class="nt-artifact-tabs">${t.artifacts.map((a) => ArtifactTabAtom(a)).join("")}</div>`,
+    t.artifacts.length > 0 ? `<div class="nt-artifact-tabs">${t.artifacts.map((a) => ArtifactTabAtom(a)).join("")}</div>` : "",
     "no artifacts produced",
   );
 

@@ -1,0 +1,2434 @@
+{
+  "scope": "All unselected original files from the before, repair and normal-baseline roots plus named receipt inputs. The final independent judge root and its two verdict files are included in full, with byte-identical copies deduplicated. Excluded bytes and pictures are not portable.",
+  "excluded": [
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/absent-reward/regression.json",
+      "scope": "before",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/absent-reward/repair.md",
+      "scope": "before",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/absent-reward/report.html",
+      "scope": "before",
+      "bytes": 11885,
+      "sha256": "afde1b2e44d644dc8bd3c508224f85ecda42fa6796729ea156c60e61582c5f8c",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/absent-reward/trace.json",
+      "scope": "before",
+      "bytes": 4910,
+      "sha256": "2609ca9d278b51c514f2d48573a1f7da9904ca606bbf9aadfbb463c5d6335c82",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/controlled-observation/regression.json",
+      "scope": "before",
+      "bytes": 782,
+      "sha256": "689dad7682573965241b0868f42662c7e05ce5b1583bf5b034f6bf629acb00b8",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/controlled-observation/repair.md",
+      "scope": "before",
+      "bytes": 2000,
+      "sha256": "83db2b2193636920ac26b4cbbabc035f9a9f40aa4d15b6e741ef8d07ccb9f697",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/controlled-observation/report.html",
+      "scope": "before",
+      "bytes": 12407,
+      "sha256": "428a286b691e17589fbca906acc600cbfa881a8495328d9775beae0b010fa3be",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/controlled-observation/trace.json",
+      "scope": "before",
+      "bytes": 5394,
+      "sha256": "818c6f109edb7d58fe535df644c0aa07b81b54ee348c0a1e7e746577306cab25",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/positive-conflict/regression.json",
+      "scope": "before",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/positive-conflict/repair.md",
+      "scope": "before",
+      "bytes": 2022,
+      "sha256": "6712267c569b0d335f38c262e449bfb179b73d3e7ff800e281daf88d4c4407a1",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/positive-conflict/report.html",
+      "scope": "before",
+      "bytes": 12254,
+      "sha256": "c1f95269ba24ce59e3aa40e2982865faf3e5c242acfca177e3b731c03c5eaf3f",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/positive-conflict/trace.json",
+      "scope": "before",
+      "bytes": 5231,
+      "sha256": "4ef63d5d2658a2ca06a2826d0d9eadfa5931b045e13feab989e995902720ca74",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/zero-cost/regression.json",
+      "scope": "before",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/zero-cost/repair.md",
+      "scope": "before",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/zero-cost/report.html",
+      "scope": "before",
+      "bytes": 11885,
+      "sha256": "cc4b87fcd7b064e1377da3a2c7cbfd76901a34b16ff0cb55fb0e8d71efb1356f",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/zero-cost/trace.json",
+      "scope": "before",
+      "bytes": 4890,
+      "sha256": "b4decc06d4592f487583771dc77974e42e4c0a3108c508a2de4a7caa82809d1a",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/zero-vs-unknown/regression.json",
+      "scope": "before",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/zero-vs-unknown/repair.md",
+      "scope": "before",
+      "bytes": 2022,
+      "sha256": "634372ca096a99149bf41aec2795b8e7a0eead9743da792834532bffe97c5887",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/zero-vs-unknown/report.html",
+      "scope": "before",
+      "bytes": 12492,
+      "sha256": "796ef784d9d3e98c44f88693a2b9a4b24d2bf18fe0abd926ead90c410a447df1",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/artifacts/zero-vs-unknown/trace.json",
+      "scope": "before",
+      "bytes": 5434,
+      "sha256": "36b35fed704a37f16dc005fb7d3d9b8048f274a30517afce16c9e4b114e61547",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/accounting-1440-boundary-3px.png",
+      "scope": "before",
+      "bytes": 79957,
+      "sha256": "fb200e2753a9198d5e9411d492d029bb93fae168a3dbf45bb470ef31d151f5dd",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/accounting-1440-raw.png",
+      "scope": "before",
+      "bytes": 79128,
+      "sha256": "c60b423989a45ff2bc90565c6d2931b59c05efbf2dd2d572ff5a269565243adb",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/empty-1440-boundary-3px.png",
+      "scope": "before",
+      "bytes": 31963,
+      "sha256": "a90b92c1cd41bcfa6760f1337805929e0f9d5c3dd63e87efa01f38f5ee2c9dec",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/empty-1440-raw.png",
+      "scope": "before",
+      "bytes": 30586,
+      "sha256": "adc9014c047145da6a4b79f2f79c88c49c230440d1b4aaf66549d74741a5b914",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/mixed-cost-1440-boundary-3px.png",
+      "scope": "before",
+      "bytes": 86211,
+      "sha256": "71f02a1bea448659fe706a154c38a031608287c4682f0c19c984c59b4b57e1f5",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum/mixed-cost-1440-raw.png",
+      "scope": "before",
+      "bytes": 84925,
+      "sha256": "ff32db801b6702cd40dafda9fcbb9cd23a66e5e2336554d54dcd8708e20989e3",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum.mjs",
+      "scope": "before",
+      "bytes": 4045,
+      "sha256": "d038bc37b906496706bc1ca694f6ac11b56311898ed39b5bb026762a43c9b6f9",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum.stderr.txt",
+      "scope": "before",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/boundary-addendum.stdout.txt",
+      "scope": "before",
+      "bytes": 65,
+      "sha256": "416ee2fae217c788ef8932947e15af95c60de7edb9121d38bd08b8e8ef11d8ee",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/absent-cost-1440x960-normal-full.png",
+      "scope": "before",
+      "bytes": 147679,
+      "sha256": "4a35406995df7503112d2b8539ec7c60a934fac2626e02aba4d55ec92210e183",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/absent-cost-1440x960-normal.png",
+      "scope": "before",
+      "bytes": 84327,
+      "sha256": "c5481039212d0b0c70be1efc19a3836b12e36db58dc1594dcdee16cb1d5faa9b",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/absent-reward-1440x960-normal-full.png",
+      "scope": "before",
+      "bytes": 148578,
+      "sha256": "75fb84d16cf4ef0aa08c018c3ac2b46f17d1b749af1566d2e1b0bb32ce68f34f",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/absent-reward-1440x960-normal.png",
+      "scope": "before",
+      "bytes": 85144,
+      "sha256": "100b48eaa0bed3c2def99d268f834d51dc34edace0fe399f304715589d9510b8",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1024x768-normal-full.png",
+      "scope": "before",
+      "bytes": 153658,
+      "sha256": "38cd92debb5766ead2f1068aaf20f1159cf001ec12d27ebdb1c1828ad7d8d3ae",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1440x960-normal-full.png",
+      "scope": "before",
+      "bytes": 160337,
+      "sha256": "a66fc25fbb3dfff0c0ab6955dfd8b9daca83125514cb9d3ca2c2bdda98c6646c",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1440x960-reduced-full.png",
+      "scope": "before",
+      "bytes": 160337,
+      "sha256": "a66fc25fbb3dfff0c0ab6955dfd8b9daca83125514cb9d3ca2c2bdda98c6646c",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1440x960-text200-full.png",
+      "scope": "before",
+      "bytes": 444896,
+      "sha256": "1de27778bc049e6ce043ffb0f4d106c2cbc240fb7e20187e8fe3cb8a08def2b7",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-1920x1080-normal-full.png",
+      "scope": "before",
+      "bytes": 164876,
+      "sha256": "551cbda39e62b704aeed94f06227cb4fe8d0e425112ea330a01797c269bbfd4e",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-320x800-normal-full.png",
+      "scope": "before",
+      "bytes": 152331,
+      "sha256": "0e3baff351c0db1b367afa8bff125c6d2f1b011ebb10561d3da1fa802a9eba04",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-360x800-normal-full.png",
+      "scope": "before",
+      "bytes": 150771,
+      "sha256": "4e8f8f36944b737f7933e2a8e252cfbc0dbff28824bca4d20e4659d920e44237",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-390-native-tab.png",
+      "scope": "before",
+      "bytes": 53188,
+      "sha256": "19e47f4ab2dd909979106e58b46a36e136fc1a0982eb78e995cc13440b39b95f",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-390x844-normal-full.png",
+      "scope": "before",
+      "bytes": 150473,
+      "sha256": "533b250d9d302fe7b455c03c1e3892d9889372e768820250e5e6a23657c8ff9d",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-390x844-reduced-full.png",
+      "scope": "before",
+      "bytes": 150473,
+      "sha256": "533b250d9d302fe7b455c03c1e3892d9889372e768820250e5e6a23657c8ff9d",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-390x844-text200-full.png",
+      "scope": "before",
+      "bytes": 498558,
+      "sha256": "29e70e027d83c99f7de56838fa46f11d4a0b44118f68b3b86077102d3c65d2b3",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/accounting-768x1024-normal-full.png",
+      "scope": "before",
+      "bytes": 148612,
+      "sha256": "a7424611b389308a6e1fcd740da068505a4820ea239e5f613e837a2d690ca47f",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-absent-cost-1440-boundary-3px.png",
+      "scope": "before",
+      "bytes": 85450,
+      "sha256": "637f05ececd14208fcc6d209cac937816ecd2bbad13849403d8dd9de664712eb",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-absent-cost-1440-raw.png",
+      "scope": "before",
+      "bytes": 84327,
+      "sha256": "c5481039212d0b0c70be1efc19a3836b12e36db58dc1594dcdee16cb1d5faa9b",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-long-artifact-1440-boundary-3px.png",
+      "scope": "before",
+      "bytes": 90361,
+      "sha256": "5aa324de6dcf6e7cc21706e7a6b6966275fb4f6efe789a7a9c823cdfa470ab6d",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-long-artifact-1440-raw.png",
+      "scope": "before",
+      "bytes": 89867,
+      "sha256": "abe93be658785c153926fea030935ad71ab603599712d88e59f0f7d38ee1ff5b",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-verdict-1440-boundary-3px.png",
+      "scope": "before",
+      "bytes": 85911,
+      "sha256": "2a022e481fdd18530780b3e8c4e159c9e0cc5cac567af3d89eb722dc0b08df87",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/before-verdict-1440-raw.png",
+      "scope": "before",
+      "bytes": 85331,
+      "sha256": "f1f15efe54e693db126e63b014b6a00e94c9f25bfa2150176c913661c00a37ec",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/controlled-observation-1440x960-normal-full.png",
+      "scope": "before",
+      "bytes": 159948,
+      "sha256": "163581a908a8ff3535fb3fd37a18775e1a5085a1d966f041b697872b5e295aca",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/controlled-observation-1440x960-normal.png",
+      "scope": "before",
+      "bytes": 84966,
+      "sha256": "a7203450f4fd5165c6238d0e5f956727acd96e742dd6875dea2362d93a50a10d",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/empty-1440x960-normal-full.png",
+      "scope": "before",
+      "bytes": 30681,
+      "sha256": "00866ceddd6c5ccf71e490048e20cfef4e941ef17b9dcb9fd2a03a627cc5814f",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/empty-1440x960-normal.png",
+      "scope": "before",
+      "bytes": 30681,
+      "sha256": "00866ceddd6c5ccf71e490048e20cfef4e941ef17b9dcb9fd2a03a627cc5814f",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1024x768-normal-full.png",
+      "scope": "before",
+      "bytes": 204687,
+      "sha256": "afb2967f21ef7017ba15463942a40814e42bdc987535284535433baf7e48e69d",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1024x768-normal.png",
+      "scope": "before",
+      "bytes": 72374,
+      "sha256": "3b61e07315e1825c07b8211d9ab86ab5772006f7f462f50be94140a96df42e85",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1440x960-normal-full.png",
+      "scope": "before",
+      "bytes": 207290,
+      "sha256": "a4ba15624e18afc4f65785592c057b1758dd5156447645d8fd9ceb4a8fc0535c",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1440x960-reduced-full.png",
+      "scope": "before",
+      "bytes": 207290,
+      "sha256": "a4ba15624e18afc4f65785592c057b1758dd5156447645d8fd9ceb4a8fc0535c",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1440x960-text200-full.png",
+      "scope": "before",
+      "bytes": 593770,
+      "sha256": "56c01c760f1e7e508ebe60e8bc667b8887c98fd53db2c9c71dd1db7b143b3408",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1920x1080-normal-full.png",
+      "scope": "before",
+      "bytes": 211610,
+      "sha256": "56232963c7c0fe3b7b50b45ef19dc3ba4f59a59d5637eb4cdcdefa9a9c2b5ac4",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-1920x1080-normal.png",
+      "scope": "before",
+      "bytes": 106437,
+      "sha256": "2be528e8514e507a0f3e9d6f201910b4b8e76e34597442b2d307ddf2977945e3",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-320x800-normal-full.png",
+      "scope": "before",
+      "bytes": 239765,
+      "sha256": "4dbbb23b00e5a1d8ccd6c838dd7ed72ea6dd27d4e0a7f93ca4f07aa5d10b21c6",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-320x800-normal.png",
+      "scope": "before",
+      "bytes": 49208,
+      "sha256": "3e6ed537458fd1359d4601cc0ac88e090bd20c87ffa8c82e0b4c1b989761a1bd",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-360x800-normal-full.png",
+      "scope": "before",
+      "bytes": 230720,
+      "sha256": "8367b2592c9831d8eb64ef8113d64e58ee8abbfe9e01d7bbc7488221062b74ff",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-360x800-normal.png",
+      "scope": "before",
+      "bytes": 54630,
+      "sha256": "da53f0dba93171e7d5f1ed9979c36ab2adfd373af6709bd32923eade3de56ba5",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-390x844-normal-full.png",
+      "scope": "before",
+      "bytes": 228780,
+      "sha256": "3aaa85dc298e9673bf72995551dbd6762d1e7942f398b4463ff1ac8ec5e9ccef",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-390x844-reduced-full.png",
+      "scope": "before",
+      "bytes": 228780,
+      "sha256": "3aaa85dc298e9673bf72995551dbd6762d1e7942f398b4463ff1ac8ec5e9ccef",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-390x844-text200-full.png",
+      "scope": "before",
+      "bytes": 705423,
+      "sha256": "32b5403b96980ca2eaf7a2fa17d7619417493d9b64512544f48b7cc9e63c3e5b",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-768x1024-normal-full.png",
+      "scope": "before",
+      "bytes": 203235,
+      "sha256": "efed225b7064fb53665b6ea92d3a16499f0bb6233c1efdf7582d7f293948ad74",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/long-unicode-768x1024-normal.png",
+      "scope": "before",
+      "bytes": 91324,
+      "sha256": "70ec6c6ecf8b7199b676c4af7470d691c4a1ae705757d5e200f9ede322e062a9",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/mixed-cost-1440x960-normal-full.png",
+      "scope": "before",
+      "bytes": 160121,
+      "sha256": "b30375538666e14117307971969940c5cf07ed225a403ce0a11c789212a81e55",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/mixed-cost-1440x960-normal.png",
+      "scope": "before",
+      "bytes": 85130,
+      "sha256": "702b2e34d60afa0dacf7cf9f3363e0b9c0bddceffcebb08c226d3599c2f24de6",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/positive-conflict-1440x960-normal-full.png",
+      "scope": "before",
+      "bytes": 154724,
+      "sha256": "c29a5788dd8b4487202ead52032e04a070b3b8232561fb6e24821bd5cf2f8ff3",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/positive-conflict-1440x960-normal.png",
+      "scope": "before",
+      "bytes": 81206,
+      "sha256": "dbc5f0029ee78c6184802265cb90815f8c44d38297d443f66fab968cad3a7015",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/zero-cost-1440x960-normal-full.png",
+      "scope": "before",
+      "bytes": 148618,
+      "sha256": "d2b17e9a9eaf9f2ed3d82cdfdde403ccd1cdb6b7a2c1fe34133e448f6cd67f20",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/zero-cost-1440x960-normal.png",
+      "scope": "before",
+      "bytes": 85184,
+      "sha256": "e4adf2376f516483e47ab0633a7207380afacadbb38d0585d6094f611c2a2818",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/zero-vs-unknown-1440x960-normal-full.png",
+      "scope": "before",
+      "bytes": 163600,
+      "sha256": "0c2fbea3a070b527ff0fa9e550109e5589769008fe5515dad0b62ed8563654a4",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/browser/zero-vs-unknown-1440x960-normal.png",
+      "scope": "before",
+      "bytes": 84681,
+      "sha256": "afc913d416d970bcb7f648785f62c4e927c2c23c88b9231c3977d3ec49c34140",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/consume-mixed-cost.mjs",
+      "scope": "before",
+      "bytes": 2221,
+      "sha256": "b72ff3dc17afca7780e58100a92e296086d9db3670e551bcc8026f97a617e27f",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/consume-mixed-cost.stderr.txt",
+      "scope": "before",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/consume-mixed-cost.stdout.txt",
+      "scope": "before",
+      "bytes": 410,
+      "sha256": "b7202e21dba77933c1b7a68458225616df99f0fc7d74d16f0696d496a4a8cede",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/consume.mjs",
+      "scope": "before",
+      "bytes": 12583,
+      "sha256": "0d98aeb9d4078f509059adecdfc2f9f25e385ec927701d15635c767a4a59ff12",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/consume.stderr.txt",
+      "scope": "before",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/consume.stdout.txt",
+      "scope": "before",
+      "bytes": 190,
+      "sha256": "e3d0acd5c020578a813eeab2a84c21a1cfc6ea3809ccb6d08e46b3a802cc5f35",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/E6k_NODERL_CURRENT_BASELINE.json.txt",
+      "scope": "before",
+      "bytes": 2201,
+      "sha256": "1d5e905e8b980203d13f2d1badd2d4c665fcbbded6989d7e521cd2d993e170a0",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/E6k_NODERL_FIRST_USE_PLAN_JUDGE.json.txt",
+      "scope": "before",
+      "bytes": 7454,
+      "sha256": "a8c17dceb948bba8321ea0631a0e2a770fa8aaa817b2d0e501af2a4d1ad21ed3",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/files.after.raw",
+      "scope": "before",
+      "bytes": 3552,
+      "sha256": "2077bae3e261948ee12db0c5c2f9bb85ebb75051d6c1c8c76abfff6874bc3dd1",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/files.before.raw",
+      "scope": "before",
+      "bytes": 3552,
+      "sha256": "2077bae3e261948ee12db0c5c2f9bb85ebb75051d6c1c8c76abfff6874bc3dd1",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/findings.json",
+      "scope": "before",
+      "bytes": 4774,
+      "sha256": "79c762196c20fb9518a106e93a885b1c096c7f04dfb73cc94e792a58c6e66fcd",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/FIRST_USE.md",
+      "scope": "before",
+      "bytes": 2876,
+      "sha256": "aa6962957d73d9d31ba9f6d8e7cfa97dc3f9c40bf6cbaa54a0373adc32321c15",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/git-after.json",
+      "scope": "before",
+      "bytes": 717,
+      "sha256": "a72f0744cfca9bba58a554a4e2d118c9a268b1a279e4575bcb848e3990fa7006",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/git-before.json",
+      "scope": "before",
+      "bytes": 938,
+      "sha256": "8dcf145b1a7d9bed768d5b4b7c380a4940ae1ecf4e0d413b1eebeafce803893f",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/head.after.raw",
+      "scope": "before",
+      "bytes": 41,
+      "sha256": "60044d296e70875619a821f0c2652a1c01c6a42a98271e9fbb8a474aaee903f6",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/head.before.raw",
+      "scope": "before",
+      "bytes": 41,
+      "sha256": "60044d296e70875619a821f0c2652a1c01c6a42a98271e9fbb8a474aaee903f6",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/index.after.raw",
+      "scope": "before",
+      "bytes": 8602,
+      "sha256": "25579f2a848e57626b4f83ce1f856c527b7e0a322befb7c666351d1fff515aa8",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/index.before.raw",
+      "scope": "before",
+      "bytes": 8602,
+      "sha256": "25579f2a848e57626b4f83ce1f856c527b7e0a322befb7c666351d1fff515aa8",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/manifest.json",
+      "scope": "before",
+      "bytes": 41629,
+      "sha256": "c1f18d78c4ca78d963c2f51be70faf1f7df038ffbf27928a2e49ff59c6b618b7",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/observe.mjs",
+      "scope": "before",
+      "bytes": 14587,
+      "sha256": "d23b89d2b73197431edb521adc6cd636c0a8bdfa572cb04f56b2b021e2e02c9b",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/observe.stderr.txt",
+      "scope": "before",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/observe.stdout.txt",
+      "scope": "before",
+      "bytes": 2614,
+      "sha256": "d210d217e71fb87327dbb40fccc308e3a4137823c5e7c74a44dfbfd39a472689",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/png-readback.json",
+      "scope": "before",
+      "bytes": 19881,
+      "sha256": "e5eb25a4ad71898427d8662924d8b4e10f19a63f54ab6d60684402eca3cc36fc",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/refs.after.raw",
+      "scope": "before",
+      "bytes": 277,
+      "sha256": "d7ceff414e832cf1b12e3b7a84321ae25202e3fcf2e986b50242f4f99674ac91",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/refs.before.raw",
+      "scope": "before",
+      "bytes": 277,
+      "sha256": "d7ceff414e832cf1b12e3b7a84321ae25202e3fcf2e986b50242f4f99674ac91",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/reopen-file.mjs",
+      "scope": "before",
+      "bytes": 2786,
+      "sha256": "353ed1369313b13b48a3dfae64bf651260385ef1cb09f170b1dde8e8b12ce1e2",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/reopen-file.stderr.txt",
+      "scope": "before",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/reopen-file.stdout.txt",
+      "scope": "before",
+      "bytes": 304,
+      "sha256": "0ac09e0976b3814f4813d9fee3d15e6fe29534e2fc9587ded408546d14954f31",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/repair-plan.json",
+      "scope": "before",
+      "bytes": 10631,
+      "sha256": "52a55e14a9006dfce2e3a05744c523829d3c3d95bd1895964498e6eb0e7aaf44",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/REPAIR_PLAN.md",
+      "scope": "before",
+      "bytes": 2264,
+      "sha256": "ff2d133f33a4a6e0febd42184fc5de9e06e3a8d50f3b2f40caf6bd693dae7104",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/report-cases.before-mixed.json",
+      "scope": "before",
+      "bytes": 2817,
+      "sha256": "f734aacbed91840dbb3b145a801d646d188683c03ea1b50695f0e8e049606f52",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/runtime-closure.json",
+      "scope": "before",
+      "bytes": 451,
+      "sha256": "400587ffab49e63c680d0e940b86cb795bd739c29a85a1b79b4ba96079b33b9d",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/source-after.json",
+      "scope": "before",
+      "bytes": 16083,
+      "sha256": "4cef6f756d5aef91f87e406b0df72ba66bee68a280ad6bac5ab78e1e277370a3",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/source-before.json",
+      "scope": "before",
+      "bytes": 16083,
+      "sha256": "4cef6f756d5aef91f87e406b0df72ba66bee68a280ad6bac5ab78e1e277370a3",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/status.after.raw",
+      "scope": "before",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/status.before.raw",
+      "scope": "before",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-first-use-01/worker-visual-readback.json",
+      "scope": "before",
+      "bytes": 2151,
+      "sha256": "d37f84f32aec3c678e5873cb652826ecc1503b44abe6bb33ab6b998c1b542084",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/absent-reward/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/absent-reward/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/absent-reward/report.html",
+      "scope": "repair",
+      "bytes": 11951,
+      "sha256": "32bfb731ddc9568ebac35553d43757960bf58734ebf57733d27aef0231a660e0",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/absent-reward/trace.json",
+      "scope": "repair",
+      "bytes": 4910,
+      "sha256": "2609ca9d278b51c514f2d48573a1f7da9904ca606bbf9aadfbb463c5d6335c82",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/controlled-observation/regression.json",
+      "scope": "repair",
+      "bytes": 782,
+      "sha256": "689dad7682573965241b0868f42662c7e05ce5b1583bf5b034f6bf629acb00b8",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/controlled-observation/repair.md",
+      "scope": "repair",
+      "bytes": 2000,
+      "sha256": "83db2b2193636920ac26b4cbbabc035f9a9f40aa4d15b6e741ef8d07ccb9f697",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/controlled-observation/report.html",
+      "scope": "repair",
+      "bytes": 12473,
+      "sha256": "04267b4283b334d01bde40dd17b8defdddef94678d6059dd83dad742bb38b222",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/controlled-observation/trace.json",
+      "scope": "repair",
+      "bytes": 5394,
+      "sha256": "818c6f109edb7d58fe535df644c0aa07b81b54ee348c0a1e7e746577306cab25",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/cost-mixed-zero/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/cost-mixed-zero/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/cost-mixed-zero/report.html",
+      "scope": "repair",
+      "bytes": 12475,
+      "sha256": "d6bd4eb08f09c2079f9ad1f5d7ade295fcbc6f1e1f60c9f9ca1a875768f4a5f7",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/cost-mixed-zero/trace.json",
+      "scope": "repair",
+      "bytes": 5319,
+      "sha256": "b116e81c42b29445de438163c63cee57fb47b7d48b3237e78021f9fd8403ff60",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/positive-conflict/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/positive-conflict/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "6712267c569b0d335f38c262e449bfb179b73d3e7ff800e281daf88d4c4407a1",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/positive-conflict/report.html",
+      "scope": "repair",
+      "bytes": 12320,
+      "sha256": "37ab2fe37609313f10e9bd6b09fabe87c40ef5889218e770aa19cc223cd4cdea",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/positive-conflict/trace.json",
+      "scope": "repair",
+      "bytes": 5231,
+      "sha256": "4ef63d5d2658a2ca06a2826d0d9eadfa5931b045e13feab989e995902720ca74",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-cases.json",
+      "scope": "repair",
+      "bytes": 1279,
+      "sha256": "ba2395eac738d21cbfe14e673120db5fb4ab3840650e46de233ead80d8af21bd",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-data/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-data/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-data/report.html",
+      "scope": "repair",
+      "bytes": 12458,
+      "sha256": "e5e9dd3b38cc72bc838db23f82a00d83f2f7dd32e763346d7954c55f2277934a",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-data/trace.json",
+      "scope": "repair",
+      "bytes": 5418,
+      "sha256": "1d0eac831f50a4b5886ec7fe8e2e1d1f2eeb891603a225860cd1168944288dcc",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-empty/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-empty/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-empty/report.html",
+      "scope": "repair",
+      "bytes": 12384,
+      "sha256": "153992166efb0caa4a477c280b54d8d6d38a8dd432572338aaaf1ff98594abfb",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-empty/trace.json",
+      "scope": "repair",
+      "bytes": 5356,
+      "sha256": "5d1f4853a6e96028bf689b9950d2d70e36dec04d6c6f9e5898f9208cc717e1ee",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-file/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-file/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-file/report.html",
+      "scope": "repair",
+      "bytes": 12413,
+      "sha256": "0535461ef72dfea51cc626da337d5e28efbac0e5964a4d72c70d2cd6721f1fe7",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-file/trace.json",
+      "scope": "repair",
+      "bytes": 5385,
+      "sha256": "7d35e0eb8edc964605344114e26feebad0a00fba7ad53430fd96f5cad6e13592",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-malformed/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-malformed/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-malformed/report.html",
+      "scope": "repair",
+      "bytes": 12392,
+      "sha256": "0d2ee9037fb96418e7f791225131915af9a08a252ca1fc1a824d156c845e804e",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-malformed/trace.json",
+      "scope": "repair",
+      "bytes": 5364,
+      "sha256": "471915ec483919f99e2b4205f8e53ee06091d305da52e70bf63587360063e41d",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-not-url/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-not-url/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-not-url/report.html",
+      "scope": "repair",
+      "bytes": 12393,
+      "sha256": "25eaf77a0cbc794083e4fda1c67e6c8365a70f900f315007a352d2014116d016",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-not-url/trace.json",
+      "scope": "repair",
+      "bytes": 5365,
+      "sha256": "111d9c6355bf0592f36038af71f0c67acae2aac6de455d49244e9760d1eff166",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-relative/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-relative/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-relative/report.html",
+      "scope": "repair",
+      "bytes": 12398,
+      "sha256": "09ae32a9132fe7e210379ed4e308ef943199d980183625f9de3320603a01f09c",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-relative/trace.json",
+      "scope": "repair",
+      "bytes": 5370,
+      "sha256": "7712e22fb6c73e614ec1c94bb53e9fd4ef99122cbc8ac584aa0509a0c97d9a10",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-safe-http/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-safe-http/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-safe-http/report.html",
+      "scope": "repair",
+      "bytes": 12450,
+      "sha256": "bc0172c3e5931b31aaca5e295e78129a9d41733d40222d277d9967eadef187c1",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-safe-http/trace.json",
+      "scope": "repair",
+      "bytes": 5388,
+      "sha256": "735561a89a1eb2ff5cc5a7c83fa17c729bce205c9d544823cfb1d693d408652c",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-safe-https/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-safe-https/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-safe-https/report.html",
+      "scope": "repair",
+      "bytes": 12466,
+      "sha256": "7c4d6832e2bc31532fd84ae02679b490a61f2ada6083c22d1bc0fc78085bf552",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-safe-https/trace.json",
+      "scope": "repair",
+      "bytes": 5396,
+      "sha256": "554f02453b3dbb440afcd45c1cf91c3bc07ef2aeb371c1175f158188a7d5db70",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-safe-uppercase/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-safe-uppercase/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-safe-uppercase/report.html",
+      "scope": "repair",
+      "bytes": 12488,
+      "sha256": "e92dc1080d487829690792501514388acd2113af7e5f61e5af305a03e893a3f3",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-safe-uppercase/trace.json",
+      "scope": "repair",
+      "bytes": 5403,
+      "sha256": "596ccbfe4309852abd2a4dc32f00ed0a2090e49eababb76c2acd2ec9d2536d70",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-scheme-relative/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-scheme-relative/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-scheme-relative/report.html",
+      "scope": "repair",
+      "bytes": 12406,
+      "sha256": "431b1bafffd3e3b105153a362abb7236c678e57f079375f9f7af0e8cb48371c4",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-scheme-relative/trace.json",
+      "scope": "repair",
+      "bytes": 5378,
+      "sha256": "7f887e93679c5b45080e1a1cdbaded554d8a1163a736d039ffe37b1b55742ef9",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-script-newline/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-script-newline/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-script-newline/report.html",
+      "scope": "repair",
+      "bytes": 12450,
+      "sha256": "e8e89af2755ae2bf4502089c907f84cf6fcc5a8637768fa26dab4897a6664028",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-script-newline/trace.json",
+      "scope": "repair",
+      "bytes": 5415,
+      "sha256": "7cdf2d7a2160da358fc7651263c6680035844e58dffd4e92261811cee2e3285e",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-script-space/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-script-space/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-script-space/report.html",
+      "scope": "repair",
+      "bytes": 12450,
+      "sha256": "771ffdca83556f4065a550a2fcab040a0d700c03f5563d1180676aec58e9f3d2",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/uri-script-space/trace.json",
+      "scope": "repair",
+      "bytes": 5414,
+      "sha256": "c852c310e225269d63fc8b22aa2728789ed6364dacd65a3fe1969d31f07731cf",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/zero-cost/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/zero-cost/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/zero-cost/report.html",
+      "scope": "repair",
+      "bytes": 11951,
+      "sha256": "5b64b42778c61e1bd63c742c00c80cfba79745e06f740778520c6ef9946ca8d4",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/zero-cost/trace.json",
+      "scope": "repair",
+      "bytes": 4890,
+      "sha256": "b4decc06d4592f487583771dc77974e42e4c0a3108c508a2de4a7caa82809d1a",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/zero-vs-unknown/regression.json",
+      "scope": "repair",
+      "bytes": 793,
+      "sha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/zero-vs-unknown/repair.md",
+      "scope": "repair",
+      "bytes": 2022,
+      "sha256": "634372ca096a99149bf41aec2795b8e7a0eead9743da792834532bffe97c5887",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/zero-vs-unknown/report.html",
+      "scope": "repair",
+      "bytes": 12558,
+      "sha256": "0d8a2dd91db042b4e9447dfc890baeac6b32612d1802c4e7fc135ff50c19eb90",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/artifacts/zero-vs-unknown/trace.json",
+      "scope": "repair",
+      "bytes": 5434,
+      "sha256": "36b35fed704a37f16dc005fb7d3d9b8048f274a30517afce16c9e4b114e61547",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/accounting-1440-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 79931,
+      "sha256": "5026d377a77570cb410f0b694cfea8ede063c776a83c459ab48e22e8bebe7a12",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/accounting-1440-raw.png",
+      "scope": "repair",
+      "bytes": 79140,
+      "sha256": "fbe95bddce0b089e29ae4f920b2583c171c4982163cf2fb23539b52cb6bcf3b4",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/empty-1440-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 33299,
+      "sha256": "4eaa02dac898d2b7f2befa5292d741a978137b9df08198f559477495f1e7fa36",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/empty-1440-raw.png",
+      "scope": "repair",
+      "bytes": 31946,
+      "sha256": "b3045580bf4e2c972ce7ada8e2352119e34883c73bc64a35a27d4d378667a9b1",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/mixed-cost-1440-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 87513,
+      "sha256": "6bdc151c4886ea304cbd008babe6e3e15cce7c77bb55ac2494f07c5928630858",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum/mixed-cost-1440-raw.png",
+      "scope": "repair",
+      "bytes": 86124,
+      "sha256": "d0ac0471e39c34cb5094e988b181d2bd65534e846bfff0c8281a653a3ac7ac82",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum.mjs",
+      "scope": "repair",
+      "bytes": 4138,
+      "sha256": "03a425638ee5a85b5a8e885892c4eb726c0f7aa739e4b906e5585c539a72967e",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/boundary-addendum.stdout.txt",
+      "scope": "repair",
+      "bytes": 65,
+      "sha256": "416ee2fae217c788ef8932947e15af95c60de7edb9121d38bd08b8e8ef11d8ee",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/absent-cost-1440x960-normal-full.png",
+      "scope": "repair",
+      "bytes": 147886,
+      "sha256": "a9e0481d3cf8d050496c9e8514d383e01cf36479530df9dff30f1c4fd8b41269",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/absent-cost-1440x960-normal.png",
+      "scope": "repair",
+      "bytes": 84501,
+      "sha256": "b37958afc290fbbfa21a90492fbac46e5c764d96f57f78f6939d327a8e1d36b4",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/absent-reward-1440x960-normal-full.png",
+      "scope": "repair",
+      "bytes": 148609,
+      "sha256": "a7d734e0c84f0c91a6ee23b793c57755d6392da5f71d7f4ac787a40770598122",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/absent-reward-1440x960-normal.png",
+      "scope": "repair",
+      "bytes": 85158,
+      "sha256": "62c97f32d9d2becb65e5ab61332266ae6d030826d33859a196aa8f44eee421f4",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1024x768-normal-full.png",
+      "scope": "repair",
+      "bytes": 153618,
+      "sha256": "5d6ce78d122f7d9763d04911142e18b4a899d35e563842489efce29f7264195d",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1440x960-normal-full.png",
+      "scope": "repair",
+      "bytes": 160242,
+      "sha256": "9ca52fea7d9919af8ff101ed8e9a5cfa15db0a6a564501519656f4427dcd6dcf",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1440x960-reduced-full.png",
+      "scope": "repair",
+      "bytes": 160242,
+      "sha256": "9ca52fea7d9919af8ff101ed8e9a5cfa15db0a6a564501519656f4427dcd6dcf",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1440x960-text200-full.png",
+      "scope": "repair",
+      "bytes": 445084,
+      "sha256": "7ea2247e6e32378b922373a0425a54eb076377dfefdfc45516d6fab6ae140bb7",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-1920x1080-normal-full.png",
+      "scope": "repair",
+      "bytes": 164819,
+      "sha256": "623814e888605c24cdf87cfb81c37f81bea3e6d91a08f16d4bd563145bd03c9d",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-320x800-normal-full.png",
+      "scope": "repair",
+      "bytes": 152240,
+      "sha256": "fe27002ef0de90aac3f6e6096fa4fece822a632079ee4586c664f212c99d6bde",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-360x800-normal-full.png",
+      "scope": "repair",
+      "bytes": 150649,
+      "sha256": "85aff541a11a6aceb8560c72d872e719a431e6df27f60e51299726ec26c4f45c",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-390-native-tab.png",
+      "scope": "repair",
+      "bytes": 53091,
+      "sha256": "b3cc54f62902d6c9022c95d645386520f4d034bf670ecce4fa4bfa680a6e5936",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-390x844-normal-full.png",
+      "scope": "repair",
+      "bytes": 150376,
+      "sha256": "8d547c4668bfa32a64c07064386006e76b3d48b3663896840180cda5dad88a4f",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-390x844-reduced-full.png",
+      "scope": "repair",
+      "bytes": 150376,
+      "sha256": "8d547c4668bfa32a64c07064386006e76b3d48b3663896840180cda5dad88a4f",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-390x844-text200-full.png",
+      "scope": "repair",
+      "bytes": 490895,
+      "sha256": "2e719dd8d37c66fb1b0c9548a6dbb512665c9c93aa568961d939719e716b81c6",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/accounting-768x1024-normal-full.png",
+      "scope": "repair",
+      "bytes": 148563,
+      "sha256": "79ee840a7ccf215344866b273853aabf73aecfb7597312312e510342e0b955d3",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-absent-cost-1440-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 85711,
+      "sha256": "2758ea4adcc108e02f3b44eb74d9b79aeb5e6e31a8652426b36ad5342db99052",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-absent-cost-1440-raw.png",
+      "scope": "repair",
+      "bytes": 84501,
+      "sha256": "b37958afc290fbbfa21a90492fbac46e5c764d96f57f78f6939d327a8e1d36b4",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-long-artifact-1440-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 97377,
+      "sha256": "07dbbfd4a10d5a130f9441369e0819c8d131ac927f90fff1a4c7fed3f7ca0edc",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-long-artifact-1440-raw.png",
+      "scope": "repair",
+      "bytes": 96676,
+      "sha256": "afa7ec767f2f895bb84fae3344468a7b3495ac73fdcd336413df7699f6601888",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-verdict-1440-boundary-3px.png",
+      "scope": "repair",
+      "bytes": 85970,
+      "sha256": "adc9739d5bec09d5d61644a4fd6a18acc9831f09d1ea7a6c4e9c70d1deb86e6f",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/before-verdict-1440-raw.png",
+      "scope": "repair",
+      "bytes": 85230,
+      "sha256": "5529323ae1dcc25a536c82f200a9a15d9836adc2940c15165a7599da5ab049d3",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/controlled-observation-1440x960-normal-full.png",
+      "scope": "repair",
+      "bytes": 159871,
+      "sha256": "56829eb244ae112352b59d1b3ee77280a7ae84f4dfec1632b2e6612bf4d8b8c7",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/controlled-observation-1440x960-normal.png",
+      "scope": "repair",
+      "bytes": 84870,
+      "sha256": "0957512ea12654a5716ea26474288e28c5e82670eaa2f062e82b09e0fb760843",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/cost-mixed-zero-1440x960-normal-full.png",
+      "scope": "repair",
+      "bytes": 160814,
+      "sha256": "906d617b5cb5d3f7efd71ce06538488ad2c135248e8e4d8f6c23460d9f315fe5",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/cost-mixed-zero-1440x960-normal.png",
+      "scope": "repair",
+      "bytes": 86036,
+      "sha256": "51d939f0bea4b21ecbfb7a056198b6cd4d7f3e953b46833c47869b379704d32c",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/empty-1440x960-normal-full.png",
+      "scope": "repair",
+      "bytes": 32044,
+      "sha256": "c79dfb4163ce25dbccb4cf1b1cc5e5ea1e718003322130df1633e63ab34e4984",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/empty-1440x960-normal.png",
+      "scope": "repair",
+      "bytes": 32044,
+      "sha256": "c79dfb4163ce25dbccb4cf1b1cc5e5ea1e718003322130df1633e63ab34e4984",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1024x768-normal-full.png",
+      "scope": "repair",
+      "bytes": 198152,
+      "sha256": "158c5c3ce8892eb56120a7091a729948a6c5db7fcbc0b9fcafed442e19c242cc",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1024x768-normal.png",
+      "scope": "repair",
+      "bytes": 79440,
+      "sha256": "f23fee13eb7d896a905e095ff83f408778c463ba73c865330d03d8ef1858605c",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1440x960-normal-full.png",
+      "scope": "repair",
+      "bytes": 205371,
+      "sha256": "d47131b961967faa73d185945192b70bd076596dc41807411588f7cccbf04433",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1440x960-reduced-full.png",
+      "scope": "repair",
+      "bytes": 205371,
+      "sha256": "d47131b961967faa73d185945192b70bd076596dc41807411588f7cccbf04433",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1440x960-text200-full.png",
+      "scope": "repair",
+      "bytes": 586183,
+      "sha256": "9a736c4c8433cb8a6e37e34a38eeecc07ba3335bee2c11667820bdeb869f895e",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1920x1080-normal-full.png",
+      "scope": "repair",
+      "bytes": 211025,
+      "sha256": "b7a5bb3e464d4d2776378abf4af0c91af772311dc710bb67908ead2b668d9575",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-1920x1080-normal.png",
+      "scope": "repair",
+      "bytes": 111554,
+      "sha256": "916e1252421c2c46ae2b57bf737849a99e8b8a3daab5305bd1ceab2c8e05c434",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-320x800-normal-full.png",
+      "scope": "repair",
+      "bytes": 184918,
+      "sha256": "6619fe5b2757915a9fe109a0cad1b71bbb48e3345c1276930f3fcb5a7e0bc64e",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-320x800-normal.png",
+      "scope": "repair",
+      "bytes": 48733,
+      "sha256": "321cc2656675e7d66f8c2a7b59d783b7bb325ee59354479dc16074b2eeef7b42",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-360x800-normal-full.png",
+      "scope": "repair",
+      "bytes": 183462,
+      "sha256": "dec766fd71e1ebdf5fee51fd1fd6662b979aee08a5d9a54fc8d04ea2e82ab966",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-360x800-normal.png",
+      "scope": "repair",
+      "bytes": 57521,
+      "sha256": "5f709c74c3301062c517b08459f00a4cab699332c16c56debdc829e5370f6134",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-390x844-normal-full.png",
+      "scope": "repair",
+      "bytes": 189524,
+      "sha256": "f9032b3258c789dd0a387c2a0b2f1649f48ae7e0eca30e4a7ad187d405eba6c8",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-390x844-reduced-full.png",
+      "scope": "repair",
+      "bytes": 189524,
+      "sha256": "f9032b3258c789dd0a387c2a0b2f1649f48ae7e0eca30e4a7ad187d405eba6c8",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-390x844-text200-full.png",
+      "scope": "repair",
+      "bytes": 674530,
+      "sha256": "4e73ae2300b04da6130ea9765f254255e749abbabcbb174d699e77182f69be39",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-768x1024-normal-full.png",
+      "scope": "repair",
+      "bytes": 193077,
+      "sha256": "9b3ce1b60ba8e7e2f3b3cb2fa8611d86514ae01f78b9c0731fe5b6a23d010fc9",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-768x1024-normal.png",
+      "scope": "repair",
+      "bytes": 94435,
+      "sha256": "fd263e0a70d4b3dd8493059f6ec3a7d0c0e5662c7ec9f69f966a7c48a5f467c2",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/mixed-cost-1440x960-normal-full.png",
+      "scope": "repair",
+      "bytes": 161312,
+      "sha256": "0a40351a8db846b02104ec23b2117211a8f0c6f4fad196e21a4a3583bd7b00e7",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/mixed-cost-1440x960-normal.png",
+      "scope": "repair",
+      "bytes": 86359,
+      "sha256": "cd98300367141e23aa672fc021bd65f5cc2bb364d2a3d9cb9b35b4c8683fbf60",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/positive-conflict-1440x960-normal-full.png",
+      "scope": "repair",
+      "bytes": 154737,
+      "sha256": "2212a11db47efd3b061fef91b5f14c322eb166e8d0407ff66cb359ce2cbf5ed3",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/positive-conflict-1440x960-normal.png",
+      "scope": "repair",
+      "bytes": 81192,
+      "sha256": "b3f4791b70c5caba8a8741fd072fd66274226b372d12f98712ed62331de9658b",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/zero-cost-1440x960-normal-full.png",
+      "scope": "repair",
+      "bytes": 148646,
+      "sha256": "996467f7774ed15051749e39a42e5ba91b962a06929f266ee3d7dbf1e859e19a",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/zero-cost-1440x960-normal.png",
+      "scope": "repair",
+      "bytes": 85194,
+      "sha256": "31783d66afef82526e4bdaaa41e048389ad42eae48844b7539cfa39a5a8a476f",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/zero-vs-unknown-1440x960-normal-full.png",
+      "scope": "repair",
+      "bytes": 163358,
+      "sha256": "9a3bfef06b888b2323d4016c0690f40bd00b3fccc35cf481328e3a7e030b9162",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/browser/zero-vs-unknown-1440x960-normal.png",
+      "scope": "repair",
+      "bytes": 84475,
+      "sha256": "0611f043a24db3b9060a68e4fdd4ec2a3c373c83548af5423ddf90bc948fcfe0",
+      "reason": "Overlapping full-page or additional state capture; this picture is NOT included in the portable packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/consume-mixed-cost.mjs",
+      "scope": "repair",
+      "bytes": 2266,
+      "sha256": "8aa47c6b8a8dc14f9f4f25ce5d6829984678a24fe7f37fb1226d45982805bf79",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/consume-mixed-cost.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/consume-mixed-cost.stdout.txt",
+      "scope": "repair",
+      "bytes": 427,
+      "sha256": "361c51e5e3edd9b583f08d5758d29f24d19eb9a5645c4952e5076673e92a6a53",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/consume.mjs",
+      "scope": "repair",
+      "bytes": 12633,
+      "sha256": "8d49c5e9a9f46f6d9dab6e713bfcd49d34271abcce6431e5cbb48e411c1c7748",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/consume.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/consume.stdout.txt",
+      "scope": "repair",
+      "bytes": 53,
+      "sha256": "95c0fb949e32f716ccd9bbdb1a48b0b4573a2b0d72e4159a3582834d0286a0a2",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/extra-cases.mjs",
+      "scope": "repair",
+      "bytes": 3628,
+      "sha256": "62f9a0dee56b4c59b2ca10ceb1ef24ef19f87330ca600b210be03bbe6daffec4",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/extra-cases.stdout.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/observe.mjs",
+      "scope": "repair",
+      "bytes": 17888,
+      "sha256": "ce68a836bf3964c72654cd39e2ff8bd4806609f34ea585136b71bab940df96c5",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/observe.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/observe.stdout.txt",
+      "scope": "repair",
+      "bytes": 115,
+      "sha256": "04dc2945528807f5210d81131cf9c665780f58bad4fc8a48525efca9b7e74422",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/reopen-file.mjs",
+      "scope": "repair",
+      "bytes": 2865,
+      "sha256": "c9d29038ac2a72250a6f91078a44cd1788d303f0f3c6dbf2992e54a639116933",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/reopen-file.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/reopen-file.stdout.txt",
+      "scope": "repair",
+      "bytes": 304,
+      "sha256": "0ac09e0976b3814f4813d9fee3d15e6fe29534e2fc9587ded408546d14954f31",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/report-cases.before-extras.json",
+      "scope": "repair",
+      "bytes": 3093,
+      "sha256": "b83a2d9914064f6c72f06859f97164c2e56a1485af64f88e1c34dc6fc09517d6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/report-cases.before-mixed.json",
+      "scope": "repair",
+      "bytes": 2817,
+      "sha256": "7dd8ed6541211a7300252a3205287c044771880e1a98eb5490ad7eded58e627b",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/source-before.json",
+      "scope": "repair",
+      "bytes": 16731,
+      "sha256": "384f947a39b388a182b6bbf0240f7ab10861e40b9baa0f5ce27023d8c9c8eea5",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/verify-protected-artifacts.mjs",
+      "scope": "repair",
+      "bytes": 1084,
+      "sha256": "94f3455be0d8bc042909f63a77a35ea94a672aeb5dd3ea64ce3f92bd57624e28",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/verify-protected-artifacts.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/after-01/verify-protected-artifacts.stdout.txt",
+      "scope": "repair",
+      "bytes": 46,
+      "sha256": "87bc77be05149291dfb337d837c8d6afb2e3c085bce5d6dc7d9d7ae36b225d1f",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/before/git.json",
+      "scope": "repair",
+      "bytes": 726,
+      "sha256": "947b6106248ed0fff791e5912de23f196ad6dc8a435beaa483285c8e2d5c2998",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/before/head.raw",
+      "scope": "repair",
+      "bytes": 41,
+      "sha256": "60044d296e70875619a821f0c2652a1c01c6a42a98271e9fbb8a474aaee903f6",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/before/index.raw",
+      "scope": "repair",
+      "bytes": 8602,
+      "sha256": "25579f2a848e57626b4f83ce1f856c527b7e0a322befb7c666351d1fff515aa8",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/before/packages/nodetrace/src/storybook.ts.txt",
+      "scope": "repair",
+      "bytes": 20599,
+      "sha256": "720ad1a95a1f57e6d457cd0c6caad5aaa76db1656a0f5220bf4d0b87587e5d75",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/before/packages/nodetrace/test/storybook.test.ts.txt",
+      "scope": "repair",
+      "bytes": 9728,
+      "sha256": "93671e06a815476a0d2219c0e64cc38d7b0899a16e5ef0bdfab0db20e70e406c",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/before/README.md.txt",
+      "scope": "repair",
+      "bytes": 6393,
+      "sha256": "867e02048086185df1b9e1524d41211d196777267d4a2f0ce5ce45c232dca1ff",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/before/refs.raw",
+      "scope": "repair",
+      "bytes": 277,
+      "sha256": "d7ceff414e832cf1b12e3b7a84321ae25202e3fcf2e986b50242f4f99674ac91",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/before/source.json",
+      "scope": "repair",
+      "bytes": 16590,
+      "sha256": "63936d481f15a0392e36e95bca6f965d22357d599e215562aca424393580f956",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/before/status.raw",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/before/tour-anchor.tour.txt",
+      "scope": "repair",
+      "bytes": 7421,
+      "sha256": "6db59f5d52703de78f39055dbe692ffe7b912b4b2ba897b71798eb36e79bc781",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/branch.stderr.txt",
+      "scope": "repair",
+      "bytes": 64,
+      "sha256": "d32e46cda75986191a09a1069209d60316e6bc8c486afdf569147ae2f3dcbb70",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/branch.stdout.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/citation-command-before-failure.txt",
+      "scope": "repair",
+      "bytes": 188,
+      "sha256": "39f1c0411cc4f3042529127977e911ad2811a839296a4853688d627852c5276e",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/correct-anchor-and-check.py",
+      "scope": "repair",
+      "bytes": 1896,
+      "sha256": "5196d788a3d9714fee2f3d0756a5f23c7968adbd0cfc625a3c87b132b95b2aea",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-branch.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-branch.stdout.raw",
+      "scope": "repair",
+      "bytes": 37,
+      "sha256": "a3058c0e774c49b757566650bf11426a4bb7a85cb431fe86802ed63d165f63b4",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-cached-diff.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-cached-diff.stdout.raw",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-changed.stderr.txt",
+      "scope": "repair",
+      "bytes": 364,
+      "sha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-changed.stdout.raw",
+      "scope": "repair",
+      "bytes": 122,
+      "sha256": "1f16eb6a1c4e43fe37697f32477eb8c0001a76ced9c06258805b029278ecdb35",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-diff-check.stderr.txt",
+      "scope": "repair",
+      "bytes": 364,
+      "sha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-diff-check.stdout.raw",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-diff.stderr.txt",
+      "scope": "repair",
+      "bytes": 364,
+      "sha256": "c44345df7f2e7ed09c4a695978a583a5cd6f237c5c503a8e3bd48648d6adb386",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-diff.stdout.raw",
+      "scope": "repair",
+      "bytes": 11047,
+      "sha256": "84d03781adf6338cc824af540e8176f21475ca0671749e591ef4b7f3a4bbba56",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-head.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-head.stdout.raw",
+      "scope": "repair",
+      "bytes": 41,
+      "sha256": "60044d296e70875619a821f0c2652a1c01c6a42a98271e9fbb8a474aaee903f6",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-index-file.raw",
+      "scope": "repair",
+      "bytes": 11081,
+      "sha256": "e5384ee712d5649f4eb14d2c749cec82051ef00314c4dd51737c8a2ba3497d64",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-index-path.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-index-path.stdout.raw",
+      "scope": "repair",
+      "bytes": 11,
+      "sha256": "742e1586a644af64934a892663d03c75415bfb01edafdfdd924a8627573bfb9c",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-index.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-index.stdout.raw",
+      "scope": "repair",
+      "bytes": 8602,
+      "sha256": "25579f2a848e57626b4f83ce1f856c527b7e0a322befb7c666351d1fff515aa8",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-refs.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-refs.stdout.raw",
+      "scope": "repair",
+      "bytes": 366,
+      "sha256": "1f810e139a62ae92611d9294285d51cf08f327743820974f6ba05a5323ae2d26",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-status.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-status.stdout.raw",
+      "scope": "repair",
+      "bytes": 148,
+      "sha256": "9d0dcc32cd6d09b414d955d51c4c6563e4f4e03c9b14ef9f163512d79100c81b",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-untracked.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/final-untracked.stdout.raw",
+      "scope": "repair",
+      "bytes": 11,
+      "sha256": "338536fccf4cb194596507ba254597bdbf32746d663ef450bacc2e4dd25cf1ee",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/freeze.py",
+      "scope": "repair",
+      "bytes": 16872,
+      "sha256": "6cac772a8804c61c6df710222da799e4ee9ac6cef20bdc56c8aafef767d5e1dc",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/handoff-example.stderr.txt",
+      "scope": "repair",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/handoff-example.stdout.txt",
+      "scope": "repair",
+      "bytes": 151,
+      "sha256": "edf4d56c89d24e6da7ca2fa270df5352c43ca08a866711e3286e89aeab37b7b6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/HANDOFF.before-final-status.md.txt",
+      "scope": "repair",
+      "bytes": 4721,
+      "sha256": "56e219e60fb8033f83171e12856161e8876fc14c3124bcab4fca0d3ec32b7c7c",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/manifest.json",
+      "scope": "repair",
+      "bytes": 68508,
+      "sha256": "27d6f4e333c0a67309c3af8a2cd97c8aaf5d5eeaf8fae9a0c9e8058e634223c6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/png-final-readback.json",
+      "scope": "repair",
+      "bytes": 21745,
+      "sha256": "e012116378c422a3d522853adfaedafbaa88f9af21d175c81097e51716da4168",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/prepare-after.py",
+      "scope": "repair",
+      "bytes": 7759,
+      "sha256": "20cfe99b8f28ffe84c02d94e04d2a5c9344f1c646ce9693eccf659ddeb6d5f43",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/prepare-continuation.py",
+      "scope": "repair",
+      "bytes": 1839,
+      "sha256": "4be885cc487bc1170401b7c9a35f9bc989a7d4b1db27d6950aca7ff3a08bc2cf",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/prove-handoff-example.py",
+      "scope": "repair",
+      "bytes": 2715,
+      "sha256": "15a252bc8bd64f3256199c6372970e39820aa5d8ad6df3a1a9eb70a10d6656f1",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/resume-after.py",
+      "scope": "repair",
+      "bytes": 3300,
+      "sha256": "292dc541528d278d449936a0aecda30966e03a2878b68febc6121d18c6e37c93",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/run-after.py",
+      "scope": "repair",
+      "bytes": 3312,
+      "sha256": "71931e42b96c426fcdc8a1b6058d7d498159305f58b26c78ab4410ffe12928fd",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/source-final/.tours/03-debug-and-recovery.tour.txt",
+      "scope": "repair",
+      "bytes": 7421,
+      "sha256": "a627101d155d289bb89ee970b2e4c94bca375777ad52c989cec607e23f1de511",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/source-final/HANDOFF.md.txt",
+      "scope": "repair",
+      "bytes": 5245,
+      "sha256": "b19353892e5dd10dc91152ad8d391dc817b4d3ada27e5c074e0486e02e856aba",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/source-final/packages/nodetrace/src/storybook.ts.txt",
+      "scope": "repair",
+      "bytes": 20886,
+      "sha256": "cc7686f7b75d541a6eb95e7e5686d949786186ec2ab25f023abb4956c6372a97",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/source-final/packages/nodetrace/test/storybook.test.ts.txt",
+      "scope": "repair",
+      "bytes": 13158,
+      "sha256": "da8f0be2f8bacb60f0925e09accf4f19f12dc073e2fd3215dfc6432dd4e79a72",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-report-repair-01/source-final/README.md.txt",
+      "scope": "repair",
+      "bytes": 6415,
+      "sha256": "3b0148033619a5b95b7870894e77ee7929e4ae8b472c214f0d588a77bcd997d3",
+      "reason": "Source/controller/Git custody is hash-bound by included receipts; the full raw file remains operator-local."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/branch-before.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/branch-before.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 5,
+      "sha256": "6403203dd5a0867eb14d104ee8a73730bd72dd9ad92e78d996a6dba0a5dcfc01",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/exact-fast-forward.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/exact-fast-forward.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 7089,
+      "sha256": "681e2acbe5f3bbbc792e89fef6260ede5adbe5d1fe377686f54232a1d7d536d4",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/head-after.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/head-after.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 41,
+      "sha256": "60044d296e70875619a821f0c2652a1c01c6a42a98271e9fbb8a474aaee903f6",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/head-before.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/head-before.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 41,
+      "sha256": "cda5050162888d466cb3b742fc69161c2a64efd77cc646bef3aecdb8289dafc8",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/preserve-old-tip.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/preserve-old-tip.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/preserved-old-final.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/preserved-old-final.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 41,
+      "sha256": "cda5050162888d466cb3b742fc69161c2a64efd77cc646bef3aecdb8289dafc8",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/remote-current.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/remote-current.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 57,
+      "sha256": "61b949aaefbbdd4ac6e69cb780ec4467049b8c38ea81439d4c069b04019a43a5",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/source-after.json",
+      "scope": "normal-baseline",
+      "bytes": 11031,
+      "sha256": "9470c2c95d999cde5ec4e28406cec69c68b92a6fb8a1dddfe2524b5fc30893dc",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/source-before.json",
+      "scope": "normal-baseline",
+      "bytes": 11031,
+      "sha256": "9470c2c95d999cde5ec4e28406cec69c68b92a6fb8a1dddfe2524b5fc30893dc",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/source-paths.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/source-paths.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 3552,
+      "sha256": "2077bae3e261948ee12db0c5c2f9bb85ebb75051d6c1c8c76abfff6874bc3dd1",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/status-before.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/status-before.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/status-final.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/status-final.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/tree-after.stderr.txt",
+      "scope": "normal-baseline",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    },
+    {
+      "origin": "E6k-noderl-current-baseline-01/tree-after.stdout.txt",
+      "scope": "normal-baseline",
+      "bytes": 41,
+      "sha256": "daba56b6f64c9c997ac588aa8e42cbac577762c9100564430347ac2647134693",
+      "reason": "Additional raw evidence outside the selected reader journey; retained only in the operator packet."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "selector": "[data-testid=\"cost-badge\"]",
+  "label": "C: missing cost is displayed as zero",
+  "rect": {
+    "x": 119.984375,
+    "y": 169.28125,
+    "width": 80.0625,
+    "height": 28
+  },
+  "raw": "before-absent-cost-390-raw.png",
+  "annotated": "before-absent-cost-390-boundary-3px.png",
+  "sourceHtmlSha256": "f11ddb2f20068c3609ef0185f089fbf511775fadc8ba69c3add3c653a020796a",
+  "mechanism": "Temporary 3 px native DOM overlay on actual unchanged report; no product/source style changes; exact page.content restoration.",
+  "untouched": "All report content, totals, data, native layout, and source HTML outside the temporary overlay remain unchanged."
+}

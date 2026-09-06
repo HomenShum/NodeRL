@@ -1,0 +1,16 @@
+{
+  "trajectoryId": "mtraj_ced8a3b839bddce8",
+  "runId": "SYNTHETIC-EMPTY",
+  "userGoal": "No run evidence supplied",
+  "outerTrace": {
+    "url": "https://example.invalid/empty",
+    "screenshots": [],
+    "consoleErrors": [],
+    "uiAssertions": []
+  },
+  "innerTrace": {
+    "steps": []
+  },
+  "artifacts": [],
+  "evidence": []
+}
