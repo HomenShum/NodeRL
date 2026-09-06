@@ -1,0 +1,9 @@
+{
+  "exitCode": 0,
+  "seconds": 1.3584058284759521,
+  "command": [
+    "npm",
+    "run",
+    "typecheck"
+  ]
+}

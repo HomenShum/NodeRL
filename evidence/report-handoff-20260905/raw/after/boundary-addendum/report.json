@@ -1,0 +1,176 @@
+{
+  "rows": [
+    {
+      "selector": "[data-testid=\"needs-review\"]",
+      "label": "E: unresolved evidence label is readable",
+      "text": "NEEDS REVIEW",
+      "rect": {
+        "x": 261.328125,
+        "y": 410.28125,
+        "width": 91.671875,
+        "height": 22.5
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1540
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "foreground": "rgb(14, 17, 22)",
+      "background": "rgb(210, 153, 34)",
+      "id": "accounting-390",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5",
+      "raw": "accounting-390-raw.png",
+      "rawSha256": "4459a4dcf9ba094780cc07cba393bb62f58f184fdb25b4e442eedf97ec871faf",
+      "boundary": "accounting-390-boundary-3px.png",
+      "boundarySha256": "7649c97a8176ccdfa6abc7dde6b2294707a4c990a45626f4d5f60272967d7179",
+      "exactRestoration": true
+    },
+    {
+      "selector": "[data-section=\"artifacts\"]",
+      "label": "F: empty artifact section explains absence",
+      "text": "Artifactsno artifacts produced",
+      "rect": {
+        "x": 24,
+        "y": 293.78125,
+        "width": 342,
+        "height": 45.5
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "foreground": "rgb(230, 237, 243)",
+      "background": "rgba(0, 0, 0, 0)",
+      "id": "empty-390",
+      "sourceHtmlSha256": "a334d6613cf2fd43c2a422082e73bbed574745ed9d783cb63383305fda388f9f",
+      "raw": "empty-390-raw.png",
+      "rawSha256": "4bc74ce28ff8f26c8a33445b2312f2d6bf82cd4cd44384cfd63aae0bafd737e2",
+      "boundary": "empty-390-boundary-3px.png",
+      "boundarySha256": "87feaab88c258f6019d28ad7181801f8bbac8fe59e4131b638b21b38adc40c4b",
+      "exactRestoration": true
+    },
+    {
+      "selector": "[data-testid=\"cost-badge\"]",
+      "label": "G: partial known cost declares coverage",
+      "text": "known cost: $0.01 (3/4 steps)",
+      "rect": {
+        "x": 24,
+        "y": 205.28125,
+        "width": 179.390625,
+        "height": 28
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "foreground": "rgb(230, 237, 243)",
+      "background": "rgb(22, 27, 34)",
+      "id": "mixed-cost-390",
+      "sourceHtmlSha256": "e72bf47d059d9b5f05e7c8892f13031ef963faf03e0a6d21ee3380b800cbdb45",
+      "raw": "mixed-cost-390-raw.png",
+      "rawSha256": "d1f8e3dfe4d110ac6e5b66743b6d290d510156d44e06fcc57596ca1546fbc2b4",
+      "boundary": "mixed-cost-390-boundary-3px.png",
+      "boundarySha256": "70a1c15696ef662d3586e8b572dc2c37fe2c9dadd184673dbf2fc09aeffd9172",
+      "exactRestoration": true
+    },
+    {
+      "selector": "[data-testid=\"needs-review\"]",
+      "label": "E: unresolved evidence label is readable",
+      "text": "NEEDS REVIEW",
+      "rect": {
+        "x": 1041.328125,
+        "y": 480.78125,
+        "width": 91.671875,
+        "height": 22.5
+      },
+      "scroll": {
+        "x": 0,
+        "y": 921
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "foreground": "rgb(14, 17, 22)",
+      "background": "rgb(210, 153, 34)",
+      "id": "accounting-1440",
+      "sourceHtmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5",
+      "raw": "accounting-1440-raw.png",
+      "rawSha256": "fbe95bddce0b089e29ae4f920b2583c171c4982163cf2fb23539b52cb6bcf3b4",
+      "boundary": "accounting-1440-boundary-3px.png",
+      "boundarySha256": "5026d377a77570cb410f0b694cfea8ede063c776a83c459ab48e22e8bebe7a12",
+      "exactRestoration": true
+    },
+    {
+      "selector": "[data-section=\"artifacts\"]",
+      "label": "F: empty artifact section explains absence",
+      "text": "Artifactsno artifacts produced",
+      "rect": {
+        "x": 294,
+        "y": 257.78125,
+        "width": 852,
+        "height": 45.5
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "foreground": "rgb(230, 237, 243)",
+      "background": "rgba(0, 0, 0, 0)",
+      "id": "empty-1440",
+      "sourceHtmlSha256": "a334d6613cf2fd43c2a422082e73bbed574745ed9d783cb63383305fda388f9f",
+      "raw": "empty-1440-raw.png",
+      "rawSha256": "b3045580bf4e2c972ce7ada8e2352119e34883c73bc64a35a27d4d378667a9b1",
+      "boundary": "empty-1440-boundary-3px.png",
+      "boundarySha256": "4eaa02dac898d2b7f2befa5292d741a978137b9df08198f559477495f1e7fa36",
+      "exactRestoration": true
+    },
+    {
+      "selector": "[data-testid=\"cost-badge\"]",
+      "label": "G: partial known cost declares coverage",
+      "text": "known cost: $0.01 (3/4 steps)",
+      "rect": {
+        "x": 457.765625,
+        "y": 136.28125,
+        "width": 179.390625,
+        "height": 28
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "foreground": "rgb(230, 237, 243)",
+      "background": "rgb(22, 27, 34)",
+      "id": "mixed-cost-1440",
+      "sourceHtmlSha256": "e72bf47d059d9b5f05e7c8892f13031ef963faf03e0a6d21ee3380b800cbdb45",
+      "raw": "mixed-cost-1440-raw.png",
+      "rawSha256": "d0ac0471e39c34cb5094e988b181d2bd65534e846bfff0c8281a653a3ac7ac82",
+      "boundary": "mixed-cost-1440-boundary-3px.png",
+      "boundarySha256": "6bdc151c4886ea304cbd008babe6e3e15cce7c77bb55ac2494f07c5928630858",
+      "exactRestoration": true
+    }
+  ],
+  "errors": [],
+  "blocked": [],
+  "closed": true,
+  "mechanism": "Actual saved report reopened from file; temporary native 3 px DOM overlays removed with exact DOM restoration. No product or source mutations."
+}

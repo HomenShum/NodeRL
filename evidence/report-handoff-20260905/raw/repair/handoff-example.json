@@ -1,0 +1,55 @@
+{
+  "exitCode": 0,
+  "seconds": 0.5172076225280762,
+  "command": [
+    "node",
+    "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-report-repair-01\\handoff-example.mjs"
+  ],
+  "cwd": "D:\\VSCode Projects\\cafecorner_nodebench\\nodebench_ai4\\NodeRL",
+  "handoffBeforeFinalStatusSha256": "56e219e60fb8033f83171e12856161e8876fc14c3124bcab4fca0d3ec32b7c7c",
+  "codeBlockSha256": "6857b28922a24ac7767a76f8423b3425f871c42672b7009342f235cfea51026c",
+  "actualOutput": "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-report-repair-01\\handoff-temp\\noderl-review-nO2DU2",
+  "files": [
+    {
+      "path": "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-report-repair-01\\handoff-temp\\noderl-review-nO2DU2\\regression.json",
+      "bytes": 617,
+      "sha256": "24e04f9fe761afe11ccd8e1b3b0085133e487d3624e2a558d04e4d730dd99bfd"
+    },
+    {
+      "path": "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-report-repair-01\\handoff-temp\\noderl-review-nO2DU2\\repair.md",
+      "bytes": 1563,
+      "sha256": "01ab4c9c063033d07623f2d0229eb71d4242e5bba64431930e4cd29b557a2673"
+    },
+    {
+      "path": "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-report-repair-01\\handoff-temp\\noderl-review-nO2DU2\\report.html",
+      "bytes": 7210,
+      "sha256": "31b51b09f12f327a664a5a93f2a85ce0a39e0d029ddd086eaabeaebaddccdefb"
+    },
+    {
+      "path": "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-report-repair-01\\handoff-temp\\noderl-review-nO2DU2\\trace.json",
+      "bytes": 1122,
+      "sha256": "9b9800813fc4cc3d38beca16534a67cc3d5894957b75c74dcf0a66b80d014f8b"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Example produces exactly four real output files",
+      "pass": true
+    },
+    {
+      "name": "Reopened trace/HTML/repair/regression preserve the synthetic failure",
+      "pass": true
+    },
+    {
+      "name": "Derived carried reward agrees across report and repair",
+      "pass": true
+    },
+    {
+      "name": "Unknown cost and needs-review remain explicit",
+      "pass": true
+    }
+  ],
+  "sourceMutation": false,
+  "providerExecution": false,
+  "browserScope": "This recipe generates the same renderer already covered by after-01 browser proof. No separate browser matrix was rerun for the example."
+}

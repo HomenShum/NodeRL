@@ -1,0 +1,800 @@
+{
+  "url": "http://127.0.0.1:4995/long-unicode",
+  "viewport": {
+    "width": 320,
+    "height": 800
+  },
+  "document": {
+    "width": 2349,
+    "height": 3269
+  },
+  "scroll": {
+    "x": 0,
+    "y": 0
+  },
+  "verdict": "verdict: FAIL · total 0.429",
+  "verdictState": "fail",
+  "goal": "Synthetic reviewer – 核对 Δ € 🧾\nLiteral <img src=\"https://example.invalid/canary\" onerror=\"document.body.dataset.injected=1\"> & <script>document.body.dataset.injected=1</script>",
+  "cost": "cost: $0.01",
+  "unscored": "3 unscored: unscored:visualQuality, unscored:costEfficiency, unscored:latencyEfficiency",
+  "needsReview": 1,
+  "images": 0,
+  "injected": null,
+  "active": {
+    "tag": "BODY",
+    "testid": null,
+    "text": "NodeRoom runSynthetic reviewer – 核对 Δ € 🧾\nLiteral <img src=\"https://example.invalid/canary\" onerror=\"document.body.dataset.injected=1\"> & <script>document.body.dataset.injected=1</script>https://example.invalid/synthetic-accounting-roomverdict: FAIL · total 0.429cost: $0.01model: glm-5.2run: SYNTHETIC-FIRST-USE-ACCOUNTING-013 unscored: unscored:visualQuality, unscored:costEfficiency, unscored:latencyEfficiencyUI assertionsPASS a sheet tab labeled 'reconciliation.xlsx' is rendered in the work surfaceobserved: tab 'reconciliation.xlsx' present and activePASS an 'exceptions' tab lists uncleared/unmatched itemsobserved: tab 'exceptions' present with 2 rowsFAIL reconciled ending cash equals the bank statement ending balance (delta = 0.00)observed: reconciled ending cash is off by 412.50 vs bank statementFailure categoriesui_assertion_failedevidence_needs_reviewArtifactssheetartifact_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_reconciliationreopen: OKexport: exports/unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_財務.xlsxAgent tracestep 0 · plan · $0.00 · 640msDraft a 3-step reconciliation plan: locate March bank statement + GL cash export, build a matched-ledger sheet, then verify the ending balance ties.Plan accepted; two source documents are expected in the room's attachments.step 1 · tool · tool: findDocument · $0.00 · 1180msCall findDocument to locate the March bank statement and the GL cash export in the room attachments.Found 'bank-statement-march.pdf' and 'gl-cash-march.csv'; both attached to room RC-MAR-RECON-8271.step 2 · write · tool: writeSheet · $0.01 · 2960msWrite reconciliation.xlsx: import both sources, match cleared items by amount+date, list unmatched items on an exceptions tab.Sheet created with 84 matched rows and 2 exceptions; ending-cash formula wired to the reconciliation tab.step 3 · verify · $0.00 · 900msVerify reconciled ending cash equals the bank statement ending balance and re-open the exported sheet.Reopen OK, but ending cash is off by 412.50 — one exception (check #1042) is unsourced; flagged for review rather than forced to tie.EvidenceMarch bank statement ending balance is 128,540.75source_backedLiteral markup <b>must stay text</b> & Unicode Δ\nSecond quoted line.source: attachment://long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_账簿.pdf#page=3GL cash account ending balance for March is 128,128.25source_backed1000-Cash,03/31,,,128128.25source: attachment://gl-cash-march.csvCheck #1042 for 412.50 is uncleared and explains the reconciliation deltaNEEDS REVIEWno quote suppliedno sourceFocus boxesbeforescreenshot: runs/screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_截图.pngroom-shell empty-artifact-tabs composerduringscreenshot: runs/RC-MAR-RECON-8271/outer/during.pngreconciliation-sheet sheet-tab-reconciliation agent-thinkingafterscreenshot: runs/RC-MAR-RECON-8271/outer/after.pngreconciliation-sheet sheet-tab-exceptions ending-cash-cellDeterministic render of trajectory mtraj_326496295ccea416. Screenshots are paths only (no inlined bytes).",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 3268.78125,
+      "right": 320,
+      "bottom": 3268.78125,
+      "scrollWidth": 2349,
+      "clientWidth": 320
+    }
+  },
+  "targets": [
+    {
+      "tag": "H1",
+      "testid": "room-goal",
+      "className": "nt-room-goal",
+      "text": "Synthetic reviewer – 核对 Δ € 🧾\nLiteral <img src=\"https://example.invalid/canary\" onerror=\"document.body.dataset.injected=1\"> & <script>document.body.dataset.injected=1</script>",
+      "rect": {
+        "x": 24,
+        "y": 44.890625,
+        "width": 272,
+        "height": 198,
+        "right": 296,
+        "bottom": 242.890625,
+        "scrollWidth": 548,
+        "clientWidth": 272
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          14,
+          17,
+          22
+        ],
+        "ratio": 16.00494193356617,
+        "fontSize": "22px",
+        "fontWeight": "700"
+      }
+    },
+    {
+      "tag": "A",
+      "testid": "room-url",
+      "className": "nt-room-url",
+      "text": "https://example.invalid/synthetic-accounting-room",
+      "rect": {
+        "x": 24,
+        "y": 249.28125,
+        "width": 265.359375,
+        "height": 38,
+        "right": 289.359375,
+        "bottom": 287.28125,
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "contrast": {
+        "foreground": "rgb(88, 166, 255)",
+        "background": [
+          14,
+          17,
+          22
+        ],
+        "ratio": 7.486625079315586,
+        "fontSize": "13px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "verdict-badge",
+      "className": "nt-badge nt-verdict-badge nt-verdict-fail",
+      "text": "verdict: FAIL · total 0.429",
+      "rect": {
+        "x": 24,
+        "y": 322.28125,
+        "width": 155.765625,
+        "height": 28,
+        "right": 179.765625,
+        "bottom": 350.28125,
+        "scrollWidth": 154,
+        "clientWidth": 154
+      },
+      "contrast": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": [
+          248,
+          81,
+          73
+        ],
+        "ratio": 3.3522381389977385,
+        "fontSize": "12px",
+        "fontWeight": "600"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "cost-badge",
+      "className": "nt-badge nt-cost-badge",
+      "text": "cost: $0.01",
+      "rect": {
+        "x": 187.765625,
+        "y": 322.28125,
+        "width": 78.234375,
+        "height": 28,
+        "right": 266,
+        "bottom": 350.28125,
+        "scrollWidth": 76,
+        "clientWidth": 76
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "12px",
+        "fontWeight": "600"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "unscored-badge",
+      "className": "nt-badge nt-unscored-badge",
+      "text": "3 unscored: unscored:visualQuality, unscored:costEfficiency, unscored:latencyEfficiency",
+      "rect": {
+        "x": 24,
+        "y": 430.28125,
+        "width": 272,
+        "height": 64,
+        "right": 296,
+        "bottom": 494.28125,
+        "scrollWidth": 270,
+        "clientWidth": 270
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "12px",
+        "fontWeight": "600"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": "ui-assertion",
+      "className": "nt-artifact-tab",
+      "text": "PASS a sheet tab labeled 'reconciliation.xlsx' is rendered in the work surfaceobserved: tab 'reconciliation.xlsx' present and active",
+      "rect": {
+        "x": 24,
+        "y": 545.78125,
+        "width": 272,
+        "height": 113.5,
+        "right": 296,
+        "bottom": 659.28125,
+        "scrollWidth": 270,
+        "clientWidth": 270
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "13px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-artifact-export",
+      "text": "observed: tab 'reconciliation.xlsx' present and active",
+      "rect": {
+        "x": 37,
+        "y": 617.28125,
+        "width": 246,
+        "height": 33,
+        "right": 283,
+        "bottom": 650.28125,
+        "scrollWidth": 246,
+        "clientWidth": 246
+      },
+      "contrast": {
+        "foreground": "rgb(139, 148, 158)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.624016439464753,
+        "fontSize": "11px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": "ui-assertion",
+      "className": "nt-artifact-tab",
+      "text": "PASS an 'exceptions' tab lists uncleared/unmatched itemsobserved: tab 'exceptions' present with 2 rows",
+      "rect": {
+        "x": 24,
+        "y": 659.28125,
+        "width": 272,
+        "height": 77.5,
+        "right": 296,
+        "bottom": 736.78125,
+        "scrollWidth": 270,
+        "clientWidth": 270
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "13px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-artifact-export",
+      "text": "observed: tab 'exceptions' present with 2 rows",
+      "rect": {
+        "x": 37,
+        "y": 711.28125,
+        "width": 246,
+        "height": 16.5,
+        "right": 283,
+        "bottom": 727.78125,
+        "scrollWidth": 246,
+        "clientWidth": 246
+      },
+      "contrast": {
+        "foreground": "rgb(139, 148, 158)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.624016439464753,
+        "fontSize": "11px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": "ui-assertion",
+      "className": "nt-artifact-tab",
+      "text": "FAIL reconciled ending cash equals the bank statement ending balance (delta = 0.00)observed: reconciled ending cash is off by 412.50 vs bank statement",
+      "rect": {
+        "x": 24,
+        "y": 736.78125,
+        "width": 272,
+        "height": 113.5,
+        "right": 296,
+        "bottom": 850.28125,
+        "scrollWidth": 270,
+        "clientWidth": 270
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "13px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-artifact-export",
+      "text": "observed: reconciled ending cash is off by 412.50 vs bank statement",
+      "rect": {
+        "x": 37,
+        "y": 808.28125,
+        "width": 246,
+        "height": 33,
+        "right": 283,
+        "bottom": 841.28125,
+        "scrollWidth": 246,
+        "clientWidth": 246
+      },
+      "contrast": {
+        "foreground": "rgb(139, 148, 158)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.624016439464753,
+        "fontSize": "11px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "failure-category",
+      "className": "nt-badge nt-verdict-fail",
+      "text": "ui_assertion_failed",
+      "rect": {
+        "x": 24,
+        "y": 901.78125,
+        "width": 121.796875,
+        "height": 28,
+        "right": 145.796875,
+        "bottom": 929.78125,
+        "scrollWidth": 120,
+        "clientWidth": 120
+      },
+      "contrast": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": [
+          248,
+          81,
+          73
+        ],
+        "ratio": 3.3522381389977385,
+        "fontSize": "12px",
+        "fontWeight": "600"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "failure-category",
+      "className": "nt-badge nt-verdict-fail",
+      "text": "evidence_needs_review",
+      "rect": {
+        "x": 24,
+        "y": 937.78125,
+        "width": 147.734375,
+        "height": 28,
+        "right": 171.734375,
+        "bottom": 965.78125,
+        "scrollWidth": 146,
+        "clientWidth": 146
+      },
+      "contrast": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": [
+          248,
+          81,
+          73
+        ],
+        "ratio": 3.3522381389977385,
+        "fontSize": "12px",
+        "fontWeight": "600"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-artifact-tab",
+      "text": "sheetartifact_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_reconciliationreopen: OKexport: exports/unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_財務.xlsx",
+      "rect": {
+        "x": 24,
+        "y": 1017.28125,
+        "width": 2085.546875,
+        "height": 95,
+        "right": 2109.546875,
+        "bottom": 1112.28125,
+        "scrollWidth": 2084,
+        "clientWidth": 2084
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "13px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "reopen-ok",
+      "className": "nt-reopen nt-reopen-ok",
+      "text": "reopen: OK",
+      "rect": {
+        "x": 1469.015625,
+        "y": 1029.28125,
+        "width": 54.546875,
+        "height": 15,
+        "right": 1523.5625,
+        "bottom": 1044.28125,
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "contrast": {
+        "foreground": "rgb(46, 160, 67)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.1281793795711295,
+        "fontSize": "11px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-artifact-export",
+      "text": "export: exports/unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_財務.xlsx",
+      "rect": {
+        "x": 37,
+        "y": 1051.78125,
+        "width": 2059.546875,
+        "height": 51.5,
+        "right": 2096.546875,
+        "bottom": 1103.28125,
+        "scrollWidth": 2060,
+        "clientWidth": 2060
+      },
+      "contrast": {
+        "foreground": "rgb(139, 148, 158)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.624016439464753,
+        "fontSize": "11px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": null,
+      "className": "nt-evidence-flag nt-status-source_backed",
+      "text": "source_backed",
+      "rect": {
+        "x": 193.59375,
+        "y": 2059.28125,
+        "width": 89.40625,
+        "height": 22.5,
+        "right": 283,
+        "bottom": 2081.78125,
+        "scrollWidth": 87,
+        "clientWidth": 87
+      },
+      "contrast": {
+        "foreground": "rgb(46, 160, 67)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.1281793795711295,
+        "fontSize": "11px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-evidence-source",
+      "text": "source: attachment://long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_账簿.pdf#page=3",
+      "rect": {
+        "x": 37,
+        "y": 2213.28125,
+        "width": 246,
+        "height": 58,
+        "right": 283,
+        "bottom": 2271.28125,
+        "scrollWidth": 2312,
+        "clientWidth": 246
+      },
+      "contrast": {
+        "foreground": "rgb(139, 148, 158)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.624016439464753,
+        "fontSize": "12px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": null,
+      "className": "nt-evidence-flag nt-status-source_backed",
+      "text": "source_backed",
+      "rect": {
+        "x": 193.59375,
+        "y": 2305.28125,
+        "width": 89.40625,
+        "height": 22.5,
+        "right": 283,
+        "bottom": 2327.78125,
+        "scrollWidth": 87,
+        "clientWidth": 87
+      },
+      "contrast": {
+        "foreground": "rgb(46, 160, 67)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.1281793795711295,
+        "fontSize": "11px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-evidence-source",
+      "text": "source: attachment://gl-cash-march.csv",
+      "rect": {
+        "x": 37,
+        "y": 2417.28125,
+        "width": 246,
+        "height": 40,
+        "right": 283,
+        "bottom": 2457.28125,
+        "scrollWidth": 246,
+        "clientWidth": 246
+      },
+      "contrast": {
+        "foreground": "rgb(139, 148, 158)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.624016439464753,
+        "fontSize": "12px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "needs-review",
+      "className": "nt-evidence-flag nt-needs-review",
+      "text": "NEEDS REVIEW",
+      "rect": {
+        "x": 191.328125,
+        "y": 2491.28125,
+        "width": 91.671875,
+        "height": 22.5,
+        "right": 283,
+        "bottom": 2513.78125,
+        "scrollWidth": 90,
+        "clientWidth": 90
+      },
+      "contrast": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": [
+          210,
+          153,
+          34
+        ],
+        "ratio": 2.524062922602352,
+        "fontSize": "11px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-focus-path",
+      "text": "screenshot: runs/screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_截图.png",
+      "rect": {
+        "x": 37,
+        "y": 2707.28125,
+        "width": 246,
+        "height": 58,
+        "right": 283,
+        "bottom": 2765.28125,
+        "scrollWidth": 1995,
+        "clientWidth": 246
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "12px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-focus-path",
+      "text": "screenshot: runs/RC-MAR-RECON-8271/outer/during.png",
+      "rect": {
+        "x": 37,
+        "y": 2864.78125,
+        "width": 246,
+        "height": 40,
+        "right": 283,
+        "bottom": 2904.78125,
+        "scrollWidth": 246,
+        "clientWidth": 246
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "12px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-focus-path",
+      "text": "screenshot: runs/RC-MAR-RECON-8271/outer/after.png",
+      "rect": {
+        "x": 37,
+        "y": 3028.78125,
+        "width": 246,
+        "height": 40,
+        "right": 283,
+        "bottom": 3068.78125,
+        "scrollWidth": 246,
+        "clientWidth": 246
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "12px",
+        "fontWeight": "400"
+      }
+    }
+  ],
+  "overflow": [
+    {
+      "tag": "DIV",
+      "className": "nt-artifact-tab",
+      "text": "sheetartifact_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_reconciliationreopen: OKexport: exports/unbroken_reference_unbroke",
+      "rect": {
+        "x": 24,
+        "y": 1017.28125,
+        "width": 2085.546875,
+        "height": 95,
+        "right": 2109.546875,
+        "bottom": 1112.28125,
+        "scrollWidth": 2084,
+        "clientWidth": 2084
+      }
+    },
+    {
+      "tag": "SPAN",
+      "className": "nt-artifact-id",
+      "text": "artifact_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_reconciliation",
+      "rect": {
+        "x": 85.546875,
+        "y": 1030.28125,
+        "width": 1375.46875,
+        "height": 15,
+        "right": 1461.015625,
+        "bottom": 1045.28125,
+        "scrollWidth": 0,
+        "clientWidth": 0
+      }
+    },
+    {
+      "tag": "SPAN",
+      "className": "nt-reopen nt-reopen-ok",
+      "text": "reopen: OK",
+      "rect": {
+        "x": 1469.015625,
+        "y": 1029.28125,
+        "width": 54.546875,
+        "height": 15,
+        "right": 1523.5625,
+        "bottom": 1044.28125,
+        "scrollWidth": 0,
+        "clientWidth": 0
+      }
+    },
+    {
+      "tag": "DIV",
+      "className": "nt-artifact-export",
+      "text": "export: exports/unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_ref",
+      "rect": {
+        "x": 37,
+        "y": 1051.78125,
+        "width": 2059.546875,
+        "height": 51.5,
+        "right": 2096.546875,
+        "bottom": 1103.28125,
+        "scrollWidth": 2060,
+        "clientWidth": 2060
+      }
+    },
+    {
+      "tag": "CODE",
+      "className": "",
+      "text": "exports/unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_u",
+      "rect": {
+        "x": 37,
+        "y": 1071.28125,
+        "width": 2059.546875,
+        "height": 29.5,
+        "right": 2096.546875,
+        "bottom": 1100.78125,
+        "scrollWidth": 0,
+        "clientWidth": 0
+      }
+    },
+    {
+      "tag": "SPAN",
+      "className": "nt-evidence-url",
+      "text": "attachment://long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_r",
+      "rect": {
+        "x": 37,
+        "y": 2235.28125,
+        "width": 2311.578125,
+        "height": 34,
+        "right": 2348.578125,
+        "bottom": 2269.28125,
+        "scrollWidth": 0,
+        "clientWidth": 0
+      }
+    },
+    {
+      "tag": "CODE",
+      "className": "",
+      "text": "runs/screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_scree",
+      "rect": {
+        "x": 37,
+        "y": 2729.28125,
+        "width": 1994.734375,
+        "height": 34,
+        "right": 2031.734375,
+        "bottom": 2763.28125,
+        "scrollWidth": 0,
+        "clientWidth": 0
+      }
+    }
+  ],
+  "bodyText": "NODEROOM RUN\nSynthetic reviewer – 核对 Δ € 🧾 Literal <img src=\"https://example.invalid/canary\" onerror=\"document.body.dataset.injected=1\"> & <script>document.body.dataset.injected=1</script>\nhttps://example.invalid/synthetic-accounting-room\nverdict: FAIL · total 0.429\ncost: $0.01\nmodel: glm-5.2\nrun: SYNTHETIC-FIRST-USE-ACCOUNTING-01\n3 unscored: unscored:visualQuality, unscored:costEfficiency, unscored:latencyEfficiency\nUI ASSERTIONS\nPASS a sheet tab labeled 'reconciliation.xlsx' is rendered in the work surface\nobserved: tab 'reconciliation.xlsx' present and active\nPASS an 'exceptions' tab lists uncleared/unmatched items\nobserved: tab 'exceptions' present with 2 rows\nFAIL reconciled ending cash equals the bank statement ending balance (delta = 0.00)\nobserved: reconciled ending cash is off by 412.50 vs bank statement\nFAILURE CATEGORIES\nui_assertion_failed\nevidence_needs_review\nARTIFACTS\nSHEETartifact_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_月末核对_reconciliationreopen: OK\nexport: exports/unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_unbroken_reference_財務.xlsx\nAGENT TRACE\nSTEP 0 · PLAN · $0.00 · 640MS\nDraft a 3-step reconciliation plan: locate March bank statement + GL cash export, build a matched-ledger sheet, then verify the ending balance ties.\nPlan accepted; two source documents are expected in the room's attachments.\nSTEP 1 · TOOL · TOOL: FINDDOCUMENT · $0.00 · 1180MS\nCall findDocument to locate the March bank statement and the GL cash export in the room attachments.\nFound 'bank-statement-march.pdf' and 'gl-cash-march.csv'; both attached to room RC-MAR-RECON-8271.\nSTEP 2 · WRITE · TOOL: WRITESHEET · $0.01 · 2960MS\nWrite reconciliation.xlsx: import both sources, match cleared items by amount+date, list unmatched items on an exceptions tab.\nSheet created with 84 matched rows and 2 exceptions; ending-cash formula wired to the reconciliation tab.\nSTEP 3 · VERIFY · $0.00 · 900MS\nVerify reconciled ending cash equals the bank statement ending balance and re-open the exported sheet.\nReopen OK, but ending cash is off by 412.50 — one exception (check #1042) is unsourced; flagged for review rather than forced to tie.\nEVIDENCE\nMarch bank statement ending balance is 128,540.75\nsource_backed\nLiteral markup <b>must stay text</b> & Unicode Δ Second quoted line.\nsource: attachment://long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_long_source_reference_账簿.pdf#page=3\nGL cash account ending balance for March is 128,128.25\nsource_backed\n1000-Cash,03/31,,,128128.25\nsource: attachment://gl-cash-march.csv\nCheck #1042 for 412.50 is uncleared and explains the reconciliation delta\nNEEDS REVIEW\nno quote supplied\nno source\nFOCUS BOXES\nBEFORE\nscreenshot: runs/screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_截图.png\nroom-shell\nempty-artifact-tabs\ncomposer\nDURING\nscreenshot: runs/RC-MAR-RECON-8271/outer/during.png\nreconciliation-sheet\nsheet-tab-reconciliation\nagent-thinking\nAFTER\nscreenshot: runs/RC-MAR-RECON-8271/outer/after.png\nreconciliation-sheet\nsheet-tab-exceptions\nending-cash-cell\nDeterministic render of trajectory mtraj_326496295ccea416. Screenshots are paths only (no inlined bytes).",
+  "fonts": {
+    "status": "loaded"
+  },
+  "motion": false
+}

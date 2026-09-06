@@ -1,0 +1,15 @@
+{
+  "selector": "[data-testid=\"cost-badge\"]",
+  "label": "C: missing cost is explicitly not recorded",
+  "rect": {
+    "x": 389.984375,
+    "y": 136.28125,
+    "width": 121.015625,
+    "height": 28
+  },
+  "raw": "before-absent-cost-1440-raw.png",
+  "annotated": "before-absent-cost-1440-boundary-3px.png",
+  "sourceHtmlSha256": "736373abfa0e8262b4f845b531f1a7101b82067bb0dc9b3710f60f99691cc0d0",
+  "mechanism": "Temporary 3 px native DOM overlay on actual unchanged report; no product/source style changes; exact page.content restoration.",
+  "untouched": "All report content, totals, data, native layout, and source HTML outside the temporary overlay remain unchanged."
+}

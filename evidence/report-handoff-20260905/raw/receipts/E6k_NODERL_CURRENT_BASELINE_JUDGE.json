@@ -1,0 +1,278 @@
+{
+  "status": "APPROVED_UNCHANGED_LOCAL_BASELINE",
+  "request": "Independently verify finite NodeRL baseline logs, counts, source/Git preservation and ci audit signal without rerunning.",
+  "candidate": "D:\\VSCode Projects\\cafecorner_nodebench\\nodebench_ai4\\NodeRL",
+  "head": "4b06939b8fd9121e2ba73887df2dd799eae2f1aa",
+  "tree": "a1e3237e6314e719e65b1c4a0d3e0a5160188fc4",
+  "preservedOldTip": "dc4d66824fd1c05050ae999634ab0225137d4672",
+  "recoveryRef": "refs/heads/codex/recovery-noderl-main-20260905",
+  "checks": [
+    {
+      "name": "Baseline receipt exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "All 101 source hashes exact before and after",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Exact main and target tree",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Old main named ref preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Only intended main move and preservation ref added",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Single worktree and clean status",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "101 stage-zero index entries match exact commit modes/blobs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Current source equals commit modulo Git checkout line endings",
+      "pass": true,
+      "detail": {
+        "rawIdenticalFiles": 2,
+        "total": 101,
+        "rawWorkingFrozenSeparately": true
+      }
+    },
+    {
+      "name": "Recorded command head-before",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command branch-before",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command status-before",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command remote-current",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command preserve-old-tip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command exact-fast-forward",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command head-after",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command tree-after",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command source-paths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command normal-ci",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command normal-tests",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command normal-typecheck",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command normal-demo",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command status-final",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Recorded command preserved-old-final",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Preservation occurred before exact ordinary fast-forward",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Native TAP actually reports 16 file-level passes with no skipped/failing tests",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Normal npm ci actual audit signal preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Demo retains exact failed assertions and needs-review regression",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Typecheck is unchanged configured command",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Expected detector negative-control failures not hidden",
+      "pass": true,
+      "detail": {
+        "limitation": "Historical detector premise remains false for generated HTML. These expected fixture failures are successful negative controls, not actual current report/browser acceptance."
+      }
+    }
+  ],
+  "checksPassed": 29,
+  "sourceFiles": 101,
+  "sourceWorkingBytesUnchanged": true,
+  "indexStage0MatchesCommit": true,
+  "rawWorkingFilesEqualGit": 2,
+  "commands": [
+    {
+      "name": "normal-ci",
+      "argv": [
+        "C:/nvm4w/nodejs/node.exe",
+        "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+        "ci"
+      ],
+      "exitCode": 0,
+      "seconds": 1.75,
+      "stdoutSha256": "6168d1e0eb9bc52c45886a3b7aa9bf693ba964021ab877a8f06270e245b0d8a0",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "normal-tests",
+      "argv": [
+        "C:/nvm4w/nodejs/node.exe",
+        "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+        "test"
+      ],
+      "exitCode": 0,
+      "seconds": 6.89,
+      "stdoutSha256": "4e88b2ffa57ee08ff405f68816f88cdc4e7e589d0412b761b41e82dfeb65b58e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "normal-typecheck",
+      "argv": [
+        "C:/nvm4w/nodejs/node.exe",
+        "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "seconds": 7.781,
+      "stdoutSha256": "2eaf80bc4878add206f78acd487fc389b151321f177900f688e9d9590db29fd4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "normal-demo",
+      "argv": [
+        "C:/nvm4w/nodejs/node.exe",
+        "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "demo"
+      ],
+      "exitCode": 0,
+      "seconds": 0.329,
+      "stdoutSha256": "38bf7bf5e8fc2e5aa17820e52e3f23d13196e5759a17a59f607e9520e1d72329",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "testCountMeaning": "16 native Node test-runner file-level cases; those files include separately printed scenario/assertion observations. Do not label every printed assertion as a distinct TAP test.",
+  "nativeTests": {
+    "pass": 16,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "todo": 0,
+    "files": [
+      "packages\\\\nodeeval\\\\test\\\\accounting_arApAging.test.ts",
+      "packages\\\\nodeeval\\\\test\\\\accounting_bankReconciliation.test.ts",
+      "packages\\\\nodeeval\\\\test\\\\accounting_cashFlowIndirect.test.ts",
+      "packages\\\\nodeeval\\\\test\\\\accounting_journalEntry.test.ts",
+      "packages\\\\nodeeval\\\\test\\\\accounting_oracleTypes.test.ts",
+      "packages\\\\nodeeval\\\\test\\\\accounting_trialBalance.test.ts",
+      "packages\\\\nodetrace\\\\test\\\\guards.test.ts",
+      "packages\\\\nodetrace\\\\test\\\\merged.test.ts",
+      "packages\\\\nodetrace\\\\test\\\\mergedReward.test.ts",
+      "packages\\\\nodetrace\\\\test\\\\pipeline.test.ts",
+      "packages\\\\nodetrace\\\\test\\\\repair.test.ts",
+      "packages\\\\nodetrace\\\\test\\\\storybook.test.ts",
+      "packages\\\\nodetrace\\\\test\\\\trajectory.test.ts",
+      "test\\\\citations.test.ts",
+      "test\\\\entrypoints.test.ts",
+      "test\\\\renderedSurfaceProbe.test.ts"
+    ],
+    "runnerDurationMs": 6437.1392
+  },
+  "npmCiAudit": {
+    "addedPackages": 19,
+    "auditedPackages": 23,
+    "reportedVulnerabilities": 0,
+    "scope": "npm ci printed audit summary at that run. No separate full/production audit, exploit proof or audit rerun by reviewer."
+  },
+  "demo": {
+    "classification": "Historical recorded-run replay through local merge/repair APIs; no current agent, provider, browser or benchmark execution.",
+    "failedAssertions": 2,
+    "needsReviewClaims": 1,
+    "verdict": "FAIL",
+    "displayedPartialReward": 0.171,
+    "embeddedAndStandaloneRegressionEqual": true
+  },
+  "limitations": [
+    "Generated report, real reopened caller artifacts and native visual/responsive/interaction/accessibility proof remain NOT_RUN.",
+    "The passing no-surface test is an existing applicability false negative for TypeScript-generated HTML; five fixture failure messages are expected negative controls, not new product failures.",
+    "One accounting helper test explicitly preserves vacuous empty-check pass/score=1 convention. This is not proof of an empty real user task succeeding; next artifact proof must retain empty/UNVERIFIED semantics at the rendered report.",
+    "Git LF/CRLF fixture warnings are retained; frozen working bytes, semantic index identity and raw Git identities are distinguished.",
+    "Normal CI, handoff/source repair, installed package, training, providers, durable storage, production and all full grades remain separate."
+  ],
+  "fullGrades": null,
+  "overallGrade": null,
+  "target": 4.5,
+  "blockers": [],
+  "guard": "CLOSED",
+  "rawEvidence": {
+    "directory": "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-current-baseline-judge-01",
+    "manifestSha256": "bd170ebf68026a92046e7bf85fd67478c510ec89a6a42fafa983336f8e589b20",
+    "files": 45,
+    "bytes": 117065
+  }
+}

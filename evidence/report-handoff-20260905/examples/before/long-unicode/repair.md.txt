@@ -1,0 +1,45 @@
+# Repair prompt — Synthetic reviewer – 核对 Δ € 🧾
+Literal <img src="https://example.invalid/canary" onerror="document.body.dataset.injected=1"> & <script>document.body.dataset.injected=1</script>
+
+- trajectory: `mtraj_326496295ccea416`  ·  run: `SYNTHETIC-FIRST-USE-ACCOUNTING-01`
+- verdict: **FAIL**  ·  total reward: 0.429
+- failure categories: ui_assertion_failed, evidence_needs_review
+
+## What failed (ground truth — do NOT guess)
+- **assert-ending-cash-ties** — expected: reconciled ending cash equals the bank statement ending balance (delta = 0.00) · observed: reconciled ending cash is off by 412.50 vs bank statement
+
+## Evidence
+- screenshots: before=runs/screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_screen_reference_截图.png, during=runs/RC-MAR-RECON-8271/outer/during.png, after=runs/RC-MAR-RECON-8271/outer/after.png
+- **needs_review (unsourced) claims — resolve with a real source or drop:**
+  - Check #1042 for 412.50 is uncleared and explains the reconciliation delta
+
+## Your task
+1. Trace each failed assertion to its root cause (read the failing step + artifact; do not fabricate).
+2. Propose the SMALLEST shared fix that makes the failed assertion(s) pass — never a per-task patch.
+3. Resolve every needs_review claim with a real source, or remove it.
+4. Add the regression below so this failure cannot silently return.
+
+## Regression to add
+```json
+{
+  "id": "regression_mtraj_326496295ccea416",
+  "fromTrajectory": "mtraj_326496295ccea416",
+  "userGoal": "Synthetic reviewer – 核对 Δ € 🧾\nLiteral <img src=\"https://example.invalid/canary\" onerror=\"document.body.dataset.injected=1\"> & <script>document.body.dataset.injected=1</script>",
+  "failedAssertions": [
+    {
+      "id": "assert-ending-cash-ties",
+      "expected": "reconciled ending cash equals the bank statement ending balance (delta = 0.00)",
+      "observed": "reconciled ending cash is off by 412.50 vs bank statement",
+      "passed": false
+    }
+  ],
+  "failureCategories": [
+    "ui_assertion_failed",
+    "evidence_needs_review"
+  ],
+  "needsReviewClaims": [
+    "Check #1042 for 412.50 is uncleared and explains the reconciliation delta"
+  ],
+  "expectation": "Re-running \"Synthetic reviewer – 核对 Δ € 🧾\nLiteral <img src=\"https://example.invalid/canary\" onerror=\"document.body.dataset.injected=1\"> & <script>document.body.dataset.injected=1</script>\" must make these 1 assertion(s) pass: assert-ending-cash-ties"
+}
+```

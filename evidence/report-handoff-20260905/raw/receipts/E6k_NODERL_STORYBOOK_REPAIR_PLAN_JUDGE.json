@@ -1,0 +1,392 @@
+{
+  "name": "NODERL-STORYBOOK-FIRST-USE-AND-PLAN-JUDGE-01",
+  "at": "2026-09-06T00:09:24.967464+00:00",
+  "mode": "Builder / independent nonauthor judge",
+  "status": "APPROVED_MINIMAL_FOUR_OWNER_REPAIR_PLAN_WITH_BOUND_ADDENDUM",
+  "sourceGuard": "CLOSED",
+  "firstUseVerdict": "OBSERVED_WITH_REPRODUCED_BLOCKERS; NOT_SAFE_FOR_UNGUARDED_REPORT_HANDOFF",
+  "source": {
+    "head": "4b06939b8fd9121e2ba73887df2dd799eae2f1aa",
+    "tree": "a1e3237e6314e719e65b1c4a0d3e0a5160188fc4",
+    "workingFilesVerifiedUnchanged": 101,
+    "originalIndexProofMeaning": "git ls-files --stage entries, not original raw .git/index bytes. Judge additionally confirms raw current index unchanged during this review.",
+    "lineEndingLimit": "Working raw hashes remain distinct from the canonical Git blobs where normal CRLF/LF conversion applies; no raw-Git equality claim."
+  },
+  "inputs": {
+    "receiptSha256": "d6ecabdb71ad1bf5f26b0db7bb0397a3e34519b7155582e22aa792f8fe4d682a",
+    "manifestSha256": "c1f18d78c4ca78d963c2f51be70faf1f7df038ffbf27928a2e49ff59c6b618b7",
+    "manifestFiles": 242,
+    "manifestBytes": 12302996,
+    "planSha256": "52a55e14a9006dfce2e3a05744c523829d3c3d95bd1895964498e6eb0e7aaf44",
+    "addendumSha256": "e258bf49f46ee37ebcae6bffaddcbed6c1b134580aea825af25dfbc3c0e5636a"
+  },
+  "actualFirstUse": {
+    "semanticPassed": 98,
+    "semanticChecks": 99,
+    "separateMixedCostPassed": 0,
+    "separateMixedCostChecks": 1,
+    "browserPassed": 129,
+    "browserChecks": 145,
+    "browserCells": 30,
+    "mainBrowserPngs": 77,
+    "allPngs": 90,
+    "nativeFileReopenPassed": 3,
+    "nativeFileReopenChecks": 3,
+    "judgeViewedPngs": 15,
+    "actualSavedReportBundlesReopenedByJudge": 11,
+    "currentListen4995": false,
+    "executedAgentOrProvider": false,
+    "realWorkbookOrScreenshotRefsVerified": false,
+    "packageUse": "Public source-workspace exports; no installed tarball/CLI certification."
+  },
+  "checks": [
+    {
+      "name": "exact_receipt_manifest_plan_addendum",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_242_raw_artifact_bindings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "complete_original_evidence_pathset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_90_pngs_bound",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "101_current_source_working_bytes_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "head_tree_refs_index_entries_and_clean_status_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "98_of_99_semantic_and_separate_mixed_failure_honest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "129_of_145_browser_failures_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "30_cells_77_captures_all_bound",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_11_real_saved_report_bundles_reopened",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "each_rendered_cell_matches_its_actual_saved_html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual_native_uri_canary_and_original_href_agree",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved_unknown_and_zero_and_partial_cost_counterexamples",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "12_actual_overflow_failures_match_7_pairs_and_specials",
+      "passed": true,
+      "detail": [
+        {
+          "name": "long-unicode-320x800-normal: no document horizontal overflow",
+          "pass": false,
+          "actual": {
+            "viewport": 320,
+            "document": 2349
+          }
+        },
+        {
+          "name": "long-unicode-360x800-normal: no document horizontal overflow",
+          "pass": false,
+          "actual": {
+            "viewport": 360,
+            "document": 2349
+          }
+        },
+        {
+          "name": "long-unicode-390x844-normal: no document horizontal overflow",
+          "pass": false,
+          "actual": {
+            "viewport": 390,
+            "document": 2349
+          }
+        },
+        {
+          "name": "long-unicode-768x1024-normal: no document horizontal overflow",
+          "pass": false,
+          "actual": {
+            "viewport": 768,
+            "document": 2349
+          }
+        },
+        {
+          "name": "long-unicode-1024x768-normal: no document horizontal overflow",
+          "pass": false,
+          "actual": {
+            "viewport": 1024,
+            "document": 2411
+          }
+        },
+        {
+          "name": "long-unicode-1440x960-normal: no document horizontal overflow",
+          "pass": false,
+          "actual": {
+            "viewport": 1440,
+            "document": 2619
+          }
+        },
+        {
+          "name": "long-unicode-1920x1080-normal: no document horizontal overflow",
+          "pass": false,
+          "actual": {
+            "viewport": 1920,
+            "document": 2859
+          }
+        },
+        {
+          "name": "accounting-390x844-text200: no document horizontal overflow",
+          "pass": false,
+          "actual": {
+            "viewport": 390,
+            "document": 499
+          }
+        },
+        {
+          "name": "long-unicode-390x844-text200: no document horizontal overflow",
+          "pass": false,
+          "actual": {
+            "viewport": 390,
+            "document": 4660
+          }
+        },
+        {
+          "name": "long-unicode-390x844-reduced: no document horizontal overflow",
+          "pass": false,
+          "actual": {
+            "viewport": 390,
+            "document": 2349
+          }
+        },
+        {
+          "name": "long-unicode-1440x960-text200: no document horizontal overflow",
+          "pass": false,
+          "actual": {
+            "viewport": 1440,
+            "document": 4930
+          }
+        },
+        {
+          "name": "long-unicode-1440x960-reduced: no document horizontal overflow",
+          "pass": false,
+          "actual": {
+            "viewport": 1440,
+            "document": 2619
+          }
+        }
+      ]
+    },
+    {
+      "name": "two_measured_status_contrasts_independently_recomputed",
+      "passed": true,
+      "detail": [
+        {
+          "name": "FAIL badge: normal small-text contrast at least 4.5",
+          "ratio": 3.3522381389977385
+        },
+        {
+          "name": "NEEDS REVIEW badge: normal small-text contrast at least 4.5",
+          "ratio": 2.524062922602352
+        }
+      ]
+    },
+    {
+      "name": "native_file_reopen_three_checks_and_exact_html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "six_supplemental_boundaries_exact_overlay_restoration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "five_causes_at_one_existing_owner",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "four_owner_plan_bound_and_all_existing_before_hashes_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "after_gate_and_boundary_case_addendum_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "baseline_collector_success_not_misused_as_product_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "collector_port_wording_caveat_explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "closing_source_refs_index_raw_current_index_guard",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original_manifest_and_plan_still_frozen",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "current_read_only_listener_query_no_4995_listener",
+      "passed": true,
+      "detail": {
+        "rows": [],
+        "at": "2026-09-06T00:09:23.9359093Z",
+        "scope": "read-only listener query for port 4995"
+      }
+    }
+  ],
+  "findings": [
+    {
+      "id": "NODERL-REPORT-URI-01",
+      "priority": "P1",
+      "observation": "Native Tab then Enter on the caller-supplied javascript: room URL executes code inside the generated report and changes its heading. The benign canary performed no external request.",
+      "owner": "packages/nodetrace/src/storybook.ts",
+      "line": 77,
+      "cause": "RoomHeaderAtom escapes an HTML attribute but makes every caller URL an active href. Escaping prevents markup injection; it does not prevent navigation to an executable scheme.",
+      "evidence": [
+        "browser/before-script-uri-390-boundary-3px.png",
+        "browser/script-uri-native-focus.json",
+        "browser/script-uri-native-activated.json",
+        "browser/script-uri-native-activated.png"
+      ],
+      "proposal": "At this sole link-rendering seam, parse an absolute URL with the native URL API. Only http: and https: become links; every other/malformed value remains escaped non-interactive text. Preserve trace bytes and all safe URL text. No fetch, redirect service, schema or capture change."
+    },
+    {
+      "id": "NODERL-REPORT-COST-01",
+      "priority": "P1",
+      "observation": "All absent costs display cost: $0.00, identical to recorded zero. Three known costs plus one absent cost display cost: $0.01, identical to a complete explicit-zero control.",
+      "owner": "packages/nodetrace/src/storybook.ts",
+      "line": 158,
+      "cause": "CostBadgeAtom starts its sum at zero and discards presence information when skipping missing/non-finite entries.",
+      "evidence": [
+        "artifacts/semantic-report.json",
+        "artifacts/mixed-cost-report.json",
+        "browser/before-absent-cost-390-boundary-3px.png",
+        "boundary-addendum/mixed-cost-390-boundary-3px.png"
+      ],
+      "proposal": "Count finite recorded cost entries once while summing. No entries: cost not recorded. All entries: preserve cost amount, including explicit zero. Partial entries: label known subtotal and coverage, for example known cost: $0.01 (3/4 steps). No price/provider policy or reward changes."
+    },
+    {
+      "id": "NODERL-REPORT-REFLOW-01",
+      "priority": "P2",
+      "observation": "Long literal artifact/source/screenshot paths make the document wider than every standard viewport. At 390 px it is 2349 px; the ordinary fixture at computed text 200% is 499 px wide.",
+      "owner": "packages/nodetrace/src/storybook.ts",
+      "line": 246,
+      "cause": "Unbreakable caller strings enlarge flex-item automatic minimum widths and overflow inline source/path text; the renderer has no bounded wrapping rule for those owned strings.",
+      "evidence": [
+        "browser/long-unicode-390x844-normal.json",
+        "browser/before-long-artifact-390-boundary-3px.png",
+        "browser/accounting-390x844-text200.json",
+        "browser/accounting-390x844-text200-full.png"
+      ],
+      "proposal": "Allow owned report text to wrap anywhere when necessary and bound artifact flex items to the available width with min-width:0/max-width:100%. Add only a measured same-owner flex wrapping correction if the existing evidence heading still fails. Preserve exact strings and all content; do not hide overflow, truncate, shrink fonts, or introduce a carousel."
+    },
+    {
+      "id": "NODERL-REPORT-CONTRAST-01",
+      "priority": "P2",
+      "observation": "The small white FAIL label on #f85149 measures 3.352238:1; NEEDS REVIEW on #d29922 measures 2.524063:1. Both are below 4.5:1.",
+      "owner": "packages/nodetrace/src/storybook.ts",
+      "line": 242,
+      "cause": "Filled status classes pair white foreground with bright existing backgrounds.",
+      "evidence": [
+        "browser/accounting-1440x960-normal.json",
+        "browser/before-verdict-390-boundary-3px.png",
+        "boundary-addendum/accounting-390-boundary-3px.png"
+      ],
+      "proposal": "Change only foreground colors for the observed filled FAIL/failure-category and NEEDS REVIEW classes to a measured sufficiently dark existing palette color. Preserve wording, meaning, background, borders, and unverified/pass semantics. Verify actual pixels and computed composite contrast; do not claim all accessibility criteria passed."
+    },
+    {
+      "id": "NODERL-REPORT-EMPTY-01",
+      "priority": "P2",
+      "observation": "An empty trace correctly says UNVERIFIED, but ARTIFACTS has no absence message while other empty sections explain their state.",
+      "owner": "packages/nodetrace/src/storybook.ts",
+      "line": 327,
+      "cause": "The section helper already owns the empty note, but an always-present empty div makes the body string truthy.",
+      "evidence": [
+        "browser/empty-visible-states.json",
+        "boundary-addendum/empty-390-boundary-3px.png"
+      ],
+      "proposal": "Pass an empty body for zero artifacts so the existing no artifacts produced message is used. No new empty-state system."
+    }
+  ],
+  "acceptedOwners": [
+    "packages/nodetrace/src/storybook.ts",
+    "packages/nodetrace/test/storybook.test.ts",
+    "HANDOFF.md",
+    "README.md"
+  ],
+  "acceptedPlan": "One existing renderer owns active room-link scheme safety, cost completeness, empty Artifacts handling and responsive/contrast styling. Its existing scenario test owner plus small HANDOFF/README changes are sufficient. No merge/reward/pricing/provider/schema policy change is required.",
+  "requiredAcceptance": [
+    "Final after observer must exit nonzero on every required assertion failure, fatal, console/request/source/cleanup failure, retaining its raw receipt.",
+    "Exact visible URL text remains; absolute HTTP/HTTPS active, script/data/file/relative/malformed inactive, normalization variants and native non-execution.",
+    "Cost: empty/all missing, all explicit zeros, mixed known/missing including a known zero, and complete finite sums.",
+    "All seven original viewport pairs and named computed-font200/reduced states must preserve full strings and bounds; neither overflow hiding nor truncation closes the named proof.",
+    "Preserve original eleven trace/repair/regression bundles and original failures. Current HTML may change only as intended; hash each current artifact.",
+    "Use valid HTTP/HTTPS navigation controls and exact visible text; unsafe values remain inert rather than being erased from trajectory evidence.",
+    "After targeted/normal tests and typecheck, inspect actual current saved-file UI and native keyboard behavior; final implementation remains subject to fresh nonauthor review."
+  ],
+  "evidenceCaveat": {
+    "originalProbe": 10035,
+    "actualSymbol": "WSAEWOULDBLOCK",
+    "interpretation": "Original connect probe cannot prove historical connection refusal. Awaited own closures are separately recorded; current read-only Get-NetTCPConnection reports no listener. Retain original raw probe and qualify its interpretation.",
+    "blocksPlan": false
+  },
+  "limits": [
+    "Approval is for the bounded plan, not the current unsafe renderer or a future implementation.",
+    "The unmodified baseline collector returned exit0 on completed collection despite16 product findings. Bound after-proof addendum requires nonzero on any required failure.",
+    "Synthetic accounting data and recorded workbook/reopen/model names remain fixture claims; actual generated JSON/HTML/Markdown artifacts and their rendered browser proof are real. No NodeRoom repair command was executed.",
+    "No app, npm install/test/build/typecheck, browser or provider was replayed by this judge. Root normalbaseline and worker runtime evidence remain separately attributed.",
+    "No physical-device/native-zoom, full accessibility, shared durable concurrency, model/provider execution, benchmark/training, packaging, shared CI or deployment certification. All full grades remain null.",
+    "Preserve this operator baseline locally. Any future publication must inert historical scripts and unsafe HTML fixtures and explicitly bind copies/omissions; this is not a portable publication approval."
+  ],
+  "fullGrades": null,
+  "reviewerContext": "Reviewer context reused across portfolio tasks; did not implement NodeRL. Reviewed actual code and artifacts independently.",
+  "evidence": {
+    "directory": "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-storybook-plan-judge-01",
+    "manifestSha256": "b8a871f8bc9aa7fcd2c19e7b522648bd6b527bc39ec87b71a6004727ddd28006",
+    "files": 54,
+    "bytes": 1168049
+  },
+  "completionTraceability": "Re the request for planner-worker-judge execution and visual/responsive/interaction standards: independently verified NodeRL first-use failures, the exact preserved source, and the smallest legitimate report repair plan."
+}

@@ -1,0 +1,15 @@
+{
+  "selector": "[data-testid=\"room-url\"]",
+  "label": "D: caller URL is visible and inert",
+  "rect": {
+    "x": 24,
+    "y": 117.28125,
+    "width": 336.875,
+    "height": 38
+  },
+  "raw": "before-script-uri-390-raw.png",
+  "annotated": "before-script-uri-390-boundary-3px.png",
+  "sourceHtmlSha256": "6ae9207ae849eeef0b6cd2e8eb6ff07c2cd46c9a6f6827112a2fb7415c65d3cd",
+  "mechanism": "Temporary 3 px native DOM overlay on actual unchanged report; no product/source style changes; exact page.content restoration.",
+  "untouched": "All report content, totals, data, native layout, and source HTML outside the temporary overlay remain unchanged."
+}

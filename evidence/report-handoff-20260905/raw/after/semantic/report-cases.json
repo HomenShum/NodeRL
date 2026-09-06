@@ -1,0 +1,170 @@
+[
+  {
+    "name": "accounting",
+    "file": "accounting/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "429b64ed3c69eef59822e19ea3be56ab0c472d532489e735dfe77ffc5f228ed4",
+    "htmlSha256": "5b3fab895de4f0dde43cdf55d77f5e062197c6fa6f9ade4611eaeb8e9af050e5"
+  },
+  {
+    "name": "absent-reward",
+    "file": "absent-reward/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "2609ca9d278b51c514f2d48573a1f7da9904ca606bbf9aadfbb463c5d6335c82",
+    "htmlSha256": "32bfb731ddc9568ebac35553d43757960bf58734ebf57733d27aef0231a660e0"
+  },
+  {
+    "name": "zero-vs-unknown",
+    "file": "zero-vs-unknown/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "36b35fed704a37f16dc005fb7d3d9b8048f274a30517afce16c9e4b114e61547",
+    "htmlSha256": "0d8a2dd91db042b4e9447dfc890baeac6b32612d1802c4e7fc135ff50c19eb90"
+  },
+  {
+    "name": "positive-conflict",
+    "file": "positive-conflict/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "4ef63d5d2658a2ca06a2826d0d9eadfa5931b045e13feab989e995902720ca74",
+    "htmlSha256": "37ab2fe37609313f10e9bd6b09fabe87c40ef5889218e770aa19cc223cd4cdea"
+  },
+  {
+    "name": "empty",
+    "file": "empty/report.html",
+    "expectedVerdict": "unverified",
+    "traceSha256": "dd3508a364d6c016031af987acbf0cbbb6f45862d53e39320c1dd125ddae854a",
+    "htmlSha256": "a334d6613cf2fd43c2a422082e73bbed574745ed9d783cb63383305fda388f9f"
+  },
+  {
+    "name": "absent-cost",
+    "file": "absent-cost/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "e0a0e4d048522bf9f8e23b282e1cfba0562713054aaec9fa9f088eb3a56a193a",
+    "htmlSha256": "736373abfa0e8262b4f845b531f1a7101b82067bb0dc9b3710f60f99691cc0d0"
+  },
+  {
+    "name": "zero-cost",
+    "file": "zero-cost/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "b4decc06d4592f487583771dc77974e42e4c0a3108c508a2de4a7caa82809d1a",
+    "htmlSha256": "5b64b42778c61e1bd63c742c00c80cfba79745e06f740778520c6ef9946ca8d4"
+  },
+  {
+    "name": "long-unicode",
+    "file": "long-unicode/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "6ab7b091fb38706326876d83150ac66dc0ffcee5d24ec7977339b4564c8211c5",
+    "htmlSha256": "808247dffba7ac73a3203b283424e0977c7de3179fc90f9d144caaffdc5b92cd"
+  },
+  {
+    "name": "script-uri",
+    "file": "script-uri/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "553559ab799104692d0cfa76c9a9f0d45139bdd876889f82994b9d8f8d1dab3e",
+    "htmlSha256": "6ae9207ae849eeef0b6cd2e8eb6ff07c2cd46c9a6f6827112a2fb7415c65d3cd"
+  },
+  {
+    "name": "controlled-observation",
+    "file": "controlled-observation/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "818c6f109edb7d58fe535df644c0aa07b81b54ee348c0a1e7e746577306cab25",
+    "htmlSha256": "04267b4283b334d01bde40dd17b8defdddef94678d6059dd83dad742bb38b222"
+  },
+  {
+    "name": "mixed-cost",
+    "file": "mixed-cost/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "bf0467b1edde82641d8555765c3bae069d6bed372fc47b3be1640e4a4f1fe45b",
+    "htmlSha256": "e72bf47d059d9b5f05e7c8892f13031ef963faf03e0a6d21ee3380b800cbdb45"
+  },
+  {
+    "name": "cost-mixed-zero",
+    "file": "cost-mixed-zero/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "b116e81c42b29445de438163c63cee57fb47b7d48b3237e78021f9fd8403ff60",
+    "htmlSha256": "d6bd4eb08f09c2079f9ad1f5d7ade295fcbc6f1e1f60c9f9ca1a875768f4a5f7"
+  },
+  {
+    "name": "uri-safe-http",
+    "file": "uri-safe-http/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "735561a89a1eb2ff5cc5a7c83fa17c729bce205c9d544823cfb1d693d408652c",
+    "htmlSha256": "bc0172c3e5931b31aaca5e295e78129a9d41733d40222d277d9967eadef187c1"
+  },
+  {
+    "name": "uri-safe-https",
+    "file": "uri-safe-https/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "554f02453b3dbb440afcd45c1cf91c3bc07ef2aeb371c1175f158188a7d5db70",
+    "htmlSha256": "7c4d6832e2bc31532fd84ae02679b490a61f2ada6083c22d1bc0fc78085bf552"
+  },
+  {
+    "name": "uri-safe-uppercase",
+    "file": "uri-safe-uppercase/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "596ccbfe4309852abd2a4dc32f00ed0a2090e49eababb76c2acd2ec9d2536d70",
+    "htmlSha256": "e92dc1080d487829690792501514388acd2113af7e5f61e5af305a03e893a3f3"
+  },
+  {
+    "name": "uri-script-space",
+    "file": "uri-script-space/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "c852c310e225269d63fc8b22aa2728789ed6364dacd65a3fe1969d31f07731cf",
+    "htmlSha256": "771ffdca83556f4065a550a2fcab040a0d700c03f5563d1180676aec58e9f3d2"
+  },
+  {
+    "name": "uri-script-newline",
+    "file": "uri-script-newline/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "7cdf2d7a2160da358fc7651263c6680035844e58dffd4e92261811cee2e3285e",
+    "htmlSha256": "e8e89af2755ae2bf4502089c907f84cf6fcc5a8637768fa26dab4897a6664028"
+  },
+  {
+    "name": "uri-data",
+    "file": "uri-data/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "1d0eac831f50a4b5886ec7fe8e2e1d1f2eeb891603a225860cd1168944288dcc",
+    "htmlSha256": "e5e9dd3b38cc72bc838db23f82a00d83f2f7dd32e763346d7954c55f2277934a"
+  },
+  {
+    "name": "uri-file",
+    "file": "uri-file/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "7d35e0eb8edc964605344114e26feebad0a00fba7ad53430fd96f5cad6e13592",
+    "htmlSha256": "0535461ef72dfea51cc626da337d5e28efbac0e5964a4d72c70d2cd6721f1fe7"
+  },
+  {
+    "name": "uri-relative",
+    "file": "uri-relative/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "7712e22fb6c73e614ec1c94bb53e9fd4ef99122cbc8ac584aa0509a0c97d9a10",
+    "htmlSha256": "09ae32a9132fe7e210379ed4e308ef943199d980183625f9de3320603a01f09c"
+  },
+  {
+    "name": "uri-scheme-relative",
+    "file": "uri-scheme-relative/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "7f887e93679c5b45080e1a1cdbaded554d8a1163a736d039ffe37b1b55742ef9",
+    "htmlSha256": "431b1bafffd3e3b105153a362abb7236c678e57f079375f9f7af0e8cb48371c4"
+  },
+  {
+    "name": "uri-malformed",
+    "file": "uri-malformed/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "471915ec483919f99e2b4205f8e53ee06091d305da52e70bf63587360063e41d",
+    "htmlSha256": "0d2ee9037fb96418e7f791225131915af9a08a252ca1fc1a824d156c845e804e"
+  },
+  {
+    "name": "uri-not-url",
+    "file": "uri-not-url/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "111d9c6355bf0592f36038af71f0c67acae2aac6de455d49244e9760d1eff166",
+    "htmlSha256": "25eaf77a0cbc794083e4fda1c67e6c8365a70f900f315007a352d2014116d016"
+  },
+  {
+    "name": "uri-empty",
+    "file": "uri-empty/report.html",
+    "expectedVerdict": "fail",
+    "traceSha256": "5d1f4853a6e96028bf689b9950d2d70e36dec04d6c6f9e5898f9208cc717e1ee",
+    "htmlSha256": "153992166efb0caa4a477c280b54d8d6d38a8dd432572338aaaf1ff98594abfb"
+  }
+]

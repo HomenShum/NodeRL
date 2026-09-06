@@ -1,0 +1,13 @@
+# NodeRL report repair receipt
+
+The bounded report repair passes its named proof. Unsafe room addresses remain inert, costs disclose missing/partial coverage, long content reflows, the two filled status labels meet the measured contrast threshold, and empty artifacts are explained. Existing trace, reward, repair and memory semantics remain intact.
+
+The source is on `codex/noderl-report-handoff-20260905` at unchanged HEAD `4b06939b8fd9121e2ba73887df2dd799eae2f1aa`. Only the five accepted files differ. All 97 other original files and all prior refs are preserved; index entries are unchanged. Nothing is staged, committed, pushed or deployed.
+
+Validation passed: nine renderer scenarios; all 16 normal test files; typecheck; 99 semantic checks plus mixed cost; 230 browser assertions; native file reopen; and the runnable handoff example. There are 94 current PNGs across the required seven pairs and special states. All 33 original trace/repair/regression files remain exact. Actual owned PID/listener closure is retained, alongside the historical socket-probe caveat.
+
+[Detailed proof](E6k-noderl-report-repair-01/FINAL_PROOF.md), [current browser receipt](E6k-noderl-report-repair-01/after-01/browser/report.json), [source freeze](E6k-noderl-report-repair-01/source-final.json), [manifest](E6k-noderl-report-repair-01/manifest.json).
+
+The evidence manifest binds 386 files and 13299390 bytes, SHA256 27d6f4e333c0a67309c3af8a2cd97c8aaf5d5eeaf8fae9a0c9e8058e634223c6. The five-owner source digest is dac4e39828002a5e5b03df8ae825e988bca8eff2f8c718d89a0d0a8446a797b5. Original failures are preserved. Fresh nonauthor review remains pending; full grades, physical devices, native zoom, providers, durable concurrency, real accounting outputs, shared CI and deployment remain open.
+
+**Re your request:** Make each repo ready for developer/user handoff with actual visual and interaction standards — NodeRL now has the scoped report repair, a tested first-use example and immutable evidence ready for independent judgment.

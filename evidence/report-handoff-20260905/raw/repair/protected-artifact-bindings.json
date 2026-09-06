@@ -1,0 +1,203 @@
+{
+  "files": 33,
+  "bindings": [
+    {
+      "path": "accounting/trace.json",
+      "beforeSha256": "429b64ed3c69eef59822e19ea3be56ab0c472d532489e735dfe77ffc5f228ed4",
+      "afterSha256": "429b64ed3c69eef59822e19ea3be56ab0c472d532489e735dfe77ffc5f228ed4",
+      "equal": true
+    },
+    {
+      "path": "accounting/repair.md",
+      "beforeSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "afterSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "equal": true
+    },
+    {
+      "path": "accounting/regression.json",
+      "beforeSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "afterSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "equal": true
+    },
+    {
+      "path": "absent-reward/trace.json",
+      "beforeSha256": "2609ca9d278b51c514f2d48573a1f7da9904ca606bbf9aadfbb463c5d6335c82",
+      "afterSha256": "2609ca9d278b51c514f2d48573a1f7da9904ca606bbf9aadfbb463c5d6335c82",
+      "equal": true
+    },
+    {
+      "path": "absent-reward/repair.md",
+      "beforeSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "afterSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "equal": true
+    },
+    {
+      "path": "absent-reward/regression.json",
+      "beforeSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "afterSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "equal": true
+    },
+    {
+      "path": "zero-vs-unknown/trace.json",
+      "beforeSha256": "36b35fed704a37f16dc005fb7d3d9b8048f274a30517afce16c9e4b114e61547",
+      "afterSha256": "36b35fed704a37f16dc005fb7d3d9b8048f274a30517afce16c9e4b114e61547",
+      "equal": true
+    },
+    {
+      "path": "zero-vs-unknown/repair.md",
+      "beforeSha256": "634372ca096a99149bf41aec2795b8e7a0eead9743da792834532bffe97c5887",
+      "afterSha256": "634372ca096a99149bf41aec2795b8e7a0eead9743da792834532bffe97c5887",
+      "equal": true
+    },
+    {
+      "path": "zero-vs-unknown/regression.json",
+      "beforeSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "afterSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "equal": true
+    },
+    {
+      "path": "positive-conflict/trace.json",
+      "beforeSha256": "4ef63d5d2658a2ca06a2826d0d9eadfa5931b045e13feab989e995902720ca74",
+      "afterSha256": "4ef63d5d2658a2ca06a2826d0d9eadfa5931b045e13feab989e995902720ca74",
+      "equal": true
+    },
+    {
+      "path": "positive-conflict/repair.md",
+      "beforeSha256": "6712267c569b0d335f38c262e449bfb179b73d3e7ff800e281daf88d4c4407a1",
+      "afterSha256": "6712267c569b0d335f38c262e449bfb179b73d3e7ff800e281daf88d4c4407a1",
+      "equal": true
+    },
+    {
+      "path": "positive-conflict/regression.json",
+      "beforeSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "afterSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "equal": true
+    },
+    {
+      "path": "empty/trace.json",
+      "beforeSha256": "dd3508a364d6c016031af987acbf0cbbb6f45862d53e39320c1dd125ddae854a",
+      "afterSha256": "dd3508a364d6c016031af987acbf0cbbb6f45862d53e39320c1dd125ddae854a",
+      "equal": true
+    },
+    {
+      "path": "empty/repair.md",
+      "beforeSha256": "5a53805e167bfdefa236480c46fef7b5886ca8f85ee15d3a5ae100774112640e",
+      "afterSha256": "5a53805e167bfdefa236480c46fef7b5886ca8f85ee15d3a5ae100774112640e",
+      "equal": true
+    },
+    {
+      "path": "empty/regression.json",
+      "beforeSha256": "b3de0ba1e29f1512dcbd4986473342ccd3ce3fc51f5a6e3fbf85e7a0d47e1187",
+      "afterSha256": "b3de0ba1e29f1512dcbd4986473342ccd3ce3fc51f5a6e3fbf85e7a0d47e1187",
+      "equal": true
+    },
+    {
+      "path": "absent-cost/trace.json",
+      "beforeSha256": "e0a0e4d048522bf9f8e23b282e1cfba0562713054aaec9fa9f088eb3a56a193a",
+      "afterSha256": "e0a0e4d048522bf9f8e23b282e1cfba0562713054aaec9fa9f088eb3a56a193a",
+      "equal": true
+    },
+    {
+      "path": "absent-cost/repair.md",
+      "beforeSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "afterSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "equal": true
+    },
+    {
+      "path": "absent-cost/regression.json",
+      "beforeSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "afterSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "equal": true
+    },
+    {
+      "path": "zero-cost/trace.json",
+      "beforeSha256": "b4decc06d4592f487583771dc77974e42e4c0a3108c508a2de4a7caa82809d1a",
+      "afterSha256": "b4decc06d4592f487583771dc77974e42e4c0a3108c508a2de4a7caa82809d1a",
+      "equal": true
+    },
+    {
+      "path": "zero-cost/repair.md",
+      "beforeSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "afterSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "equal": true
+    },
+    {
+      "path": "zero-cost/regression.json",
+      "beforeSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "afterSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "equal": true
+    },
+    {
+      "path": "long-unicode/trace.json",
+      "beforeSha256": "6ab7b091fb38706326876d83150ac66dc0ffcee5d24ec7977339b4564c8211c5",
+      "afterSha256": "6ab7b091fb38706326876d83150ac66dc0ffcee5d24ec7977339b4564c8211c5",
+      "equal": true
+    },
+    {
+      "path": "long-unicode/repair.md",
+      "beforeSha256": "a38807f9f8f66092a4e8b0d534ae1d8e5ca2c27873f879a46116a1050b074a12",
+      "afterSha256": "a38807f9f8f66092a4e8b0d534ae1d8e5ca2c27873f879a46116a1050b074a12",
+      "equal": true
+    },
+    {
+      "path": "long-unicode/regression.json",
+      "beforeSha256": "efee61bdb6b146f872b61f11b25ce48b4690678ea7bbc217cb34940cf441e272",
+      "afterSha256": "efee61bdb6b146f872b61f11b25ce48b4690678ea7bbc217cb34940cf441e272",
+      "equal": true
+    },
+    {
+      "path": "script-uri/trace.json",
+      "beforeSha256": "553559ab799104692d0cfa76c9a9f0d45139bdd876889f82994b9d8f8d1dab3e",
+      "afterSha256": "553559ab799104692d0cfa76c9a9f0d45139bdd876889f82994b9d8f8d1dab3e",
+      "equal": true
+    },
+    {
+      "path": "script-uri/repair.md",
+      "beforeSha256": "ddfab90a24a4eb664c5873f8895edb8903779572fa24828a2de513651a5c239f",
+      "afterSha256": "ddfab90a24a4eb664c5873f8895edb8903779572fa24828a2de513651a5c239f",
+      "equal": true
+    },
+    {
+      "path": "script-uri/regression.json",
+      "beforeSha256": "b1f15a2c76981fd6fe5aa781731dc6f502a9d883e8612a9833cf0d0eaafd8848",
+      "afterSha256": "b1f15a2c76981fd6fe5aa781731dc6f502a9d883e8612a9833cf0d0eaafd8848",
+      "equal": true
+    },
+    {
+      "path": "controlled-observation/trace.json",
+      "beforeSha256": "818c6f109edb7d58fe535df644c0aa07b81b54ee348c0a1e7e746577306cab25",
+      "afterSha256": "818c6f109edb7d58fe535df644c0aa07b81b54ee348c0a1e7e746577306cab25",
+      "equal": true
+    },
+    {
+      "path": "controlled-observation/repair.md",
+      "beforeSha256": "83db2b2193636920ac26b4cbbabc035f9a9f40aa4d15b6e741ef8d07ccb9f697",
+      "afterSha256": "83db2b2193636920ac26b4cbbabc035f9a9f40aa4d15b6e741ef8d07ccb9f697",
+      "equal": true
+    },
+    {
+      "path": "controlled-observation/regression.json",
+      "beforeSha256": "689dad7682573965241b0868f42662c7e05ce5b1583bf5b034f6bf629acb00b8",
+      "afterSha256": "689dad7682573965241b0868f42662c7e05ce5b1583bf5b034f6bf629acb00b8",
+      "equal": true
+    },
+    {
+      "path": "mixed-cost/trace.json",
+      "beforeSha256": "bf0467b1edde82641d8555765c3bae069d6bed372fc47b3be1640e4a4f1fe45b",
+      "afterSha256": "bf0467b1edde82641d8555765c3bae069d6bed372fc47b3be1640e4a4f1fe45b",
+      "equal": true
+    },
+    {
+      "path": "mixed-cost/repair.md",
+      "beforeSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "afterSha256": "94dab04135e5f8ee05f12afa8465cff675a4e6a495354f2a82a19a565f46f3a6",
+      "equal": true
+    },
+    {
+      "path": "mixed-cost/regression.json",
+      "beforeSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "afterSha256": "e4e2f52d9cfebc6c4c8718ad868cf381d2b9e3cac4c507ff9adc339641c78951",
+      "equal": true
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "status": "CURRENT_UNCHANGED_BASELINE_COMMANDS_PASS",
+  "at": "2026-09-05T23:36:18.974936+00:00",
+  "candidate": "D:\\VSCode Projects\\cafecorner_nodebench\\nodebench_ai4\\NodeRL",
+  "head": "4b06939b8fd9121e2ba73887df2dd799eae2f1aa",
+  "preservedOldTip": "dc4d66824fd1c05050ae999634ab0225137d4672",
+  "sourceFiles": 101,
+  "commands": [
+    {
+      "name": "normal-ci",
+      "argv": [
+        "C:/nvm4w/nodejs/node.exe",
+        "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+        "ci"
+      ],
+      "exitCode": 0,
+      "seconds": 1.75,
+      "stdoutSha256": "6168d1e0eb9bc52c45886a3b7aa9bf693ba964021ab877a8f06270e245b0d8a0",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "normal-tests",
+      "argv": [
+        "C:/nvm4w/nodejs/node.exe",
+        "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+        "test"
+      ],
+      "exitCode": 0,
+      "seconds": 6.89,
+      "stdoutSha256": "4e88b2ffa57ee08ff405f68816f88cdc4e7e589d0412b761b41e82dfeb65b58e",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "normal-typecheck",
+      "argv": [
+        "C:/nvm4w/nodejs/node.exe",
+        "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "seconds": 7.781,
+      "stdoutSha256": "2eaf80bc4878add206f78acd487fc389b151321f177900f688e9d9590db29fd4",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "normal-demo",
+      "argv": [
+        "C:/nvm4w/nodejs/node.exe",
+        "C:/nvm4w/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "demo"
+      ],
+      "exitCode": 0,
+      "seconds": 0.329,
+      "stdoutSha256": "38bf7bf5e8fc2e5aa17820e52e3f23d13196e5759a17a59f607e9520e1d72329",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "runtimeScope": "Recorded-run replay only; no model/agent/network capture or benchmark rerun.",
+  "reportProof": "NOT_RUN",
+  "workingTree": "CLEAN"
+}

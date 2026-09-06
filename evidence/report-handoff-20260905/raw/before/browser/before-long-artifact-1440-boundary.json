@@ -1,0 +1,15 @@
+{
+  "selector": "[data-atom=\"artifact-tab\"]",
+  "label": "B: long artifact/path exceeds report width",
+  "rect": {
+    "x": 0,
+    "y": 655.78125,
+    "width": 2085.546875,
+    "height": 95
+  },
+  "raw": "before-long-artifact-1440-raw.png",
+  "annotated": "before-long-artifact-1440-boundary-3px.png",
+  "sourceHtmlSha256": "5972eb3b988861db2d538ee60bd66b4f84b5badfe936c2a3ee4aea3e2627212e",
+  "mechanism": "Temporary 3 px native DOM overlay on actual unchanged report; no product/source style changes; exact page.content restoration.",
+  "untouched": "All report content, totals, data, native layout, and source HTML outside the temporary overlay remain unchanged."
+}

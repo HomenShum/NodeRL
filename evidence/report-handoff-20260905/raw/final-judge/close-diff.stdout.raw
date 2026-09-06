@@ -1,0 +1,199 @@
+diff --git a/.tours/03-debug-and-recovery.tour b/.tours/03-debug-and-recovery.tour
+index 91bc9f2..e5bc35e 100644
+--- a/.tours/03-debug-and-recovery.tour
++++ b/.tours/03-debug-and-recovery.tour
+@@ -23,7 +23,7 @@
+     },
+     {
+       "file": "packages/nodetrace/src/storybook.ts",
+-      "line": 300,
++      "line": 319,
+       "pattern": "^export function renderStorybook",
+       "description": "**Showing it to a person.** One merged trajectory becomes one self-contained HTML file — no server, no build, no network. A reviewer or a judge can be sent the file itself.\n\nIt is composed from small pure atom functions, one per visual card, so each can be tested alone rather than by string-matching a whole page."
+     },
+diff --git a/README.md b/README.md
+index b6ce009..305d746 100644
+--- a/README.md
++++ b/README.md
+@@ -24,8 +24,8 @@ Needs **Node 22.18 or newer** and nothing else. No API key, no database, no buil
+ ```bash
+ git clone https://github.com/HomenShum/NodeRL.git
+ cd NodeRL
+-npm install     # 19 packages, none of which the demo actually loads
+-npm test        # 15 test files, 15 pass
++npm ci          # install the locked source-workspace dependencies
++npm test        # run the current repository and package scenarios
+ npm run demo    # one real failed run, end to end
+ ```
+ 
+@@ -41,6 +41,8 @@ runs `tsc` as a checker only.
+ **New here? Read [`docs/START_HERE.md`](docs/START_HERE.md)** — it walks the demo through the code in
+ the order it actually executes.
+ 
++For setup, a runnable saved-report example and current verification limits, read [`HANDOFF.md`](HANDOFF.md).
++
+ ## The three packages
+ 
+ | Package | What it is | Depends on |
+diff --git a/packages/nodetrace/src/storybook.ts b/packages/nodetrace/src/storybook.ts
+index 1677a7d..3905a93 100644
+--- a/packages/nodetrace/src/storybook.ts
++++ b/packages/nodetrace/src/storybook.ts
+@@ -75,11 +75,21 @@ function usd(n: number): string {
+ 
+ /** Room header: the user goal + the live room URL the outer proof drove. */
+ function RoomHeaderAtom(goal: string, url: string): string {
++  let linkable = false;
++  try {
++    const protocol = new URL(url).protocol;
++    linkable = protocol === "http:" || protocol === "https:";
++  } catch {
++    // Preserve malformed or non-absolute addresses as evidence, without making them active links.
++  }
++  const address = linkable
++    ? `<a class="nt-room-url" data-testid="room-url" href="${esc(url)}">${esc(url)}</a>`
++    : `<span class="nt-room-url" data-testid="room-url">${esc(url)}</span>`;
+   return (
+     `<header class="nt-room-header" data-atom="room-header">` +
+     `<div class="nt-room-kicker">NodeRoom run</div>` +
+     `<h1 class="nt-room-goal" data-testid="room-goal">${esc(goal)}</h1>` +
+-    `<a class="nt-room-url" data-testid="room-url" href="${esc(url)}">${esc(url)}</a>` +
++    address +
+     `</header>`
+   );
+ }
+@@ -157,12 +167,21 @@ function EvidenceCardAtom(evidence: MergedEvidence): string {
+ /** Cost badge: sums the per-step costUsd off the inner trace. Derived from the trace only (HONEST_SCORES). */
+ function CostBadgeAtom(steps: MergedStep[]): string {
+   let sum = 0;
++  let recorded = 0;
+   for (const s of steps) {
+-    if (typeof s.costUsd === "number" && Number.isFinite(s.costUsd)) sum += s.costUsd;
++    if (typeof s.costUsd === "number" && Number.isFinite(s.costUsd)) {
++      sum += s.costUsd;
++      recorded++;
++    }
+   }
++  const label = recorded === 0
++    ? "cost: not recorded"
++    : recorded === steps.length
++      ? `cost: ${usd(sum)}`
++      : `known cost: ${usd(sum)} (${recorded}/${steps.length} steps)`;
+   return (
+     `<span class="nt-badge nt-cost-badge" data-atom="cost-badge" data-testid="cost-badge">` +
+-    `cost: ${esc(usd(sum))}` +
++    esc(label) +
+     `</span>`
+   );
+ }
+@@ -230,7 +249,7 @@ const STORYBOOK_CSS = `
+ *{box-sizing:border-box}
+ body.nt-storybook{margin:0;background:var(--nt-bg);color:var(--nt-fg);
+ font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
+-.nt-wrap{max-width:900px;margin:0 auto;padding:24px}
++.nt-wrap{max-width:900px;margin:0 auto;padding:24px;overflow-wrap:anywhere}
+ .nt-room-header{border-bottom:1px solid var(--nt-border);padding-bottom:16px;margin-bottom:16px}
+ .nt-room-kicker{color:var(--nt-muted);text-transform:uppercase;letter-spacing:.08em;font-size:11px}
+ .nt-room-goal{margin:.2em 0;font-size:22px}
+@@ -239,11 +258,11 @@ font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-s
+ .nt-badge{display:inline-block;padding:4px 10px;border-radius:999px;font-weight:600;font-size:12px;
+ border:1px solid var(--nt-border);background:var(--nt-panel)}
+ .nt-verdict-pass{color:#fff;background:var(--nt-pass);border-color:var(--nt-pass)}
+-.nt-verdict-fail{color:#fff;background:var(--nt-fail);border-color:var(--nt-fail)}
++.nt-verdict-fail{color:var(--nt-bg);background:var(--nt-fail);border-color:var(--nt-fail)}
+ .nt-verdict-unverified{color:var(--nt-warn);border-color:var(--nt-warn)}
+ .nt-section-title{margin:24px 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--nt-muted)}
+ .nt-artifact-tabs{display:flex;gap:8px;flex-wrap:wrap}
+-.nt-artifact-tab{background:var(--nt-panel);border:1px solid var(--nt-border);border-radius:8px;padding:8px 12px;font-size:13px}
++.nt-artifact-tab{background:var(--nt-panel);border:1px solid var(--nt-border);border-radius:8px;padding:8px 12px;font-size:13px;min-width:0;max-width:100%}
+ .nt-artifact-kind{display:inline-block;background:#21262d;border-radius:4px;padding:1px 6px;margin-right:6px;font-size:11px;text-transform:uppercase}
+ .nt-artifact-id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+ .nt-reopen{margin-left:8px;font-size:11px}
+@@ -260,7 +279,7 @@ border-radius:8px;padding:10px 12px;margin-bottom:8px}
+ .nt-evidence-head{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+ .nt-evidence-claim{font-weight:600}
+ .nt-evidence-flag{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--nt-border);white-space:nowrap}
+-.nt-needs-review{color:#fff;background:var(--nt-warn);border-color:var(--nt-warn)}
++.nt-needs-review{color:var(--nt-bg);background:var(--nt-warn);border-color:var(--nt-warn)}
+ .nt-status-source_backed{color:var(--nt-pass)}
+ .nt-evidence-quote{margin:8px 0;padding:6px 10px;border-left:2px solid var(--nt-border);color:var(--nt-fg)}
+ .nt-evidence-noquote,.nt-evidence-nosource{color:var(--nt-muted);font-style:italic;font-size:12px}
+@@ -326,7 +345,7 @@ export function renderStorybook(t: NodeMergedTrajectory): string {
+ 
+   const artifacts = section(
+     "Artifacts",
+-    `<div class="nt-artifact-tabs">${t.artifacts.map((a) => ArtifactTabAtom(a)).join("")}</div>`,
++    t.artifacts.length > 0 ? `<div class="nt-artifact-tabs">${t.artifacts.map((a) => ArtifactTabAtom(a)).join("")}</div>` : "",
+     "no artifacts produced",
+   );
+ 
+diff --git a/packages/nodetrace/test/storybook.test.ts b/packages/nodetrace/test/storybook.test.ts
+index 7bdcbde..5f60852 100644
+--- a/packages/nodetrace/test/storybook.test.ts
++++ b/packages/nodetrace/test/storybook.test.ts
+@@ -185,5 +185,65 @@ scenario("(f) ESCAPING — a claim containing HTML is escaped, not injected as l
+ 
+ /* -------------------------------------------------------------------------- */
+ 
++scenario("A curator can inspect untrusted room addresses without making executable schemes active", () => {
++  const safe = ["https://example.invalid/room?view=review&run=1", "http://example.invalid/room", "HTTPS://example.invalid/room"];
++  const unsafe = [
++    "javascript:document.body.dataset.canary='executed';void 0",
++    " JaVaScRiPt:document.body.dataset.canary='executed';void 0",
++    "java\nscript:document.body.dataset.canary='executed';void 0",
++    "data:text/html,<script>document.body.dataset.canary=1</script>",
++    "file:///synthetic-report.html", "/relative-room", "//example.invalid/room", "not a URL", "https://", "",
++  ];
++  // Repeated batch exports must not introduce a stateful exception after a safe address.
++  for (let batch = 0; batch < 32; batch++) {
++    for (const url of [...safe, ...unsafe]) {
++      const t = mergedNoReward();
++      t.outerTrace.url = url;
++      const before = JSON.stringify(t);
++      const html = renderStorybook(t);
++      const room = html.match(/<(a|span) class="nt-room-url"[^>]*>(.*?)<\/(?:a|span)>/s);
++      assert.ok(room, "the address remains visible in the report");
++      assert.equal(room[1], safe.includes(url) ? "a" : "span", `address classification: ${JSON.stringify(url)}`);
++      assert.equal(html, renderStorybook(t), "repeated report bytes remain deterministic");
++      assert.equal(JSON.stringify(t), before, "rendering must not alter the recorded address or trace");
++    }
++  }
++});
++
++scenario("A reviewer distinguishes missing, partial and fully recorded costs across repeated reports", () => {
++  const cases: { name: string; values: (number | undefined)[]; expected: string }[] = [
++    { name: "empty trace", values: [], expected: "cost: not recorded" },
++    { name: "all costs missing", values: [undefined, undefined], expected: "cost: not recorded" },
++    { name: "all costs explicitly zero", values: [0, 0], expected: "cost: $0.00" },
++    { name: "partial nonzero", values: [0.25, undefined, 0.5], expected: "known cost: $0.75 (2/3 steps)" },
++    { name: "partial zero", values: [0, undefined], expected: "known cost: $0.00 (1/2 steps)" },
++    { name: "complete costs", values: [0.25, 0.5], expected: "cost: $0.75" },
++    { name: "non-finite is unrecorded", values: [Number.NaN, Number.POSITIVE_INFINITY], expected: "cost: not recorded" },
++    { name: "partial with non-finite", values: [0.25, Number.NaN], expected: "known cost: $0.25 (1/2 steps)" },
++  ];
++  for (let batch = 0; batch < 32; batch++) {
++    for (const c of cases) {
++      const t = mergedNoReward();
++      t.innerTrace.steps = c.values.map((costUsd, stepIndex) => ({ stepIndex, phase: "verify", action: "Review the recorded work", observation: "Synthetic cost-presence scenario", ...(costUsd === undefined ? {} : { costUsd }) }));
++      const html = renderStorybook(t);
++      assert.equal(html.match(/data-testid="cost-badge">([^<]+)/)?.[1], c.expected, c.name);
++      assert.ok(html.includes('data-verdict="fail"'), "cost completeness cannot promote the failed accounting assertion");
++    }
++  }
++});
++
++scenario("An empty handoff explains absent artifacts without inventing a score or hiding review evidence", () => {
++  const t = mergedNoReward();
++  t.artifacts = [];
++  t.innerTrace.steps = [];
++  t.outerTrace.uiAssertions = [];
++  const html = renderStorybook(t);
++  assert.ok(html.includes("no artifacts produced"));
++  assert.ok(html.includes('data-verdict="unverified"'));
++  assert.ok(!html.includes(" · total "));
++  assert.ok(html.includes('data-needs-review="true"'), "existing unresolved evidence must survive an empty artifact list");
++  assert.equal(html, renderStorybook(t));
++});
++
+ console.log(`\n${passed} passed, ${failed} failed`);
+ if (failed > 0) process.exit(1);

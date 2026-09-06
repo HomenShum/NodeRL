@@ -185,5 +185,65 @@ scenario("(f) ESCAPING — a claim containing HTML is escaped, not injected as l
 
 /* -------------------------------------------------------------------------- */
 
+scenario("A curator can inspect untrusted room addresses without making executable schemes active", () => {
+  const safe = ["https://example.invalid/room?view=review&run=1", "http://example.invalid/room", "HTTPS://example.invalid/room"];
+  const unsafe = [
+    "javascript:document.body.dataset.canary='executed';void 0",
+    " JaVaScRiPt:document.body.dataset.canary='executed';void 0",
+    "java\nscript:document.body.dataset.canary='executed';void 0",
+    "data:text/html,<script>document.body.dataset.canary=1</script>",
+    "file:///synthetic-report.html", "/relative-room", "//example.invalid/room", "not a URL", "https://", "",
+  ];
+  // Repeated batch exports must not introduce a stateful exception after a safe address.
+  for (let batch = 0; batch < 32; batch++) {
+    for (const url of [...safe, ...unsafe]) {
+      const t = mergedNoReward();
+      t.outerTrace.url = url;
+      const before = JSON.stringify(t);
+      const html = renderStorybook(t);
+      const room = html.match(/<(a|span) class="nt-room-url"[^>]*>(.*?)<\/(?:a|span)>/s);
+      assert.ok(room, "the address remains visible in the report");
+      assert.equal(room[1], safe.includes(url) ? "a" : "span", `address classification: ${JSON.stringify(url)}`);
+      assert.equal(html, renderStorybook(t), "repeated report bytes remain deterministic");
+      assert.equal(JSON.stringify(t), before, "rendering must not alter the recorded address or trace");
+    }
+  }
+});
+
+scenario("A reviewer distinguishes missing, partial and fully recorded costs across repeated reports", () => {
+  const cases: { name: string; values: (number | undefined)[]; expected: string }[] = [
+    { name: "empty trace", values: [], expected: "cost: not recorded" },
+    { name: "all costs missing", values: [undefined, undefined], expected: "cost: not recorded" },
+    { name: "all costs explicitly zero", values: [0, 0], expected: "cost: $0.00" },
+    { name: "partial nonzero", values: [0.25, undefined, 0.5], expected: "known cost: $0.75 (2/3 steps)" },
+    { name: "partial zero", values: [0, undefined], expected: "known cost: $0.00 (1/2 steps)" },
+    { name: "complete costs", values: [0.25, 0.5], expected: "cost: $0.75" },
+    { name: "non-finite is unrecorded", values: [Number.NaN, Number.POSITIVE_INFINITY], expected: "cost: not recorded" },
+    { name: "partial with non-finite", values: [0.25, Number.NaN], expected: "known cost: $0.25 (1/2 steps)" },
+  ];
+  for (let batch = 0; batch < 32; batch++) {
+    for (const c of cases) {
+      const t = mergedNoReward();
+      t.innerTrace.steps = c.values.map((costUsd, stepIndex) => ({ stepIndex, phase: "verify", action: "Review the recorded work", observation: "Synthetic cost-presence scenario", ...(costUsd === undefined ? {} : { costUsd }) }));
+      const html = renderStorybook(t);
+      assert.equal(html.match(/data-testid="cost-badge">([^<]+)/)?.[1], c.expected, c.name);
+      assert.ok(html.includes('data-verdict="fail"'), "cost completeness cannot promote the failed accounting assertion");
+    }
+  }
+});
+
+scenario("An empty handoff explains absent artifacts without inventing a score or hiding review evidence", () => {
+  const t = mergedNoReward();
+  t.artifacts = [];
+  t.innerTrace.steps = [];
+  t.outerTrace.uiAssertions = [];
+  const html = renderStorybook(t);
+  assert.ok(html.includes("no artifacts produced"));
+  assert.ok(html.includes('data-verdict="unverified"'));
+  assert.ok(!html.includes(" · total "));
+  assert.ok(html.includes('data-needs-review="true"'), "existing unresolved evidence must survive an empty artifact list");
+  assert.equal(html, renderStorybook(t));
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 if (failed > 0) process.exit(1);

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "packages/nodetrace/src/storybook.ts",
+    "beforeSha256": "51957a31548e33da12591ff6767cb36361cc61425e8efecae54f38b2b474039c",
+    "afterSha256": "cc7686f7b75d541a6eb95e7e5686d949786186ec2ab25f023abb4956c6372a97"
+  },
+  {
+    "path": "packages/nodetrace/test/storybook.test.ts",
+    "beforeSha256": "ad99d044825bee9ae37ca12a7da707cafc385e289f560bae039bdd3bcd2991c1",
+    "afterSha256": "da8f0be2f8bacb60f0925e09accf4f19f12dc073e2fd3215dfc6432dd4e79a72"
+  }
+]

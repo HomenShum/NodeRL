@@ -1,0 +1,13 @@
+{
+  "request": "Parent requires mixed known/missing costs before a fix proposal.",
+  "knownSteps": 3,
+  "missingSteps": 1,
+  "knownSubtotal": 0.012400000000000001,
+  "mixedDisplay": "cost: $0.01",
+  "completeExplicitZeroDisplay": "cost: $0.01",
+  "check": {
+    "name": "Partial known subtotal is distinguished from complete cost",
+    "pass": false
+  },
+  "originalSemanticReportSha256": "9e77c63f1b2270cbc5e67cac87914ec2d6c22e248053c8786f15ae138ad3e1fd"
+}

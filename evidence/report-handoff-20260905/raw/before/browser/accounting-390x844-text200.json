@@ -1,0 +1,755 @@
+{
+  "url": "http://127.0.0.1:4995/accounting",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "document": {
+    "width": 499,
+    "height": 7132
+  },
+  "scroll": {
+    "x": 0,
+    "y": 0
+  },
+  "verdict": "verdict: FAIL · total 0.429",
+  "verdictState": "fail",
+  "goal": "Synthetic accountant review: March bank reconciliation",
+  "cost": "cost: $0.01",
+  "unscored": "3 unscored: unscored:visualQuality, unscored:costEfficiency, unscored:latencyEfficiency",
+  "needsReview": 1,
+  "images": 0,
+  "injected": null,
+  "active": {
+    "tag": "BODY",
+    "testid": null,
+    "text": "NodeRoom runSynthetic accountant review: March bank reconciliationhttps://example.invalid/synthetic-accounting-roomverdict: FAIL · total 0.429cost: $0.01model: glm-5.2run: SYNTHETIC-FIRST-USE-ACCOUNTING-013 unscored: unscored:visualQuality, unscored:costEfficiency, unscored:latencyEfficiencyUI assertionsPASS a sheet tab labeled 'reconciliation.xlsx' is rendered in the work surfaceobserved: tab 'reconciliation.xlsx' present and activePASS an 'exceptions' tab lists uncleared/unmatched itemsobserved: tab 'exceptions' present with 2 rowsFAIL reconciled ending cash equals the bank statement ending balance (delta = 0.00)observed: reconciled ending cash is off by 412.50 vs bank statementFailure categoriesui_assertion_failedevidence_needs_reviewArtifactssheetartifact-reconciliation-xlsxreopen: OKexport: runs/RC-MAR-RECON-8271/artifacts/reconciliation.xlsxAgent tracestep 0 · plan · $0.00 · 640msDraft a 3-step reconciliation plan: locate March bank statement + GL cash export, build a matched-ledger sheet, then verify the ending balance ties.Plan accepted; two source documents are expected in the room's attachments.step 1 · tool · tool: findDocument · $0.00 · 1180msCall findDocument to locate the March bank statement and the GL cash export in the room attachments.Found 'bank-statement-march.pdf' and 'gl-cash-march.csv'; both attached to room RC-MAR-RECON-8271.step 2 · write · tool: writeSheet · $0.01 · 2960msWrite reconciliation.xlsx: import both sources, match cleared items by amount+date, list unmatched items on an exceptions tab.Sheet created with 84 matched rows and 2 exceptions; ending-cash formula wired to the reconciliation tab.step 3 · verify · $0.00 · 900msVerify reconciled ending cash equals the bank statement ending balance and re-open the exported sheet.Reopen OK, but ending cash is off by 412.50 — one exception (check #1042) is unsourced; flagged for review rather than forced to tie.EvidenceMarch bank statement ending balance is 128,540.75source_backedEnding balance as of March 31: $128,540.75source: attachment://bank-statement-march.pdf#p3GL cash account ending balance for March is 128,128.25source_backed1000-Cash,03/31,,,128128.25source: attachment://gl-cash-march.csvCheck #1042 for 412.50 is uncleared and explains the reconciliation deltaNEEDS REVIEWno quote suppliedno sourceFocus boxesbeforescreenshot: runs/RC-MAR-RECON-8271/outer/before.pngroom-shell empty-artifact-tabs composerduringscreenshot: runs/RC-MAR-RECON-8271/outer/during.pngreconciliation-sheet sheet-tab-reconciliation agent-thinkingafterscreenshot: runs/RC-MAR-RECON-8271/outer/after.pngreconciliation-sheet sheet-tab-exceptions ending-cash-cellDeterministic render of trajectory mtraj_326496295ccea416. Screenshots are paths only (no inlined bytes).",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 7131.59375,
+      "right": 390,
+      "bottom": 7131.59375,
+      "scrollWidth": 499,
+      "clientWidth": 390
+    }
+  },
+  "targets": [
+    {
+      "tag": "H1",
+      "testid": "room-goal",
+      "className": "nt-room-goal",
+      "text": "Synthetic accountant review: March bank reconciliation",
+      "rect": {
+        "x": 24,
+        "y": 65.796875,
+        "width": 342,
+        "height": 330,
+        "right": 366,
+        "bottom": 395.796875,
+        "scrollWidth": 342,
+        "clientWidth": 342
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          14,
+          17,
+          22
+        ],
+        "ratio": 16.00494193356617,
+        "fontSize": "44px",
+        "fontWeight": "700"
+      }
+    },
+    {
+      "tag": "A",
+      "testid": "room-url",
+      "className": "nt-room-url",
+      "text": "https://example.invalid/synthetic-accounting-room",
+      "rect": {
+        "x": 24,
+        "y": 408.59375,
+        "width": 333.109375,
+        "height": 77,
+        "right": 357.109375,
+        "bottom": 485.59375,
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "contrast": {
+        "foreground": "rgb(88, 166, 255)",
+        "background": [
+          14,
+          17,
+          22
+        ],
+        "ratio": 7.486625079315586,
+        "fontSize": "26px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "verdict-badge",
+      "className": "nt-badge nt-verdict-badge nt-verdict-fail",
+      "text": "verdict: FAIL · total 0.429",
+      "rect": {
+        "x": 24,
+        "y": 521.59375,
+        "width": 289.515625,
+        "height": 46,
+        "right": 313.515625,
+        "bottom": 567.59375,
+        "scrollWidth": 288,
+        "clientWidth": 288
+      },
+      "contrast": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": [
+          248,
+          81,
+          73
+        ],
+        "ratio": 3.3522381389977385,
+        "fontSize": "24px",
+        "fontWeight": "600"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "cost-badge",
+      "className": "nt-badge nt-cost-badge",
+      "text": "cost: $0.01",
+      "rect": {
+        "x": 24,
+        "y": 575.59375,
+        "width": 134.453125,
+        "height": 46,
+        "right": 158.453125,
+        "bottom": 621.59375,
+        "scrollWidth": 132,
+        "clientWidth": 132
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "24px",
+        "fontWeight": "600"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "unscored-badge",
+      "className": "nt-badge nt-unscored-badge",
+      "text": "3 unscored: unscored:visualQuality, unscored:costEfficiency, unscored:latencyEfficiency",
+      "rect": {
+        "x": 24,
+        "y": 719.59375,
+        "width": 342,
+        "height": 154,
+        "right": 366,
+        "bottom": 873.59375,
+        "scrollWidth": 340,
+        "clientWidth": 340
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "24px",
+        "fontWeight": "600"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": "ui-assertion",
+      "className": "nt-artifact-tab",
+      "text": "PASS a sheet tab labeled 'reconciliation.xlsx' is rendered in the work surfaceobserved: tab 'reconciliation.xlsx' present and active",
+      "rect": {
+        "x": 24,
+        "y": 944.59375,
+        "width": 342,
+        "height": 277,
+        "right": 366,
+        "bottom": 1221.59375,
+        "scrollWidth": 340,
+        "clientWidth": 340
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "26px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-artifact-export",
+      "text": "observed: tab 'reconciliation.xlsx' present and active",
+      "rect": {
+        "x": 37,
+        "y": 1113.59375,
+        "width": 316,
+        "height": 99,
+        "right": 353,
+        "bottom": 1212.59375,
+        "scrollWidth": 316,
+        "clientWidth": 316
+      },
+      "contrast": {
+        "foreground": "rgb(139, 148, 158)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.624016439464753,
+        "fontSize": "22px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": "ui-assertion",
+      "className": "nt-artifact-tab",
+      "text": "PASS an 'exceptions' tab lists uncleared/unmatched itemsobserved: tab 'exceptions' present with 2 rows",
+      "rect": {
+        "x": 24,
+        "y": 1221.59375,
+        "width": 342,
+        "height": 205,
+        "right": 366,
+        "bottom": 1426.59375,
+        "scrollWidth": 340,
+        "clientWidth": 340
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "26px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-artifact-export",
+      "text": "observed: tab 'exceptions' present with 2 rows",
+      "rect": {
+        "x": 37,
+        "y": 1351.59375,
+        "width": 316,
+        "height": 66,
+        "right": 353,
+        "bottom": 1417.59375,
+        "scrollWidth": 316,
+        "clientWidth": 316
+      },
+      "contrast": {
+        "foreground": "rgb(139, 148, 158)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.624016439464753,
+        "fontSize": "22px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": "ui-assertion",
+      "className": "nt-artifact-tab",
+      "text": "FAIL reconciled ending cash equals the bank statement ending balance (delta = 0.00)observed: reconciled ending cash is off by 412.50 vs bank statement",
+      "rect": {
+        "x": 24,
+        "y": 1426.59375,
+        "width": 342,
+        "height": 277,
+        "right": 366,
+        "bottom": 1703.59375,
+        "scrollWidth": 340,
+        "clientWidth": 340
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "26px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-artifact-export",
+      "text": "observed: reconciled ending cash is off by 412.50 vs bank statement",
+      "rect": {
+        "x": 37,
+        "y": 1595.59375,
+        "width": 316,
+        "height": 99,
+        "right": 353,
+        "bottom": 1694.59375,
+        "scrollWidth": 316,
+        "clientWidth": 316
+      },
+      "contrast": {
+        "foreground": "rgb(139, 148, 158)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.624016439464753,
+        "fontSize": "22px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "failure-category",
+      "className": "nt-badge nt-verdict-fail",
+      "text": "ui_assertion_failed",
+      "rect": {
+        "x": 24,
+        "y": 1774.59375,
+        "width": 221.578125,
+        "height": 46,
+        "right": 245.578125,
+        "bottom": 1820.59375,
+        "scrollWidth": 220,
+        "clientWidth": 220
+      },
+      "contrast": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": [
+          248,
+          81,
+          73
+        ],
+        "ratio": 3.3522381389977385,
+        "fontSize": "24px",
+        "fontWeight": "600"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "failure-category",
+      "className": "nt-badge nt-verdict-fail",
+      "text": "evidence_needs_review",
+      "rect": {
+        "x": 24,
+        "y": 1828.59375,
+        "width": 273.453125,
+        "height": 46,
+        "right": 297.453125,
+        "bottom": 1874.59375,
+        "scrollWidth": 271,
+        "clientWidth": 271
+      },
+      "contrast": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": [
+          248,
+          81,
+          73
+        ],
+        "ratio": 3.3522381389977385,
+        "fontSize": "24px",
+        "fontWeight": "600"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-artifact-tab",
+      "text": "sheetartifact-reconciliation-xlsxreopen: OKexport: runs/RC-MAR-RECON-8271/artifacts/reconciliation.xlsx",
+      "rect": {
+        "x": 24,
+        "y": 1945.59375,
+        "width": 474.875,
+        "height": 180,
+        "right": 498.875,
+        "bottom": 2125.59375,
+        "scrollWidth": 473,
+        "clientWidth": 473
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "26px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "reopen-ok",
+      "className": "nt-reopen nt-reopen-ok",
+      "text": "reopen: OK",
+      "rect": {
+        "x": 341.453125,
+        "y": 2003.59375,
+        "width": 109.078125,
+        "height": 30,
+        "right": 450.53125,
+        "bottom": 2033.59375,
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "contrast": {
+        "foreground": "rgb(46, 160, 67)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.1281793795711295,
+        "fontSize": "22px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-artifact-export",
+      "text": "export: runs/RC-MAR-RECON-8271/artifacts/reconciliation.xlsx",
+      "rect": {
+        "x": 37,
+        "y": 2044.59375,
+        "width": 448.875,
+        "height": 72,
+        "right": 485.875,
+        "bottom": 2116.59375,
+        "scrollWidth": 449,
+        "clientWidth": 449
+      },
+      "contrast": {
+        "foreground": "rgb(139, 148, 158)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.624016439464753,
+        "fontSize": "22px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": null,
+      "className": "nt-evidence-flag nt-status-source_backed",
+      "text": "source_backed",
+      "rect": {
+        "x": 192.1875,
+        "y": 4494.59375,
+        "width": 160.8125,
+        "height": 39,
+        "right": 353,
+        "bottom": 4533.59375,
+        "scrollWidth": 159,
+        "clientWidth": 159
+      },
+      "contrast": {
+        "foreground": "rgb(46, 160, 67)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.1281793795711295,
+        "fontSize": "22px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-evidence-source",
+      "text": "source: attachment://bank-statement-march.pdf#p3",
+      "rect": {
+        "x": 37,
+        "y": 4858.59375,
+        "width": 316,
+        "height": 156,
+        "right": 353,
+        "bottom": 5014.59375,
+        "scrollWidth": 316,
+        "clientWidth": 316
+      },
+      "contrast": {
+        "foreground": "rgb(139, 148, 158)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.624016439464753,
+        "fontSize": "24px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": null,
+      "className": "nt-evidence-flag nt-status-source_backed",
+      "text": "source_backed",
+      "rect": {
+        "x": 192.1875,
+        "y": 5048.59375,
+        "width": 160.8125,
+        "height": 39,
+        "right": 353,
+        "bottom": 5087.59375,
+        "scrollWidth": 159,
+        "clientWidth": 159
+      },
+      "contrast": {
+        "foreground": "rgb(46, 160, 67)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.1281793795711295,
+        "fontSize": "22px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-evidence-source",
+      "text": "source: attachment://gl-cash-march.csv",
+      "rect": {
+        "x": 37,
+        "y": 5412.59375,
+        "width": 316,
+        "height": 80,
+        "right": 353,
+        "bottom": 5492.59375,
+        "scrollWidth": 316,
+        "clientWidth": 316
+      },
+      "contrast": {
+        "foreground": "rgb(139, 148, 158)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 5.624016439464753,
+        "fontSize": "24px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "needs-review",
+      "className": "nt-evidence-flag nt-needs-review",
+      "text": "NEEDS REVIEW",
+      "rect": {
+        "x": 216.421875,
+        "y": 5526.59375,
+        "width": 165.34375,
+        "height": 39,
+        "right": 381.765625,
+        "bottom": 5565.59375,
+        "scrollWidth": 163,
+        "clientWidth": 163
+      },
+      "contrast": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": [
+          210,
+          153,
+          34
+        ],
+        "ratio": 2.524062922602352,
+        "fontSize": "22px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-focus-path",
+      "text": "screenshot: runs/RC-MAR-RECON-8271/outer/before.png",
+      "rect": {
+        "x": 37,
+        "y": 6024.59375,
+        "width": 316,
+        "height": 120,
+        "right": 353,
+        "bottom": 6144.59375,
+        "scrollWidth": 316,
+        "clientWidth": 316
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "24px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-focus-path",
+      "text": "screenshot: runs/RC-MAR-RECON-8271/outer/during.png",
+      "rect": {
+        "x": 37,
+        "y": 6334.59375,
+        "width": 316,
+        "height": 120,
+        "right": 353,
+        "bottom": 6454.59375,
+        "scrollWidth": 316,
+        "clientWidth": 316
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "24px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "DIV",
+      "testid": null,
+      "className": "nt-focus-path",
+      "text": "screenshot: runs/RC-MAR-RECON-8271/outer/after.png",
+      "rect": {
+        "x": 37,
+        "y": 6677.59375,
+        "width": 316,
+        "height": 120,
+        "right": 353,
+        "bottom": 6797.59375,
+        "scrollWidth": 316,
+        "clientWidth": 316
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "24px",
+        "fontWeight": "400"
+      }
+    }
+  ],
+  "overflow": [
+    {
+      "tag": "DIV",
+      "className": "nt-artifact-tab",
+      "text": "sheetartifact-reconciliation-xlsxreopen: OKexport: runs/RC-MAR-RECON-8271/artifacts/reconciliation.xlsx",
+      "rect": {
+        "x": 24,
+        "y": 1945.59375,
+        "width": 474.875,
+        "height": 180,
+        "right": 498.875,
+        "bottom": 2125.59375,
+        "scrollWidth": 473,
+        "clientWidth": 473
+      }
+    },
+    {
+      "tag": "SPAN",
+      "className": "nt-reopen nt-reopen-ok",
+      "text": "reopen: OK",
+      "rect": {
+        "x": 341.453125,
+        "y": 2003.59375,
+        "width": 109.078125,
+        "height": 30,
+        "right": 450.53125,
+        "bottom": 2033.59375,
+        "scrollWidth": 0,
+        "clientWidth": 0
+      }
+    },
+    {
+      "tag": "DIV",
+      "className": "nt-artifact-export",
+      "text": "export: runs/RC-MAR-RECON-8271/artifacts/reconciliation.xlsx",
+      "rect": {
+        "x": 37,
+        "y": 2044.59375,
+        "width": 448.875,
+        "height": 72,
+        "right": 485.875,
+        "bottom": 2116.59375,
+        "scrollWidth": 449,
+        "clientWidth": 449
+      }
+    },
+    {
+      "tag": "CODE",
+      "className": "",
+      "text": "runs/RC-MAR-RECON-8271/artifacts/reconciliation.xlsx",
+      "rect": {
+        "x": 37,
+        "y": 2051.59375,
+        "width": 448.875,
+        "height": 61,
+        "right": 485.875,
+        "bottom": 2112.59375,
+        "scrollWidth": 0,
+        "clientWidth": 0
+      }
+    }
+  ],
+  "bodyText": "NODEROOM RUN\nSynthetic accountant review: March bank reconciliation\nhttps://example.invalid/synthetic-accounting-room\nverdict: FAIL · total 0.429\ncost: $0.01\nmodel: glm-5.2\nrun: SYNTHETIC-FIRST-USE-ACCOUNTING-01\n3 unscored: unscored:visualQuality, unscored:costEfficiency, unscored:latencyEfficiency\nUI ASSERTIONS\nPASS a sheet tab labeled 'reconciliation.xlsx' is rendered in the work surface\nobserved: tab 'reconciliation.xlsx' present and active\nPASS an 'exceptions' tab lists uncleared/unmatched items\nobserved: tab 'exceptions' present with 2 rows\nFAIL reconciled ending cash equals the bank statement ending balance (delta = 0.00)\nobserved: reconciled ending cash is off by 412.50 vs bank statement\nFAILURE CATEGORIES\nui_assertion_failed\nevidence_needs_review\nARTIFACTS\nSHEETartifact-reconciliation-xlsxreopen: OK\nexport: runs/RC-MAR-RECON-8271/artifacts/reconciliation.xlsx\nAGENT TRACE\nSTEP 0 · PLAN · $0.00 · 640MS\nDraft a 3-step reconciliation plan: locate March bank statement + GL cash export, build a matched-ledger sheet, then verify the ending balance ties.\nPlan accepted; two source documents are expected in the room's attachments.\nSTEP 1 · TOOL · TOOL: FINDDOCUMENT · $0.00 · 1180MS\nCall findDocument to locate the March bank statement and the GL cash export in the room attachments.\nFound 'bank-statement-march.pdf' and 'gl-cash-march.csv'; both attached to room RC-MAR-RECON-8271.\nSTEP 2 · WRITE · TOOL: WRITESHEET · $0.01 · 2960MS\nWrite reconciliation.xlsx: import both sources, match cleared items by amount+date, list unmatched items on an exceptions tab.\nSheet created with 84 matched rows and 2 exceptions; ending-cash formula wired to the reconciliation tab.\nSTEP 3 · VERIFY · $0.00 · 900MS\nVerify reconciled ending cash equals the bank statement ending balance and re-open the exported sheet.\nReopen OK, but ending cash is off by 412.50 — one exception (check #1042) is unsourced; flagged for review rather than forced to tie.\nEVIDENCE\nMarch bank statement ending balance is 128,540.75\nsource_backed\nEnding balance as of March 31: $128,540.75\nsource: attachment://bank-statement-march.pdf#p3\nGL cash account ending balance for March is 128,128.25\nsource_backed\n1000-Cash,03/31,,,128128.25\nsource: attachment://gl-cash-march.csv\nCheck #1042 for 412.50 is uncleared and explains the reconciliation delta\nNEEDS REVIEW\nno quote supplied\nno source\nFOCUS BOXES\nBEFORE\nscreenshot: runs/RC-MAR-RECON-8271/outer/before.png\nroom-shell\nempty-artifact-tabs\ncomposer\nDURING\nscreenshot: runs/RC-MAR-RECON-8271/outer/during.png\nreconciliation-sheet\nsheet-tab-reconciliation\nagent-thinking\nAFTER\nscreenshot: runs/RC-MAR-RECON-8271/outer/after.png\nreconciliation-sheet\nsheet-tab-exceptions\nending-cash-cell\nDeterministic render of trajectory mtraj_326496295ccea416. Screenshots are paths only (no inlined bytes).",
+  "fonts": {
+    "status": "loaded"
+  },
+  "motion": false
+}

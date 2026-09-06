@@ -1,0 +1,18 @@
+{
+  "scriptSha256": "b4c425bc2e937788180d26d074f90023a5abb5c36524e6859a507098b1fb82ad",
+  "source": "cc7686f7b75d541a6eb95e7e5686d949786186ec2ab25f023abb4956c6372a97",
+  "command": [
+    "C:\\nvm4w\\nodejs\\node.EXE",
+    "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-replay-final-renderer.mjs"
+  ],
+  "environmentNames": [
+    "PATH",
+    "PATHEXT",
+    "SYSTEMROOT",
+    "TEMP",
+    "TMP",
+    "WINDIR"
+  ],
+  "deadlineSeconds": 20,
+  "scope": "Pure read-only source renderer; no browser/provider/full suite"
+}

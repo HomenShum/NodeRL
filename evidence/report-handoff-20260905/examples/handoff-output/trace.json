@@ -1,0 +1,48 @@
+{
+  "trajectoryId": "mtraj_3d8dda6eb8379535",
+  "runId": "synthetic-handoff-example",
+  "userGoal": "Review an unresolved reconciliation",
+  "outerTrace": {
+    "url": "https://example.invalid/synthetic-review",
+    "screenshots": [],
+    "consoleErrors": [],
+    "uiAssertions": [
+      {
+        "id": "cash-ties",
+        "expected": "Reconciliation delta is zero",
+        "observed": "Synthetic example: delta is 412.50",
+        "passed": false
+      }
+    ]
+  },
+  "innerTrace": {
+    "steps": []
+  },
+  "artifacts": [],
+  "evidence": [
+    {
+      "factId": "source-gap",
+      "claim": "An uncleared check explains the delta",
+      "status": "needs_review"
+    }
+  ],
+  "reward": {
+    "taskCompletion": 0,
+    "uiStateCorrectness": 0,
+    "visualQuality": 0,
+    "evidenceGrounding": 0,
+    "costEfficiency": 0,
+    "latencyEfficiency": 0,
+    "safety": 1,
+    "total": 0.14285714285714285,
+    "labels": [
+      "unscored:visualQuality",
+      "unscored:costEfficiency",
+      "unscored:latencyEfficiency"
+    ],
+    "failureCategories": [
+      "ui_assertion_failed",
+      "evidence_needs_review"
+    ]
+  }
+}

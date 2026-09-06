@@ -1,0 +1,113 @@
+{
+  "id": "NODERL-REPORT-HANDOFF-01",
+  "status": "IMPLEMENTED_AND_NAMED_PROOF_PASS; INDEPENDENT_REVIEW_PENDING",
+  "at": "2026-09-06T00:28:40.446620+00:00",
+  "request": "Make each repo usable and ready for developer/user handoff, including visual, responsive and interaction standards.",
+  "repository": "D:\\VSCode Projects\\cafecorner_nodebench\\nodebench_ai4\\NodeRL",
+  "head": "4b06939b8fd9121e2ba73887df2dd799eae2f1aa",
+  "branch": "codex/noderl-report-handoff-20260905",
+  "ownedFiles": [
+    {
+      "path": "packages/nodetrace/src/storybook.ts",
+      "bytes": 20886,
+      "sha256": "cc7686f7b75d541a6eb95e7e5686d949786186ec2ab25f023abb4956c6372a97",
+      "rawGitBlobSha1": "3905a9337662646cd7c522b5cecc0804b7fc5d2f",
+      "prospectiveFilteredGitBlobSha1": "3905a9337662646cd7c522b5cecc0804b7fc5d2f",
+      "tracked": true
+    },
+    {
+      "path": "packages/nodetrace/test/storybook.test.ts",
+      "bytes": 13158,
+      "sha256": "da8f0be2f8bacb60f0925e09accf4f19f12dc073e2fd3215dfc6432dd4e79a72",
+      "rawGitBlobSha1": "5f60852209fd80893f7b3b89c26e0752734c1e00",
+      "prospectiveFilteredGitBlobSha1": "5f60852209fd80893f7b3b89c26e0752734c1e00",
+      "tracked": true
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 5245,
+      "sha256": "b19353892e5dd10dc91152ad8d391dc817b4d3ada27e5c074e0486e02e856aba",
+      "rawGitBlobSha1": "b5a0e3f5fd7bc679e1267611e0035aa424c3fef8",
+      "prospectiveFilteredGitBlobSha1": "b5a0e3f5fd7bc679e1267611e0035aa424c3fef8",
+      "tracked": false
+    },
+    {
+      "path": "README.md",
+      "bytes": 6415,
+      "sha256": "3b0148033619a5b95b7870894e77ee7929e4ae8b472c214f0d588a77bcd997d3",
+      "rawGitBlobSha1": "305d74623bbbf37eac4f38849b9751ce1b4697d8",
+      "prospectiveFilteredGitBlobSha1": "305d74623bbbf37eac4f38849b9751ce1b4697d8",
+      "tracked": true
+    },
+    {
+      "path": ".tours/03-debug-and-recovery.tour",
+      "bytes": 7421,
+      "sha256": "a627101d155d289bb89ee970b2e4c94bca375777ad52c989cec607e23f1de511",
+      "rawGitBlobSha1": "862ec75fc08a10a8d949ca9565285037c06c45b5",
+      "prospectiveFilteredGitBlobSha1": "e5bc35ea639850406c49f366d00a9ff88e71cf04",
+      "tracked": true
+    }
+  ],
+  "sourceDigest": "dac4e39828002a5e5b03df8ae825e988bca8eff2f8c718d89a0d0a8446a797b5",
+  "sourceDigestSerialization": "UTF-8 JSON of ownedFiles in the listed owner order, sort_keys=True, separators=(comma,colon), no final newline.",
+  "sourceFiles": 102,
+  "originalProtectedFiles": 97,
+  "allOriginalRefsPreserved": true,
+  "indexEntriesUnchanged": true,
+  "staged": false,
+  "committed": false,
+  "sourceManifest": {
+    "path": "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-report-repair-01\\source-final.json",
+    "sha256": "bbc41f741902fae3309decc9b665ec0c5b5facdee87ad91e3a89a81086e5c8bd"
+  },
+  "evidenceManifest": {
+    "path": "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-report-repair-01\\manifest.json",
+    "sha256": "27d6f4e333c0a67309c3af8a2cd97c8aaf5d5eeaf8fae9a0c9e8058e634223c6",
+    "files": 386,
+    "bytes": 13299390
+  },
+  "priorPlan": "52a55e14a9006dfce2e3a05744c523829d3c3d95bd1895964498e6eb0e7aaf44",
+  "priorAddendum": "e258bf49f46ee37ebcae6bffaddcbed6c1b134580aea825af25dfbc3c0e5636a",
+  "priorPlanJudge": "97e44ed711bb203d8220b5ae0e6a2b7b1b138a40da0e3c03f7cadedfbf16b9e7",
+  "fifthOwnerAddendum": {
+    "path": "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-report-repair-01\\citation-addendum.json",
+    "sha256": "72242b1e87a511556d974cb26be2d8a22837a5d6bdb652a98f5bca0b2def2a09"
+  },
+  "verification": {
+    "targetedRendererScenarios": "9/9; original owner failed all three added groups",
+    "normalTests": "16/16 files",
+    "typecheck": "PASS",
+    "semantic": "99/99 plus mixed-cost 1/1",
+    "browser": "230/230 assertions;31 layout cells plus named native URL actions",
+    "pngs": 94,
+    "originalArtifactBindings": "33/33 unchanged trace/repair/regression files",
+    "nativeFileReopen": "3/3",
+    "handoffExample": "4/4 reopened output checks",
+    "runtime": "All recorded owned PID/create-time identities gone and no listener on 4995"
+  },
+  "failuresPreserved": [
+    "targeted-before.stdout.txt",
+    "tests.stdout.txt",
+    "citation-command-before-failure.txt",
+    "after-01/extra-cases.stderr.txt",
+    "original 242-file first-use baseline remains exact"
+  ],
+  "currentHandoffMetadataSuccessor": {
+    "path": "HANDOFF.md",
+    "beforeProofSha256": "56e219e60fb8033f83171e12856161e8876fc14c3124bcab4fca0d3ec32b7c7c",
+    "finalSha256": "b19353892e5dd10dc91152ad8d391dc817b4d3ada27e5c074e0486e02e856aba",
+    "change": "One current verification/status paragraph updated after successful checks. Runnable code block and product/runtime sources unchanged.",
+    "browserSourceBindingMeaning": "All 102 files were stable throughout after-01. Final handoff status is an explicit metadata-only successor to its recorded source hash."
+  },
+  "limits": [
+    "Fresh nonauthor source/visual review pending; no commit/push/deploy/publication.",
+    "Only the five named renderer trust/layout causes were repaired; full UI/accessibility grades remain null.",
+    "Synthetic accounting inputs; no actual workbook or screenshot refs verified; no provider/model/capture/NodeRoom command/benchmark/training execution.",
+    "Source-workspace public imports, not npm tarball or installed CLI.",
+    "No physical device, native zoom, durable shared concurrency or shared CI certification.",
+    "HTTPS safe-link behavior used local route fulfillment; no real TLS endpoint claimed.",
+    "Inherited rendered-surface probe still misses the dynamic HTML renderer; its N/A result cannot certify UI applicability.",
+    "Original 10035 socket result is WSAEWOULDBLOCK; actual new listener/PID evidence governs closure."
+  ],
+  "fullGrades": null
+}

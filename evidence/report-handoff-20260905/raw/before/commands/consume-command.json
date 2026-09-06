@@ -1,0 +1,9 @@
+{
+  "exitCode": 0,
+  "seconds": 0.902677059173584,
+  "command": [
+    "node",
+    "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-first-use-01\\consume.mjs"
+  ],
+  "environment": "Child system/runtime allowlist only; no provider environment inherited."
+}

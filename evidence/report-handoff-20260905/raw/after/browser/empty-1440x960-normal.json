@@ -1,0 +1,153 @@
+{
+  "url": "http://127.0.0.1:4995/empty",
+  "viewport": {
+    "width": 1440,
+    "height": 960
+  },
+  "document": {
+    "width": 1440,
+    "height": 960
+  },
+  "scroll": {
+    "x": 0,
+    "y": 0
+  },
+  "verdict": "verdict: UNVERIFIED",
+  "verdictState": "unverified",
+  "goal": "No run evidence supplied",
+  "cost": "cost: not recorded",
+  "needsReview": 0,
+  "images": 0,
+  "injected": null,
+  "active": {
+    "tag": "BODY",
+    "testid": null,
+    "text": "NodeRoom runNo run evidence suppliedhttps://example.invalid/emptyverdict: UNVERIFIEDcost: not recordedrun: SYNTHETIC-EMPTYUI assertionsno UI assertionsArtifactsno artifacts producedAgent traceno reasoning steps recordedEvidenceno evidence groundedFocus boxesno screenshots capturedDeterministic render of trajectory mtraj_ced8a3b839bddce8. Screenshots are paths only (no inlined bytes).",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 594.28125,
+      "right": 1440,
+      "bottom": 594.28125,
+      "scrollWidth": 1440,
+      "clientWidth": 1440
+    }
+  },
+  "targets": [
+    {
+      "tag": "H1",
+      "testid": "room-goal",
+      "className": "nt-room-goal",
+      "text": "No run evidence supplied",
+      "rect": {
+        "x": 294,
+        "y": 44.890625,
+        "width": 852,
+        "height": 33,
+        "right": 1146,
+        "bottom": 77.890625,
+        "scrollWidth": 852,
+        "clientWidth": 852
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          14,
+          17,
+          22
+        ],
+        "ratio": 16.00494193356617,
+        "fontSize": "22px",
+        "fontWeight": "700"
+      }
+    },
+    {
+      "tag": "A",
+      "testid": "room-url",
+      "className": "nt-room-url",
+      "text": "https://example.invalid/empty",
+      "rect": {
+        "x": 294,
+        "y": 84.28125,
+        "width": 171.96875,
+        "height": 17,
+        "right": 465.96875,
+        "bottom": 101.28125,
+        "scrollWidth": 0,
+        "clientWidth": 0
+      },
+      "contrast": {
+        "foreground": "rgb(88, 166, 255)",
+        "background": [
+          14,
+          17,
+          22
+        ],
+        "ratio": 7.486625079315586,
+        "fontSize": "13px",
+        "fontWeight": "400"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "verdict-badge",
+      "className": "nt-badge nt-verdict-badge nt-verdict-unverified",
+      "text": "verdict: UNVERIFIED",
+      "rect": {
+        "x": 294,
+        "y": 136.28125,
+        "width": 132.109375,
+        "height": 28,
+        "right": 426.109375,
+        "bottom": 164.28125,
+        "scrollWidth": 130,
+        "clientWidth": 130
+      },
+      "contrast": {
+        "foreground": "rgb(210, 153, 34)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 6.85338734831515,
+        "fontSize": "12px",
+        "fontWeight": "600"
+      }
+    },
+    {
+      "tag": "SPAN",
+      "testid": "cost-badge",
+      "className": "nt-badge nt-cost-badge",
+      "text": "cost: not recorded",
+      "rect": {
+        "x": 434.109375,
+        "y": 136.28125,
+        "width": 121.015625,
+        "height": 28,
+        "right": 555.125,
+        "bottom": 164.28125,
+        "scrollWidth": 119,
+        "clientWidth": 119
+      },
+      "contrast": {
+        "foreground": "rgb(230, 237, 243)",
+        "background": [
+          22,
+          27,
+          34
+        ],
+        "ratio": 14.639773375342953,
+        "fontSize": "12px",
+        "fontWeight": "600"
+      }
+    }
+  ],
+  "overflow": [],
+  "bodyText": "NODEROOM RUN\nNo run evidence supplied\nhttps://example.invalid/empty\nverdict: UNVERIFIED\ncost: not recorded\nrun: SYNTHETIC-EMPTY\nUI ASSERTIONS\nno UI assertions\nARTIFACTS\nno artifacts produced\nAGENT TRACE\nno reasoning steps recorded\nEVIDENCE\nno evidence grounded\nFOCUS BOXES\nno screenshots captured\nDeterministic render of trajectory mtraj_ced8a3b839bddce8. Screenshots are paths only (no inlined bytes).",
+  "fonts": {
+    "status": "loaded"
+  },
+  "motion": false
+}

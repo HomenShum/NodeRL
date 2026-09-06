@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "Actual native file reopening preserves failed status, needs-review and unscored",
+      "pass": true
+    },
+    {
+      "name": "Native file keyboard reaches room link without activating it",
+      "pass": true
+    },
+    {
+      "name": "Offline report needs no external resource",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "blocked": [],
+  "state": {
+    "url": "file:///C:/Users/hshum/.codex/worktrees/5dba/nodebench-ai/docs/plans/portfolio-recovery-20260904/E6k-noderl-first-use-01/artifacts/accounting/report.html",
+    "goal": "Synthetic accountant review: March bank reconciliation",
+    "verdict": "verdict: FAIL · total 0.429",
+    "needsReview": 1,
+    "unscored": "3 unscored: unscored:visualQuality, unscored:costEfficiency, unscored:latencyEfficiency",
+    "bodyText": "NODEROOM RUN\nSynthetic accountant review: March bank reconciliation\nhttps://example.invalid/synthetic-accounting-room\nverdict: FAIL · total 0.429\ncost: $0.01\nmodel: glm-5.2\nrun: SYNTHETIC-FIRST-USE-ACCOUNTING-01\n3 unscored: unscored:visualQuality, unscored:costEfficiency, unscored:latencyEfficiency\nUI ASSERTIONS\nPASS a sheet tab labeled 'reconciliation.xlsx' is rendered in the work surface\nobserved: tab 'reconciliation.xlsx' present and active\nPASS an 'exceptions' tab lists uncleared/unmatched items\nobserved: tab 'exceptions' present with 2 rows\nFAIL reconciled ending cash equals the bank statement ending balance (delta = 0.00)\nobserved: reconciled ending cash is off by 412.50 vs bank statement\nFAILURE CATEGORIES\nui_assertion_failed\nevidence_needs_review\nARTIFACTS\nSHEETartifact-reconciliation-xlsxreopen: OK\nexport: runs/RC-MAR-RECON-8271/artifacts/reconciliation.xlsx\nAGENT TRACE\nSTEP 0 · PLAN · $0.00 · 640MS\nDraft a 3-step reconciliation plan: locate March bank statement + GL cash export, build a matched-ledger sheet, then verify the ending balance ties.\nPlan accepted; two source documents are expected in the room's attachments.\nSTEP 1 · TOOL · TOOL: FINDDOCUMENT · $0.00 · 1180MS\nCall findDocument to locate the March bank statement and the GL cash export in the room attachments.\nFound 'bank-statement-march.pdf' and 'gl-cash-march.csv'; both attached to room RC-MAR-RECON-8271.\nSTEP 2 · WRITE · TOOL: WRITESHEET · $0.01 · 2960MS\nWrite reconciliation.xlsx: import both sources, match cleared items by amount+date, list unmatched items on an exceptions tab.\nSheet created with 84 matched rows and 2 exceptions; ending-cash formula wired to the reconciliation tab.\nSTEP 3 · VERIFY · $0.00 · 900MS\nVerify reconciled ending cash equals the bank statement ending balance and re-open the exported sheet.\nReopen OK, but ending cash is off by 412.50 — one exception (check #1042) is unsourced; flagged for review rather than forced to tie.\nEVIDENCE\nMarch bank statement ending balance is 128,540.75\nsource_backed\nEnding balance as of March 31: $128,540.75\nsource: attachment://bank-statement-march.pdf#p3\nGL cash account ending balance for March is 128,128.25\nsource_backed\n1000-Cash,03/31,,,128128.25\nsource: attachment://gl-cash-march.csv\nCheck #1042 for 412.50 is uncleared and explains the reconciliation delta\nNEEDS REVIEW\nno quote supplied\nno source\nFOCUS BOXES\nBEFORE\nscreenshot: runs/RC-MAR-RECON-8271/outer/before.png\nroom-shell\nempty-artifact-tabs\ncomposer\nDURING\nscreenshot: runs/RC-MAR-RECON-8271/outer/during.png\nreconciliation-sheet\nsheet-tab-reconciliation\nagent-thinking\nAFTER\nscreenshot: runs/RC-MAR-RECON-8271/outer/after.png\nreconciliation-sheet\nsheet-tab-exceptions\nending-cash-cell\nDeterministic render of trajectory mtraj_326496295ccea416. Screenshots are paths only (no inlined bytes)."
+  },
+  "sourceHtmlSha256": "1ed7e96bcf59eebb879f78f43af10db595c0315699a3a4ee4ecd0eb6ac2822ae",
+  "pngSha256": "c1bc7d16ebdc5ec407b6375c19ebf3f720eea0695992f90e1a4b76be25450408",
+  "browserClosed": true,
+  "serverUsed": false
+}

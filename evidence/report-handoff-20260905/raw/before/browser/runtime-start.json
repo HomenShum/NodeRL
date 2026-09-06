@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-05T23:51:53.995Z",
+  "listen": {
+    "address": "127.0.0.1",
+    "family": "IPv4",
+    "port": 4995
+  },
+  "playwright": "1.61.1",
+  "sourceFiles": 101,
+  "ownedReports": 11
+}

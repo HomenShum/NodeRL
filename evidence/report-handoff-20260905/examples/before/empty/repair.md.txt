@@ -1,0 +1,30 @@
+# Repair prompt — No run evidence supplied
+
+- trajectory: `mtraj_ced8a3b839bddce8`  ·  run: `SYNTHETIC-EMPTY`
+- verdict: **PARTIAL/REVIEW**  ·  total reward: 0.143
+- failure categories: (none)
+
+## What failed (ground truth — do NOT guess)
+- (no failed UI assertion)
+
+## Evidence
+- screenshots: (none)
+
+## Your task
+1. Trace each failed assertion to its root cause (read the failing step + artifact; do not fabricate).
+2. Propose the SMALLEST shared fix that makes the failed assertion(s) pass — never a per-task patch.
+3. Resolve every needs_review claim with a real source, or remove it.
+4. Add the regression below so this failure cannot silently return.
+
+## Regression to add
+```json
+{
+  "id": "regression_mtraj_ced8a3b839bddce8",
+  "fromTrajectory": "mtraj_ced8a3b839bddce8",
+  "userGoal": "No run evidence supplied",
+  "failedAssertions": [],
+  "failureCategories": [],
+  "needsReviewClaims": [],
+  "expectation": "Re-running \"No run evidence supplied\" must keep all UI assertions passing and resolve 0 needs_review evidence fact(s)."
+}
+```

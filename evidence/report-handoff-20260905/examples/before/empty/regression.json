@@ -1,0 +1,9 @@
+{
+  "id": "regression_mtraj_ced8a3b839bddce8",
+  "fromTrajectory": "mtraj_ced8a3b839bddce8",
+  "userGoal": "No run evidence supplied",
+  "failedAssertions": [],
+  "failureCategories": [],
+  "needsReviewClaims": [],
+  "expectation": "Re-running \"No run evidence supplied\" must keep all UI assertions passing and resolve 0 needs_review evidence fact(s)."
+}

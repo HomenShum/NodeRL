@@ -1,0 +1,119 @@
+{
+  "viewedImages": [
+    {
+      "path": "E6k-noderl-report-repair-01/after-01/browser/accounting-320x800-normal.png",
+      "bytes": 43274,
+      "sha256": "8d21bfe1c3b2b869e1a005388bba89ada9ca4517d5748bec95c03f46f544d28d",
+      "width": 320,
+      "height": 800,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    },
+    {
+      "path": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-390x844-text200.png",
+      "bytes": 46120,
+      "sha256": "288c8a1eeb69813b9ac93db52e4632cadd4e04456e19d39e7d9e0eed96ba2b10",
+      "width": 390,
+      "height": 844,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    },
+    {
+      "path": "E6k-noderl-report-repair-01/after-01/browser/accounting-1440x960-normal-full.png",
+      "bytes": 160242,
+      "sha256": "9ca52fea7d9919af8ff101ed8e9a5cfa15db0a6a564501519656f4427dcd6dcf",
+      "width": 1440,
+      "height": 1887,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    },
+    {
+      "path": "E6k-noderl-report-repair-01/after-01/browser/script-uri-native-activated.png",
+      "bytes": 52435,
+      "sha256": "20d9a85309160d40b12f1478b21875d13b3fb18f64847882716b2b7d18561ac3",
+      "width": 390,
+      "height": 844,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    },
+    {
+      "path": "E6k-noderl-first-use-01/browser/long-unicode-390x844-normal.png",
+      "bytes": 58598,
+      "sha256": "150e093d639420151decdeee315172f42a7b4613d98b4a6f47849370b21484e9",
+      "width": 390,
+      "height": 844,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    },
+    {
+      "path": "E6k-noderl-report-repair-01/after-01/browser/long-unicode-390x844-normal.png",
+      "bytes": 58647,
+      "sha256": "0577cc659841cd335e2f7a839600f62fbf0fa57082e4d2780ca8bd5ee34f528c",
+      "width": 390,
+      "height": 844,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    },
+    {
+      "path": "E6k-noderl-report-repair-01/after-01/boundary-addendum/accounting-390-raw.png",
+      "bytes": 48057,
+      "sha256": "4459a4dcf9ba094780cc07cba393bb62f58f184fdb25b4e442eedf97ec871faf",
+      "width": 390,
+      "height": 844,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    },
+    {
+      "path": "E6k-noderl-report-repair-01/after-01/boundary-addendum/empty-390-raw.png",
+      "bytes": 27480,
+      "sha256": "4bc74ce28ff8f26c8a33445b2312f2d6bf82cd4cd44384cfd63aae0bafd737e2",
+      "width": 390,
+      "height": 844,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    },
+    {
+      "path": "E6k-noderl-report-repair-01/after-01/boundary-addendum/mixed-cost-390-raw.png",
+      "bytes": 53519,
+      "sha256": "d1f8e3dfe4d110ac6e5b66743b6d290d510156d44e06fcc57596ca1546fbc2b4",
+      "width": 390,
+      "height": 844,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    },
+    {
+      "path": "E6k-noderl-report-repair-01/after-01/browser/before-long-artifact-390-raw.png",
+      "bytes": 45886,
+      "sha256": "d3f89bd4a1d344411f697f46b6a024dfe1e3205da0d2cf98b38633ccf78ea30a",
+      "width": 390,
+      "height": 844,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    },
+    {
+      "path": "E6k-noderl-report-repair-01/after-01/browser/accounting-390x844-text200.png",
+      "bytes": 58873,
+      "sha256": "f29dd4df57a7ffecedcdc8326d9ce32c9c5790c7438d259f060dd09ef6167b59",
+      "width": 390,
+      "height": 844,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    },
+    {
+      "path": "E6k-noderl-report-repair-01/after-01/browser/accounting-1440x960-text200.png",
+      "bytes": 117695,
+      "sha256": "e18636e0887e9c746e52f3cc81a57e4d609f4292d716f8d87d3bea06494bc3f2",
+      "width": 1440,
+      "height": 960,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    },
+    {
+      "path": "E6k-noderl-report-repair-01/after-01/file-reopen/reopened-file-1440.png",
+      "bytes": 85015,
+      "sha256": "74ccb281e4b62fcdece1f9cebe8c2b87ddd2d7d3daad70d80613898e9fc3c978",
+      "width": 1440,
+      "height": 960,
+      "viewedWith": "tools.view_image; original1440x1887 desktop full image displayed resized1376x1803, other views preserve their shown dimensions"
+    }
+  ],
+  "independentSrgbContrast": {
+    "FAIL": {
+      "beforeWhite": 3.3522381389977385,
+      "afterOwnedBackgroundText": 5.641444785773366
+    },
+    "NEEDS REVIEW": {
+      "beforeWhite": 2.524062922602352,
+      "afterOwnedBackgroundText": 7.492470255226981
+    }
+  },
+  "scope": "13 actual saved images viewed:12 current and1 matched baseline. Other82 current PNGs are byte-verified but not newly viewed by this judge. Glyph full-page readability is limited by viewer scaling; viewport and targeted phone pixels were inspected separately. No whole UI/a11y score."
+}

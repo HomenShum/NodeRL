@@ -1,0 +1,19 @@
+{
+  "taskCompletion": 0,
+  "uiStateCorrectness": 0,
+  "visualQuality": 0,
+  "evidenceGrounding": 0,
+  "costEfficiency": 0,
+  "latencyEfficiency": 0,
+  "safety": 1,
+  "total": 0.14285714285714285,
+  "labels": [
+    "unscored:taskCompletion",
+    "unscored:uiStateCorrectness",
+    "unscored:visualQuality",
+    "unscored:evidenceGrounding",
+    "unscored:costEfficiency",
+    "unscored:latencyEfficiency"
+  ],
+  "failureCategories": []
+}

@@ -1,0 +1,22 @@
+{
+  "derivation": "computeMergedReward(unscored), then deliberately attached to the main report trace. Not a provider or human grade.",
+  "value": {
+    "taskCompletion": 0.6666666666666666,
+    "uiStateCorrectness": 0.6666666666666666,
+    "visualQuality": 0,
+    "evidenceGrounding": 0.6666666666666666,
+    "costEfficiency": 0,
+    "latencyEfficiency": 0,
+    "safety": 1,
+    "total": 0.42857142857142855,
+    "labels": [
+      "unscored:visualQuality",
+      "unscored:costEfficiency",
+      "unscored:latencyEfficiency"
+    ],
+    "failureCategories": [
+      "ui_assertion_failed",
+      "evidence_needs_review"
+    ]
+  }
+}

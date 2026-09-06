@@ -1,0 +1,8 @@
+{
+  "path": ".tours/03-debug-and-recovery.tour",
+  "beforeSha256": "6db59f5d52703de78f39055dbe692ffe7b912b4b2ba897b71798eb36e79bc781",
+  "afterSha256": "a627101d155d289bb89ee970b2e4c94bca375777ad52c989cec607e23f1de511",
+  "change": "steps[3].line 300 to 319; no other raw byte changed",
+  "authorization": "Parent accepted exact observed current declaration and prior citation failure",
+  "rawFailure": "tests.stdout.txt"
+}

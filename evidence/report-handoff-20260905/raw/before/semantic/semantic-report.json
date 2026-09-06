@@ -1,0 +1,542 @@
+{
+  "at": "2026-09-05T23:48:26.553Z",
+  "checks": [
+    {
+      "name": "Public package entrypoints resolve from NodeRL package.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Public NodeEval entrypoint loads without executing an oracle/provider",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Merge does not mutate caller input",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Absent reward stays absent",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Failure survives merge",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Needs-review survives merge",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Unknown visual score remains explicit",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: JSON reopen preserves exact trace",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: HTML repeat/reopen is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: repair repeat is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: regression carries exact failed assertions",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: regression carries needs-review claims",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: expected HTML verdict",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: carried total agrees in JSON/HTML/repair",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "accounting: regression uses carried failure categories",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-reward: JSON reopen preserves exact trace",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-reward: HTML repeat/reopen is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-reward: repair repeat is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-reward: regression carries exact failed assertions",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-reward: regression carries needs-review claims",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-reward: expected HTML verdict",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-reward: absent reward renders no total",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-vs-unknown: JSON reopen preserves exact trace",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-vs-unknown: HTML repeat/reopen is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-vs-unknown: repair repeat is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-vs-unknown: regression carries exact failed assertions",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-vs-unknown: regression carries needs-review claims",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-vs-unknown: expected HTML verdict",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-vs-unknown: carried total agrees in JSON/HTML/repair",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-vs-unknown: regression uses carried failure categories",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Supplied zero is scored, absent components remain unscored",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "positive-conflict: JSON reopen preserves exact trace",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "positive-conflict: HTML repeat/reopen is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "positive-conflict: repair repeat is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "positive-conflict: regression carries exact failed assertions",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "positive-conflict: regression carries needs-review claims",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "positive-conflict: expected HTML verdict",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "positive-conflict: carried total agrees in JSON/HTML/repair",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "positive-conflict: regression uses carried failure categories",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Positive supplied total cannot hide failed assertion",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty: JSON reopen preserves exact trace",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty: HTML repeat/reopen is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty: repair repeat is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty: regression carries exact failed assertions",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty: regression carries needs-review claims",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty: expected HTML verdict",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "empty: absent reward renders no total",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Empty assertion/evidence values stay labelled unscored",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost: JSON reopen preserves exact trace",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost: HTML repeat/reopen is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost: repair repeat is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost: regression carries exact failed assertions",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost: regression carries needs-review claims",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost: expected HTML verdict",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "absent-cost: absent reward renders no total",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-cost: JSON reopen preserves exact trace",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-cost: HTML repeat/reopen is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-cost: repair repeat is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-cost: regression carries exact failed assertions",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-cost: regression carries needs-review claims",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-cost: expected HTML verdict",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "zero-cost: absent reward renders no total",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Absent cost is visibly distinct from explicit zero",
+      "pass": false,
+      "actual": {
+        "absent": "cost: $0.00",
+        "explicitZero": "cost: $0.00"
+      }
+    },
+    {
+      "name": "long-unicode: JSON reopen preserves exact trace",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: HTML repeat/reopen is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: repair repeat is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: regression carries exact failed assertions",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: regression carries needs-review claims",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: expected HTML verdict",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: carried total agrees in JSON/HTML/repair",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "long-unicode: regression uses carried failure categories",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "script-uri: JSON reopen preserves exact trace",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "script-uri: HTML repeat/reopen is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "script-uri: repair repeat is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "script-uri: regression carries exact failed assertions",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "script-uri: regression carries needs-review claims",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "script-uri: expected HTML verdict",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "script-uri: carried total agrees in JSON/HTML/repair",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "script-uri: regression uses carried failure categories",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "controlled-observation: JSON reopen preserves exact trace",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "controlled-observation: HTML repeat/reopen is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "controlled-observation: repair repeat is byte-identical",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "controlled-observation: regression carries exact failed assertions",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "controlled-observation: regression carries needs-review claims",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "controlled-observation: expected HTML verdict",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "controlled-observation: carried total agrees in JSON/HTML/repair",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "controlled-observation: regression uses carried failure categories",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Changed observation changes HTML and repair bytes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Trajectory ID is not claimed as full content hash",
+      "pass": true,
+      "actual": {
+        "trajectoryIdUnchanged": true,
+        "meaning": "content hashes bind variants; caller-generated trajectory IDs alone do not"
+      }
+    },
+    {
+      "name": "typed-array: merge and renderer reject screenshot bytes",
+      "pass": true,
+      "actual": {
+        "mergeError": "NO-LEAK violation: outerTrace.screenshots[0].path carries inlined bytes; screenshots must be paths only",
+        "renderError": "NO-LEAK violation: screenshot[before].path carries inlined bytes; screenshots must be paths only"
+      }
+    },
+    {
+      "name": "array-buffer: merge and renderer reject screenshot bytes",
+      "pass": true,
+      "actual": {
+        "mergeError": "NO-LEAK violation: outerTrace.screenshots[0].path carries inlined bytes; screenshots must be paths only",
+        "renderError": "NO-LEAK violation: screenshot[before].path carries inlined bytes; screenshots must be paths only"
+      }
+    },
+    {
+      "name": "data-uri: merge and renderer reject screenshot bytes",
+      "pass": true,
+      "actual": {
+        "mergeError": "NO-LEAK violation: outerTrace.screenshots[0].path is a data: URI (inlined bytes); screenshots must be paths only",
+        "renderError": "NO-LEAK violation: screenshot[before].path is a data: URI (inlined bytes); screenshots must be paths only"
+      }
+    },
+    {
+      "name": "Failure patterns repeat deterministically at fixed time",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "256 repeated batches preserve exactly 64 unresolved patterns",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Resolution removes only 32 named tasks",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Latest same-root-cause failure replaces prior detail without growth",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Explicit resolution empties memory and repair targets",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Independent caller burst produces equal results without mutating inputs",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "No API attempted network",
+      "pass": true,
+      "actual": null
+    }
+  ],
+  "passed": 98,
+  "failed": [
+    {
+      "name": "Absent cost is visibly distinct from explicit zero",
+      "pass": false,
+      "actual": {
+        "absent": "cost: $0.00",
+        "explicitZero": "cost: $0.00"
+      }
+    }
+  ],
+  "deniedFetch": [],
+  "imports": {
+    "@noderl/nodetrace": {
+      "resolved": "D:\\VSCode Projects\\cafecorner_nodebench\\nodebench_ai4\\NodeRL\\packages\\nodetrace\\src\\index.ts",
+      "sha256": "62cf3481b3f75753454a64ea646c11c2aa02b4068080849faacbd414287f5068"
+    },
+    "@noderl/nodemem": {
+      "resolved": "D:\\VSCode Projects\\cafecorner_nodebench\\nodebench_ai4\\NodeRL\\packages\\nodemem\\src\\index.ts",
+      "sha256": "282ed0c250ff32e970e2876c4f4d9710f444c105f4655ee314a028a19f661eef"
+    },
+    "@noderl/nodeeval": {
+      "resolved": "D:\\VSCode Projects\\cafecorner_nodebench\\nodebench_ai4\\NodeRL\\packages\\nodeeval\\src\\index.ts",
+      "sha256": "1cc29b65d8c6b1772799be2bd7ceebe13e5395990821dc480d7fc18bea1b0389"
+    }
+  },
+  "fullGrades": null
+}

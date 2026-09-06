@@ -1,0 +1,50 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { stripTypeScriptTypes } from 'node:module';
+import { pathToFileURL } from 'node:url';
+
+const P = 'C:/Users/hshum/.codex/worktrees/5dba/nodebench-ai/docs/plans/portfolio-recovery-20260904';
+const R = 'D:/VSCode Projects/cafecorner_nodebench/nodebench_ai4/NodeRL';
+const O = path.join(P, 'E6k-noderl-report-repair-01');
+const J = path.join(P, 'E6k-noderl-report-final-judge-01');
+const B = path.join(P, 'E6k-noderl-first-use-01');
+const sha = b => crypto.createHash('sha256').update(b).digest('hex');
+const read = p => fs.readFileSync(p);
+const json = p => JSON.parse(read(p).toString('utf8'));
+let fetchAttempts = 0;
+globalThis.fetch = async () => { fetchAttempts++; throw new Error('Provider/network calls forbidden in pure renderer replay'); };
+const ownerPath = path.join(R, 'packages/nodetrace/src/storybook.ts');
+const beforePath = path.join(O, 'before/packages/nodetrace/src/storybook.ts.txt');
+const before = read(beforePath);
+const current = read(ownerPath);
+if (sha(before) !== '720ad1a95a1f57e6d457cd0c6caad5aaa76db1656a0f5220bf4d0b87587e5d75') throw new Error('Original owner mismatch');
+if (sha(current) !== 'cc7686f7b75d541a6eb95e7e5686d949786186ec2ab25f023abb4956c6372a97') throw new Error('Current owner mismatch');
+const { renderStorybook } = await import(pathToFileURL(ownerPath).href);
+const stripped = stripTypeScriptTypes(before.toString('utf8'), { mode: 'strip' });
+const old = await import('data:text/javascript;base64,' + Buffer.from(stripped).toString('base64'));
+const rows = [];
+for (const [label, root, renderer] of [['original', B, old.renderStorybook], ['current', path.join(O, 'after-01'), renderStorybook]]) {
+  for (const c of json(path.join(root, 'artifacts/report-cases.json'))) {
+    const traceBytes = read(path.join(root, 'artifacts', c.name, 'trace.json'));
+    const trace = JSON.parse(traceBytes.toString('utf8'));
+    const serialized = JSON.stringify(trace);
+    const rendered = Buffer.from(renderer(trace));
+    const expected = read(path.join(root, 'artifacts', c.file));
+    rows.push({ owner: label, name: c.name, traceSha256: sha(traceBytes), savedHtmlSha256: sha(expected), renderedSha256: sha(rendered), byteEqual: rendered.equals(expected), deterministic: rendered.equals(Buffer.from(renderer(trace))), callerUnchanged: serialized === JSON.stringify(trace) });
+  }
+}
+const names = ['script-uri', 'absent-cost', 'empty'];
+const knockouts = names.map(name => {
+  const t = json(path.join(B, 'artifacts', name, 'trace.json'));
+  const a = old.renderStorybook(t), b = renderStorybook(t);
+  const effect = name === 'script-uri' ? { oldActive: /<a class="nt-room-url"[^>]*href="javascript:/.test(a), newInert: /<span class="nt-room-url"/.test(b) && !/<a class="nt-room-url"/.test(b) }
+    : name === 'absent-cost' ? { oldUnknownAsZero: a.includes('data-testid="cost-badge">cost: $0.00'), newUnknownExplicit: b.includes('data-testid="cost-badge">cost: not recorded') }
+      : { oldMessageAbsent: !a.includes('no artifacts produced'), newMessagePresent: b.includes('no artifacts produced') };
+  return { name, effect, reproduced: Object.values(effect).every(Boolean) };
+});
+const pass = rows.every(r => r.byteEqual && r.deterministic && r.callerUnchanged) && knockouts.every(r => r.reproduced) && fetchAttempts === 0 && read(ownerPath).equals(current);
+const report = { status: pass ? 'PASS' : 'FAIL', scope: 'Independent pure actual-owner rendering of saved inputs; no browser, full suite, agent execution or provider. Original exact owner is type-stripped by Node, without implementation rewriting.', currentOwnerSha256: sha(current), originalOwnerSha256: sha(before), strippedOriginalSha256: sha(stripped), node: process.version, rows, knockouts, fetchAttempts };
+fs.writeFileSync(path.join(J, 'pure-renderer-replay.json'), JSON.stringify(report, null, 2) + '\n', { flag: 'wx' });
+console.log(JSON.stringify({ status: report.status, actualSavedReports: rows.length, knockouts: knockouts.length, fetchAttempts }));
+if (!pass) process.exitCode = 1;

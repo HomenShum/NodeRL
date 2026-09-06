@@ -1,0 +1,1187 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Exact frozen operator receipt",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Exact source/manifest documents",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "E6k-noderl-report-repair-01 exact artifact hashes/count/bytes",
+      "pass": true,
+      "actual": []
+    },
+    {
+      "name": "E6k-noderl-first-use-01 exact artifact hashes/count/bytes",
+      "pass": true,
+      "actual": []
+    },
+    {
+      "name": "All102 current source files match freeze",
+      "pass": true,
+      "actual": 102
+    },
+    {
+      "name": "97 original protected files match initial custody",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Five-owner digest exact",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Owned raw and future-filtered blob packages/nodetrace/src/storybook.ts",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Owned raw and future-filtered blob packages/nodetrace/test/storybook.test.ts",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Owned raw and future-filtered blob HANDOFF.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Owned raw and future-filtered blob README.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Owned raw and future-filtered blob .tours/03-debug-and-recovery.tour",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Git head exits zero",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "Frozen current Git output head",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Git branch exits zero",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "Frozen current Git output branch",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Git refs exits zero",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "Frozen current Git output refs",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Git index exits zero",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "Frozen current Git output index",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Git status exits zero",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "Frozen current Git output status",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Git diff exits zero",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "Frozen current Git output diff",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Git diff-check exits zero",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "Frozen current Git output diff-check",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Git changed exits zero",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "Frozen current Git output changed",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Git untracked exits zero",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "Frozen current Git output untracked",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Git cached-diff exits zero",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "Frozen current Git output cached-diff",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Git index-path exits zero",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "name": "Frozen current Git output index-path",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Final raw index metadata stable",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Original stage entries unchanged",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "All old refs preserved; exactly one approved new branch",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Only exact CodeTour300-to319 bytes change",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Current declaration really line319",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "New lines have no Git whitespace errors",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output accounting/trace.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output accounting/repair.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output accounting/regression.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output absent-reward/trace.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output absent-reward/repair.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output absent-reward/regression.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output zero-vs-unknown/trace.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output zero-vs-unknown/repair.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output zero-vs-unknown/regression.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output positive-conflict/trace.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output positive-conflict/repair.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output positive-conflict/regression.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output empty/trace.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output empty/repair.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output empty/regression.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output absent-cost/trace.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output absent-cost/repair.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output absent-cost/regression.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output zero-cost/trace.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output zero-cost/repair.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output zero-cost/regression.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output long-unicode/trace.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output long-unicode/repair.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output long-unicode/regression.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output script-uri/trace.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output script-uri/repair.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output script-uri/regression.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output controlled-observation/trace.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output controlled-observation/repair.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output controlled-observation/regression.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output mixed-cost/trace.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output mixed-cost/repair.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Reopened protected output mixed-cost/regression.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Exactly33 original trace/repair/regression outputs",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Browser actual230 assertions31cells complete",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Browser error and closure honesty",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "94 PNG arithmetic",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout accounting-320x800-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout long-unicode-320x800-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout accounting-360x800-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout long-unicode-360x800-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout accounting-390x844-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout long-unicode-390x844-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout accounting-768x1024-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout long-unicode-768x1024-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout accounting-1024x768-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout long-unicode-1024x768-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout accounting-1440x960-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout long-unicode-1440x960-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout accounting-1920x1080-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout long-unicode-1920x1080-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout accounting-390x844-text200",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout long-unicode-390x844-text200",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout accounting-390x844-reduced",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout long-unicode-390x844-reduced",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout accounting-1440x960-text200",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout long-unicode-1440x960-text200",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout accounting-1440x960-reduced",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout long-unicode-1440x960-reduced",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout absent-reward-1440x960-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout zero-vs-unknown-1440x960-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout positive-conflict-1440x960-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout empty-1440x960-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout absent-cost-1440x960-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout zero-cost-1440x960-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout mixed-cost-1440x960-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout cost-mixed-zero-1440x960-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Saved layout controlled-observation-1440x960-normal",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Actual doubled-font vectors accounting-1440x960-text200-font-transform.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Actual doubled-font vectors accounting-390x844-text200-font-transform.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Actual doubled-font vectors long-unicode-1440x960-text200-font-transform.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Actual doubled-font vectors long-unicode-390x844-text200-font-transform.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Six supplemental exact overlay restorations",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Semantic99 actual booleans",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Mixed cost distinguishes recorded coverage",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Native saved file reopen three actual checks",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Exact current handoff runnable example unchanged",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Actual handoff output regression.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Actual handoff output repair.md",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Actual handoff output report.html",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Actual handoff output trace.json",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Handoff executed4checks andzeroexit",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Recorded command exit targeted-before",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Recorded command exit targeted-after",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Recorded command exit tests",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Recorded command exit tests-after-anchor",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Recorded command exit typecheck",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Original owner negative scenario groups retained",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Current renderer scenarios nine actual passes",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Normal native file-level tests16pass",
+      "pass": true,
+      "actual": null
+    },
+    {
+      "name": "Inherited UI applicability misclassification disclosed",
+      "pass": true,
+      "actual": null
+    }
+  ],
+  "source": [
+    {
+      "path": ".claude/skills/proof-looping/SKILL.md",
+      "bytes": 6204,
+      "sha256": "d383aa9adcdbdf6f9e7eacb2893f7755576d66f38404541660f72c3aae65cf5c"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 52,
+      "sha256": "8b93bfec94c40f34c9af444af0d34af629f324fc30d13ff36b79099b3d34628c"
+    },
+    {
+      "path": ".tours/01-primary-user-flow.tour",
+      "bytes": 6931,
+      "sha256": "775d16f0b2f6120f509b9184b720676d5b5d551a3f43bfb37decde592367a413"
+    },
+    {
+      "path": ".tours/02-agent-execution.tour",
+      "bytes": 7561,
+      "sha256": "e1aff3250c6592ea1f6bfaec181cb2895894b881942155eb1ff865bc654edd44"
+    },
+    {
+      "path": ".tours/03-debug-and-recovery.tour",
+      "bytes": 7421,
+      "sha256": "a627101d155d289bb89ee970b2e4c94bca375777ad52c989cec607e23f1de511"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1088,
+      "sha256": "8df6a3fd828134a5b08f620a7c0bc1ad7c177e3f45720729307d25805f29e789"
+    },
+    {
+      "path": "NODE-LOOPS.md",
+      "bytes": 3502,
+      "sha256": "3f74de25c885f540e16ebcfce1de4280f450ed67448432d5bb19913ec1bb43b5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6415,
+      "sha256": "3b0148033619a5b95b7870894e77ee7929e4ae8b472c214f0d588a77bcd997d3"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 1308,
+      "sha256": "c338a6164febf691a86dccba8e2c54f1403fd9749aa5807c4af126e595c9e225"
+    },
+    {
+      "path": "docs/FEATURE_PROOF_STORYBOARD.md",
+      "bytes": 2724,
+      "sha256": "7d5f789e4b683b1e1f151479128605ce142e905962b88b14af2a3d3490f714c7"
+    },
+    {
+      "path": "docs/SIMPLIFICATION_REPORT.md",
+      "bytes": 14373,
+      "sha256": "153ec41ac0d7c5587aacc5f2ec0222b05a5b656872424841f37352b771813e3c"
+    },
+    {
+      "path": "docs/START_HERE.md",
+      "bytes": 20607,
+      "sha256": "8f76637c4c179e2573b8307aae96b303e6ba9eb6f9a59820bfc8bd59f257ae46"
+    },
+    {
+      "path": "docs/accounting-benchmarks.md",
+      "bytes": 4969,
+      "sha256": "83ba822194b76bfbe414bf0de92488ef5cc2c8dbd960e522fbb2573111c42c5b"
+    },
+    {
+      "path": "docs/codebase/ARCHITECTURE.md",
+      "bytes": 7567,
+      "sha256": "c02ddb6ad26e4bd71ff2cd14a855f376059d488e38d3c4dea956df13d9fdc1bc"
+    },
+    {
+      "path": "docs/codebase/CONCERNS.md",
+      "bytes": 7171,
+      "sha256": "ac9222f6656c37c9e44d590cd980d32340aad662fd5081b59eb2b82080048f6d"
+    },
+    {
+      "path": "docs/codebase/CONVENTIONS.md",
+      "bytes": 5122,
+      "sha256": "d5c26f9413077f5d31745e33acf4ba737419aade6f54d4fed8669e0ecf21f25f"
+    },
+    {
+      "path": "docs/codebase/INTEGRATIONS.md",
+      "bytes": 4874,
+      "sha256": "bf3220dc31c11c7102f7739181e85bb3675ee58d90534a19e3db257a168c25d9"
+    },
+    {
+      "path": "docs/codebase/STACK.md",
+      "bytes": 4603,
+      "sha256": "3b9932341e63c8aacefc07dc581070a07da2956f293bc09b3e4c0eed74a2b693"
+    },
+    {
+      "path": "docs/codebase/STRUCTURE.md",
+      "bytes": 4498,
+      "sha256": "80c8696c2a6335e516ece465fd351f6cdba0a271470d24aae4f5dbd50291c939"
+    },
+    {
+      "path": "docs/codebase/TESTING.md",
+      "bytes": 5657,
+      "sha256": "7f6644bcb2f945411696321796300e1fe5ac951ce0834e00cd83751a7037065b"
+    },
+    {
+      "path": "docs/exists-vs-net-new.md",
+      "bytes": 2377,
+      "sha256": "fd587f4010656a47bdd9b1bd8f17e2b68cb1a505815b1f907ee38ea46dd9b244"
+    },
+    {
+      "path": "docs/literature-review.md",
+      "bytes": 12609,
+      "sha256": "b99230f96dd6d984b99da71b812755cdbca3f8abc64e1eb304f8e64709a4edeb"
+    },
+    {
+      "path": "docs/looper-foraging.md",
+      "bytes": 10401,
+      "sha256": "c1a244776d7bd7a03f6bf6cfe33f5855aa07783eec0f986e018d6f20f3cca1a6"
+    },
+    {
+      "path": "docs/thesis.md",
+      "bytes": 3010,
+      "sha256": "c539d62ffedc23a2850925af6453eb866731bf03485e00903462a7c21e9f2341"
+    },
+    {
+      "path": "examples/btb-one-task-proven/README.md",
+      "bytes": 1523,
+      "sha256": "a020c7cfe85633a177fc00afc54bea48a6ed6ea43776240571f05df5d9bd7d88"
+    },
+    {
+      "path": "experiments/NodeRL-BTB-ToolPolicy-v0.md",
+      "bytes": 6993,
+      "sha256": "fdc96c64e0d1aefd1d53899bd6fbf9b12e21e0ab0f8f15e8b20a572566efe2e6"
+    },
+    {
+      "path": "experiments/Substrate-Ablation-v0.md",
+      "bytes": 8543,
+      "sha256": "a125a42825783dca6e5f495b2a543036d667e38156f6d7d670a0a4b646f5a5ec"
+    },
+    {
+      "path": "experiments/fr-a1-runs/fr-a1-live-run-001-build.mjs",
+      "bytes": 2757,
+      "sha256": "f63ddd089dcfe78923b86404fa49a3e14db9f4b02ef467c19afaccd5ba4d4e41"
+    },
+    {
+      "path": "experiments/fr-a1-runs/fr-a1-live-run-001-repair.md",
+      "bytes": 4318,
+      "sha256": "6b5411dfbe8440fdaad257142232a975ef58b68c7e98c48d93cd0aaf4141af05"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 8415,
+      "sha256": "7b4166ae79a3a5c26028d5453ab185b288b810ffabee5430d60a8532adc8e79d"
+    },
+    {
+      "path": "package.json",
+      "bytes": 590,
+      "sha256": "da9af447f195905930cb4cc502bd17ec331d11a9e8708e4a7f0556ba9338394e"
+    },
+    {
+      "path": "packages/nodeeval/README.md",
+      "bytes": 3732,
+      "sha256": "2a0b36f59550c1449a6d53584182ed9cd452923d6e55aba39abe8140a7ea3b97"
+    },
+    {
+      "path": "packages/nodeeval/package.json",
+      "bytes": 401,
+      "sha256": "90ed06cf3364a356ad1794620eaf0dc1f7222e2c895eed4a788cb81a3453bf43"
+    },
+    {
+      "path": "packages/nodeeval/src/accounting/arApAging.ts",
+      "bytes": 8947,
+      "sha256": "afb64a4e0d558253b60ce87bea8884a037cedd83c843884068bd51c152cdb1aa"
+    },
+    {
+      "path": "packages/nodeeval/src/accounting/bankReconciliation.ts",
+      "bytes": 7680,
+      "sha256": "d958acb1772e604ee72e942b0a72d54e415ab7fe8d23a3b57d77e954c103166b"
+    },
+    {
+      "path": "packages/nodeeval/src/accounting/cashFlowIndirect.ts",
+      "bytes": 6107,
+      "sha256": "0b7f971b14ff44996143c34f57a3ebc2b0fa2caf434e4da1bccd11c77a93a980"
+    },
+    {
+      "path": "packages/nodeeval/src/accounting/journalEntry.ts",
+      "bytes": 4889,
+      "sha256": "23f7a2be522f2bd4da3afe9bf295fde7f40a9ba9b740af67ef19cd15d40f5b35"
+    },
+    {
+      "path": "packages/nodeeval/src/accounting/oracleTypes.ts",
+      "bytes": 2414,
+      "sha256": "0b243c2781d9b4266c7900cd73d93c275b3a527c81f46618b51dbf37718030f3"
+    },
+    {
+      "path": "packages/nodeeval/src/accounting/trialBalance.ts",
+      "bytes": 8046,
+      "sha256": "345a2321dfff11105ad089852a6e0fee2ee114dac92f711e6bc7e9fad359c902"
+    },
+    {
+      "path": "packages/nodeeval/src/bankerToolBenchEvalLedger.ts",
+      "bytes": 10813,
+      "sha256": "df605d91eb1d4e94a30c68466dd2185e9a57910bd6b1d847f7b80a930b4a9fc7"
+    },
+    {
+      "path": "packages/nodeeval/src/bankerToolBenchFullSuiteGate.ts",
+      "bytes": 7468,
+      "sha256": "dc0dcf2e8d49a25996e3e67b4db3bd090a90ddedc4b659048a37b99f46191b1f"
+    },
+    {
+      "path": "packages/nodeeval/src/bankerToolBenchLiveSuiteGate.ts",
+      "bytes": 3354,
+      "sha256": "a85defcc2f430258be1d0b7b1ba3afc17809c5ec112567b5f3eeba4b8bcbd848"
+    },
+    {
+      "path": "packages/nodeeval/src/index.ts",
+      "bytes": 3655,
+      "sha256": "1cc29b65d8c6b1772799be2bd7ceebe13e5395990821dc480d7fc18bea1b0389"
+    },
+    {
+      "path": "packages/nodeeval/test/accounting_arApAging.test.ts",
+      "bytes": 6392,
+      "sha256": "d941cdf1eb493f4c79fa5fe09e882ab4c5ec2966df154bcc699dc2c9a7b2a5d6"
+    },
+    {
+      "path": "packages/nodeeval/test/accounting_bankReconciliation.test.ts",
+      "bytes": 7104,
+      "sha256": "d95618a81b3b1232ba0d650b5bb825110fc80713157c7d71c270ad17639d6490"
+    },
+    {
+      "path": "packages/nodeeval/test/accounting_cashFlowIndirect.test.ts",
+      "bytes": 6912,
+      "sha256": "0bc4e969757539a213692a3066db85f63929f9966bbb73459994c66f034bd20b"
+    },
+    {
+      "path": "packages/nodeeval/test/accounting_journalEntry.test.ts",
+      "bytes": 6821,
+      "sha256": "3445df7dcb28691d9118122c9d0775fa4064fd1d48c5f5eb2e6d8e7801db679c"
+    },
+    {
+      "path": "packages/nodeeval/test/accounting_oracleTypes.test.ts",
+      "bytes": 2966,
+      "sha256": "d030bdf5f264b034233adf41ac6ab858fcfc206f477fc91c127ef0ce47c7b386"
+    },
+    {
+      "path": "packages/nodeeval/test/accounting_trialBalance.test.ts",
+      "bytes": 12278,
+      "sha256": "31ce3def987b2af175e95253fe955b8b5612a2cc46ed2e8a3aad937daa26dd04"
+    },
+    {
+      "path": "packages/nodemem/README.md",
+      "bytes": 2946,
+      "sha256": "28054c44a173e6b69807f193bc4e3f730635dd9b64fad4ea43b252f33d0c4150"
+    },
+    {
+      "path": "packages/nodemem/package.json",
+      "bytes": 393,
+      "sha256": "7d0424e0765bc3c5c14e99c2eecd8263e9c602d6ba12f635ad182e6d74cf0977"
+    },
+    {
+      "path": "packages/nodemem/src/core/classifier.ts",
+      "bytes": 7332,
+      "sha256": "5e7b323128ef5a1f5ce964a20d5443b0fce0be326b813c8968449470b9ff55f5"
+    },
+    {
+      "path": "packages/nodemem/src/core/memoryCompiler.ts",
+      "bytes": 5310,
+      "sha256": "37bdf0945ad324046cf36fa155d63b0061c3f66482f083cf45cb73524811bf7d"
+    },
+    {
+      "path": "packages/nodemem/src/core/retrievalPlanner.ts",
+      "bytes": 6041,
+      "sha256": "2f54467e7432dd5def6611ba260339e8c746e88effd4fd3e78c2ae65eea9aabe"
+    },
+    {
+      "path": "packages/nodemem/src/core/types.ts",
+      "bytes": 9215,
+      "sha256": "f2525bbc13d5e52fef8b6a4cc9c9e3cde4c9f3ac04e35e9a56326485c03e1e1b"
+    },
+    {
+      "path": "packages/nodemem/src/failureMemory.ts",
+      "bytes": 5127,
+      "sha256": "f29e9ec86346481320e57e91e15ed4f074b45cc3fd3d1e62ebffab7da0eeb16f"
+    },
+    {
+      "path": "packages/nodemem/src/index.ts",
+      "bytes": 1435,
+      "sha256": "282ed0c250ff32e970e2876c4f4d9710f444c105f4655ee314a028a19f661eef"
+    },
+    {
+      "path": "packages/nodetrace/README.md",
+      "bytes": 4276,
+      "sha256": "9fe44153779fb6b435069683f235240b63bbef0f9a8ef4c6096cdb26fe278c18"
+    },
+    {
+      "path": "packages/nodetrace/package.json",
+      "bytes": 615,
+      "sha256": "ccbcc414c93e0ee88053628c1a34ef141e632d9764d4ab25baa353f6a9edd2dd"
+    },
+    {
+      "path": "packages/nodetrace/src/guards.ts",
+      "bytes": 4697,
+      "sha256": "0f8f009558a75763d4902fead689b59eac6d54c54c764016e7d5749e1fde760e"
+    },
+    {
+      "path": "packages/nodetrace/src/index.ts",
+      "bytes": 3050,
+      "sha256": "62cf3481b3f75753454a64ea646c11c2aa02b4068080849faacbd414287f5068"
+    },
+    {
+      "path": "packages/nodetrace/src/merged.ts",
+      "bytes": 13592,
+      "sha256": "b089b048a53cc444a71574cdb7f3bf675ad2040fd50ac9b6031a82313a746ca4"
+    },
+    {
+      "path": "packages/nodetrace/src/mergedReward.ts",
+      "bytes": 12410,
+      "sha256": "6689c22729fe6cca63554be13c5cdf6ede451cc9a3effda8a26fd1719a5e2142"
+    },
+    {
+      "path": "packages/nodetrace/src/pipeline.ts",
+      "bytes": 7235,
+      "sha256": "d4e05c839acb389b6c6720e37e55c2c223db292dd1a07a26e1b3489e8acae0c7"
+    },
+    {
+      "path": "packages/nodetrace/src/reasoning.ts",
+      "bytes": 2456,
+      "sha256": "d5398040ebc7c70934c922b5a4dcb16f42d51340dbb7d072fe9a92b5790722f8"
+    },
+    {
+      "path": "packages/nodetrace/src/repair.ts",
+      "bytes": 5530,
+      "sha256": "4aa55ee9f58b358e1c6bde0d3590da05d38fbe54773bd611198ca5ab2869a7ad"
+    },
+    {
+      "path": "packages/nodetrace/src/storybook.ts",
+      "bytes": 20886,
+      "sha256": "cc7686f7b75d541a6eb95e7e5686d949786186ec2ab25f023abb4956c6372a97"
+    },
+    {
+      "path": "packages/nodetrace/src/substrate/browserbase.ts",
+      "bytes": 4715,
+      "sha256": "b8e5d211eb334c6fdfba518e72e0dfecdbdb87cfc3802a6cb4c3c13ad65f7c01"
+    },
+    {
+      "path": "packages/nodetrace/src/substrate/firecrawl.ts",
+      "bytes": 2646,
+      "sha256": "2494cf5ef45157af89a06e661dd83ef69abe8682dda6b15c5903da3db60a0fec"
+    },
+    {
+      "path": "packages/nodetrace/src/substrate/index.ts",
+      "bytes": 761,
+      "sha256": "1a7d37bdabdeae36b531a3f6ef07bb69a399c69ae15938e74dd2abbe27d48d05"
+    },
+    {
+      "path": "packages/nodetrace/src/trajectory.ts",
+      "bytes": 20000,
+      "sha256": "6a269e9247f4415546890b4c7911245e2df72c70eadf92c57818cb843ce4f1d0"
+    },
+    {
+      "path": "packages/nodetrace/src/types.ts",
+      "bytes": 3855,
+      "sha256": "6d53d5d5e2e79bab4136a44dbf93f4accfa9c79be21e0c4d8508132f45b704a4"
+    },
+    {
+      "path": "packages/nodetrace/test/guards.test.ts",
+      "bytes": 5213,
+      "sha256": "e9787cde1a68714931849d7e7e217c34a7f998ff5bf69751e4e46fac7a851659"
+    },
+    {
+      "path": "packages/nodetrace/test/merged.fixture.ts",
+      "bytes": 6358,
+      "sha256": "8b160bafdc97447c22d58eeeda0ea84f43b8d6e8b5b405150f6b6daf71ba92b5"
+    },
+    {
+      "path": "packages/nodetrace/test/merged.test.ts",
+      "bytes": 8889,
+      "sha256": "f1e24d20860f8c3da189b7ffd38afab485fa4f2d379e31c1b85359ea900aab2a"
+    },
+    {
+      "path": "packages/nodetrace/test/mergedReward.test.ts",
+      "bytes": 9417,
+      "sha256": "46acd9ef8e6fbce7a4edcaa45e672a8244f183f5cbe6b088a5c5efd52faffc48"
+    },
+    {
+      "path": "packages/nodetrace/test/pipeline.test.ts",
+      "bytes": 4653,
+      "sha256": "a6e4f9c34ca7e5e2cf4beb07d1b8db25f56f70c6e8eaa15d1f28984f4fd61263"
+    },
+    {
+      "path": "packages/nodetrace/test/repair.test.ts",
+      "bytes": 5353,
+      "sha256": "95145d621cf924363d048e60f7fad20910ef32d2e5ebcbedf36cb04e202f8b22"
+    },
+    {
+      "path": "packages/nodetrace/test/storybook.test.ts",
+      "bytes": 13158,
+      "sha256": "da8f0be2f8bacb60f0925e09accf4f19f12dc073e2fd3215dfc6432dd4e79a72"
+    },
+    {
+      "path": "packages/nodetrace/test/trajectory.test.ts",
+      "bytes": 14080,
+      "sha256": "e0c175d188b6e1122df9d50ac6f0db2a64867dce034f0ad6966126181e7cbbcf"
+    },
+    {
+      "path": "promotion/PRODUCT_GOAL.md",
+      "bytes": 10223,
+      "sha256": "ec1e383ad0f23ae9ab18ce0dbc99df3e33481ad601873e1062896208c8b44405"
+    },
+    {
+      "path": "promotion/PRODUCT_JOURNEYS.md",
+      "bytes": 9620,
+      "sha256": "4efbd76df0854ab6e642d037170ea51091f07abe656b5eaeba9927e1c45b671f"
+    },
+    {
+      "path": "promotion/PROMOTION_LOG.md",
+      "bytes": 18772,
+      "sha256": "dcc1dd6071da08e6ecd106a212ecbf46a9e4e69ea11931998772ff4ee79a2475"
+    },
+    {
+      "path": "promotion/SKILLS.md",
+      "bytes": 2001,
+      "sha256": "9fd292ce6cf9678e11d30ff5ee887562b15cd372625761743e1243540ee37fd9"
+    },
+    {
+      "path": "promotion/evidence/audit-toolchain-check.mjs",
+      "bytes": 3642,
+      "sha256": "c92f497fb3d33d681c5adb0eab4f9c2264f3b8d203deedf01fa86b9938aa91e7"
+    },
+    {
+      "path": "promotion/evidence/audit-toolchain-versions.json",
+      "bytes": 1066,
+      "sha256": "1b86448dc808e9098cbfe647c093ac9fea4502c3562fad5d9e329d9911ff6dc4"
+    },
+    {
+      "path": "promotion/evidence/condition-07-wig-review.md",
+      "bytes": 6077,
+      "sha256": "254a944d8cbceb1d2fc9259a54ddf38caee1ef4239505f6354d9c782ef7a295a"
+    },
+    {
+      "path": "promotion/evidence/condition-08-web-quality-audit.md",
+      "bytes": 3829,
+      "sha256": "1c8d2d4d476f74487cf6eb07e72543a17d7d883c9e2b921d36d32febe1fc90af"
+    },
+    {
+      "path": "promotion/evidence/rendered-surface-probe.json",
+      "bytes": 813,
+      "sha256": "8db738497be754a5765dddfe93557135fe62fdf6277fba07d7c288ed6884d132"
+    },
+    {
+      "path": "promotion/evidence/rendered-surface-probe.mjs",
+      "bytes": 7212,
+      "sha256": "74fc16905f0f14fe1e723a114b0c6db276be1493044eeb89e15543b32b335149"
+    },
+    {
+      "path": "spec/anti-cheat-doctrine.md",
+      "bytes": 2025,
+      "sha256": "e6c24f9069f24f1ab2301981c71c40202681220a3f5511c03f51797f75130820"
+    },
+    {
+      "path": "spec/manifest-lint.md",
+      "bytes": 5448,
+      "sha256": "f717480c8b095ae03ae3db0ca219b626177dc910534696c4b3d866bcbff67e60"
+    },
+    {
+      "path": "spec/node-loops.md",
+      "bytes": 3435,
+      "sha256": "eb0f1e72fcaa071c99cdc2dfcd9b0977843f5539860aadc7591105a3cdbf2b98"
+    },
+    {
+      "path": "spec/proof-receipt-contract.md",
+      "bytes": 2417,
+      "sha256": "baa8f28e9dc2c47ab8b857e1b21d99293657da540008433205aa746be5e9cbca"
+    },
+    {
+      "path": "spec/prove-before-claim.md",
+      "bytes": 3763,
+      "sha256": "46b25abd4062166204c0818be87b4056e433df20f77ee0acb1a5430c8e9f4502"
+    },
+    {
+      "path": "spec/reward-design.md",
+      "bytes": 2503,
+      "sha256": "e8e8f5dc543336505041936595a14c396634ee1c6354a4dd3f8722b3dc6ff1d0"
+    },
+    {
+      "path": "spec/trajectory-schema.md",
+      "bytes": 4011,
+      "sha256": "e3d7144cdc2d1f96ccccf466e295e48fb484ee30bf261cdac736c684939e2e82"
+    },
+    {
+      "path": "test/citations.test.ts",
+      "bytes": 9906,
+      "sha256": "4c7a4bcee0ecc78413f42a199ccf7cbecdc82ee17886859498f5fbbbecfd325c"
+    },
+    {
+      "path": "test/entrypoints.test.ts",
+      "bytes": 3413,
+      "sha256": "373111936ebb96da50f6d788753439a1d5d5beac32f54ddd7419d9c8e7e3388a"
+    },
+    {
+      "path": "test/renderedSurfaceProbe.test.ts",
+      "bytes": 8498,
+      "sha256": "15f9b5abb2825362bc39202d20b469a2465a90dc429a13d43c902630612e8ce4"
+    },
+    {
+      "path": "tsconfig.packages.json",
+      "bytes": 853,
+      "sha256": "41c005e06a58597c8d67d4873cdf891dc0303b52f4257b14322cf0b071f3dedb"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 5245,
+      "sha256": "b19353892e5dd10dc91152ad8d391dc817b4d3ada27e5c074e0486e02e856aba"
+    }
+  ],
+  "git": {
+    "head": "60044d296e70875619a821f0c2652a1c01c6a42a98271e9fbb8a474aaee903f6",
+    "branch": "a3058c0e774c49b757566650bf11426a4bb7a85cb431fe86802ed63d165f63b4",
+    "refs": "1f810e139a62ae92611d9294285d51cf08f327743820974f6ba05a5323ae2d26",
+    "index": "25579f2a848e57626b4f83ce1f856c527b7e0a322befb7c666351d1fff515aa8",
+    "status": "9d0dcc32cd6d09b414d955d51c4c6563e4f4e03c9b14ef9f163512d79100c81b",
+    "diff": "84d03781adf6338cc824af540e8176f21475ca0671749e591ef4b7f3a4bbba56",
+    "diff-check": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": "1f16eb6a1c4e43fe37697f32477eb8c0001a76ced9c06258805b029278ecdb35",
+    "untracked": "338536fccf4cb194596507ba254597bdbf32746d663ef450bacc2e4dd25cf1ee",
+    "cached-diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "index-path": "742e1586a644af64934a892663d03c75415bfb01edafdfdd924a8627573bfb9c"
+  },
+  "rawIndexSha256": "e5384ee712d5649f4eb14d2c749cec82051ef00314c4dd51737c8a2ba3497d64",
+  "guard": "OPEN"
+}

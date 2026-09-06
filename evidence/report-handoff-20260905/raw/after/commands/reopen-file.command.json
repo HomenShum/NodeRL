@@ -1,0 +1,42 @@
+{
+  "command": [
+    "node",
+    "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-report-repair-01\\after-01\\reopen-file.mjs"
+  ],
+  "exitCode": 0,
+  "seconds": 0.9433670043945312,
+  "deadlineSeconds": 60,
+  "timedOut": false,
+  "ownedPids": [
+    {
+      "pid": 9880,
+      "created": 1788654108.619779,
+      "name": "node.exe"
+    },
+    {
+      "pid": 7364,
+      "created": 1788654108.901718,
+      "name": "chrome-headless-shell.exe"
+    },
+    {
+      "pid": 58084,
+      "created": 1788654109.001886,
+      "name": "chrome-headless-shell.exe"
+    },
+    {
+      "pid": 34940,
+      "created": 1788654109.0603516,
+      "name": "chrome-headless-shell.exe"
+    },
+    {
+      "pid": 29612,
+      "created": 1788654109.0799952,
+      "name": "chrome-headless-shell.exe"
+    }
+  ],
+  "aliveOwnedPids": [],
+  "observedPort4995Listeners": [],
+  "listenersAfter": [],
+  "environment": "Child system/runtime allowlist only; provider environment not inherited.",
+  "priorProbeCaveat": "Original baseline 10035 was WSAEWOULDBLOCK, not evidence of refusal. This run uses actual listener rows and PID/create-time identities."
+}

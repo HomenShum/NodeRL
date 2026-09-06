@@ -1,0 +1,2064 @@
+{
+  "fixedTime": 1700000000000,
+  "callerBound": 64,
+  "repeatedBatches": 256,
+  "counts": [
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64
+  ],
+  "first": [
+    {
+      "id": "isolated:synthetic-account-000:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-000",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-000"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-0.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-001:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-001",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-001"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-1.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-002:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-002",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-002"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-2.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-003:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-003",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-003"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-3.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-004:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-004",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-004"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-4.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-005:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-005",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-005"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-5.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-006:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-006",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-006"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-6.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-007:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-007",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-007"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-7.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-008:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-008",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-008"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-8.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-009:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-009",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-009"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-9.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-010:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-010",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-010"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-10.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-011:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-011",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-011"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-11.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-012:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-012",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-012"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-12.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-013:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-013",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-013"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-13.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-014:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-014",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-014"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-14.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-015:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-015",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-015"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-15.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-016:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-016",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-016"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-16.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-017:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-017",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-017"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-17.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-018:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-018",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-018"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-18.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-019:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-019",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-019"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-19.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-020:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-020",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-020"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-20.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-021:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-021",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-021"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-21.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-022:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-022",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-022"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-22.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-023:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-023",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-023"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-23.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-024:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-024",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-024"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-24.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-025:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-025",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-025"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-25.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-026:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-026",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-026"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-26.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-027:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-027",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-027"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-27.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-028:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-028",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-028"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-28.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-029:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-029",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-029"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-29.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-030:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-030",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-030"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-30.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-031:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-031",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-031"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-31.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-032:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-032",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-032"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-32.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-033:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-033",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-033"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-33.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-034:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-034",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-034"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-34.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-035:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-035",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-035"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-35.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-036:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-036",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-036"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-36.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-037:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-037",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-037"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-37.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-038:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-038",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-038"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-38.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-039:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-039",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-039"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-39.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-040:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-040",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-040"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-40.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-041:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-041",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-041"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-41.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-042:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-042",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-042"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-42.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-043:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-043",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-043"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-43.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-044:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-044",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-044"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-44.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-045:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-045",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-045"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-45.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-046:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-046",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-046"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-46.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-047:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-047",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-047"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-47.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-048:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-048",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-048"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-48.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-049:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-049",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-049"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-49.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-050:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-050",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-050"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-50.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-051:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-051",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-051"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-51.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-052:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-052",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-052"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-52.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-053:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-053",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-053"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-53.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-054:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-054",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-054"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-54.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-055:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-055",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-055"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-55.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-056:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-056",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-056"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-56.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-057:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-057",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-057"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-57.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-058:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-058",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-058"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-58.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-059:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-059",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-059"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-59.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-060:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-060",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-060"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-60.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-061:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-061",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-061"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-61.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-062:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-062",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-062"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-62.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-063:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-063",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-063"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-63.json"
+      ],
+      "createdAt": 1700000000000
+    }
+  ],
+  "half": [
+    {
+      "id": "isolated:synthetic-account-032:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-032",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-032"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-32.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-033:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-033",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-033"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-33.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-034:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-034",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-034"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-34.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-035:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-035",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-035"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-35.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-036:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-036",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-036"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-36.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-037:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-037",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-037"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-37.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-038:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-038",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-038"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-38.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-039:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-039",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-039"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-39.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-040:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-040",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-040"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-40.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-041:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-041",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-041"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-41.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-042:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-042",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-042"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-42.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-043:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-043",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-043"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-43.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-044:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-044",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-044"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-44.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-045:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-045",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-045"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-45.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-046:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-046",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-046"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-46.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-047:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-047",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-047"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-47.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-048:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-048",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-048"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-48.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-049:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-049",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-049"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-49.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-050:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-050",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-050"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-50.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-051:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-051",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-051"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-51.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-052:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-052",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-052"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-52.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-053:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-053",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-053"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-53.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-054:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-054",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-054"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-54.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-055:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-055",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-055"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-55.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-056:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-056",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-056"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-56.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-057:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-057",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-057"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-57.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-058:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-058",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-058"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-58.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-059:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-059",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-059"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-59.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-060:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-060",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-060"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-60.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-061:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-061",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-061"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-61.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-062:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-062",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-062"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-62.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-063:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-063",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-063"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-63.json"
+      ],
+      "createdAt": 1700000000000
+    }
+  ],
+  "upsert": [
+    {
+      "id": "isolated:synthetic-account-032:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-032",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-032"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-32.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-033:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-033",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-033"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-33.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-034:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-034",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-034"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-34.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-035:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-035",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-035"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-35.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-036:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-036",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-036"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-36.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-037:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-037",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-037"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-37.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-038:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-038",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-038"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-38.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-039:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-039",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-039"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-39.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-040:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-040",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-040"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-40.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-041:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-041",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-041"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-41.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-042:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-042",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-042"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-42.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-043:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-043",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-043"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-43.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-044:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-044",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-044"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-44.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-045:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-045",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-045"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-45.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-046:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-046",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-046"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-46.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-047:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-047",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-047"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-47.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-048:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-048",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-048"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-48.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-049:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-049",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-049"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-49.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-050:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-050",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-050"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-50.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-051:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-051",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-051"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-51.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-052:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-052",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-052"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-52.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-053:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-053",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-053"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-53.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-054:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-054",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-054"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-54.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-055:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-055",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-055"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-55.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-056:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-056",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-056"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-56.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-057:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-057",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-057"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-57.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-058:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-058",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-058"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-58.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-059:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-059",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-059"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-59.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-060:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-060",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-060"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-60.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-061:deliverable_export_or_reopen",
+      "symptom": "Reopen failed for synthetic receipt",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-061",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-061"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-61.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-062:official_scorer_not_pass",
+      "symptom": "Scorer verdict failed: ending cash does not tie",
+      "rootCause": "official_scorer_not_pass",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-062",
+      "fixSummary": "Inspect the package verifier output; the deliverable package failed validation.",
+      "affectedSystems": [
+        "synthetic-account-062"
+      ],
+      "receiptRefs": [
+        "synthetic-receipt-62.json"
+      ],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "isolated:synthetic-account-063:deliverable_export_or_reopen",
+      "symptom": "Reopen failed again; latest receipt replaces earlier detail",
+      "rootCause": "deliverable_export_or_reopen",
+      "regressionTest": "npm run benchmark:bankertoolbench:nodeagent-sweep -- -MaterializerMode generic-only -ForceModelPlanner -NoFallbackPlan -Resume -TaskIds synthetic-account-063",
+      "fixSummary": "Fix the deliverable writer/export path so all 5 files download and reopen.",
+      "affectedSystems": [
+        "synthetic-account-063"
+      ],
+      "receiptRefs": [
+        "synthetic-latest.json"
+      ],
+      "createdAt": 1700000000001
+    }
+  ],
+  "resolved": [],
+  "commandsExecuted": false,
+  "durability": "Pure caller arrays; this is not shared persistent concurrency or a production capacity certification."
+}

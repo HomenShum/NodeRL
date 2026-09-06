@@ -1,0 +1,44 @@
+# Repair prompt — Review an unresolved reconciliation
+
+- trajectory: `mtraj_3d8dda6eb8379535`  ·  run: `synthetic-handoff-example`
+- verdict: **FAIL**  ·  total reward: 0.143
+- failure categories: ui_assertion_failed, evidence_needs_review
+
+## What failed (ground truth — do NOT guess)
+- **cash-ties** — expected: Reconciliation delta is zero · observed: Synthetic example: delta is 412.50
+
+## Evidence
+- screenshots: (none)
+- **needs_review (unsourced) claims — resolve with a real source or drop:**
+  - An uncleared check explains the delta
+
+## Your task
+1. Trace each failed assertion to its root cause (read the failing step + artifact; do not fabricate).
+2. Propose the SMALLEST shared fix that makes the failed assertion(s) pass — never a per-task patch.
+3. Resolve every needs_review claim with a real source, or remove it.
+4. Add the regression below so this failure cannot silently return.
+
+## Regression to add
+```json
+{
+  "id": "regression_mtraj_3d8dda6eb8379535",
+  "fromTrajectory": "mtraj_3d8dda6eb8379535",
+  "userGoal": "Review an unresolved reconciliation",
+  "failedAssertions": [
+    {
+      "id": "cash-ties",
+      "expected": "Reconciliation delta is zero",
+      "observed": "Synthetic example: delta is 412.50",
+      "passed": false
+    }
+  ],
+  "failureCategories": [
+    "ui_assertion_failed",
+    "evidence_needs_review"
+  ],
+  "needsReviewClaims": [
+    "An uncleared check explains the delta"
+  ],
+  "expectation": "Re-running \"Review an unresolved reconciliation\" must make these 1 assertion(s) pass: cash-ties"
+}
+```

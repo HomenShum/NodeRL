@@ -1,0 +1,272 @@
+{
+  "status": "FIRST_USE_COMPLETED_WITH_REPRODUCED_BLOCKERS; SOURCE_UNCHANGED",
+  "at": "2026-09-06T00:00:46.819094+00:00",
+  "request": "Make every repo usable and ready for developer/user handoff, including actual visual, responsiveness and interaction standards.",
+  "head": "4b06939b8fd9121e2ba73887df2dd799eae2f1aa",
+  "tree": "a1e3237e6314e719e65b1c4a0d3e0a5160188fc4",
+  "sourceFiles": 101,
+  "sourceManifestSha256": "4cef6f756d5aef91f87e406b0df72ba66bee68a280ad6bac5ab78e1e277370a3",
+  "gitGuards": {
+    "head": {
+      "exitCode": 0,
+      "sha256": "60044d296e70875619a821f0c2652a1c01c6a42a98271e9fbb8a474aaee903f6",
+      "exactBefore": true
+    },
+    "refs": {
+      "exitCode": 0,
+      "sha256": "d7ceff414e832cf1b12e3b7a84321ae25202e3fcf2e986b50242f4f99674ac91",
+      "exactBefore": true
+    },
+    "index": {
+      "exitCode": 0,
+      "sha256": "25579f2a848e57626b4f83ce1f856c527b7e0a322befb7c666351d1fff515aa8",
+      "exactBefore": true
+    },
+    "status": {
+      "exitCode": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exactBefore": true
+    },
+    "files": {
+      "exitCode": 0,
+      "sha256": "2077bae3e261948ee12db0c5c2f9bb85ebb75051d6c1c8c76abfff6874bc3dd1",
+      "exactBefore": true
+    }
+  },
+  "commands": {
+    "consume-command.json": {
+      "exitCode": 0,
+      "seconds": 0.902677059173584,
+      "command": [
+        "node",
+        "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-first-use-01\\consume.mjs"
+      ],
+      "environment": "Child system/runtime allowlist only; no provider environment inherited."
+    },
+    "observe-command.json": {
+      "exitCode": 0,
+      "seconds": 9.893304824829102,
+      "command": [
+        "node",
+        "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-first-use-01\\observe.mjs"
+      ],
+      "deadlineSeconds": 240,
+      "environment": "Child system/runtime allowlist only; no provider environment inherited."
+    },
+    "reopen-file-command.json": {
+      "exitCode": 0,
+      "seconds": 0.8435845375061035,
+      "deadlineSeconds": 60
+    },
+    "boundary-addendum-command.json": {
+      "exitCode": 0,
+      "seconds": 1.6640691757202148,
+      "deadlineSeconds": 60
+    }
+  },
+  "normalBaseline": "Root prior npm ci/test/typecheck/demo pass reused; not repeated.",
+  "semantic": {
+    "passed": 98,
+    "checks": 99,
+    "failed": [
+      {
+        "name": "Absent cost is visibly distinct from explicit zero",
+        "pass": false,
+        "actual": {
+          "absent": "cost: $0.00",
+          "explicitZero": "cost: $0.00"
+        }
+      }
+    ],
+    "mixedCostAddendumPassed": 0,
+    "mixedCostAddendumChecks": 1
+  },
+  "browser": {
+    "passed": 129,
+    "checks": 145,
+    "cells": 30,
+    "pngs": 77,
+    "failed": [
+      {
+        "name": "long-unicode-320x800-normal: no document horizontal overflow",
+        "pass": false,
+        "actual": {
+          "viewport": 320,
+          "document": 2349
+        }
+      },
+      {
+        "name": "long-unicode-360x800-normal: no document horizontal overflow",
+        "pass": false,
+        "actual": {
+          "viewport": 360,
+          "document": 2349
+        }
+      },
+      {
+        "name": "long-unicode-390x844-normal: no document horizontal overflow",
+        "pass": false,
+        "actual": {
+          "viewport": 390,
+          "document": 2349
+        }
+      },
+      {
+        "name": "long-unicode-768x1024-normal: no document horizontal overflow",
+        "pass": false,
+        "actual": {
+          "viewport": 768,
+          "document": 2349
+        }
+      },
+      {
+        "name": "long-unicode-1024x768-normal: no document horizontal overflow",
+        "pass": false,
+        "actual": {
+          "viewport": 1024,
+          "document": 2411
+        }
+      },
+      {
+        "name": "long-unicode-1440x960-normal: no document horizontal overflow",
+        "pass": false,
+        "actual": {
+          "viewport": 1440,
+          "document": 2619
+        }
+      },
+      {
+        "name": "long-unicode-1920x1080-normal: no document horizontal overflow",
+        "pass": false,
+        "actual": {
+          "viewport": 1920,
+          "document": 2859
+        }
+      },
+      {
+        "name": "accounting-390x844-text200: no document horizontal overflow",
+        "pass": false,
+        "actual": {
+          "viewport": 390,
+          "document": 499
+        }
+      },
+      {
+        "name": "long-unicode-390x844-text200: no document horizontal overflow",
+        "pass": false,
+        "actual": {
+          "viewport": 390,
+          "document": 4660
+        }
+      },
+      {
+        "name": "long-unicode-390x844-reduced: no document horizontal overflow",
+        "pass": false,
+        "actual": {
+          "viewport": 390,
+          "document": 2349
+        }
+      },
+      {
+        "name": "long-unicode-1440x960-text200: no document horizontal overflow",
+        "pass": false,
+        "actual": {
+          "viewport": 1440,
+          "document": 4930
+        }
+      },
+      {
+        "name": "long-unicode-1440x960-reduced: no document horizontal overflow",
+        "pass": false,
+        "actual": {
+          "viewport": 1440,
+          "document": 2619
+        }
+      },
+      {
+        "name": "Empty artifacts section explains absence",
+        "pass": false,
+        "actual": "NODEROOM RUN\nNo run evidence supplied\nhttps://example.invalid/empty\nverdict: UNVERIFIED\ncost: $0.00\nrun: SYNTHETIC-EMPTY\nUI ASSERTIONS\nno UI assertions\nARTIFACTS\nAGENT TRACE\nno reasoning steps recorded\nEVIDENCE\nno evidence grounded\nFOCUS BOXES\nno screenshots captured\nDeterministic render of trajectory mtraj_ced8a3b839bddce8. Screenshots are paths only (no inlined bytes)."
+      },
+      {
+        "name": "FAIL badge: normal small-text contrast at least 4.5",
+        "pass": false,
+        "actual": {
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            248,
+            81,
+            73
+          ],
+          "ratio": 3.3522381389977385,
+          "fontSize": "12px",
+          "fontWeight": "600"
+        }
+      },
+      {
+        "name": "NEEDS REVIEW badge: normal small-text contrast at least 4.5",
+        "pass": false,
+        "actual": {
+          "foreground": "rgb(255, 255, 255)",
+          "background": [
+            210,
+            153,
+            34
+          ],
+          "ratio": 2.524062922602352,
+          "fontSize": "11px",
+          "fontWeight": "400"
+        }
+      },
+      {
+        "name": "Native activation cannot execute a supplied script scheme",
+        "pass": false,
+        "actual": {
+          "actualGoal": "OWNED CANARY EXECUTED",
+          "mechanism": "Native Tab then Enter; benign payload modifies only this owned report heading. No exfiltration, provider call, or generated command."
+        }
+      }
+    ],
+    "errors": [],
+    "blocked": []
+  },
+  "nativeFileReopen": {
+    "passed": 3,
+    "checks": 3
+  },
+  "supplementalBoundaries": {
+    "cells": 6,
+    "pngs": 12,
+    "exactRestoration": true
+  },
+  "totalPngs": 90,
+  "manifest": {
+    "path": "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-first-use-01\\manifest.json",
+    "sha256": "c1f18d78c4ca78d963c2f51be70faf1f7df038ffbf27928a2e49ff59c6b618b7",
+    "files": 242,
+    "bytes": 12302996
+  },
+  "repairPlan": {
+    "path": "C:\\Users\\hshum\\.codex\\worktrees\\5dba\\nodebench-ai\\docs\\plans\\portfolio-recovery-20260904\\E6k-noderl-first-use-01\\repair-plan.json",
+    "sha256": "52a55e14a9006dfce2e3a05744c523829d3c3d95bd1895964498e6eb0e7aaf44",
+    "owners": [
+      "packages/nodetrace/src/storybook.ts",
+      "packages/nodetrace/test/storybook.test.ts",
+      "HANDOFF.md",
+      "README.md"
+    ]
+  },
+  "sourceMutation": false,
+  "runtimeClosed": true,
+  "port4995Refused": true,
+  "noExternalRequests": true,
+  "noGeneratedCommandsExecuted": true,
+  "fullGrades": null,
+  "currentHandoffStatus": "HELD for URI execution, cost honesty, responsive report and status-label defects.",
+  "limitations": [
+    "No safe report handoff certification while the actual URI execution and reporting defects remain.",
+    "No new public API, abstraction, dependency, installer, database, shared durable service or agent platform.",
+    "No npm tarball/installed CLI, real accounting output, real screenshot capture, real model/provider, NodeRoom UI, benchmark, training, hosting or full numerical grade proof.",
+    "Current repository has no shared CI; a minimal shared check workflow is a separate later handoff slice, not silently included here."
+  ]
+}
