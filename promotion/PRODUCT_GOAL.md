@@ -31,15 +31,7 @@ surface and quickstart; see the GATE's reduced-gate section -->
 
 Scoring vocabulary is PASS / FAIL / **UNVERIFIED**, and UNVERIFIED is never PASS.
 
-One fourth value is used below, sparingly and with its evidence: **N/A**, for a
-condition whose subject provably does not exist in this repo. N/A is **not** a
-pass and never counts toward promotion — the status line at the bottom of the
-scorecard counts it separately. It exists because "UNVERIFIED — audit not run"
-and "there is nothing to audit, and here is the measurement proving it" are
-different statements, and only the second one is actionable: it tells the next
-reader that installing a tool will not help, and it expires automatically the
-day the subject appears (see `promotion/evidence/rendered-surface-probe.mjs`,
-which exits 1 the moment it does).
+Historical N/A rows below relied on a detector that missed HTML generated inside TypeScript. That premise is invalid for current NodeRL: the public report renderer is an owned visual surface. No-marker output is only a heuristic result and does not independently justify N/A. A detected surface deliberately exits 1 to require review; passing the detector's unit tests proves detection behavior, not completion of those audits.
 
 ## Canonical journeys
 
@@ -52,7 +44,29 @@ Every iteration is recorded in [PROMOTION_LOG.md](PROMOTION_LOG.md) — journey
 exercised, defect fixed, evidence path, conditions newly passing. Loop state
 lives in git, never in an agent's memory, so any agent can resume the loop cold.
 
-## Current scorecard
+## Current assessment — 2026-09-06
+
+**Status: NOT PROMOTED.** The generated report is applicable to visual, responsive, interaction and accessibility review. The report repair at source `702759ae7854f165eedb051a98b679dfdfe06e95` has independently reviewed local evidence in [HANDOFF](../HANDOFF.md). The old scorecard below is preserved with its original mixed source identities; its missing-surface N/A rows do not apply to current source.
+
+| # | Current condition | Status | Current evidence boundary |
+|---|---|---|---|
+| 1 | Complete advertised journeys | UNVERIFIED | The keyless supplied-record/report/reopen journey is observed; provider capture and every advertised workflow are not. |
+| 2 | No critical or major usability defect | UNVERIFIED | The scoped report defects were repaired; complete repository and user coverage is unfinished. |
+| 3 | Intentional mobile and desktop | UNVERIFIED | Seven viewport pairs have local report observations; no full design or physical-device grade. |
+| 4 | Content preservation at supported widths | UNVERIFIED | All 31 recorded report layout cells preserve content; complete platform/locale/zoom coverage is unfinished. |
+| 5 | Designed lifecycle states | UNVERIFIED | Static report failures and empty artifacts are observed; broader capture lifecycle is not certified. |
+| 6 | Keyboard and accessibility | UNVERIFIED | Native link actions and two repaired contrast ratios are observed; no full accessibility or assistive-technology approval. |
+| 7 | Web Interface Guidelines review | UNVERIFIED | The historical no-interface exemption is invalid; a complete current review remains required. |
+| 8 | Web-quality audit | UNVERIFIED | The historical no-interface exemption is invalid; current complete audit reports are absent. |
+| 9 | Browser errors and failed requests | UNVERIFIED | The scoped owned-browser report proof has no recorded errors; provider and untested journeys remain outside that proof. |
+| 10 | Interaction performance | UNVERIFIED | No complete frozen performance budgets or constrained-device observations. |
+| 11 | Tests and typecheck | PASS (local source only) | The current normal suite passed 16 files, including 12 detector scenarios; typecheck and the recorded demo passed. Shared CI remains to be observed at the final commit. |
+| 12 | Verified rendered improvements | UNVERIFIED | Prior report repair has actual before/after pictures; this detector/documentation repair changes no report pixels and grants no broader completion. |
+
+No current row inherits N/A or an automatic PASS. Full portfolio dimension and overall grades remain null. CI checks source behavior; they do not change promotion thresholds or replace observed product review.
+
+## Historical scorecard — original 2026-08-13/14 assessment, superseded for current applicability
+
 
 Baseline measured 2026-08-13 against commit `dc4d668`, in a fresh
 `git clone --depth 50` on Windows 11, Node v22.22.2 / npm 10.9.7. This repo was

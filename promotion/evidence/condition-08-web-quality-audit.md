@@ -1,5 +1,10 @@
 # Condition 8 — web-quality audit (accessibility, performance, Core Web Vitals)
 
+> **Current applicability correction, 2026-09-06: the historical N/A premise below is invalid.** NodeRL's public `renderStorybook` library generates a complete HTML report from TypeScript. The repaired detector identifies `packages/nodetrace/src/storybook.ts`; its deliberate exit 1 requires an actual audit. The prior review, source identities and original measurements below are retained as history, not current acceptance. The web-quality audit condition remains **UNVERIFIED**. The local report repair has scoped rendered evidence; no complete Lighthouse, axe, human or performance approval is inferred. See [current handoff](../../HANDOFF.md) and [current probe output](rendered-surface-probe.json).
+
+## Historical review retained verbatim
+
+
 **Verdict: NOT APPLICABLE — the audit tools run here, but there is no page to run them against.**
 
 Not PASS. No Lighthouse report and no axe report exist for this repo, because

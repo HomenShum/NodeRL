@@ -59,6 +59,16 @@ Open `report.html` in the printed directory, then compare `trace.json`, `repair.
 
 Only absolute HTTP/HTTPS room addresses are active links. Other addresses remain visible text. Cost is “not recorded” when absent, a labelled known subtotal when partial, and a complete amount only when every step records a finite cost. Explicit zero is preserved. Failure-memory functions operate on caller-owned arrays; the caller must persist them. Suggested regression commands target NodeRoom and must not be executed as NodeRL setup commands.
 
+## The report is an interface and must be reviewed
+
+The public renderer generates HTML from TypeScript. The current detector now searches for those source markers and reports the actual renderer. Run `node promotion/evidence/rendered-surface-probe.mjs` from the root: **exit 1 is expected**, meaning the discovered interface requires an audit. Exit 0 would mean only that no heuristic marker was found. The detector's scenario tests expect the real report to be detected; passing those tests is not a completed UI audit or permission to promote.
+
+The detector inspects committed HEAD paths and contents consistently. Its JSON separately names that commit/tree and hashes the detector file actually executing, which may contain uncommitted changes. `--write` refreshes the current output and still exits 1 when it finds the report. Historical N/A review text remains explicitly superseded in `promotion/PRODUCT_GOAL.md` and its two condition documents. Complete web-quality and human review remain open.
+
+The ordinary CI workflow runs install, tests, typecheck and the recorded demo on Node 22 for pull requests and main pushes. Its actual shared result must be checked at the proposed commit; the YAML alone is not execution proof or branch protection.
+
+The report evidence packet below is immutable historical proof at source `702759ae7854f165eedb051a98b679dfdfe06e95`. Its packet-only `python evidence/report-handoff-20260905/verify.py` remains useful. Its optional `--source-root` checks the original 102-file raw snapshot, so it intentionally fails against this changed detector/test/documentation checkout. Use an exact historical checkout for that historical source check. Current changed inputs and the unchanged renderer are separately listed in [the detection receipt](promotion/evidence/generated-surface-review.json); no old source hash is silently waived or rewritten.
+
 ## Current repair and limits
 
 The report repair was evaluated against the source recorded in the [report evidence packet](evidence/report-handoff-20260905/README.md), based on commit `4b06939b8fd9121e2ba73887df2dd799eae2f1aa`. It addresses executable room addresses, missing/partial cost disclosure, long-content reflow, two filled status-label contrasts, and the empty Artifacts message. The independent reviewer approved the five-owner repair after 133 closing checks. The packet records that judgment and local test results against exact source hashes. Those records describe that reviewed local source; they do not establish the status of a later shared CI run, release or deployment.

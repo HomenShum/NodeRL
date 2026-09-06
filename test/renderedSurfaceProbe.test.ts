@@ -1,39 +1,14 @@
 /**
- * renderedSurfaceProbe.test.ts — the negative control for the evidence behind
- * promotion conditions 7 and 8.
- *
- * Why this test exists:
- * `promotion/evidence/rendered-surface-probe.mjs` is the sole evidence that
- * NodeRL has no rendered surface, which is the sole reason conditions 7 (Web
- * Interface Guidelines review) and 8 (web-quality audit) are scored NOT
- * APPLICABLE instead of being audited. A probe that reports "no surface" on
- * every input would produce exactly the same green result on a repo full of
- * HTML — it would be a rubber stamp, and the NOT APPLICABLE verdict resting on
- * it would be worthless. A gate that cannot fail is not a gate.
- *
- * So this stands up throwaway git repositories and checks that the probe
- * answers differently when the answer should differ:
- *   (a) a tree with nothing renderable      -> exit 0, surface_found false
- *   (b) + one .html file                    -> exit 1, markup_files fires
- *   (c) + a UI framework dependency         -> exit 1, ui_dependencies fires
- *   (d) + a server that binds a port        -> exit 1, server_entrypoints fires
- *   (e) + a deployed page URL in a doc      -> exit 1, deployed_urls fires
- * Each vector is proved to fire on its own, because four dead checks hiding
- * behind one live one is the same rubber stamp wearing a longer coat.
- *
- * Then (f) pins the probe's one exclusion at exactly two files wide, and (g)
- * runs the probe against THIS repository — which is what gives the N/A verdict
- * an expiry date: the day a demo page, a stylesheet, a server or a deployed URL
- * lands here, `npm test` goes red and points at the eight scorecard rows that
- * have to be re-scored by opening the page.
- *
- * Run: npm test   (or: node --test test/renderedSurfaceProbe.test.ts)
+ * A reviewer must discover generated reports before deciding whether UI audits
+ * apply. These committed-fixture scenarios test the detector, not the quality
+ * of the detected UI. A discovered surface deliberately exits 1 for audit.
+ * No-match fixtures establish only missing heuristic markers, never N/A.
  */
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync, copyFileSync } from "node:fs";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { basename, dirname, join, resolve } from "node:path";
 
 let pass = 0, fail = 0;
 function scenario(name: string, fn: () => void): void {
@@ -61,6 +36,12 @@ function makeFixture(): string {
   return dir;
 }
 
+function removeFixture(dir: string): void {
+  assert.equal(resolve(dirname(dir)), resolve(tmpdir()));
+  assert.ok(basename(dir).startsWith("noderl-surface-probe-"));
+  rmSync(dir, { recursive: true, force: true });
+}
+
 function commit(dir: string): void {
   execFileSync("git", ["add", "-A"], { cwd: dir });
   execFileSync(
@@ -81,7 +62,7 @@ function runProbe(dir: string): { code: number; report: Record<string, any> } {
 }
 
 /** Add one rendered-surface vector to a clean fixture and assert the probe reddens. */
-function vector(name: string, check: string, mutate: (dir: string) => void): void {
+function vector(name: string, check: string, mutate: (dir: string) => void, expectedPath?: string): void {
   const dir = makeFixture();
   try {
     mutate(dir);
@@ -94,13 +75,17 @@ function vector(name: string, check: string, mutate: (dir: string) => void): voi
         report.checks[check].count > 0,
         `${check} must be the check that fired, got ${JSON.stringify(report.checks[check])}`,
       );
+      if (expectedPath) {
+        assert.ok(report.checks[check].matches.some((line: string) => line.includes(`:${expectedPath}:`)),
+          `the generated markup must come from ${expectedPath}`);
+      }
     });
   } finally {
-    rmSync(dir, { recursive: true, force: true });
+    removeFixture(dir);
   }
 }
 
-// (a) The premise: with nothing renderable, the probe is green.
+// A bare fixture has no heuristic markers; this is not an N/A approval.
 const clean = makeFixture();
 try {
   const { code, report } = runProbe(clean);
@@ -112,12 +97,38 @@ try {
     }
   });
 } finally {
-  rmSync(clean, { recursive: true, force: true });
+  removeFixture(clean);
 }
 
-// (b)-(e) Each vector, alone, must turn the probe red.
+// Each independent vector must require an audit.
 vector("one .html file", "markup_files", (dir) =>
   writeFileSync(join(dir, "demo.html"), "<!doctype html><title>demo</title>\n"));
+
+vector("one stylesheet without a page", "stylesheet_files", (dir) =>
+  writeFileSync(join(dir, "report.css"), "body { color: black; }\n"));
+
+vector("TypeScript generates a complete report", "generated_markup", (dir) =>
+  writeFileSync(join(dir, "report.ts"),
+    "export const render = () => '<!doctype html><html lang=\"en\"><style>body{color:black}</style><body>Report</body></html>';\n"), "report.ts");
+
+vector("JavaScript generates uppercase HTML", "generated_markup", (dir) =>
+  writeFileSync(join(dir, "report.mjs"),
+    "export const render = () => '<HTML><STYLE>body{color:black}</STYLE><BODY>Report</BODY></HTML>';\n"), "report.mjs");
+
+{
+  const dir = makeFixture();
+  try {
+    writeFileSync(join(dir, "prefix.ts"), "export const tags = '<stylesheet><htmlish><bodyguard>';\n");
+    commit(dir);
+    const { code, report } = runProbe(dir);
+    scenario("tag-name prefixes do not masquerade as document markers", () => {
+      assert.equal(code, 0);
+      assert.equal(report.surface_found, false);
+    });
+  } finally {
+    removeFixture(dir);
+  }
+}
 
 vector("a UI framework dependency", "ui_dependencies_or_bin", (dir) =>
   writeFileSync(
@@ -158,28 +169,45 @@ vector("a deployed page URL in a doc", "deployed_urls", (dir) =>
       assert.equal(report.checks.server_entrypoints.count, 1, "exactly the non-excluded file fires");
     });
   } finally {
-    rmSync(dir, { recursive: true, force: true });
+    removeFixture(dir);
   }
 }
 
-// (g) The live claim. The scorecard scores conditions 3-10 N/A on the premise
-// that THIS repository has no rendered surface. Running the probe against the
-// fixtures above proves the probe works; running it here is what keeps the
-// scorecard honest. When someone commits a demo page, this line goes red and
-// those eight rows have to be re-scored by opening the page — they cannot
-// inherit "nothing to audit" from a tree that no longer exists.
-scenario("this repository -> no rendered surface, so conditions 3-10 stay N/A", () => {
+// A reviewer inspecting a commit must not accidentally combine it with a
+// contributor's staged next revision. Repeated staging remains outside HEAD.
+{
+  const dir = makeFixture();
+  try {
+    const inspected = execFileSync("git", ["rev-parse", "HEAD"], { cwd: dir, encoding: "utf8" }).trim();
+    scenario("staged revisions do not change the inspected committed tree", () => {
+      for (let revision = 0; revision < 3; revision++) {
+        writeFileSync(join(dir, "next.html"), `<html><body>Revision ${revision}</body></html>\n`);
+        execFileSync("git", ["add", "--", "next.html"], { cwd: dir });
+        const { code, report } = runProbe(dir);
+        assert.equal(code, 0);
+        assert.equal(report.commit, inspected);
+        assert.equal(report.checks.markup_files.count, 0);
+      }
+      commit(dir);
+      const { code, report } = runProbe(dir);
+      assert.equal(code, 1);
+      assert.notEqual(report.commit, inspected);
+      assert.deepEqual(report.checks.markup_files.matches, ["next.html"]);
+    });
+  } finally {
+    removeFixture(dir);
+  }
+}
+
+// The current source actually generates an HTML report. Detection is a unit
+// contract; the required audit remains a separate, unresolved promotion gate.
+scenario("the real generated report requires an audit", () => {
   const { code, report } = runProbe(process.cwd());
-  assert.equal(
-    code,
-    0,
-    "a rendered surface has appeared in NodeRL. promotion/PRODUCT_GOAL.md scores " +
-      "conditions 3-10 N/A on the premise that none exists; that premise is now false. " +
-      "Run the lighthouse + axe audits and a real Web Interface Guidelines review, then " +
-      "re-score those rows. Offending matches: " +
-      JSON.stringify(report.checks),
-  );
-  assert.equal(report.surface_found, false, "surface_found must still be false");
+  assert.equal(code, 1, "the real renderer must be detected, not waived as N/A");
+  assert.equal(report.surface_found, true);
+  assert.ok(report.checks.generated_markup.matches.some((line: string) =>
+    line.includes(":packages/nodetrace/src/storybook.ts:")),
+    "the generated-markup vector must find the actual renderer itself");
 });
 
 console.log(`\n${pass} passed, ${fail} failed`);
