@@ -11,6 +11,8 @@
 <p align="center"><a href="#quickstart">Quickstart</a> · <a href="docs/START_HERE.md">Code&nbsp;walkthrough</a> · <a href="HANDOFF.md">Handoff</a> · <a href="https://homenshum.github.io/">All&nbsp;projects</a></p>
 <!-- brand:end -->
 
+# NodeRL
+
 **Turn failed agent runs into the next better attempt — and into training data.**
 
 When you run an AI agent on a real task, it often half-succeeds: it gets the number right but shows
