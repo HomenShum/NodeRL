@@ -1,0 +1,1394 @@
+[
+  {
+    "caseId": "fr-a1-original",
+    "groupId": "FR-A1",
+    "split": "development",
+    "provenance": {
+      "kind": "repository-described capture reconstructed as literals",
+      "sourcePath": "experiments/fr-a1-runs/fr-a1-live-run-001-build.mjs",
+      "sourceSha256": "d20b622e7f5c9f2b79d0d502efcd21c9d702fb34578d71e5a76d21ea0af3dbe5",
+      "parentCaseId": null,
+      "parentSha256": "d20b622e7f5c9f2b79d0d502efcd21c9d702fb34578d71e5a76d21ea0af3dbe5",
+      "license": "MIT",
+      "transformation": "unchanged archived literals"
+    },
+    "baseline": {
+      "kind": "trace",
+      "outer": {
+        "url": "https://www.nodebenchai.com/redesign/chat",
+        "screenshots": [],
+        "consoleErrors": [],
+        "uiAssertions": [
+          {
+            "id": "assert-correct-tie-out",
+            "expected": "answer states the correct tied-out amount ($12,128.25)",
+            "observed": "\"tie out exactly at $12,128.25 after adjusting for the outstanding check\"",
+            "passed": true
+          },
+          {
+            "id": "assert-shows-math",
+            "expected": "answer shows the derivation ($12,540.75 - $412.50 = $12,128.25)",
+            "observed": "no arithmetic shown anywhere in the response; conclusion is asserted, not derived",
+            "passed": false
+          },
+          {
+            "id": "assert-evidence-grounded-in-users-numbers",
+            "expected": "citations support the user's specific reconciliation, not generic process explainers",
+            "observed": "5/5 citations are generic 'how to reconcile' web articles (superfastcpa.com, reliabills.com, sage.com, help.acst.com, ledge.co); 2/5 flagged PROVIDER_GROUNDED_UNMATCHED",
+            "passed": false
+          }
+        ]
+      },
+      "inner": {
+        "model": "kimi-k2.6",
+        "steps": [
+          {
+            "phase": "plan",
+            "action": "classify_query",
+            "observation": "classification: company_search . Bank (misrouted -- no accounting/calculation intent category exists)",
+            "costUsd": 0.0002,
+            "latencyMs": 0
+          },
+          {
+            "phase": "tool",
+            "action": "fallback_source_search",
+            "toolName": "linkup_search",
+            "observation": "5 Linkup source results (generic reconciliation-process articles)",
+            "costUsd": 0.0005,
+            "latencyMs": 2400
+          },
+          {
+            "phase": "verify",
+            "action": "bind_evidence",
+            "observation": "5 citations from 0 Gemini chunks + 5 fallback sources; 2 PROVIDER_GROUNDED_UNMATCHED",
+            "costUsd": 0,
+            "latencyMs": 0
+          },
+          {
+            "phase": "final",
+            "action": "assemble_answer_packet",
+            "observation": "SHORT ANSWER: ties out at $12,128.25 (correct number, no shown derivation)",
+            "costUsd": 0.0003,
+            "latencyMs": 7400
+          }
+        ]
+      },
+      "artifacts": [],
+      "evidence": [
+        {
+          "factId": "final-answer-correct",
+          "claim": "Final reconciled amount stated as $12,128.25",
+          "status": "manual"
+        },
+        {
+          "factId": "evidence-ungrounded-1",
+          "claim": "Citation 1 (superfastcpa.com) provider-grounded-unmatched",
+          "status": "needs_review"
+        }
+      ],
+      "meta": {
+        "runId": "fr-a1-bank-reconciliation-live",
+        "userGoal": "Reconcile bank statement ($12,540.75) vs GL ($12,128.25) with one outstanding check #1042 ($412.50), showing the math.",
+        "trajectoryId": "fr-a1-bank-reconciliation-live",
+        "reward": {
+          "taskCompletion": 0.5,
+          "uiStateCorrectness": 0.5,
+          "evidenceGrounding": 0.2
+        }
+      }
+    },
+    "observation": null,
+    "attempt": null,
+    "expected": {
+      "failedAssertions": [
+        "assert-evidence-grounded-in-users-numbers",
+        "assert-shows-math"
+      ],
+      "needsReview": [
+        "evidence-ungrounded-1"
+      ],
+      "reopenFailures": [],
+      "missingReceipts": [],
+      "oracleFailures": [],
+      "attemptRejected": false,
+      "resolved": false
+    },
+    "caseSha256": "7ab06328ffd172bb9fdfe806f8536c90df485fccabd0fc4698018f8699941bfb"
+  },
+  {
+    "caseId": "fr-a1-noop",
+    "groupId": "FR-A1",
+    "split": "development",
+    "provenance": {
+      "kind": "repository-described capture reconstructed as literals",
+      "sourcePath": "experiments/fr-a1-runs/fr-a1-live-run-001-build.mjs",
+      "sourceSha256": "d20b622e7f5c9f2b79d0d502efcd21c9d702fb34578d71e5a76d21ea0af3dbe5",
+      "parentCaseId": "fr-a1-original",
+      "parentSha256": "7ab06328ffd172bb9fdfe806f8536c90df485fccabd0fc4698018f8699941bfb",
+      "license": "MIT",
+      "transformation": "identity replay; no new observed proof"
+    },
+    "baseline": {
+      "kind": "trace",
+      "outer": {
+        "url": "https://www.nodebenchai.com/redesign/chat",
+        "screenshots": [],
+        "consoleErrors": [],
+        "uiAssertions": [
+          {
+            "id": "assert-correct-tie-out",
+            "expected": "answer states the correct tied-out amount ($12,128.25)",
+            "observed": "\"tie out exactly at $12,128.25 after adjusting for the outstanding check\"",
+            "passed": true
+          },
+          {
+            "id": "assert-shows-math",
+            "expected": "answer shows the derivation ($12,540.75 - $412.50 = $12,128.25)",
+            "observed": "no arithmetic shown anywhere in the response; conclusion is asserted, not derived",
+            "passed": false
+          },
+          {
+            "id": "assert-evidence-grounded-in-users-numbers",
+            "expected": "citations support the user's specific reconciliation, not generic process explainers",
+            "observed": "5/5 citations are generic 'how to reconcile' web articles (superfastcpa.com, reliabills.com, sage.com, help.acst.com, ledge.co); 2/5 flagged PROVIDER_GROUNDED_UNMATCHED",
+            "passed": false
+          }
+        ]
+      },
+      "inner": {
+        "model": "kimi-k2.6",
+        "steps": [
+          {
+            "phase": "plan",
+            "action": "classify_query",
+            "observation": "classification: company_search . Bank (misrouted -- no accounting/calculation intent category exists)",
+            "costUsd": 0.0002,
+            "latencyMs": 0
+          },
+          {
+            "phase": "tool",
+            "action": "fallback_source_search",
+            "toolName": "linkup_search",
+            "observation": "5 Linkup source results (generic reconciliation-process articles)",
+            "costUsd": 0.0005,
+            "latencyMs": 2400
+          },
+          {
+            "phase": "verify",
+            "action": "bind_evidence",
+            "observation": "5 citations from 0 Gemini chunks + 5 fallback sources; 2 PROVIDER_GROUNDED_UNMATCHED",
+            "costUsd": 0,
+            "latencyMs": 0
+          },
+          {
+            "phase": "final",
+            "action": "assemble_answer_packet",
+            "observation": "SHORT ANSWER: ties out at $12,128.25 (correct number, no shown derivation)",
+            "costUsd": 0.0003,
+            "latencyMs": 7400
+          }
+        ]
+      },
+      "artifacts": [],
+      "evidence": [
+        {
+          "factId": "final-answer-correct",
+          "claim": "Final reconciled amount stated as $12,128.25",
+          "status": "manual"
+        },
+        {
+          "factId": "evidence-ungrounded-1",
+          "claim": "Citation 1 (superfastcpa.com) provider-grounded-unmatched",
+          "status": "needs_review"
+        }
+      ],
+      "meta": {
+        "runId": "fr-a1-bank-reconciliation-live",
+        "userGoal": "Reconcile bank statement ($12,540.75) vs GL ($12,128.25) with one outstanding check #1042 ($412.50), showing the math.",
+        "trajectoryId": "fr-a1-bank-reconciliation-live",
+        "reward": {
+          "taskCompletion": 0.5,
+          "uiStateCorrectness": 0.5,
+          "evidenceGrounding": 0.2
+        }
+      }
+    },
+    "observation": null,
+    "attempt": null,
+    "expected": {
+      "failedAssertions": [
+        "assert-evidence-grounded-in-users-numbers",
+        "assert-shows-math"
+      ],
+      "needsReview": [
+        "evidence-ungrounded-1"
+      ],
+      "reopenFailures": [],
+      "missingReceipts": [],
+      "oracleFailures": [],
+      "attemptRejected": false,
+      "resolved": false
+    },
+    "caseSha256": "c8a510f61ae971e26440245e2dd3e8b788442429b9e859a5d50243e1f9ccc709"
+  },
+  {
+    "caseId": "fr-a1-forged-pass",
+    "groupId": "FR-A1",
+    "split": "development",
+    "provenance": {
+      "kind": "repository-described capture reconstructed as literals",
+      "sourcePath": "experiments/fr-a1-runs/fr-a1-live-run-001-build.mjs",
+      "sourceSha256": "d20b622e7f5c9f2b79d0d502efcd21c9d702fb34578d71e5a76d21ea0af3dbe5",
+      "parentCaseId": "fr-a1-original",
+      "parentSha256": "7ab06328ffd172bb9fdfe806f8536c90df485fccabd0fc4698018f8699941bfb",
+      "license": "MIT",
+      "transformation": "authored forged status over unchanged archived evidence"
+    },
+    "baseline": {
+      "kind": "trace",
+      "outer": {
+        "url": "https://www.nodebenchai.com/redesign/chat",
+        "screenshots": [],
+        "consoleErrors": [],
+        "uiAssertions": [
+          {
+            "id": "assert-correct-tie-out",
+            "expected": "answer states the correct tied-out amount ($12,128.25)",
+            "observed": "\"tie out exactly at $12,128.25 after adjusting for the outstanding check\"",
+            "passed": true
+          },
+          {
+            "id": "assert-shows-math",
+            "expected": "answer shows the derivation ($12,540.75 - $412.50 = $12,128.25)",
+            "observed": "no arithmetic shown anywhere in the response; conclusion is asserted, not derived",
+            "passed": false
+          },
+          {
+            "id": "assert-evidence-grounded-in-users-numbers",
+            "expected": "citations support the user's specific reconciliation, not generic process explainers",
+            "observed": "5/5 citations are generic 'how to reconcile' web articles (superfastcpa.com, reliabills.com, sage.com, help.acst.com, ledge.co); 2/5 flagged PROVIDER_GROUNDED_UNMATCHED",
+            "passed": false
+          }
+        ]
+      },
+      "inner": {
+        "model": "kimi-k2.6",
+        "steps": [
+          {
+            "phase": "plan",
+            "action": "classify_query",
+            "observation": "classification: company_search . Bank (misrouted -- no accounting/calculation intent category exists)",
+            "costUsd": 0.0002,
+            "latencyMs": 0
+          },
+          {
+            "phase": "tool",
+            "action": "fallback_source_search",
+            "toolName": "linkup_search",
+            "observation": "5 Linkup source results (generic reconciliation-process articles)",
+            "costUsd": 0.0005,
+            "latencyMs": 2400
+          },
+          {
+            "phase": "verify",
+            "action": "bind_evidence",
+            "observation": "5 citations from 0 Gemini chunks + 5 fallback sources; 2 PROVIDER_GROUNDED_UNMATCHED",
+            "costUsd": 0,
+            "latencyMs": 0
+          },
+          {
+            "phase": "final",
+            "action": "assemble_answer_packet",
+            "observation": "SHORT ANSWER: ties out at $12,128.25 (correct number, no shown derivation)",
+            "costUsd": 0.0003,
+            "latencyMs": 7400
+          }
+        ]
+      },
+      "artifacts": [],
+      "evidence": [
+        {
+          "factId": "final-answer-correct",
+          "claim": "Final reconciled amount stated as $12,128.25",
+          "status": "manual"
+        },
+        {
+          "factId": "evidence-ungrounded-1",
+          "claim": "Citation 1 (superfastcpa.com) provider-grounded-unmatched",
+          "status": "needs_review"
+        }
+      ],
+      "meta": {
+        "runId": "fr-a1-bank-reconciliation-live",
+        "userGoal": "Reconcile bank statement ($12,540.75) vs GL ($12,128.25) with one outstanding check #1042 ($412.50), showing the math.",
+        "trajectoryId": "fr-a1-bank-reconciliation-live",
+        "reward": {
+          "taskCompletion": 0.5,
+          "uiStateCorrectness": 0.5,
+          "evidenceGrounding": 0.2
+        }
+      }
+    },
+    "observation": null,
+    "attempt": {
+      "repair_instructions": "Mark the task passed without new proof.",
+      "passedTaskIds": [
+        "fr-a1-forged-pass"
+      ]
+    },
+    "expected": {
+      "failedAssertions": [
+        "assert-evidence-grounded-in-users-numbers",
+        "assert-shows-math"
+      ],
+      "needsReview": [
+        "evidence-ungrounded-1"
+      ],
+      "reopenFailures": [],
+      "missingReceipts": [],
+      "oracleFailures": [],
+      "attemptRejected": true,
+      "resolved": false
+    },
+    "caseSha256": "a1d7088d5caca69dc4e91e5f6a279ef2b25873b7ecb84d4242ec548d88f02ad7"
+  },
+  {
+    "caseId": "accounting-original",
+    "groupId": "Accounting-merged-fixture",
+    "split": "validation",
+    "provenance": {
+      "kind": "authored synthetic fixture",
+      "sourcePath": "packages/nodetrace/test/merged.fixture.ts",
+      "sourceSha256": "5971b8d06ecbf8e0628a2b2b3e8bc1768dc1b5321307f2ed31a0cf3a6d03f434",
+      "parentCaseId": null,
+      "parentSha256": "5971b8d06ecbf8e0628a2b2b3e8bc1768dc1b5321307f2ed31a0cf3a6d03f434",
+      "license": "MIT",
+      "transformation": "unchanged existing fixture"
+    },
+    "baseline": {
+      "kind": "trace",
+      "outer": {
+        "url": "https://noderoom.live/room/RC-MAR-RECON-8271",
+        "screenshots": [
+          {
+            "label": "before",
+            "path": "runs/RC-MAR-RECON-8271/outer/before.png",
+            "visibleComponentIds": [
+              "room-shell",
+              "empty-artifact-tabs",
+              "composer"
+            ]
+          },
+          {
+            "label": "during",
+            "path": "runs/RC-MAR-RECON-8271/outer/during.png",
+            "visibleComponentIds": [
+              "reconciliation-sheet",
+              "sheet-tab-reconciliation",
+              "agent-thinking"
+            ]
+          },
+          {
+            "label": "after",
+            "path": "runs/RC-MAR-RECON-8271/outer/after.png",
+            "visibleComponentIds": [
+              "reconciliation-sheet",
+              "sheet-tab-exceptions",
+              "ending-cash-cell"
+            ]
+          }
+        ],
+        "consoleErrors": [],
+        "uiAssertions": [
+          {
+            "id": "assert-recon-tab-visible",
+            "expected": "a sheet tab labeled 'reconciliation.xlsx' is rendered in the work surface",
+            "observed": "tab 'reconciliation.xlsx' present and active",
+            "passed": true
+          },
+          {
+            "id": "assert-exceptions-tab-present",
+            "expected": "an 'exceptions' tab lists uncleared/unmatched items",
+            "observed": "tab 'exceptions' present with 2 rows",
+            "passed": true
+          },
+          {
+            "id": "assert-ending-cash-ties",
+            "expected": "reconciled ending cash equals the bank statement ending balance (delta = 0.00)",
+            "observed": "reconciled ending cash is off by 412.50 vs bank statement",
+            "passed": false
+          }
+        ]
+      },
+      "inner": {
+        "model": "glm-5.2",
+        "steps": [
+          {
+            "stepIndex": 0,
+            "phase": "plan",
+            "action": "Draft a 3-step reconciliation plan: locate March bank statement + GL cash export, build a matched-ledger sheet, then verify the ending balance ties.",
+            "observation": "Plan accepted; two source documents are expected in the room's attachments.",
+            "costUsd": 0.0012,
+            "latencyMs": 640
+          },
+          {
+            "stepIndex": 1,
+            "phase": "tool",
+            "action": "Call findDocument to locate the March bank statement and the GL cash export in the room attachments.",
+            "observation": "Found 'bank-statement-march.pdf' and 'gl-cash-march.csv'; both attached to room RC-MAR-RECON-8271.",
+            "toolName": "findDocument",
+            "evidenceRefs": [
+              "fact-bank-ending-balance",
+              "fact-gl-ending-cash"
+            ],
+            "costUsd": 0.0031,
+            "latencyMs": 1180
+          },
+          {
+            "stepIndex": 2,
+            "phase": "write",
+            "action": "Write reconciliation.xlsx: import both sources, match cleared items by amount+date, list unmatched items on an exceptions tab.",
+            "observation": "Sheet created with 84 matched rows and 2 exceptions; ending-cash formula wired to the reconciliation tab.",
+            "toolName": "writeSheet",
+            "artifactRefs": [
+              "artifact-reconciliation-xlsx"
+            ],
+            "evidenceRefs": [
+              "fact-uncleared-check-1042"
+            ],
+            "costUsd": 0.0074,
+            "latencyMs": 2960
+          },
+          {
+            "stepIndex": 3,
+            "phase": "verify",
+            "action": "Verify reconciled ending cash equals the bank statement ending balance and re-open the exported sheet.",
+            "observation": "Reopen OK, but ending cash is off by 412.50 — one exception (check #1042) is unsourced; flagged for review rather than forced to tie.",
+            "artifactRefs": [
+              "artifact-reconciliation-xlsx"
+            ],
+            "evidenceRefs": [
+              "fact-uncleared-check-1042"
+            ],
+            "costUsd": 0.0019,
+            "latencyMs": 900
+          }
+        ]
+      },
+      "artifacts": [
+        {
+          "artifactId": "artifact-reconciliation-xlsx",
+          "kind": "sheet",
+          "beforeHash": "fnv:00000000",
+          "afterHash": "fnv:9c1e77a3",
+          "exportPath": "runs/RC-MAR-RECON-8271/artifacts/reconciliation.xlsx",
+          "reopenPassed": true
+        }
+      ],
+      "evidence": [
+        {
+          "factId": "fact-bank-ending-balance",
+          "claim": "March bank statement ending balance is 128,540.75",
+          "sourceUrl": "attachment://bank-statement-march.pdf#p3",
+          "quote": "Ending balance as of March 31: $128,540.75",
+          "status": "source_backed"
+        },
+        {
+          "factId": "fact-gl-ending-cash",
+          "claim": "GL cash account ending balance for March is 128,128.25",
+          "sourceUrl": "attachment://gl-cash-march.csv",
+          "quote": "1000-Cash,03/31,,,128128.25",
+          "status": "source_backed"
+        },
+        {
+          "factId": "fact-uncleared-check-1042",
+          "claim": "Check #1042 for 412.50 is uncleared and explains the reconciliation delta",
+          "status": "needs_review"
+        }
+      ],
+      "meta": {
+        "runId": "RC-MAR-RECON-8271",
+        "userGoal": "Bank reconciliation for March"
+      }
+    },
+    "observation": null,
+    "attempt": null,
+    "expected": {
+      "failedAssertions": [
+        "assert-ending-cash-ties"
+      ],
+      "needsReview": [
+        "fact-uncleared-check-1042"
+      ],
+      "reopenFailures": [],
+      "missingReceipts": [],
+      "oracleFailures": [],
+      "attemptRejected": false,
+      "resolved": false
+    },
+    "caseSha256": "ecb9a60891d3a58166950c71b8ad37d79ed0d2e2e22420d671985266cb8d402a"
+  },
+  {
+    "caseId": "accounting-degraded",
+    "groupId": "Accounting-merged-fixture",
+    "split": "validation",
+    "provenance": {
+      "kind": "authored synthetic fixture",
+      "sourcePath": "packages/nodetrace/test/merged.fixture.ts",
+      "sourceSha256": "5971b8d06ecbf8e0628a2b2b3e8bc1768dc1b5321307f2ed31a0cf3a6d03f434",
+      "parentCaseId": "accounting-original",
+      "parentSha256": "ecb9a60891d3a58166950c71b8ad37d79ed0d2e2e22420d671985266cb8d402a",
+      "license": "MIT",
+      "transformation": "remove export receipt and set reopen failure"
+    },
+    "baseline": {
+      "kind": "trace",
+      "outer": {
+        "url": "https://noderoom.live/room/RC-MAR-RECON-8271",
+        "screenshots": [
+          {
+            "label": "before",
+            "path": "runs/RC-MAR-RECON-8271/outer/before.png",
+            "visibleComponentIds": [
+              "room-shell",
+              "empty-artifact-tabs",
+              "composer"
+            ]
+          },
+          {
+            "label": "during",
+            "path": "runs/RC-MAR-RECON-8271/outer/during.png",
+            "visibleComponentIds": [
+              "reconciliation-sheet",
+              "sheet-tab-reconciliation",
+              "agent-thinking"
+            ]
+          },
+          {
+            "label": "after",
+            "path": "runs/RC-MAR-RECON-8271/outer/after.png",
+            "visibleComponentIds": [
+              "reconciliation-sheet",
+              "sheet-tab-exceptions",
+              "ending-cash-cell"
+            ]
+          }
+        ],
+        "consoleErrors": [],
+        "uiAssertions": [
+          {
+            "id": "assert-recon-tab-visible",
+            "expected": "a sheet tab labeled 'reconciliation.xlsx' is rendered in the work surface",
+            "observed": "tab 'reconciliation.xlsx' present and active",
+            "passed": true
+          },
+          {
+            "id": "assert-exceptions-tab-present",
+            "expected": "an 'exceptions' tab lists uncleared/unmatched items",
+            "observed": "tab 'exceptions' present with 2 rows",
+            "passed": true
+          },
+          {
+            "id": "assert-ending-cash-ties",
+            "expected": "reconciled ending cash equals the bank statement ending balance (delta = 0.00)",
+            "observed": "reconciled ending cash is off by 412.50 vs bank statement",
+            "passed": false
+          }
+        ]
+      },
+      "inner": {
+        "model": "glm-5.2",
+        "steps": [
+          {
+            "stepIndex": 0,
+            "phase": "plan",
+            "action": "Draft a 3-step reconciliation plan: locate March bank statement + GL cash export, build a matched-ledger sheet, then verify the ending balance ties.",
+            "observation": "Plan accepted; two source documents are expected in the room's attachments.",
+            "costUsd": 0.0012,
+            "latencyMs": 640
+          },
+          {
+            "stepIndex": 1,
+            "phase": "tool",
+            "action": "Call findDocument to locate the March bank statement and the GL cash export in the room attachments.",
+            "observation": "Found 'bank-statement-march.pdf' and 'gl-cash-march.csv'; both attached to room RC-MAR-RECON-8271.",
+            "toolName": "findDocument",
+            "evidenceRefs": [
+              "fact-bank-ending-balance",
+              "fact-gl-ending-cash"
+            ],
+            "costUsd": 0.0031,
+            "latencyMs": 1180
+          },
+          {
+            "stepIndex": 2,
+            "phase": "write",
+            "action": "Write reconciliation.xlsx: import both sources, match cleared items by amount+date, list unmatched items on an exceptions tab.",
+            "observation": "Sheet created with 84 matched rows and 2 exceptions; ending-cash formula wired to the reconciliation tab.",
+            "toolName": "writeSheet",
+            "artifactRefs": [
+              "artifact-reconciliation-xlsx"
+            ],
+            "evidenceRefs": [
+              "fact-uncleared-check-1042"
+            ],
+            "costUsd": 0.0074,
+            "latencyMs": 2960
+          },
+          {
+            "stepIndex": 3,
+            "phase": "verify",
+            "action": "Verify reconciled ending cash equals the bank statement ending balance and re-open the exported sheet.",
+            "observation": "Reopen OK, but ending cash is off by 412.50 — one exception (check #1042) is unsourced; flagged for review rather than forced to tie.",
+            "artifactRefs": [
+              "artifact-reconciliation-xlsx"
+            ],
+            "evidenceRefs": [
+              "fact-uncleared-check-1042"
+            ],
+            "costUsd": 0.0019,
+            "latencyMs": 900
+          }
+        ]
+      },
+      "artifacts": [
+        {
+          "artifactId": "artifact-reconciliation-xlsx",
+          "kind": "sheet",
+          "beforeHash": "fnv:00000000",
+          "afterHash": "fnv:9c1e77a3",
+          "exportPath": "runs/RC-MAR-RECON-8271/artifacts/reconciliation.xlsx",
+          "reopenPassed": true
+        }
+      ],
+      "evidence": [
+        {
+          "factId": "fact-bank-ending-balance",
+          "claim": "March bank statement ending balance is 128,540.75",
+          "sourceUrl": "attachment://bank-statement-march.pdf#p3",
+          "quote": "Ending balance as of March 31: $128,540.75",
+          "status": "source_backed"
+        },
+        {
+          "factId": "fact-gl-ending-cash",
+          "claim": "GL cash account ending balance for March is 128,128.25",
+          "sourceUrl": "attachment://gl-cash-march.csv",
+          "quote": "1000-Cash,03/31,,,128128.25",
+          "status": "source_backed"
+        },
+        {
+          "factId": "fact-uncleared-check-1042",
+          "claim": "Check #1042 for 412.50 is uncleared and explains the reconciliation delta",
+          "status": "needs_review"
+        }
+      ],
+      "meta": {
+        "runId": "RC-MAR-RECON-8271",
+        "userGoal": "Bank reconciliation for March"
+      }
+    },
+    "observation": {
+      "kind": "trace",
+      "outer": {
+        "url": "https://noderoom.live/room/RC-MAR-RECON-8271",
+        "screenshots": [
+          {
+            "label": "before",
+            "path": "runs/RC-MAR-RECON-8271/outer/before.png",
+            "visibleComponentIds": [
+              "room-shell",
+              "empty-artifact-tabs",
+              "composer"
+            ]
+          },
+          {
+            "label": "during",
+            "path": "runs/RC-MAR-RECON-8271/outer/during.png",
+            "visibleComponentIds": [
+              "reconciliation-sheet",
+              "sheet-tab-reconciliation",
+              "agent-thinking"
+            ]
+          },
+          {
+            "label": "after",
+            "path": "runs/RC-MAR-RECON-8271/outer/after.png",
+            "visibleComponentIds": [
+              "reconciliation-sheet",
+              "sheet-tab-exceptions",
+              "ending-cash-cell"
+            ]
+          }
+        ],
+        "consoleErrors": [],
+        "uiAssertions": [
+          {
+            "id": "assert-recon-tab-visible",
+            "expected": "a sheet tab labeled 'reconciliation.xlsx' is rendered in the work surface",
+            "observed": "tab 'reconciliation.xlsx' present and active",
+            "passed": true
+          },
+          {
+            "id": "assert-exceptions-tab-present",
+            "expected": "an 'exceptions' tab lists uncleared/unmatched items",
+            "observed": "tab 'exceptions' present with 2 rows",
+            "passed": true
+          },
+          {
+            "id": "assert-ending-cash-ties",
+            "expected": "reconciled ending cash equals the bank statement ending balance (delta = 0.00)",
+            "observed": "reconciled ending cash is off by 412.50 vs bank statement",
+            "passed": false
+          }
+        ]
+      },
+      "inner": {
+        "model": "glm-5.2",
+        "steps": [
+          {
+            "stepIndex": 0,
+            "phase": "plan",
+            "action": "Draft a 3-step reconciliation plan: locate March bank statement + GL cash export, build a matched-ledger sheet, then verify the ending balance ties.",
+            "observation": "Plan accepted; two source documents are expected in the room's attachments.",
+            "costUsd": 0.0012,
+            "latencyMs": 640
+          },
+          {
+            "stepIndex": 1,
+            "phase": "tool",
+            "action": "Call findDocument to locate the March bank statement and the GL cash export in the room attachments.",
+            "observation": "Found 'bank-statement-march.pdf' and 'gl-cash-march.csv'; both attached to room RC-MAR-RECON-8271.",
+            "toolName": "findDocument",
+            "evidenceRefs": [
+              "fact-bank-ending-balance",
+              "fact-gl-ending-cash"
+            ],
+            "costUsd": 0.0031,
+            "latencyMs": 1180
+          },
+          {
+            "stepIndex": 2,
+            "phase": "write",
+            "action": "Write reconciliation.xlsx: import both sources, match cleared items by amount+date, list unmatched items on an exceptions tab.",
+            "observation": "Sheet created with 84 matched rows and 2 exceptions; ending-cash formula wired to the reconciliation tab.",
+            "toolName": "writeSheet",
+            "artifactRefs": [
+              "artifact-reconciliation-xlsx"
+            ],
+            "evidenceRefs": [
+              "fact-uncleared-check-1042"
+            ],
+            "costUsd": 0.0074,
+            "latencyMs": 2960
+          },
+          {
+            "stepIndex": 3,
+            "phase": "verify",
+            "action": "Verify reconciled ending cash equals the bank statement ending balance and re-open the exported sheet.",
+            "observation": "Reopen OK, but ending cash is off by 412.50 — one exception (check #1042) is unsourced; flagged for review rather than forced to tie.",
+            "artifactRefs": [
+              "artifact-reconciliation-xlsx"
+            ],
+            "evidenceRefs": [
+              "fact-uncleared-check-1042"
+            ],
+            "costUsd": 0.0019,
+            "latencyMs": 900
+          }
+        ]
+      },
+      "artifacts": [
+        {
+          "artifactId": "artifact-reconciliation-xlsx",
+          "kind": "sheet",
+          "beforeHash": "fnv:00000000",
+          "afterHash": "fnv:9c1e77a3",
+          "reopenPassed": false
+        }
+      ],
+      "evidence": [
+        {
+          "factId": "fact-bank-ending-balance",
+          "claim": "March bank statement ending balance is 128,540.75",
+          "sourceUrl": "attachment://bank-statement-march.pdf#p3",
+          "quote": "Ending balance as of March 31: $128,540.75",
+          "status": "source_backed"
+        },
+        {
+          "factId": "fact-gl-ending-cash",
+          "claim": "GL cash account ending balance for March is 128,128.25",
+          "sourceUrl": "attachment://gl-cash-march.csv",
+          "quote": "1000-Cash,03/31,,,128128.25",
+          "status": "source_backed"
+        },
+        {
+          "factId": "fact-uncleared-check-1042",
+          "claim": "Check #1042 for 412.50 is uncleared and explains the reconciliation delta",
+          "status": "needs_review"
+        }
+      ],
+      "meta": {
+        "runId": "RC-MAR-RECON-8271",
+        "userGoal": "Bank reconciliation for March"
+      }
+    },
+    "attempt": null,
+    "expected": {
+      "failedAssertions": [
+        "assert-ending-cash-ties"
+      ],
+      "needsReview": [
+        "fact-uncleared-check-1042"
+      ],
+      "reopenFailures": [
+        "artifact-reconciliation-xlsx"
+      ],
+      "missingReceipts": [
+        "artifact-reconciliation-xlsx"
+      ],
+      "oracleFailures": [],
+      "attemptRejected": false,
+      "resolved": false
+    },
+    "caseSha256": "00db9764704f79d209d7ee5812b5540d8402e658f59b4a0aac97861c62f2eb9b"
+  },
+  {
+    "caseId": "accounting-synthetic-repaired",
+    "groupId": "Accounting-merged-fixture",
+    "split": "validation",
+    "provenance": {
+      "kind": "authored synthetic positive control",
+      "sourcePath": "packages/nodetrace/test/merged.fixture.ts",
+      "sourceSha256": "5971b8d06ecbf8e0628a2b2b3e8bc1768dc1b5321307f2ed31a0cf3a6d03f434",
+      "parentCaseId": "accounting-original",
+      "parentSha256": "ecb9a60891d3a58166950c71b8ad37d79ed0d2e2e22420d671985266cb8d402a",
+      "license": "MIT",
+      "transformation": "author passing arithmetic, citation, export/reopen snapshot; not agent repair"
+    },
+    "baseline": {
+      "kind": "trace",
+      "outer": {
+        "url": "https://noderoom.live/room/RC-MAR-RECON-8271",
+        "screenshots": [
+          {
+            "label": "before",
+            "path": "runs/RC-MAR-RECON-8271/outer/before.png",
+            "visibleComponentIds": [
+              "room-shell",
+              "empty-artifact-tabs",
+              "composer"
+            ]
+          },
+          {
+            "label": "during",
+            "path": "runs/RC-MAR-RECON-8271/outer/during.png",
+            "visibleComponentIds": [
+              "reconciliation-sheet",
+              "sheet-tab-reconciliation",
+              "agent-thinking"
+            ]
+          },
+          {
+            "label": "after",
+            "path": "runs/RC-MAR-RECON-8271/outer/after.png",
+            "visibleComponentIds": [
+              "reconciliation-sheet",
+              "sheet-tab-exceptions",
+              "ending-cash-cell"
+            ]
+          }
+        ],
+        "consoleErrors": [],
+        "uiAssertions": [
+          {
+            "id": "assert-recon-tab-visible",
+            "expected": "a sheet tab labeled 'reconciliation.xlsx' is rendered in the work surface",
+            "observed": "tab 'reconciliation.xlsx' present and active",
+            "passed": true
+          },
+          {
+            "id": "assert-exceptions-tab-present",
+            "expected": "an 'exceptions' tab lists uncleared/unmatched items",
+            "observed": "tab 'exceptions' present with 2 rows",
+            "passed": true
+          },
+          {
+            "id": "assert-ending-cash-ties",
+            "expected": "reconciled ending cash equals the bank statement ending balance (delta = 0.00)",
+            "observed": "reconciled ending cash is off by 412.50 vs bank statement",
+            "passed": false
+          }
+        ]
+      },
+      "inner": {
+        "model": "glm-5.2",
+        "steps": [
+          {
+            "stepIndex": 0,
+            "phase": "plan",
+            "action": "Draft a 3-step reconciliation plan: locate March bank statement + GL cash export, build a matched-ledger sheet, then verify the ending balance ties.",
+            "observation": "Plan accepted; two source documents are expected in the room's attachments.",
+            "costUsd": 0.0012,
+            "latencyMs": 640
+          },
+          {
+            "stepIndex": 1,
+            "phase": "tool",
+            "action": "Call findDocument to locate the March bank statement and the GL cash export in the room attachments.",
+            "observation": "Found 'bank-statement-march.pdf' and 'gl-cash-march.csv'; both attached to room RC-MAR-RECON-8271.",
+            "toolName": "findDocument",
+            "evidenceRefs": [
+              "fact-bank-ending-balance",
+              "fact-gl-ending-cash"
+            ],
+            "costUsd": 0.0031,
+            "latencyMs": 1180
+          },
+          {
+            "stepIndex": 2,
+            "phase": "write",
+            "action": "Write reconciliation.xlsx: import both sources, match cleared items by amount+date, list unmatched items on an exceptions tab.",
+            "observation": "Sheet created with 84 matched rows and 2 exceptions; ending-cash formula wired to the reconciliation tab.",
+            "toolName": "writeSheet",
+            "artifactRefs": [
+              "artifact-reconciliation-xlsx"
+            ],
+            "evidenceRefs": [
+              "fact-uncleared-check-1042"
+            ],
+            "costUsd": 0.0074,
+            "latencyMs": 2960
+          },
+          {
+            "stepIndex": 3,
+            "phase": "verify",
+            "action": "Verify reconciled ending cash equals the bank statement ending balance and re-open the exported sheet.",
+            "observation": "Reopen OK, but ending cash is off by 412.50 — one exception (check #1042) is unsourced; flagged for review rather than forced to tie.",
+            "artifactRefs": [
+              "artifact-reconciliation-xlsx"
+            ],
+            "evidenceRefs": [
+              "fact-uncleared-check-1042"
+            ],
+            "costUsd": 0.0019,
+            "latencyMs": 900
+          }
+        ]
+      },
+      "artifacts": [
+        {
+          "artifactId": "artifact-reconciliation-xlsx",
+          "kind": "sheet",
+          "beforeHash": "fnv:00000000",
+          "afterHash": "fnv:9c1e77a3",
+          "exportPath": "runs/RC-MAR-RECON-8271/artifacts/reconciliation.xlsx",
+          "reopenPassed": true
+        }
+      ],
+      "evidence": [
+        {
+          "factId": "fact-bank-ending-balance",
+          "claim": "March bank statement ending balance is 128,540.75",
+          "sourceUrl": "attachment://bank-statement-march.pdf#p3",
+          "quote": "Ending balance as of March 31: $128,540.75",
+          "status": "source_backed"
+        },
+        {
+          "factId": "fact-gl-ending-cash",
+          "claim": "GL cash account ending balance for March is 128,128.25",
+          "sourceUrl": "attachment://gl-cash-march.csv",
+          "quote": "1000-Cash,03/31,,,128128.25",
+          "status": "source_backed"
+        },
+        {
+          "factId": "fact-uncleared-check-1042",
+          "claim": "Check #1042 for 412.50 is uncleared and explains the reconciliation delta",
+          "status": "needs_review"
+        }
+      ],
+      "meta": {
+        "runId": "RC-MAR-RECON-8271",
+        "userGoal": "Bank reconciliation for March"
+      }
+    },
+    "observation": {
+      "kind": "trace",
+      "outer": {
+        "url": "https://noderoom.live/room/RC-MAR-RECON-8271",
+        "screenshots": [
+          {
+            "label": "before",
+            "path": "runs/RC-MAR-RECON-8271/outer/before.png",
+            "visibleComponentIds": [
+              "room-shell",
+              "empty-artifact-tabs",
+              "composer"
+            ]
+          },
+          {
+            "label": "during",
+            "path": "runs/RC-MAR-RECON-8271/outer/during.png",
+            "visibleComponentIds": [
+              "reconciliation-sheet",
+              "sheet-tab-reconciliation",
+              "agent-thinking"
+            ]
+          },
+          {
+            "label": "after",
+            "path": "runs/RC-MAR-RECON-8271/outer/after.png",
+            "visibleComponentIds": [
+              "reconciliation-sheet",
+              "sheet-tab-exceptions",
+              "ending-cash-cell"
+            ]
+          }
+        ],
+        "consoleErrors": [],
+        "uiAssertions": [
+          {
+            "id": "assert-recon-tab-visible",
+            "expected": "a sheet tab labeled 'reconciliation.xlsx' is rendered in the work surface",
+            "observed": "tab 'reconciliation.xlsx' present and active",
+            "passed": true
+          },
+          {
+            "id": "assert-exceptions-tab-present",
+            "expected": "an 'exceptions' tab lists uncleared/unmatched items",
+            "observed": "tab 'exceptions' present with 2 rows",
+            "passed": true
+          },
+          {
+            "id": "assert-ending-cash-ties",
+            "expected": "reconciled ending cash equals the bank statement ending balance (delta = 0.00)",
+            "observed": "SYNTHETIC CONTROL: 128540.75 - 412.50 = 128128.25; adjusted bank and ledger tie with delta 0.00.",
+            "passed": true
+          }
+        ]
+      },
+      "inner": {
+        "model": "glm-5.2",
+        "steps": [
+          {
+            "stepIndex": 0,
+            "phase": "plan",
+            "action": "Draft a 3-step reconciliation plan: locate March bank statement + GL cash export, build a matched-ledger sheet, then verify the ending balance ties.",
+            "observation": "Plan accepted; two source documents are expected in the room's attachments.",
+            "costUsd": 0.0012,
+            "latencyMs": 640
+          },
+          {
+            "stepIndex": 1,
+            "phase": "tool",
+            "action": "Call findDocument to locate the March bank statement and the GL cash export in the room attachments.",
+            "observation": "Found 'bank-statement-march.pdf' and 'gl-cash-march.csv'; both attached to room RC-MAR-RECON-8271.",
+            "toolName": "findDocument",
+            "evidenceRefs": [
+              "fact-bank-ending-balance",
+              "fact-gl-ending-cash"
+            ],
+            "costUsd": 0.0031,
+            "latencyMs": 1180
+          },
+          {
+            "stepIndex": 2,
+            "phase": "write",
+            "action": "Write reconciliation.xlsx: import both sources, match cleared items by amount+date, list unmatched items on an exceptions tab.",
+            "observation": "Sheet created with 84 matched rows and 2 exceptions; ending-cash formula wired to the reconciliation tab.",
+            "toolName": "writeSheet",
+            "artifactRefs": [
+              "artifact-reconciliation-xlsx"
+            ],
+            "evidenceRefs": [
+              "fact-uncleared-check-1042"
+            ],
+            "costUsd": 0.0074,
+            "latencyMs": 2960
+          },
+          {
+            "stepIndex": 3,
+            "phase": "verify",
+            "action": "Verify reconciled ending cash equals the bank statement ending balance and re-open the exported sheet.",
+            "observation": "SYNTHETIC CONTROL ONLY: arithmetic ties, check has an authored source, export reopens. No agent executed.",
+            "artifactRefs": [
+              "artifact-reconciliation-xlsx"
+            ],
+            "evidenceRefs": [
+              "fact-uncleared-check-1042"
+            ],
+            "costUsd": 0.0019,
+            "latencyMs": 900
+          }
+        ]
+      },
+      "artifacts": [
+        {
+          "artifactId": "artifact-reconciliation-xlsx",
+          "kind": "sheet",
+          "beforeHash": "fnv:00000000",
+          "afterHash": "fnv:9c1e77a3",
+          "exportPath": "runs/RC-MAR-RECON-8271/artifacts/reconciliation.xlsx",
+          "reopenPassed": true
+        }
+      ],
+      "evidence": [
+        {
+          "factId": "fact-bank-ending-balance",
+          "claim": "March bank statement ending balance is 128,540.75",
+          "sourceUrl": "attachment://bank-statement-march.pdf#p3",
+          "quote": "Ending balance as of March 31: $128,540.75",
+          "status": "source_backed"
+        },
+        {
+          "factId": "fact-gl-ending-cash",
+          "claim": "GL cash account ending balance for March is 128,128.25",
+          "sourceUrl": "attachment://gl-cash-march.csv",
+          "quote": "1000-Cash,03/31,,,128128.25",
+          "status": "source_backed"
+        },
+        {
+          "factId": "fact-uncleared-check-1042",
+          "claim": "Check #1042 for 412.50 is uncleared and explains the reconciliation delta",
+          "status": "source_backed",
+          "sourceUrl": "attachment://synthetic-control-check-register#1042",
+          "quote": "SYNTHETIC CONTROL ONLY: check 1042, 412.50, uncleared."
+        }
+      ],
+      "meta": {
+        "runId": "RC-MAR-RECON-8271",
+        "userGoal": "Bank reconciliation for March"
+      }
+    },
+    "attempt": null,
+    "expected": {
+      "failedAssertions": [],
+      "needsReview": [],
+      "reopenFailures": [],
+      "missingReceipts": [],
+      "oracleFailures": [],
+      "attemptRejected": false,
+      "resolved": true
+    },
+    "caseSha256": "d2abb40350cd5d6a4489edccdf609e1c9d7b9ce85799d3d3aed82f5a6dff93a5"
+  },
+  {
+    "caseId": "bank-good",
+    "groupId": "Bank-oracle-fixture",
+    "split": "holdout",
+    "provenance": {
+      "kind": "authored synthetic fixture",
+      "sourcePath": "packages/nodeeval/test/accounting_bankReconciliation.test.ts",
+      "sourceSha256": "d7b8fdcc46e0c832471a69e3ce2bd45f0a1a77099b95d5ad67e62dae68e63cf6",
+      "parentCaseId": null,
+      "parentSha256": "d7b8fdcc46e0c832471a69e3ce2bd45f0a1a77099b95d5ad67e62dae68e63cf6",
+      "license": "MIT",
+      "transformation": "unchanged good oracle input"
+    },
+    "baseline": {
+      "kind": "bank",
+      "bankEndingBalance": 10000,
+      "ledgerEndingBalance": 9850,
+      "matched": [
+        {
+          "amount": 5000
+        },
+        {
+          "amount": 4850
+        }
+      ],
+      "unmatched": [
+        {
+          "amount": 200
+        },
+        {
+          "amount": -50
+        }
+      ],
+      "journalEntries": [
+        {
+          "lines": [
+            {
+              "debit": 25
+            },
+            {
+              "credit": 25
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "debit": 30
+            },
+            {
+              "credit": 15
+            },
+            {
+              "credit": 15
+            }
+          ]
+        }
+      ]
+    },
+    "observation": null,
+    "attempt": null,
+    "expected": {
+      "failedAssertions": [],
+      "needsReview": [],
+      "reopenFailures": [],
+      "missingReceipts": [],
+      "oracleFailures": [],
+      "attemptRejected": false,
+      "resolved": true
+    },
+    "caseSha256": "e38c8e930fdd80f9581bdf2ec7aa2103169c3a83801f7e79d85d26fa33e3532e"
+  },
+  {
+    "caseId": "bank-delta",
+    "groupId": "Bank-oracle-fixture",
+    "split": "holdout",
+    "provenance": {
+      "kind": "authored synthetic fixture",
+      "sourcePath": "packages/nodeeval/test/accounting_bankReconciliation.test.ts",
+      "sourceSha256": "d7b8fdcc46e0c832471a69e3ce2bd45f0a1a77099b95d5ad67e62dae68e63cf6",
+      "parentCaseId": "bank-good",
+      "parentSha256": "e38c8e930fdd80f9581bdf2ec7aa2103169c3a83801f7e79d85d26fa33e3532e",
+      "license": "MIT",
+      "transformation": "increase bank balance by 1.00"
+    },
+    "baseline": {
+      "kind": "bank",
+      "bankEndingBalance": 10001,
+      "ledgerEndingBalance": 9850,
+      "matched": [
+        {
+          "amount": 5000
+        },
+        {
+          "amount": 4850
+        }
+      ],
+      "unmatched": [
+        {
+          "amount": 200
+        },
+        {
+          "amount": -50
+        }
+      ],
+      "journalEntries": [
+        {
+          "lines": [
+            {
+              "debit": 25
+            },
+            {
+              "credit": 25
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "debit": 30
+            },
+            {
+              "credit": 15
+            },
+            {
+              "credit": 15
+            }
+          ]
+        }
+      ]
+    },
+    "observation": null,
+    "attempt": null,
+    "expected": {
+      "failedAssertions": [],
+      "needsReview": [],
+      "reopenFailures": [],
+      "missingReceipts": [],
+      "oracleFailures": [
+        "ending_cash_tie"
+      ],
+      "attemptRejected": false,
+      "resolved": false
+    },
+    "caseSha256": "c70220ee3b225417736aa6efa0651ad99a149be7ec186b9ff61d3cef52b55e78"
+  },
+  {
+    "caseId": "bank-unbalanced-je",
+    "groupId": "Bank-oracle-fixture",
+    "split": "holdout",
+    "provenance": {
+      "kind": "authored synthetic fixture",
+      "sourcePath": "packages/nodeeval/test/accounting_bankReconciliation.test.ts",
+      "sourceSha256": "d7b8fdcc46e0c832471a69e3ce2bd45f0a1a77099b95d5ad67e62dae68e63cf6",
+      "parentCaseId": "bank-good",
+      "parentSha256": "e38c8e930fdd80f9581bdf2ec7aa2103169c3a83801f7e79d85d26fa33e3532e",
+      "license": "MIT",
+      "transformation": "second journal entry credits 29 vs debits 30"
+    },
+    "baseline": {
+      "kind": "bank",
+      "bankEndingBalance": 10000,
+      "ledgerEndingBalance": 9850,
+      "matched": [
+        {
+          "amount": 5000
+        },
+        {
+          "amount": 4850
+        }
+      ],
+      "unmatched": [
+        {
+          "amount": 200
+        },
+        {
+          "amount": -50
+        }
+      ],
+      "journalEntries": [
+        {
+          "lines": [
+            {
+              "debit": 25
+            },
+            {
+              "credit": 25
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "debit": 30
+            },
+            {
+              "credit": 15
+            },
+            {
+              "credit": 14
+            }
+          ]
+        }
+      ]
+    },
+    "observation": null,
+    "attempt": null,
+    "expected": {
+      "failedAssertions": [],
+      "needsReview": [],
+      "reopenFailures": [],
+      "missingReceipts": [],
+      "oracleFailures": [
+        "je_1_balanced"
+      ],
+      "attemptRejected": false,
+      "resolved": false
+    },
+    "caseSha256": "fe4c2925359063f13cadb8c99e5ec9ef3adf8b5ceadd9c093e36aeddd5ee0200"
+  }
+]
