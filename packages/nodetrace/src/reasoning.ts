@@ -23,10 +23,11 @@ function providerFor(modelId: string): LanguageModel {
 /** Default model for `aiSdkReasoner` (SPEC model-defaults §A.2.1; wire id per §1.2, `anthropic` transport). */
 export const DEFAULT_REASONING_MODEL = "claude-haiku-5-5";
 
-// The 12-step / 60 s pipeline ceiling (docs/codebase/ARCHITECTURE.md) argues for low effort. Sent only to the
-// 5.5 ids: `output_config.effort` is not accepted by older caller-supplied Claude ids, which keep today's request.
+// The 12-step / 60 s pipeline ceiling (docs/codebase/ARCHITECTURE.md) argues for low effort. Keyed on the exact
+// migrated default only: every caller-supplied id (including other 5.5 ids, whose own effort defaults differ,
+// SPEC §1.3) keeps today's request.
 const providerOptionsFor = (modelId: string) =>
-  modelId.startsWith("claude-") && modelId.endsWith("-5-5") ? { anthropic: { effort: "low" as const } } : undefined;
+  modelId === DEFAULT_REASONING_MODEL ? { anthropic: { effort: "low" as const } } : undefined;
 
 export function aiSdkReasoner(modelId: string = DEFAULT_REASONING_MODEL): ReasoningModel {
   return {

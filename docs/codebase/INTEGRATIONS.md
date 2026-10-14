@@ -28,7 +28,7 @@ everything else routes to Anthropic — `return anthropic(modelId)` (line 20). D
 `DEFAULT_REASONING_MODEL` (`claude-haiku-5-5`, exported from `reasoning.ts`).
 
 ```ts
-aiSdkReasoner("claude-haiku-5-5")   // a model id string, not an options object
+aiSdkReasoner(DEFAULT_REASONING_MODEL)   // a model id string, not an options object
 ```
 
 Keys are read from the environment by the AI SDK clients and are `.trim()`ed on the way in. That

@@ -56,6 +56,17 @@ test("default reasoner sends claude-haiku-5-5 with no Haiku-5.5-forbidden keys",
 test("caller-supplied older Claude id is sent as given, without effort", async () => {
   const { body, err } = await captureBody(aiSdkReasoner("claude-haiku-4-5"));
   assert.equal(body.model, "claude-haiku-4-5");
-  assert.ok(!("effort" in (body.output_config ?? {})), "effort is only sent to 5.5 ids");
+  assert.ok(!("effort" in (body.output_config ?? {})), "effort is only sent to the migrated default");
   assert.ifError(err);
 });
+
+// §A.0 rule 4 / §1.3: the lock supplies only the default. Other 5.5 ids a caller passes have their own effort
+// defaults (Sonnet 5.5 high, Opus 5.5 medium), so they must keep today's request, not silently get "low".
+for (const id of ["claude-sonnet-5-5", "claude-opus-5-5"]) {
+  test(`caller-supplied ${id} is sent as given, without effort`, async () => {
+    const { body, err } = await captureBody(aiSdkReasoner(id));
+    assert.equal(body.model, id);
+    assert.ok(!("effort" in (body.output_config ?? {})), "effort is only sent to the migrated default");
+    assert.ifError(err);
+  });
+}
