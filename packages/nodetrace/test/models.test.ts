@@ -15,9 +15,12 @@ import { z } from "zod";
 process.env.ANTHROPIC_API_KEY = "test-key-not-real";
 const { aiSdkReasoner, DEFAULT_REASONING_MODEL } = await import("../src/reasoning.ts");
 
-async function captureBody(reasoner: ReturnType<typeof aiSdkReasoner>): Promise<Record<string, any>> {
+// Returns the captured request body and any decide() error. Callers assert on the body FIRST so a wrong request
+// shape (e.g. an old SDK forcing a `json` tool) is named directly, then assert the error is absent.
+async function captureBody(reasoner: ReturnType<typeof aiSdkReasoner>): Promise<{ body: Record<string, any>; err: unknown }> {
   const realFetch = globalThis.fetch;
   let body: Record<string, any> | undefined;
+  let err: unknown;
   globalThis.fetch = (async (_url: unknown, init?: RequestInit) => {
     body = JSON.parse(String(init?.body));
     return new Response(JSON.stringify({
@@ -30,14 +33,14 @@ async function captureBody(reasoner: ReturnType<typeof aiSdkReasoner>): Promise<
       system: "s", instruction: "i", schema: z.object({ ok: z.boolean() }),
       context: { url: "https://example.com/", title: "t", a11y: "a" },
     });
-  } finally { globalThis.fetch = realFetch; }
-  assert.ok(body, "no request reached the fake transport");
-  return body;
+  } catch (e) { err = e; } finally { globalThis.fetch = realFetch; }
+  assert.ok(body, `no request reached the fake transport (decide error: ${err})`);
+  return { body, err };
 }
 
 test("default reasoner sends claude-haiku-5-5 with no Haiku-5.5-forbidden keys", async () => {
   assert.equal(DEFAULT_REASONING_MODEL, "claude-haiku-5-5");
-  const body = await captureBody(aiSdkReasoner());
+  const { body, err } = await captureBody(aiSdkReasoner());
   assert.equal(body.model, "claude-haiku-5-5");
   for (const k of ["temperature", "top_p", "top_k"]) assert.ok(!(k in body), `${k} must be absent`);
   assert.ok(!JSON.stringify(body.thinking ?? {}).includes("budget_tokens"), "no budget_tokens");
@@ -47,10 +50,12 @@ test("default reasoner sends claude-haiku-5-5 with no Haiku-5.5-forbidden keys",
   assert.equal(body.output_config?.format?.type, "json_schema", "native structured output path");
   assert.equal(body.output_config?.effort, "low", "effort set explicitly");
   assert.ok(body.max_tokens > 4096, `max_tokens ${body.max_tokens} must not be the unknown-model 4096 cap`);
+  assert.ifError(err);
 });
 
 test("caller-supplied older Claude id is sent as given, without effort", async () => {
-  const body = await captureBody(aiSdkReasoner("claude-haiku-4-5"));
+  const { body, err } = await captureBody(aiSdkReasoner("claude-haiku-4-5"));
   assert.equal(body.model, "claude-haiku-4-5");
   assert.ok(!("effort" in (body.output_config ?? {})), "effort is only sent to 5.5 ids");
+  assert.ifError(err);
 });
