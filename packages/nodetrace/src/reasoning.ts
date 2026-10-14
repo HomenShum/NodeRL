@@ -20,7 +20,15 @@ function providerFor(modelId: string): LanguageModel {
   return anthropic(modelId); // default + all claude-* ids
 }
 
-export function aiSdkReasoner(modelId = "claude-haiku-4-5"): ReasoningModel {
+/** Default model for `aiSdkReasoner` (SPEC model-defaults §A.2.1; wire id per §1.2, `anthropic` transport). */
+export const DEFAULT_REASONING_MODEL = "claude-haiku-5-5";
+
+// The 12-step / 60 s pipeline ceiling (docs/codebase/ARCHITECTURE.md) argues for low effort. Sent only to the
+// 5.5 ids: `output_config.effort` is not accepted by older caller-supplied Claude ids, which keep today's request.
+const providerOptionsFor = (modelId: string) =>
+  modelId.startsWith("claude-") && modelId.endsWith("-5-5") ? { anthropic: { effort: "low" as const } } : undefined;
+
+export function aiSdkReasoner(modelId: string = DEFAULT_REASONING_MODEL): ReasoningModel {
   return {
     name: modelId,
     async decide<T>({ system, instruction, context, schema, signal }: {
@@ -41,6 +49,7 @@ export function aiSdkReasoner(modelId = "claude-haiku-4-5"): ReasoningModel {
         system,
         messages: [{ role: "user", content }],
         abortSignal: signal,
+        providerOptions: providerOptionsFor(modelId),
       });
       return object as T;
     },
