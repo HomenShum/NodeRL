@@ -17,14 +17,14 @@ const { aiSdkReasoner, DEFAULT_REASONING_MODEL } = await import("../src/reasonin
 
 // Returns the captured request body and any decide() error. Callers assert on the body FIRST so a wrong request
 // shape (e.g. an old SDK forcing a `json` tool) is named directly, then assert the error is absent.
-async function captureBody(reasoner: ReturnType<typeof aiSdkReasoner>): Promise<{ body: Record<string, any>; err: unknown }> {
+async function captureBody(reasoner: ReturnType<typeof aiSdkReasoner>, stopReason = "end_turn"): Promise<{ body: Record<string, any>; err: unknown }> {
   const realFetch = globalThis.fetch;
   let body: Record<string, any> | undefined;
   let err: unknown;
   globalThis.fetch = (async (_url: unknown, init?: RequestInit) => {
     body = JSON.parse(String(init?.body));
     return new Response(JSON.stringify({
-      id: "msg_test", type: "message", role: "assistant", model: body!.model, stop_reason: "end_turn",
+      id: "msg_test", type: "message", role: "assistant", model: body!.model, stop_reason: stopReason,
       content: [{ type: "text", text: '{"ok":true}' }], usage: { input_tokens: 1, output_tokens: 1 },
     }), { status: 200, headers: { "content-type": "application/json" } });
   }) as typeof fetch;
@@ -70,3 +70,11 @@ for (const id of ["claude-sonnet-5-5", "claude-opus-5-5"]) {
     assert.ifError(err);
   });
 }
+
+// Haiku 5.5 checklist [BLOCKS] item / README "never a fake success": a refusal (stop_reason "refusal", which the SDK
+// reports as finishReason "content-filter") must fail decide() even when its text is schema-valid.
+test("a refusal with schema-valid text fails decide() instead of returning an object", async () => {
+  const { err } = await captureBody(aiSdkReasoner(), "refusal");
+  assert.ok(err instanceof Error, "decide() must throw on a refusal");
+  assert.match(String((err as Error).message), /refused/);
+});

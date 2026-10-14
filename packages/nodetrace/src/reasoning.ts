@@ -44,7 +44,7 @@ export function aiSdkReasoner(modelId: string = DEFAULT_REASONING_MODEL): Reason
       ].join("\n");
       const content: Array<{ type: "text"; text: string } | { type: "image"; image: Uint8Array }> = [{ type: "text", text }];
       if (context.screenshot) content.push({ type: "image", image: context.screenshot.png });
-      const { object } = await generateObject({
+      const { object, finishReason } = await generateObject({
         model: providerFor(modelId),
         schema, // zod schema → generateObject validates the result to T
         system,
@@ -52,6 +52,10 @@ export function aiSdkReasoner(modelId: string = DEFAULT_REASONING_MODEL): Reason
         abortSignal: signal,
         providerOptions: providerOptionsFor(modelId),
       });
+      // The SDK maps Anthropic stop_reason "refusal" to "content-filter". A refusal whose text still parses against
+      // the schema would otherwise return as a successful capture (README: "never a fake success"). Haiku 5.5 has no
+      // server-side fallback for refusals (SPEC §1.3), so fail here and let runCapture record { ok: false }.
+      if (finishReason === "content-filter") throw new Error(`${modelId} refused the request (finishReason: content-filter)`);
       return object as T;
     },
   };
