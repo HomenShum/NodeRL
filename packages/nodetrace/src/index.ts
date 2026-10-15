@@ -71,6 +71,6 @@ export {
 
 export * from "./types.ts";
 export { runCapture } from "./pipeline.ts";
-export { aiSdkReasoner } from "./reasoning.ts";
+export { aiSdkReasoner, DEFAULT_REASONING_MODEL } from "./reasoning.ts";
 export { CAPTURE_LIMITS, CaptureUrlError, assertCapturableUrl, clipRepresentation } from "./guards.ts";
 export { pickSubstrate, browserbaseSubstrate, firecrawlSubstrate } from "./substrate/index.ts";

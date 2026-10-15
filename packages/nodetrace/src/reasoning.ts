@@ -20,7 +20,16 @@ function providerFor(modelId: string): LanguageModel {
   return anthropic(modelId); // default + all claude-* ids
 }
 
-export function aiSdkReasoner(modelId = "claude-haiku-4-5"): ReasoningModel {
+/** Default model for `aiSdkReasoner` (SPEC model-defaults §A.2.1; wire id per §1.2, `anthropic` transport). */
+export const DEFAULT_REASONING_MODEL = "claude-haiku-5-5";
+
+// The 12-step / 60 s pipeline ceiling (docs/codebase/ARCHITECTURE.md) argues for low effort. Keyed on the exact
+// migrated default only: every caller-supplied id (including other 5.5 ids, whose own effort defaults differ,
+// SPEC §1.3) keeps today's request.
+const providerOptionsFor = (modelId: string) =>
+  modelId === DEFAULT_REASONING_MODEL ? { anthropic: { effort: "low" as const } } : undefined;
+
+export function aiSdkReasoner(modelId: string = DEFAULT_REASONING_MODEL): ReasoningModel {
   return {
     name: modelId,
     async decide<T>({ system, instruction, context, schema, signal }: {
@@ -35,13 +44,18 @@ export function aiSdkReasoner(modelId = "claude-haiku-4-5"): ReasoningModel {
       ].join("\n");
       const content: Array<{ type: "text"; text: string } | { type: "image"; image: Uint8Array }> = [{ type: "text", text }];
       if (context.screenshot) content.push({ type: "image", image: context.screenshot.png });
-      const { object } = await generateObject({
+      const { object, finishReason } = await generateObject({
         model: providerFor(modelId),
         schema, // zod schema → generateObject validates the result to T
         system,
         messages: [{ role: "user", content }],
         abortSignal: signal,
+        providerOptions: providerOptionsFor(modelId),
       });
+      // The SDK maps Anthropic stop_reason "refusal" to "content-filter". A refusal whose text still parses against
+      // the schema would otherwise return as a successful capture (README: "never a fake success"). Haiku 5.5 has no
+      // server-side fallback for refusals (SPEC §1.3), so fail here and let runCapture record { ok: false }.
+      if (finishReason === "content-filter") throw new Error(`${modelId} refused the request (finishReason: content-filter)`);
       return object as T;
     },
   };

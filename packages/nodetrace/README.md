@@ -50,7 +50,7 @@ if (!substrate) throw new Error("set BROWSERBASE_* or FIRECRAWL_API_KEY");
 const result = await runCapture({
   goal: "extract the revenue table",
   url: "https://example.com/annual-report",
-  reasoner: aiSdkReasoner("claude-haiku-4-5"),  // model id, not an object
+  reasoner: aiSdkReasoner(),  // default model; pass a model id string (not an object) to override
   substrate,
 });
 // result.ok === false carries the error and the steps captured so far — never a fake success.
