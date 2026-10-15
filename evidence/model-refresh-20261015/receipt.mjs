@@ -40,9 +40,9 @@ const wire = { requests: 0, body: null, response: null, estimateUsd: 0 };
 globalThis.fetch = async (url, init) => {
   if (wire.requests >= 1) throw new Error("receipt: budget stop, only one request is allowed");
   const body = JSON.parse(String(init?.body));
-  const inTokens = Math.ceil(String(init.body).length / 3); // upper bound: >= 3 chars per token
+  const inTokens = Buffer.byteLength(String(init.body)); // upper bound: a token covers at least one UTF-8 byte (the 3-chars-per-token guess undercounted: 491 chars -> 280 tokens)
   wire.estimateUsd = (inTokens * PRICE.inPerM + body.max_tokens * PRICE.outPerM) / 1e6;
-  if (wire.estimateUsd > MAX_USD) throw new Error(`receipt: budget stop, worst case $${wire.estimateUsd} > cap $${MAX_USD}`);
+  if (!(wire.estimateUsd <= MAX_USD)) throw new Error(`receipt: budget stop, worst case $${wire.estimateUsd} > cap $${MAX_USD}`);
   wire.requests++;
   wire.body = body;
   const res = await realFetch(url, init);
