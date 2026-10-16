@@ -9,6 +9,7 @@ import { generateObject, type LanguageModel } from "ai";
 import { createAnthropic } from "@ai-sdk/anthropic";
 import { createOpenAI } from "@ai-sdk/openai";
 import type { ReasoningModel } from "./types.ts";
+import { resolveModel } from "./models.ts";
 
 // Trim env keys: a stray trailing \r (Windows copy/pipe artifact in `convex env set`) would otherwise
 // produce a malformed "Authorization: Bearer …\r" header and break the provider call.
@@ -20,8 +21,12 @@ function providerFor(modelId: string): LanguageModel {
   return anthropic(modelId); // default + all claude-* ids
 }
 
-/** Default model for `aiSdkReasoner` (SPEC model-defaults §A.2.1; wire id per §1.2, `anthropic` transport). */
-export const DEFAULT_REASONING_MODEL = "claude-haiku-5-5";
+/**
+ * Default model for `aiSdkReasoner`. Not typed here: it is the `reasoner` role in models.lock.json, which NodeKit's
+ * weekly `nodekit models sync` proposes changes to (models.config.json declares the role). A human merges that
+ * proposal; this file does not change when the registry moves the default.
+ */
+export const DEFAULT_REASONING_MODEL = resolveModel("reasoner").id;
 
 // The 12-step / 60 s pipeline ceiling (docs/codebase/ARCHITECTURE.md) argues for low effort. Keyed on the exact
 // migrated default only: every caller-supplied id (including other 5.5 ids, whose own effort defaults differ,

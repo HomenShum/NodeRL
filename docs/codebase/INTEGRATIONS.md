@@ -24,8 +24,8 @@ do it.
 
 **Where:** `packages/nodetrace/src/reasoning.ts`
 **How it chooses:** by model id prefix. Anything starting `gpt`, `o1`, `o3` or `o4` routes to OpenAI;
-everything else routes to Anthropic — `return anthropic(modelId)` (line 20). Default id is
-`DEFAULT_REASONING_MODEL` (`claude-haiku-5-5`, exported from `reasoning.ts`).
+everything else routes to Anthropic — `return anthropic(modelId)` (line 21). Default id is
+`DEFAULT_REASONING_MODEL` (exported from `reasoning.ts`; the `reasoner` role in `models.lock.json`, currently `claude-haiku-5-5` — see [model-defaults](../model-defaults.md)).
 
 ```ts
 aiSdkReasoner(DEFAULT_REASONING_MODEL)   // a model id string, not an options object

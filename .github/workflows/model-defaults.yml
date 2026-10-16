@@ -1,0 +1,62 @@
+name: Model defaults
+
+# Keeps the default model current without anyone remembering to check (SPEC model-defaults Part B, pilot).
+# Weekly, NodeKit's registry is compared with models.lock.json; if a decision-relevant fact changed, ONE pull
+# request is opened on automation/model-defaults. A human merges it. The pull_request job only lints the lock
+# offline (no registry, no network beyond the pinned tooling checkout). No provider key, no paid call.
+#
+# Both `uses:` refs and `platform_sha` are the same NodeKit commit and move together in a reviewed PR.
+# Needs the repo setting "Allow GitHub Actions to create and approve pull requests".
+
+on:
+  schedule:
+    - cron: "23 14 * * 2"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Run every check and print the proposal; push nothing, open nothing.
+        type: boolean
+        default: true
+  pull_request:
+    paths:
+      - models.lock.json
+      - models.config.json
+      - packages/**
+      - .github/workflows/model-defaults.yml
+
+permissions: {}
+
+jobs:
+  lint:
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@29da2429ac8389c89ae12ae763cd61037ce3266a
+    with:
+      mode: lint
+      platform_sha: 29da2429ac8389c89ae12ae763cd61037ce3266a
+
+  watch:
+    if: github.event_name != 'pull_request'
+    permissions:
+      contents: read
+      issues: write
+    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@29da2429ac8389c89ae12ae763cd61037ce3266a
+    with:
+      mode: watch
+      platform_sha: 29da2429ac8389c89ae12ae763cd61037ce3266a
+      registry_ref: main
+      dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+
+  bump:
+    needs: watch
+    if: github.event_name != 'pull_request'
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@29da2429ac8389c89ae12ae763cd61037ce3266a
+    with:
+      mode: bump
+      platform_sha: 29da2429ac8389c89ae12ae763cd61037ce3266a
+      registry_ref: main
+      dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}

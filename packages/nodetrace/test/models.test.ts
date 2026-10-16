@@ -78,3 +78,70 @@ test("a refusal with schema-valid text fails decide() instead of returning an ob
   assert.ok(err instanceof Error, "decide() must throw on a refusal");
   assert.match(String((err as Error).message), /refused/);
 });
+
+// ── the lock is the source of the default (SPEC model-defaults §B.5, §B.6) ───────────────────────────────────────
+
+const { default: lock } = await import("../../../models.lock.json", { with: { type: "json" } });
+const { resolveModel, resolveWith, wireId } = await import("../src/models.ts");
+
+test("the default is the lock's reasoner role, and the request carries the lock's wire id and honours its constraints", async () => {
+  const role = lock.roles.reasoner;
+  assert.equal(DEFAULT_REASONING_MODEL, role.id);
+  assert.equal(wireId(role.id, role.transport), role.ids.anthropic);
+  const { body, err } = await captureBody(aiSdkReasoner());
+  assert.equal(body.model, role.ids.anthropic, "the model string equals the lock");
+  // The lock's constraints drive the assertions, so a registry change to them is checked against the real request.
+  const c = role.constraints as Record<string, unknown>;
+  if (c.sampling === "forbidden") for (const k of ["temperature", "top_p", "top_k"]) assert.ok(!(k in body), `${k} is forbidden by the lock`);
+  if (c.prefill === "forbidden") assert.notEqual(body.messages.at(-1).role, "assistant");
+  if (c.budgetTokens === "forbidden") assert.ok(!JSON.stringify(body.thinking ?? {}).includes("budget_tokens"));
+  assert.ok(body.max_tokens >= role.minMaxTokens, "role.minMaxTokens: an adaptive-thinking id needs headroom");
+  assert.ifError(err);
+});
+
+test("the lock has the shape the accessor and NodeKit's lint rely on, and no clock inside its decision fields", () => {
+  assert.equal(lock.schemaVersion, "nodeplatform.model-defaults/v1");
+  assert.match(lock.registrySha256, /^[0-9a-f]{64}$/);
+  assert.match(lock.registryRef, /^[0-9a-f]{40}$/);
+  const role = lock.roles.reasoner;
+  assert.ok(role.lineTransports.includes(role.transport), "(b2) the role's transport is one its line offers");
+  assert.ok(role.ids[role.transport as keyof typeof role.ids], "(b2) a verified wire id exists for the transport in use");
+  assert.ok(role.id in lock.known, "the pinned id is also a known id");
+  assert.ok(!JSON.stringify(lock).includes("checkedAt"));
+  assert.deepEqual(lock.frozen, []);
+});
+
+test("resolveModel covers all four sources, takes the transport from the override's own ids, and never constructs a wire id", () => {
+  const fromLock = resolveModel("reasoner");
+  assert.deepEqual([fromLock.source, fromLock.id, fromLock.transport, fromLock.provider], ["lock", lock.roles.reasoner.id, "anthropic", "anthropic"]);
+
+  const known = resolveModel("reasoner", "claude-sonnet-5-5");
+  assert.deepEqual([known.source, known.transport], ["override", "anthropic"]);
+  assert.equal((known.constraints as Record<string, unknown>).forcedToolChoice, "forbidden", "an override carries its OWN constraints, not the default's");
+
+  const unknown = resolveModel("reasoner", "claude-haiku-4-5");
+  assert.deepEqual([unknown.source, unknown.id, unknown.transport, unknown.constraints], ["override-unknown", "claude-haiku-4-5", null, null]);
+
+  // A reviewed id with no wire id on the role's transport and none on its own provider's transport.
+  const bedrockOnly = structuredClone(lock);
+  (bedrockOnly.known as Record<string, any>)["claude-opus-5-5"].ids = { bedrock: "anthropic.claude-opus-5-5" };
+  const incompatible = resolveWith(bedrockOnly, "reasoner", "claude-opus-5-5");
+  assert.deepEqual([incompatible.source, incompatible.transport, incompatible.constraints], ["override-incompatible", null, null]);
+
+  // A reviewed id that is only reachable on its provider's own transport falls back to that transport.
+  const viaProvider = structuredClone(lock);
+  (viaProvider.roles.reasoner as any).transport = "openrouter";
+  assert.equal(resolveWith(viaProvider, "reasoner", "claude-sonnet-5-5").transport, "openrouter");
+  (viaProvider.known as Record<string, any>)["claude-sonnet-5-5"].ids = { anthropic: "claude-sonnet-5-5" };
+  assert.equal(resolveWith(viaProvider, "reasoner", "claude-sonnet-5-5").transport, "anthropic");
+
+  assert.throws(() => wireId("claude-haiku-5-5", "openai"), /no verified openai id for claude-haiku-5-5/);
+  assert.throws(() => wireId("gpt-nothing", "anthropic"), /no verified anthropic id/);
+});
+
+test("a caller-supplied id the registry does not know still reaches the wire as given (callers keep their own routing)", async () => {
+  const { body, err } = await captureBody(aiSdkReasoner("claude-haiku-4-5"));
+  assert.equal(body.model, "claude-haiku-4-5");
+  assert.equal(resolveModel("reasoner", "claude-haiku-4-5").source, "override-unknown");
+  assert.ifError(err);
+});

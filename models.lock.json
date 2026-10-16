@@ -1,0 +1,140 @@
+{
+  "schemaVersion": "nodeplatform.model-defaults/v1",
+  "registryRef": "29da2429ac8389c89ae12ae763cd61037ce3266a",
+  "registrySha256": "87f1f17290654744f6f562f6dbe202676776cc433ea6486d0979a333ed79e208",
+  "generatedAt": "2026-10-16T10:30:00.000Z",
+  "decisionDigest": "20c7c566ad90c55baf18440627600a7ef46d055ae7c6b987007a9a92218b7404",
+  "roles": {
+    "reasoner": {
+      "line": "anthropic.haiku",
+      "lineTransports": [
+        "anthropic"
+      ],
+      "transport": "anthropic",
+      "id": "claude-haiku-5-5",
+      "provider": "anthropic",
+      "ids": {
+        "anthropic": "claude-haiku-5-5",
+        "openrouter": "anthropic/claude-haiku-5.5",
+        "bedrock": "anthropic.claude-haiku-5-5"
+      },
+      "constraints": {
+        "sampling": "forbidden",
+        "prefill": "forbidden",
+        "forcedToolChoice": "allowed-skips-thinking",
+        "thinkingDisabled": "allowed-at-high-or-below",
+        "budgetTokens": "forbidden",
+        "adaptiveThinking": true,
+        "defaultEffort": "medium",
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "maxTokensField": "max_tokens",
+        "refusalStopReason": true
+      },
+      "availability": {
+        "anthropic": {
+          "state": "active",
+          "deprecatedAt": null,
+          "retiresOn": null,
+          "retiresNotBefore": "2027-10-07",
+          "autoRoutedTo": null,
+          "source": "anthropicDocs"
+        },
+        "openrouter": {
+          "state": "listed",
+          "expiration": null,
+          "source": "openrouter"
+        },
+        "bedrock": {
+          "state": "unverified"
+        }
+      },
+      "price": {
+        "inPerM": 0.1,
+        "outPerM": 0.5,
+        "cacheReadPerM": 0.01,
+        "tiers": [
+          {
+            "abovePromptTokens": 100000,
+            "inPerM": 0.5,
+            "outPerM": 2.5,
+            "cacheReadPerM": 0.05
+          }
+        ],
+        "source": "openrouter"
+      },
+      "minMaxTokens": 2048
+    }
+  },
+  "known": {
+    "claude-haiku-5-5": {
+      "provider": "anthropic",
+      "ids": {
+        "anthropic": "claude-haiku-5-5",
+        "openrouter": "anthropic/claude-haiku-5.5",
+        "bedrock": "anthropic.claude-haiku-5-5"
+      },
+      "constraints": {
+        "sampling": "forbidden",
+        "prefill": "forbidden",
+        "forcedToolChoice": "allowed-skips-thinking",
+        "thinkingDisabled": "allowed-at-high-or-below",
+        "budgetTokens": "forbidden",
+        "adaptiveThinking": true,
+        "defaultEffort": "medium",
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "maxTokensField": "max_tokens",
+        "refusalStopReason": true
+      }
+    },
+    "claude-opus-5-5": {
+      "provider": "anthropic",
+      "ids": {
+        "anthropic": "claude-opus-5-5",
+        "openrouter": "anthropic/claude-opus-5.5",
+        "bedrock": "anthropic.claude-opus-5-5"
+      },
+      "constraints": {
+        "sampling": "forbidden",
+        "prefill": "forbidden",
+        "forcedToolChoice": "forbidden",
+        "thinkingDisabled": "forbidden",
+        "budgetTokens": "forbidden",
+        "adaptiveThinking": true,
+        "defaultEffort": "medium",
+        "maxTokensField": "max_tokens"
+      }
+    },
+    "claude-sonnet-5-5": {
+      "provider": "anthropic",
+      "ids": {
+        "anthropic": "claude-sonnet-5-5",
+        "openrouter": "anthropic/claude-sonnet-5.5",
+        "bedrock": "anthropic.claude-sonnet-5-5"
+      },
+      "constraints": {
+        "sampling": "forbidden",
+        "prefill": "forbidden",
+        "forcedToolChoice": "forbidden",
+        "thinkingDisabled": "forbidden",
+        "budgetTokens": "forbidden",
+        "adaptiveThinking": true,
+        "defaultEffort": "high",
+        "maxTokensField": "max_tokens"
+      }
+    }
+  },
+  "frozen": [],
+  "exclude": []
+}
