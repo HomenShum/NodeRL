@@ -31,20 +31,20 @@ jobs:
     if: github.event_name == 'pull_request'
     permissions:
       contents: read
-    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@ebf968e40d958e40588233db698f05853ae7355e
+    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@35309cbf1c015b2b05920e033b58abbbc6391456
     with:
       mode: lint
-      platform_sha: ebf968e40d958e40588233db698f05853ae7355e
+      platform_sha: 35309cbf1c015b2b05920e033b58abbbc6391456
 
   watch:
     if: github.event_name != 'pull_request'
     permissions:
       contents: read
       issues: write
-    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@ebf968e40d958e40588233db698f05853ae7355e
+    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@35309cbf1c015b2b05920e033b58abbbc6391456
     with:
       mode: watch
-      platform_sha: ebf968e40d958e40588233db698f05853ae7355e
+      platform_sha: 35309cbf1c015b2b05920e033b58abbbc6391456
       registry_ref: main
       dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
 
@@ -54,9 +54,9 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@ebf968e40d958e40588233db698f05853ae7355e
+    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@35309cbf1c015b2b05920e033b58abbbc6391456
     with:
       mode: bump
-      platform_sha: ebf968e40d958e40588233db698f05853ae7355e
+      platform_sha: 35309cbf1c015b2b05920e033b58abbbc6391456
       registry_ref: main
       dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
