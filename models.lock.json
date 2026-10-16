@@ -1,9 +1,9 @@
 {
   "schemaVersion": "nodeplatform.model-defaults/v1",
-  "registryRef": "29da2429ac8389c89ae12ae763cd61037ce3266a",
+  "registryRef": "ebf968e40d958e40588233db698f05853ae7355e",
   "registrySha256": "87f1f17290654744f6f562f6dbe202676776cc433ea6486d0979a333ed79e208",
   "generatedAt": "2026-10-16T10:30:00.000Z",
-  "decisionDigest": "20c7c566ad90c55baf18440627600a7ef46d055ae7c6b987007a9a92218b7404",
+  "decisionDigest": "8282c563b0a854736c993f265e8944b0e3d6b08031edfcb06dd53fcf3c9379cc",
   "roles": {
     "reasoner": {
       "line": "anthropic.haiku",
