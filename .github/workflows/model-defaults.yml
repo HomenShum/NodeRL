@@ -2,8 +2,9 @@ name: Model defaults
 
 # Keeps the default model current without anyone remembering to check (SPEC model-defaults Part B, pilot).
 # Weekly, NodeKit's registry is compared with models.lock.json; if a decision-relevant fact changed, ONE pull
-# request is opened on automation/model-defaults. A human merges it. The pull_request job only lints the lock
-# offline (no registry, no network beyond the pinned tooling checkout). No provider key, no paid call.
+# request is opened on automation/model-defaults. A human merges it. The pull_request job lints the lock against
+# the registry at the commit the lock pins (data, fetched by SHA). This repo's own install and test commands run
+# without a GitHub token. No provider key, no paid call.
 #
 # Both `uses:` refs and `platform_sha` are the same NodeKit commit and move together in a reviewed PR.
 # Needs the repo setting "Allow GitHub Actions to create and approve pull requests".
@@ -31,20 +32,20 @@ jobs:
     if: github.event_name == 'pull_request'
     permissions:
       contents: read
-    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@35309cbf1c015b2b05920e033b58abbbc6391456
+    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@c2cc1498f5c0312f05da6da5b798a1130de8b370
     with:
       mode: lint
-      platform_sha: 35309cbf1c015b2b05920e033b58abbbc6391456
+      platform_sha: c2cc1498f5c0312f05da6da5b798a1130de8b370
 
   watch:
     if: github.event_name != 'pull_request'
     permissions:
       contents: read
       issues: write
-    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@35309cbf1c015b2b05920e033b58abbbc6391456
+    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@c2cc1498f5c0312f05da6da5b798a1130de8b370
     with:
       mode: watch
-      platform_sha: 35309cbf1c015b2b05920e033b58abbbc6391456
+      platform_sha: c2cc1498f5c0312f05da6da5b798a1130de8b370
       registry_ref: main
       dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
 
@@ -54,9 +55,9 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@35309cbf1c015b2b05920e033b58abbbc6391456
+    uses: HomenShum/NodeKit/.github/workflows/model-bump.yml@c2cc1498f5c0312f05da6da5b798a1130de8b370
     with:
       mode: bump
-      platform_sha: 35309cbf1c015b2b05920e033b58abbbc6391456
+      platform_sha: c2cc1498f5c0312f05da6da5b798a1130de8b370
       registry_ref: main
       dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}

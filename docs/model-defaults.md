@@ -15,12 +15,15 @@ changes to; a person reviews and merges.
   as `override-unknown` and keeps today's routing, it is never rewritten.
 - `.github/workflows/model-defaults.yml` runs every Tuesday. If the registry changed something this repo uses
   (the id, its constraints, its lifecycle dates, its price), it opens one pull request on
-  `automation/model-defaults`. On pull requests it lints the lock offline. It never merges, uses no provider
+  `automation/model-defaults`. On pull requests it lints the lock against the registry as it was at the commit the lock itself pins (so a hand-edited lock fails). It never merges, uses no provider
   key and makes no paid call. Closing a proposal keeps it closed until the registry's decision changes.
 
 **What a proposal checks before it opens.** The lock is regenerated from the registry, linted (no raw model id
 outside the allowlist in `models.config.json`, the role's transport has a wire id, the pinned id is not
-retired or within 30 days of retiring) and this repo's own `npm test && npm run typecheck` runs.
+retired or within 30 days of retiring) and this repo's own `npm test && npm run typecheck` runs. That gate runs
+with no GitHub token in its environment; the pull request is committed and pushed afterwards from a fresh checkout.
+`npm test` also has to pass when the default moves to a reviewed successor, so its model assertions read the lock
+(and the effort option is sent only if the lock's constraints list it) instead of naming today's id.
 
 **If you change the default on purpose.** Edit the registry in NodeKit (`lines.anthropic.haiku.current`, a
 human-owned PR there), not this repo. If this repo needs a different line, change `models.config.json`.

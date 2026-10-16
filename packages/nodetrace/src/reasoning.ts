@@ -9,7 +9,7 @@ import { generateObject, type LanguageModel } from "ai";
 import { createAnthropic } from "@ai-sdk/anthropic";
 import { createOpenAI } from "@ai-sdk/openai";
 import type { ReasoningModel } from "./types.ts";
-import { resolveModel } from "./models.ts";
+import { resolveModel, type Resolved } from "./models.ts";
 
 // Trim env keys: a stray trailing \r (Windows copy/pipe artifact in `convex env set`) would otherwise
 // produce a malformed "Authorization: Bearer …\r" header and break the provider call.
@@ -29,10 +29,11 @@ function providerFor(modelId: string): LanguageModel {
 export const DEFAULT_REASONING_MODEL = resolveModel("reasoner").id;
 
 // The 12-step / 60 s pipeline ceiling (docs/codebase/ARCHITECTURE.md) argues for low effort. Keyed on the exact
-// migrated default only: every caller-supplied id (including other 5.5 ids, whose own effort defaults differ,
-// SPEC §1.3) keeps today's request.
-const providerOptionsFor = (modelId: string) =>
-  modelId === DEFAULT_REASONING_MODEL ? { anthropic: { effort: "low" as const } } : undefined;
+// lock default only: every caller-supplied id (including other 5.5 ids, whose own effort defaults differ,
+// SPEC §1.3) keeps today's request. And only when the lock's constraints for that id list "low": a reviewed
+// successor with a different effort set is not sent a value it may reject.
+export const providerOptionsFor = (modelId: string, role: Resolved = resolveModel("reasoner")) =>
+  modelId === role.id && (role.constraints as { efforts?: string[] } | null)?.efforts?.includes("low") ? { anthropic: { effort: "low" as const } } : undefined;
 
 export function aiSdkReasoner(modelId: string = DEFAULT_REASONING_MODEL): ReasoningModel {
   return {

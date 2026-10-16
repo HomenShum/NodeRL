@@ -1,7 +1,7 @@
 {
   "schemaVersion": "nodeplatform.model-defaults/v1",
-  "registryRef": "35309cbf1c015b2b05920e033b58abbbc6391456",
-  "registrySha256": "87f1f17290654744f6f562f6dbe202676776cc433ea6486d0979a333ed79e208",
+  "registryRef": "c2cc1498f5c0312f05da6da5b798a1130de8b370",
+  "registrySha256": "049a996ae19e4962d0fd89bafd1703f345388873842a4e8ecf9b8074211c3b05",
   "generatedAt": "2026-10-16T10:30:00.000Z",
   "decisionDigest": "8282c563b0a854736c993f265e8944b0e3d6b08031edfcb06dd53fcf3c9379cc",
   "roles": {
@@ -44,30 +44,9 @@
           "retiresNotBefore": "2027-10-07",
           "autoRoutedTo": null,
           "source": "anthropicDocs"
-        },
-        "openrouter": {
-          "state": "listed",
-          "expiration": null,
-          "source": "openrouter"
-        },
-        "bedrock": {
-          "state": "unverified"
         }
       },
-      "price": {
-        "inPerM": 0.1,
-        "outPerM": 0.5,
-        "cacheReadPerM": 0.01,
-        "tiers": [
-          {
-            "abovePromptTokens": 100000,
-            "inPerM": 0.5,
-            "outPerM": 2.5,
-            "cacheReadPerM": 0.05
-          }
-        ],
-        "source": "openrouter"
-      },
+      "price": null,
       "minMaxTokens": 2048
     }
   },

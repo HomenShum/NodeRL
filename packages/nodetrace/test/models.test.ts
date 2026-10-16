@@ -13,7 +13,9 @@ import { test } from "node:test";
 import { z } from "zod";
 
 process.env.ANTHROPIC_API_KEY = "test-key-not-real";
-const { aiSdkReasoner, DEFAULT_REASONING_MODEL } = await import("../src/reasoning.ts");
+const { aiSdkReasoner, DEFAULT_REASONING_MODEL, providerOptionsFor } = await import("../src/reasoning.ts");
+const { default: lock } = await import("../../../models.lock.json", { with: { type: "json" } });
+const { resolveModel, resolveWith, wireId } = await import("../src/models.ts");
 
 // Returns the captured request body and any decide() error. Callers assert on the body FIRST so a wrong request
 // shape (e.g. an old SDK forcing a `json` tool) is named directly, then assert the error is absent.
@@ -38,17 +40,24 @@ async function captureBody(reasoner: ReturnType<typeof aiSdkReasoner>, stopReaso
   return { body, err };
 }
 
-test("default reasoner sends claude-haiku-5-5 with no Haiku-5.5-forbidden keys", async () => {
-  assert.equal(DEFAULT_REASONING_MODEL, "claude-haiku-5-5");
+// Was: DEFAULT_REASONING_MODEL === "claude-haiku-5-5", the same literal in the request body, and effort "low"
+// unconditionally. Those pinned today's id, so the weekly bump (which runs this test before it opens its PR) could
+// never deliver a reviewed successor: it would fail every week. The id, its wire string and the effort are now read
+// from the lock, so a legitimate registry move passes here and a wrong request still fails.
+test("default reasoner sends the lock's wire id with none of the keys the Haiku 5.5 line rejects", async () => {
+  const role = lock.roles.reasoner;
+  assert.equal(DEFAULT_REASONING_MODEL, role.id);
   const { body, err } = await captureBody(aiSdkReasoner());
-  assert.equal(body.model, "claude-haiku-5-5");
+  assert.equal(body.model, wireId(role.id, role.transport));
   for (const k of ["temperature", "top_p", "top_k"]) assert.ok(!(k in body), `${k} must be absent`);
   assert.ok(!JSON.stringify(body.thinking ?? {}).includes("budget_tokens"), "no budget_tokens");
   assert.notEqual(body.messages.at(-1).role, "assistant", "no assistant prefill");
   assert.ok(!("tool_choice" in body), "no forced tool_choice");
   assert.ok(!(body.tools ?? []).some((t: any) => t.name === "json"), "no json-tool forcing");
   assert.equal(body.output_config?.format?.type, "json_schema", "native structured output path");
-  assert.equal(body.output_config?.effort, "low", "effort set explicitly");
+  // effort goes out only when the lock's constraints for the pinned id list it (see providerOptionsFor)
+  if ((role.constraints.efforts as string[]).includes("low")) assert.equal(body.output_config?.effort, "low", "effort set explicitly");
+  else assert.ok(!("effort" in (body.output_config ?? {})), "an id that does not list 'low' is not sent it");
   assert.ok(body.max_tokens > 4096, `max_tokens ${body.max_tokens} must not be the unknown-model 4096 cap`);
   assert.ifError(err);
 });
@@ -81,9 +90,6 @@ test("a refusal with schema-valid text fails decide() instead of returning an ob
 
 // ── the lock is the source of the default (SPEC model-defaults §B.5, §B.6) ───────────────────────────────────────
 
-const { default: lock } = await import("../../../models.lock.json", { with: { type: "json" } });
-const { resolveModel, resolveWith, wireId } = await import("../src/models.ts");
-
 test("the default is the lock's reasoner role, and the request carries the lock's wire id and honours its constraints", async () => {
   const role = lock.roles.reasoner;
   assert.equal(DEFAULT_REASONING_MODEL, role.id);
@@ -97,6 +103,18 @@ test("the default is the lock's reasoner role, and the request carries the lock'
   if (c.budgetTokens === "forbidden") assert.ok(!JSON.stringify(body.thinking ?? {}).includes("budget_tokens"));
   assert.ok(body.max_tokens >= role.minMaxTokens, "role.minMaxTokens: an adaptive-thinking id needs headroom");
   assert.ifError(err);
+});
+
+// The effort option is the one part of the request that depends on WHICH id is the default: it goes to the lock's
+// default only, and only when that id's constraints list "low" (a successor with a different effort set must not be
+// sent a value it rejects, which would make the first real retirement fail at runtime instead of in this test).
+test("providerOptionsFor: effort low goes to the lock's default only, and only when its constraints list it", () => {
+  const role = (id: string, efforts?: string[]) => ({ ...resolveModel("reasoner"), id, constraints: efforts ? { efforts } : null });
+  assert.deepEqual(providerOptionsFor("claude-haiku-5-6", role("claude-haiku-5-6", ["low", "medium"])), { anthropic: { effort: "low" } });
+  assert.equal(providerOptionsFor("claude-haiku-5-6", role("claude-haiku-5-6", ["medium", "high"])), undefined, "a successor without 'low' is not sent it");
+  assert.equal(providerOptionsFor("claude-haiku-5-6", role("claude-haiku-5-6")), undefined, "no constraints: nothing is assumed");
+  assert.equal(providerOptionsFor("claude-sonnet-5-5", role("claude-haiku-5-6", ["low"])), undefined, "a caller-supplied id keeps its own request");
+  assert.deepEqual(providerOptionsFor(DEFAULT_REASONING_MODEL), providerOptionsFor(lock.roles.reasoner.id), "the committed lock is the default source");
 });
 
 test("the lock has the shape the accessor and NodeKit's lint rely on, and no clock inside its decision fields", () => {
