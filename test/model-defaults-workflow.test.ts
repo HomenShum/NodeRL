@@ -26,6 +26,13 @@ test("permissions: none at the top, read for lint, issues for watch, contents+PR
   assert.deepEqual([...job("bump").matchAll(/^      ([a-z-]+): (\w+)$/gm)].map((m) => `${m[1]}:${m[2]}`).filter((s) => /:(read|write)$/.test(s)), ["contents:write", "pull-requests:write"]);
 });
 
+test("lint runs on every pull request: rule (b) scans the whole repo, so a path filter would let a raw model id merge unlinted", () => {
+  const trigger = text.split(/^on:$/m)[1].split(/^permissions:/m)[0];
+  assert.match(trigger, /^  pull_request:$/m);
+  assert.doesNotMatch(trigger, /^\s+paths(-ignore)?:/m, "a path filter narrows lint to part of what lint scans");
+  assert.doesNotMatch(trigger, /^\s+branches(-ignore)?:/m);
+});
+
 test("weekly schedule, manual runs default to a dry run, no secret, no merge", () => {
   assert.match(text, /cron: "\d+ \d+ \* \* 2"/);
   assert.match(text, /dry_run:\n(?:.*\n)*?\s+default: true/);

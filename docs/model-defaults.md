@@ -15,13 +15,16 @@ changes to; a person reviews and merges.
   as `override-unknown` and keeps today's routing, it is never rewritten.
 - `.github/workflows/model-defaults.yml` runs every Tuesday. If the registry changed something this repo uses
   (the id, its constraints, its lifecycle dates, its price), it opens one pull request on
-  `automation/model-defaults`. On pull requests it lints the lock against the registry as it was at the commit the lock itself pins (so a hand-edited lock fails). It never merges, uses no provider
+  `automation/model-defaults`. On every pull request it lints the lock against the registry as it was at the commit the lock itself pins (so a hand-edited lock fails) and scans the whole repo for raw model ids (no path filter, or an id added outside `packages/` would merge unlinted and then block the next weekly bump). It never merges, uses no provider
   key and makes no paid call. Closing a proposal keeps it closed until the registry's decision changes.
 
 **What a proposal checks before it opens.** The lock is regenerated from the registry, linted (no raw model id
 outside the allowlist in `models.config.json`, the role's transport has a wire id, the pinned id is not
 retired or within 30 days of retiring) and this repo's own `npm test && npm run typecheck` runs. That gate runs
-with no GitHub token in its environment; the pull request is committed and pushed afterwards from a fresh checkout.
+in a read-only job (`contents: read`, no token in its environment) and is that job's last step. The pull request is
+opened by a second job, which has the write scopes and runs none of this repo's code: it starts from a fresh checkout,
+recomputes the lock from the same registry commit, and pushes nothing unless the lock's hash equals the one the gate
+ran on. (An earlier version ran both in one job, so `npm ci` and `npm test` could reach the write token.)
 `npm test` also has to pass when the default moves to a reviewed successor, so its model assertions read the lock
 (and the effort option is sent only if the lock's constraints list it) instead of naming today's id.
 
