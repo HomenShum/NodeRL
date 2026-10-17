@@ -40,6 +40,10 @@ async function captureBody(reasoner: ReturnType<typeof aiSdkReasoner>, stopReaso
   return { body, err };
 }
 
+// Two of the three reviewed ids (sonnet-5-5, opus-5-5) carry no `efforts` at all, so a successor without it is
+// ordinary, and the gate must not throw on it (the weekly bump runs this file as its G3 gate).
+const listsLowEffort = (role: { constraints: unknown }) => ((role.constraints as { efforts?: string[] } | null)?.efforts ?? []).includes("low");
+
 // Was: DEFAULT_REASONING_MODEL === "claude-haiku-5-5", the same literal in the request body, and effort "low"
 // unconditionally. Those pinned today's id, so the weekly bump (which runs this test before it opens its PR) could
 // never deliver a reviewed successor: it would fail every week. The id, its wire string and the effort are now read
@@ -56,10 +60,17 @@ test("default reasoner sends the lock's wire id with none of the keys the Haiku 
   assert.ok(!(body.tools ?? []).some((t: any) => t.name === "json"), "no json-tool forcing");
   assert.equal(body.output_config?.format?.type, "json_schema", "native structured output path");
   // effort goes out only when the lock's constraints for the pinned id list it (see providerOptionsFor)
-  if ((role.constraints.efforts as string[]).includes("low")) assert.equal(body.output_config?.effort, "low", "effort set explicitly");
+  if (listsLowEffort(role)) assert.equal(body.output_config?.effort, "low", "effort set explicitly");
   else assert.ok(!("effort" in (body.output_config ?? {})), "an id that does not list 'low' is not sent it");
   assert.ok(body.max_tokens > 4096, `max_tokens ${body.max_tokens} must not be the unknown-model 4096 cap`);
   assert.ifError(err);
+});
+
+test("the gate's effort expectation tolerates a locked role with no efforts, or no constraints", () => {
+  assert.equal(listsLowEffort({ constraints: { efforts: ["low", "high"] } }), true);
+  assert.equal(listsLowEffort({ constraints: { efforts: ["medium"] } }), false);
+  assert.equal(listsLowEffort({ constraints: { sampling: "forbidden" } }), false, "a successor like sonnet-5-5 or opus-5-5 has no efforts");
+  assert.equal(listsLowEffort({ constraints: null }), false);
 });
 
 test("caller-supplied older Claude id is sent as given, without effort", async () => {

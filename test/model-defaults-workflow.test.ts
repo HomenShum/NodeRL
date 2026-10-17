@@ -41,3 +41,23 @@ test("weekly schedule, manual runs default to a dry run, no secret, no merge", (
   assert.doesNotMatch(text, /pull_request_target/);
   assert.match(text, /needs: watch/);
 });
+
+// The scheduled run is the only thing that makes this repo's default current without anyone remembering. A `dry_run`
+// that is true on a schedule leaves every run green while the URGENT issue (and the "registry refresh not running"
+// alarm) and the proposal PR never open, so the expression is evaluated for each event, not just matched as text.
+test("watch and bump are live on the weekly schedule and a dry run on a default manual run", () => {
+  const job = (name: string) => text.split(new RegExp(`^  ${name}:$`, "m"))[1].split(/^  \w+:$/m)[0];
+  const dryRun = (name: string, eventName: string, dispatchInput?: boolean) => {
+    const raw = job(name).match(/^      dry_run: (.+)$/m)?.[1].trim();
+    assert.ok(raw, `${name} passes dry_run`);
+    if (raw === "true" || raw === "false") return raw === "true"; // a literal: evaluated as written
+    const expr = raw.match(/^\$\{\{ ([\w.\s='&|!()]+) \}\}$/)?.[1];
+    assert.ok(expr, `${name}: dry_run is a literal or a plain expression, got ${raw}`);
+    return Boolean(new Function("github", "inputs", `return ${expr};`)({ event_name: eventName }, { dry_run: dispatchInput }));
+  };
+  for (const name of ["watch", "bump"]) {
+    assert.equal(dryRun(name, "schedule"), false, `${name}: the scheduled run must act`);
+    assert.equal(dryRun(name, "workflow_dispatch", true), true, `${name}: a default manual run pushes nothing`);
+    assert.equal(dryRun(name, "workflow_dispatch", false), false, `${name}: a manual run with the box unticked acts`);
+  }
+});
