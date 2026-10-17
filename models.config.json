@@ -1,0 +1,14 @@
+{
+  "contractVersion": "nodeplatform.model-defaults/v1",
+  "lock": "models.lock.json",
+  "roles": {
+    "reasoner": { "line": "anthropic.haiku", "transport": "anthropic", "minMaxTokens": 2048 }
+  },
+  "frozen": [],
+  "exclude": [],
+  "gate": {
+    "install": "npm ci",
+    "check": "npm test && npm run typecheck"
+  },
+  "idAllowlist": ["evidence/", "docs/", "packages/nodetrace/test/", "// model-id-fixture"]
+}

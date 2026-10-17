@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "nodeplatform.model-defaults/v1",
+  "registryRef": "c2cc1498f5c0312f05da6da5b798a1130de8b370",
+  "registrySha256": "049a996ae19e4962d0fd89bafd1703f345388873842a4e8ecf9b8074211c3b05",
+  "generatedAt": "2026-10-16T10:30:00.000Z",
+  "decisionDigest": "8282c563b0a854736c993f265e8944b0e3d6b08031edfcb06dd53fcf3c9379cc",
+  "roles": {
+    "reasoner": {
+      "line": "anthropic.haiku",
+      "lineTransports": [
+        "anthropic"
+      ],
+      "transport": "anthropic",
+      "id": "claude-haiku-5-5",
+      "provider": "anthropic",
+      "ids": {
+        "anthropic": "claude-haiku-5-5",
+        "openrouter": "anthropic/claude-haiku-5.5",
+        "bedrock": "anthropic.claude-haiku-5-5"
+      },
+      "constraints": {
+        "sampling": "forbidden",
+        "prefill": "forbidden",
+        "forcedToolChoice": "allowed-skips-thinking",
+        "thinkingDisabled": "allowed-at-high-or-below",
+        "budgetTokens": "forbidden",
+        "adaptiveThinking": true,
+        "defaultEffort": "medium",
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "maxTokensField": "max_tokens",
+        "refusalStopReason": true
+      },
+      "availability": {
+        "anthropic": {
+          "state": "active",
+          "deprecatedAt": null,
+          "retiresOn": null,
+          "retiresNotBefore": "2027-10-07",
+          "autoRoutedTo": null,
+          "source": "anthropicDocs"
+        }
+      },
+      "price": null,
+      "minMaxTokens": 2048
+    }
+  },
+  "known": {
+    "claude-haiku-5-5": {
+      "provider": "anthropic",
+      "ids": {
+        "anthropic": "claude-haiku-5-5",
+        "openrouter": "anthropic/claude-haiku-5.5",
+        "bedrock": "anthropic.claude-haiku-5-5"
+      },
+      "constraints": {
+        "sampling": "forbidden",
+        "prefill": "forbidden",
+        "forcedToolChoice": "allowed-skips-thinking",
+        "thinkingDisabled": "allowed-at-high-or-below",
+        "budgetTokens": "forbidden",
+        "adaptiveThinking": true,
+        "defaultEffort": "medium",
+        "efforts": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "maxTokensField": "max_tokens",
+        "refusalStopReason": true
+      }
+    },
+    "claude-opus-5-5": {
+      "provider": "anthropic",
+      "ids": {
+        "anthropic": "claude-opus-5-5",
+        "openrouter": "anthropic/claude-opus-5.5",
+        "bedrock": "anthropic.claude-opus-5-5"
+      },
+      "constraints": {
+        "sampling": "forbidden",
+        "prefill": "forbidden",
+        "forcedToolChoice": "forbidden",
+        "thinkingDisabled": "forbidden",
+        "budgetTokens": "forbidden",
+        "adaptiveThinking": true,
+        "defaultEffort": "medium",
+        "maxTokensField": "max_tokens"
+      }
+    },
+    "claude-sonnet-5-5": {
+      "provider": "anthropic",
+      "ids": {
+        "anthropic": "claude-sonnet-5-5",
+        "openrouter": "anthropic/claude-sonnet-5.5",
+        "bedrock": "anthropic.claude-sonnet-5-5"
+      },
+      "constraints": {
+        "sampling": "forbidden",
+        "prefill": "forbidden",
+        "forcedToolChoice": "forbidden",
+        "thinkingDisabled": "forbidden",
+        "budgetTokens": "forbidden",
+        "adaptiveThinking": true,
+        "defaultEffort": "high",
+        "maxTokensField": "max_tokens"
+      }
+    }
+  },
+  "frozen": [],
+  "exclude": []
+}
